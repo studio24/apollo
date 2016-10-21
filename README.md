@@ -1,12 +1,12 @@
-# TWI Training and Examinations
+# Apollo
 
-Static website for TWI Training and Examinations.
+Static framework
 
 ## Site URLs
 
 * Live: https://www.domain.com (N/A)
 * Staging: http://staging.domain.com (N/A)
-* Development: http://twi.dev
+* Development: http://apollo.dev
 
 ## Building the site
 
