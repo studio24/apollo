@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #Notes
+\*------------------------------------*/
+
+.note {
+
+    background-color: $accent-color;
+    color: contrast($accent-color);
+
+    padding: 1rem;
+
+    a {
+
+        color: contrast($accent-color);
+
+    }
+
+    a:visited {
+
+        color: subtle($accent-color);
+
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+
+        color: deviate(contrast($accent-color));
+
+    }
+
+}

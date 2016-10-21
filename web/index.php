@@ -1,0 +1,2004 @@
+<!doctype html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8">
+    <title>Apollo</title>
+    <!-- Force IE to use latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css" media="screen"/>
+
+</head>
+
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/scripts__header.html'); ?>
+
+<body>
+
+
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/assets/svg/icons.svg'); ?>
+
+
+<header class="island island--fullpage bg bg--primary">
+
+    <div class="group">
+        <div class="group__item group__item--primary">
+
+            <h1 class="heading size--xxxl">Apollo</h1>
+            <div class="lead">
+                <p>The living content- and style guide for Studio 24 by <a href="http://studio24.net">Studio 24</a>.</p>
+            </div>
+
+            <p>Named in honour of Apollo, the Greek god of truth. This guide and its content serve as one single source
+                of truth.</p>
+
+            <p>This guide introduces and reinforces an understanding of the elements, sections and templates that make a
+                website through a shared vocabulary which is used for internal as well as client communcation.</p>
+
+        </div>
+    </div>
+
+</header>
+
+
+<!-- Main -->
+<main>
+
+
+    <section class="island island--fullpage">
+        <div class="group">
+            <div class="group__item">
+
+                <h1 class="heading size--xl">Table of content</h1>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item">
+
+
+                <h2 class="heading size--xxl">Essentials</h2>
+
+                <p>Essentials are more abstract elements like colour palettes, typography, and interactive states.</p>
+
+                <ul class="clean-list clean-list--compact">
+                    <li><a href="#typography-and-copy">Typography and copy</a></li>
+                    <li><a href="#accessible-and-inclusive-design">Accessible and inclusive design</a></li>
+                    <li><a href="#branding-and-colours">Branding and colours</a></li>
+                </ul>
+
+
+                <h2 class="heading size--xxl">Elements</h2>
+
+                <p>Your content is contained within Elements. Elements are the smallest building blocks of the
+                    interface, such as buttons or links.</p>
+
+                <ul class="clean-list clean-list--compact">
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#lead">Lead</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#paragraphs">Paragraphs</a></li>
+                    <li><a href="#text-level">Text-level</a></li>
+                </ul>
+
+            </div>
+            <div class="group__item">
+
+                <h2 class="heading size--xxl">Sections</h2>
+
+                <p>Sections are groups of Elements (and sometimes Sections) joined together to form distinct section of
+                    an interface, for example navigation or comment blocks.</p>
+
+                <ul class="clean-list clean-list--compact">
+                    <li><a href="#banner">Banner</a></li>
+                    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                    <li><a href="#call-to-actions">Call-to-actions</a></li>
+                    <li><a href="#callouts">Callouts</a></li>
+                    <li><a href="#collapsibles">Collapsibles</a></li>
+                    <li><a href="#columns">Columns</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#metadata">Metadata</a></li>
+                    <li><a href="#navigation">Navigation</a></li>
+                    <li><a href="#notes">Notes</a></li>
+                    <li><a href="#pager">Pager</a></li>
+                    <li><a href="#pagination">Pagination</a></li>
+                    <li><a href="#quotes">Quotes</a></li>
+                    <li><a href="#share">Share</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#tabs">Tabs</a></li>
+                    <li><a href="#taxonomies">Taxonomies</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                </ul>
+
+            </div>
+            <div class="group__item">
+
+                <h2 class="heading size--xxl">Templates</h2>
+
+                <p>Groups of Sections are called Templates. Most pages are created by choosing a Templates, some allow
+                    you to choose Sections as well and then completing the page with content.</p>
+
+                <ul class="clean-list clean-list--compact">
+                    <li><a href="#t-example-template">Example template</a></li>
+                    <!-- 					<li><a href="#t-accommodation-details">Accommodation details</a></li>
+                                        <li><a href="#t-contact">Contact</a></li>
+                                        <li><a href="#t-course-landing">Course landing</a></li>
+                                        <li><a href="#t-courses">Courses</a></li>
+                                        <li><a href="#t-course-details">Course details</a></li>
+                                        <li><a href="#t-generic">Generic (Default)</a></li>
+                                        <li><a href="#t-locations">Locations</a></li>
+                                        <li><a href="#t-news">News</a></li>
+                                        <li><a href="#t-news-details">News details</a></li>
+                                        <li><a href="#t-profile-details">Profile details</a></li>
+                                        <li><a href="#t-search">Search</a></li>
+                                        <li><a href="#t-search-results">Search results</a></li> -->
+                    <!-- <li><a href="#t-home">Homepage</a></li> -->
+                    <!-- <li><a href="#t-jobs">Job page?</a></li> -->
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Essentials intro -------------------------------------------------- -->
+    <section class="island island--fullpage">
+        <div class="group">
+            <div class="group__item group__item--primary">
+
+                <h1 class="heading size--xxxl">Essentials</h1>
+                <div class="lead">
+                    <p>Discover how to save money, time and better maintain your brand consistency across platforms by
+                        using a living content- and style guide.</p>
+                    <p>A style guide is a living document of code, which details all the various elements and coded
+                        modules of your site or application. Beyond its use in consolidating the front-end code, it also
+                        documents the visual language, such as header styles and color palettes, used to create the
+                        site.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Essentials intro -------------------------------------------------- -->
+
+
+    <!-- Essentials -------------------------------------------------- -->
+    <section>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Essentials</h3>
+                <h3 id="typography-and-copy" class="heading size--xl no-margin">Typography and copy</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <div class="lead">
+                    <p>The web is 95% typography and copy, which is why 95% of your time should be spent thinking about the
+                        words you use to express our brand.</p>
+                </div>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                    <p>Our visitors span the entire globe and many speak English as a second or even third language which is why we keep it simple. Poets can be clever, we are clear.</p>
+
+                <h4 class="heading subheading size--xl">Primary</h4>
+
+                <p>The primary level of typography is all of the big type. It’s headlines and decks – also known as “furniture” – that draw readers into the design. This is usually the biggest type in the design.</p>
+
+                <h5 class="heading size--l">Helvetica</h5>
+
+                <p>Helvetica is a widely used sans-serif typeface developed in 1957 by Swiss typeface designer Max Miedinger with input from Eduard
+                    Hoffmann.</p>
+
+                <h4 class="heading subheading size--xl">Secondary</h4>
+
+                <p>The secondary level of typography are the nuggets of scannable information that help readers stay with the design. This includes elements such as subheads, captions, pull quotes, infographics and other small blocks of text that add information to the primary level of text. The design of these text blocks is on the large side, but typically much smaller than lettering in the primary level of typography.</p>
+
+                <h5 class="heading size--l">Georgia</h5>
+
+                <p>Georgia is a serif typeface designed in 1993 by Matthew Carter and hinted by Tom Rickner for the Microsoft Corporation. It was intended as a serif font that would appear elegant but legible printed small or on low-resolution screens.</p>
+
+                <h4 class="heading subheading size--xl">Tertiary</h4>
+
+                <p>The tertiary level of typography is the main text of your design. It is often some of the smallest type in the design, but it needs to be large enough to be completely readable by all potential users. The typeface should be simple and consistent in design, spacing and overall usage.</p>
+
+                <h5 class="heading size--l">Georgia</h5>
+
+                <p>Georgia is a serif typeface designed in 1993 by Matthew Carter and hinted by Tom Rickner for the Microsoft Corporation. It was intended as a serif font that would appear elegant but legible printed small or on low-resolution screens.</p>
+
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Essentials</h3>
+                <h3 id="accessible-and-inclusive-design" class="heading size--xl no-margin">Accessible and inclusive
+                    design</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>We treat accessible and inclusive design as a first-class passenger making sure our website is
+                    accessible and usable for everyone.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>Accessible and inclusive design isn't about people with disabilities, it's about everybody. People
+                    like me and you. Because people of all ethnicities, ages and abilities benefit from inclusive
+                    design.</p>
+
+                <p>Disabilities affect us daily and can range from someone having a permanent disability, such as
+                    cognitive, vision, or mobility-related disability; or they may be temporary, such as someone with a
+                    broken arm; or even situational, such as a parent holding their newborn.</p>
+
+                <p>By designing with accessibility and inclusive design in mind we are making sure that our website is
+                    available to as many people as possible.</p>
+
+                <p>The <a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0 AA compliance guidelines</a> are just the
+                    beginning. By exploring the various ways a person can touch, tap, press, swipe, click, hear, see and
+                    interact with our interfaces, we build inclusive products to meet any disability, whether they are
+                    permanent, temporary or situational.</p>
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Essentials</h3>
+                <h3 id="branding-and-colours" class="heading size--xl no-margin">Branding and colours</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The importance of colour and branding in summary.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>Consistency of color is critical to maintaining a coherent family of products, and accurately
+                    communicating the nature of specific content within an application. For instance, a particular blue
+                    background can indicate system-supplied information.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nulla quod et deleniti adipisci nemo
+                    aspernatur illo. Temporibus deleniti consequatur non veritatis, labore quisquam.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, ad? Laudantium repellendus ut ad,
+                    perferendis officia similique neque architecto quas, a laborum voluptate.</p>
+
+                <h4 class="heading size--xl">Brand palette</h4>
+
+                <ul class="clean-list swatches">
+                    <li class="swatch">
+                        <span class="swatch__sample bg--primary"></span>
+                        <h4 class="heading size--l swatch__heading">Rhino Blue</h4>
+                        <p>
+                            rgb(245, 130, 31)<br>
+                            #27354F<br>
+                            Pantone Solid Coated 716 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--secondary"></span>
+                        <h4 class="heading size--l swatch__heading">Blaze Orange</h4>
+                        <p>
+                            rgb(72, 184, 216)<br>
+                            #ff6600<br>
+                            Pantone Solid Coated 2985 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--tertiary"></span>
+                        <h4 class="heading size--l swatch__heading">Orange
+                            Peel</h4>
+                        <p>
+                            rgb(68, 68, 68)<br>
+                            #ff9900<br>
+                            Pantone Solid Coated Black 7 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--accent"></span>
+                        <h4 class="heading size--l swatch__heading">Jacarta Purple</h4>
+                        <p>
+                            rgb(242, 242, 242)<br>
+                            #F2F2F2<br>
+                            Pantone Solid Coated 663 C
+                        </p>
+                    </li>
+                </ul>
+
+                <h4 class="heading size--xl">Neutrals palette</h4>
+
+                <ul class="clean-list swatches">
+                    <li class="swatch">
+                        <span class="swatch__sample bg--subtle"></span>
+                        <h4 class="heading size--l swatch__heading">Mercury Grey (Subtle)</h4>
+                        <p>
+                            rgb(245, 130, 31)<br>
+                            #F5821F<br>
+                            Pantone Solid Coated 716 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--white"></span>
+                        <h4 class="heading size--l swatch__heading">Wild Sand White</h4>
+                        <p>
+                            rgb(72, 184, 216)<br>
+                            #48b8d8<br>
+                            Pantone Solid Coated 2985 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--black"></span>
+                        <h4 class="heading size--l swatch__heading">Mine Shaft Black</h4>
+                        <p>
+                            rgb(68, 68, 68)<br>
+                            #444444<br>
+                            Pantone Solid Coated Black 7 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--accent"></span>
+                        <h4 class="heading size--l swatch__heading">Jacarta Purple</h4>
+                        <p>
+                            rgb(242, 242, 242)<br>
+                            #F2F2F2<br>
+                            Pantone Solid Coated 663 C
+                        </p>
+                    </li>
+                </ul>
+
+                <h4 class="heading size--xl">System palette</h4>
+
+
+                <ul class="clean-list swatches">
+                    <li class="swatch">
+                        <span class="swatch__sample bg--warning"></span>
+                        <h4 class="heading size--l swatch__heading">Candlelight (Warning)</h4>
+                        <p>
+                            rgb(245, 130, 31)<br>
+                            #F5821F<br>
+                            Pantone Solid Coated 716 C
+                        </p>
+                    </li>
+                    <li class="swatch">
+                        <span class="swatch__sample bg--alert"></span>
+                        <h4 class="heading size--l swatch__heading">Pomegranate (Alert)</h4>
+                        <p>
+                            rgb(72, 184, 216)<br>
+                            #f04618<br>
+                            Pantone Solid Coated 2985 C
+                        </p>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- / Essentials -------------------------------------------------- -->
+
+
+    <!-- Elements intro -------------------------------------------------- -->
+    <section class="island island--fullpage">
+        <div class="group">
+            <div class="group__item group__item--primary">
+
+                <h1 class="heading size--xxxl">Elements</h1>
+                <div class="lead">
+                    <p>Your content is contained within Elements. Elements are the smallest building blocks of the
+                        interface, such as buttons or inputs. They also include more abstract elements like colour
+                        palettes, typography, and interactive states.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Elements intro -------------------------------------------------- -->
+
+
+    <!-- Elements -------------------------------------------------- -->
+    <section>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Elements</h3>
+                <h3 id="buttons" class="heading size--xl no-margin">Buttons</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The button section Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae repellendus
+                    voluptatibus voluptatum.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <a href="link" class="button button--primary">Primary button</a>
+                <a href="link" class="button button--secondary">Secondary button</a>
+                <a href="link" class="button button--tertiary">Tertiary button</a>
+                <a href="link" class="button button--accent">Accent button</a>
+                <a href="link" class="button button--subtle">Subtle button</a>
+
+                <a href="link" class="button button--primary">
+                    <span>Button with icon</span>
+                    <svg class="icon">
+                        <use xlink:href="#arrow-right"/>
+                    </svg>
+                </a>
+
+                <a href="link" class="button button--primary">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#email"/>
+                    </svg>
+                    <span class="visuallyhidden">Button with screen reader available context</span>
+                </a>
+
+                <a href="link" class="button button--primary">
+                    <svg class="icon">
+                        <use xlink:href="#instagram"/>
+                    </svg>
+                    <span>Button with icon</span>
+                </a>
+
+
+                <h4 class="heading size--xl subheading">Modfications</h4>
+
+                <a href="link" class="button button--primary button--is-block">
+                    <svg class="icon">
+                        <use xlink:href="#email"/>
+                    </svg>
+                    <span>Block button with icon</span>
+                </a>
+
+                <!-- `is-disabled` overrides any modifiers -->
+                <p><a href="link" class="button button--subtle" disabled>Disabled button</a></p>
+
+                <p>
+                    <a href="link" class="button button--primary size--s">S button</a>
+                    <a href="link" class="button button--primary size--m">M button (default)</a>
+                    <a href="link" class="button button--primary size--l">L button</a>
+                    <a href="link" class="button button--primary size--xl">XL button</a>
+                    <a href="link" class="button button--primary size--xxl">XXL button</a>
+                    <a href="link" class="button button--primary size--xxxl">XXXL button</a>
+                </p>
+
+                <h4 class="heading size--xl subheading">Semantics</h4>
+
+                <button type="button" class="button
+                button--primary">Button</button>
+                <a href="javascript(void);" class="button button--primary">Link
+                    (styled as
+                    button)</a>
+                <span class="button button--primary">Span</span>
+
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Elements</h3>
+                <h3 id="headings" class="heading size--xl no-margin">Headings</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The headings section is...</p>
+                <p>Keep your page title under 65 characters (including spaces).</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>A well-defined information hierarchy is essential for a user to find their way around a website. One
+                    important factor in creating this hierarchy is the use of distinct header styles that help the user
+                    make sense of the content being presented.</p>
+
+                <h4 class="heading size--xxxl">The Adventure of the Engineer&rsquo;s Thumb and the Noble Bachelor</h4>
+                <h4 class="heading size--xxl">The Adventure of the Engineer&rsquo;s Thumb and the Noble Bachelor</h4>
+                <h4 class="heading size--xl">The Adventure of the Engineer&rsquo;s Thumb and the Noble Bachelor</h4>
+                <h4 class="heading size--l">The Adventure of the Engineer&rsquo;s Thumb and the Noble Bachelor</h4>
+                <h4 class="heading size--m">The Adventure of the Engineer&rsquo;s Thumb and the Noble Bachelor</h4>
+                <h4 class="heading size--s">The Adventure of the Engineer&rsquo;s Thumb and the Noble Bachelor</h4>
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Elements</h3>
+                <h3 id="lead" class="heading size--xl no-margin">Lead</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The lead section is used to summary the page your visitors are about to read. On most templates this
+                    follow the page heading.</p>
+                <p>Keep you lead concise and under 140 characters (including spaces) because we use this for the page's
+                    meta description as well, which allows search engines to display the lead as part of the search
+                    result.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <div class="lead">
+                    <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned. The landlady
+                        informed me that he had left the house.</p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Elements</h3>
+                <h3 id="links" class="heading size--xl no-margin">Links</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The link element allows you to link content from other places. Instead of writing, "Click here," you
+                    should always write descriptive texts explaining the destination. This way people aren't frustrated
+                    by links leading them places they didn't want to go.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>
+                    <a href="javascript:void(0)">Give Sherlock Holmes a call</a>
+                </p>
+                <p>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="#phone"/>
+                        </svg>
+                        <span>Give Sherlock Holmes a call</span>
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Elements</h3>
+                <h3 id="paragraphs" class="heading size--xl no-margin">Paragraphs</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>Paragraph</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name.
+                    In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion
+                    akin to love for Irene Adler.</p>
+                <p>All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced
+                    mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen,
+                    but as a lover he would have placed himself in a false position. He never spoke of the softer
+                    passions, save with a gibe and a sneer.</p>
+                <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned. The landlady
+                    informed me that he had left the house shortly after eight o’clock in the morning. I sat down beside
+                    the fire, however, with the intention of awaiting him, however long he might be.</p>
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Elements</h3>
+                <h3 id="text-level" class="heading size--xl no-margin">Text-level</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>Text-level</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>To Sherlock Holmes she is <strong>always the woman</strong>. I have seldom heard him mention her
+                    under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not
+                    that he felt any emotion akin to love for Irene Adler.</p>
+                <p>All emotions, and <em>that one particularly</em>, were abhorrent to his cold, precise but admirably
+                    balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world
+                    has seen, but as a lover he would have placed himself in a false position. He never spoke of the
+                    softer passions, save with a gibe and a sneer.</p>
+                <p>At three o’clock precisely I was at <a href="googlemap">Baker Street</a>, but Holmes had not yet
+                    returned. The landlady informed me that he had left the house shortly after eight o’clock in the
+                    morning. I sat down beside the fire, however, with the intention of awaiting him, however long he
+                    might be.</p>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- / Elements -------------------------------------------------- -->
+
+
+    <!-- Sections intro -------------------------------------------------- -->
+    <section class="island island--fullpage">
+        <div class="group">
+            <div class="group__item group__item--primary">
+
+                <h1 class="heading size--xxxl">Sections</h1>
+                <div class="lead">
+                    <p>Sections are groups of Elements (and sometimes Sections) joined together to form distinct section
+                        of an interface, for example navigation or comment blocks.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Sections intro -------------------------------------------------- -->
+
+
+    <!-- Sections -------------------------------------------------- -->
+    <section>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="banner" class="heading size--xl no-margin">Banner</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The banner section lets you feature a prominent call-to-action and establish the brand tone.</p>
+                <p><em>Numerous studies have proven that people ignore these when used in carousels which is why we
+                        recommend using static imagery with a strong message.</em></p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <figure class="banner" role="banner">
+                    <img src="/assets/images/sherlock-banner.jpg" alt="Descriptive text.">
+                    <figcaption>
+
+                        <h2 class="heading size--xl">The Adventure of the Engineer’s Thumb</h2>
+                        <div class="lead">
+                            <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned. The
+                                landlady informed me that he had left the house shortly after eight o’clock in the
+                                morning.</p>
+                        </div>
+                        <p>
+                            <a href="link" class="button button--secondary">
+                                <span>Call Mrs. Hudson today</span>
+                                <svg class="icon">
+                                    <use xlink:href="#arrow-right"/>
+                                </svg>
+                            </a>
+                        </p>
+
+                    </figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="breadcrumbs" class="heading size--xl no-margin">Breadcrumbs &#10004;</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The breadcrumbs section shows your visitors where they are within the hierarchy of your website.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="http://www.domain.com/" itemprop="item">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" position="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="http://www.domain.com/level-1" itemprop="item">
+                            <span itemprop="name">Level 1</span>
+                        </a>
+                        <meta itemprop="position" position="2"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="http://www.domain.com/level-1/level-2" itemprop="item">
+                            <span itemprop="name">Level 2</span>
+                        </a>
+                        <meta itemprop="position" position="3"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			        <span itemprop="item">
+			            <span itemprop="name">Current page</span>
+			        </span>
+                        <meta itemprop="position" position="4"/>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="call-to-actions" class="heading size--xl no-margin">Call-to-actions</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The call-to-action section is used to draw your visitors attention and encourage them to act on your
+                    message.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <figure class="cta bg--primary padding--surround">
+                    <h2 class="h4">Sherlock Holmes</h2>
+                    <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned.</p>
+                    <a href="link" class="button button--accent">
+                        <span>Call Mrs. Hudson today</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"/>
+                        </svg>
+                    </a>
+                </figure>
+
+                <figure class="cta bg--secondary padding--surround">
+                    <h2 class="h4">Sherlock Holmes</h2>
+                    <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned.</p>
+                    <a href="link" class="button button--accent">
+                        <span>Call Mrs. Hudson today</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"/>
+                        </svg>
+                    </a>
+                </figure>
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="callouts" class="heading size--xl no-margin">Callouts</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The callout section is useful for calling of trivia or interesting information.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <figure class="callout">
+                    <figcaption>
+                        <h2 class="h4">Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, placeat exercitationem
+                            neque, dolorem ipsam ullam deserunt. Soluta hic atque sint nesciunt maxime enim
+                            voluptates?</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="collapsibles" class="heading size--xl no-margin">Collapsibles &#10004;</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The collapsible section is useful when there is so much content that contextually revealing it by
+                    your visitors request makes more sense. E.g. A <abbr title="Frequently asked questions">FAQs</abbr>
+                    section.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <!-- Collapsibles wrapper -->
+                <div class="collapsibles js-collapsibles">
+
+                    <!-- Section: collapsible: item -->
+                    <h3 class="heading size--xl js-collapsible-heading">A Scandal in Bohemia</h3>
+                    <div class="js-collapsible-content">
+                        <p>To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any
+                            other name. In his eyes she eclipses and predominates the whole of her sex. It was not that
+                            he felt any emotion akin to love for Irene Adler.</p>
+                        <p>All emotions, and that one particularly, were abhorrent to his cold, precise but admirably
+                            balanced mind. He was, I take it, the most perfect reasoning and observing machine that the
+                            world has seen, but as a lover he would have placed himself in a false position. He never
+                            spoke of the softer passions, save with a gibe and a sneer.</p>
+                    </div>
+                    <!-- / Section: collapsible: item -->
+
+                    <!-- Section: collapsible: item -->
+                    <h3 class="heading size--xl js-collapsible-heading">The Red-Headed League</h3>
+                    <div class="js-collapsible-content">
+                        <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned. The
+                            landlady informed me that he had left the house shortly after eight o’clock in the morning.
+                            I sat down beside the fire, however, with the intention of awaiting him, however long he
+                            might be.</p>
+                        <p>I was already deeply interested in his inquiry, for, though it was surrounded by none of the
+                            grim and strange features which were associated with the two crimes which I have already
+                            recorded, still, the nature of the case and the exalted station of his client gave it a
+                            character of its own.</p>
+                    </div>
+                    <!-- / Section: collapsible: item -->
+                </div>
+                <!-- / Collapsibles wrapper -->
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="columns" class="heading size--xl no-margin">Columns</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The column section is useful when Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <div class="columns">
+                    <ol>
+                        <li>A Scandal in Bohemia</li>
+                        <li>The Red-Headed League</li>
+                        <li>A Case of Identity</li>
+                        <li>The Boscombe Valley Mystery</li>
+                        <li>The Five Orange Pips</li>
+                        <li>The Man with the Twisted Lip</li>
+                        <li>The Adventure of the Blue Carbuncle</li>
+                        <li>The Adventure of the Speckled Band</li>
+                        <li>The Adventure of the Engineer’s Thumb</li>
+                        <li>The Adventure of the Noble Bachelor</li>
+                        <li>The Adventure of the Beryl Coronet</li>
+                        <li>The Adventure of the Copper Beeches</li>
+                        <li>A Scandal in Bohemia</li>
+                        <li>The Red-Headed League</li>
+                        <li>A Case of Identity</li>
+                        <li>The Boscombe Valley Mystery</li>
+                        <li>The Five Orange Pips</li>
+                        <li>The Man with the Twisted Lip</li>
+                        <li>The Adventure of the Blue Carbuncle</li>
+                        <li>The Adventure of the Speckled Band</li>
+                        <li>The Adventure of the Engineer’s Thumb</li>
+                        <li>The Adventure of the Noble Bachelor</li>
+                        <li>The Adventure of the Beryl Coronet</li>
+                        <li>The Adventure of the Copper Beeches</li>
+                    </ol>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="forms" class="heading size--xl no-margin">Forms</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The form section is used to collect information from your visitors.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <form action="">
+
+                    <div class="field-group">
+                        <label for="text-input-required" class="field-label">
+                            Text input
+                            <small>(Required)</small>
+                            <div id="input-1-description" class="field-description">
+                                Optional helpful information lorem ipsum dolor sit amet, consectetur adipisicing.
+                            </div>
+                            <div class="field-error"
+                                 id="input-1-error"
+                                 role="alert"></div>
+                        </label>
+                        <input type="text"
+                               class="field-input"
+                               name="text-input-required"
+                               id="text-input-required"
+                               placeholder="E.g. Example of the expected information" required="required"
+                               aria-required="true"
+                               aria-invalid="false"
+                               aria-describedby="input-1-error input-1-description">
+                    </div>
+
+                    <div class="field-group field-group--has-error">
+                        <label for="text-input-optional"
+                               class="field-label">Text input
+                            <small>(Optional)</small>
+                            <div id="input-2-description"
+                                 class="field-description">
+                                Optional helpful information lorem ipsum dolor sit amet, consectetur adipisicing.
+                            </div>
+                        </label>
+                        <input type="text"
+                               class="field-input"
+                               name="text-input-optional"
+                               id="text-input-optional"
+                               placeholder="E.g. Example of the expected information"
+                               aria-invalid="false"
+                               aria-describedby="input-2-error input-2-description">
+                        <div class="field-error"
+                             id="input-2-error"
+                             role="alert">Understandable error message with a suggestion on how to solve the problem.
+                        </div>
+                    </div>
+
+                    <div class="field-group field-group--has-error">
+                        <label for="input-3" class="field-label">
+                            Text input with error
+                            <small>(Optional)</small>
+                            <div class="field-description">
+                                Optional helpful information lorem ipsum dolor sit amet, consectetur adipisicing.
+                            </div>
+                            <div class="field-error"
+                                 id="input-3-error"
+                                 role="alert">
+                                Understandable error message with a suggestion on how to solve the problem.
+                            </div>
+                        </label>
+                        <input type="text"
+                               class="field-input"
+                               name="input-3"
+                               id="input-3"
+                               placeholder="E.g. Example of the expected information"
+                               aria-invalid="false"
+                               aria-describedby="input-3-error">
+                    </div>
+
+                    <div class="field-group field-group--has-error">
+                        <label for="select-input" class="field-label">
+                            Select input
+                            <div class="field-description">
+                                Optional helpful information lorem ipsum dolor sit amet, consectetur adipisicing.
+                            </div>
+                            <div class="field-error"
+                                 id="input-4-error"
+                                 role="alert">Understandable error message with a suggestion on how to solve the
+                                problem.
+                            </div>
+                        </label>
+                        <select name="select-input"
+                                id="select-input"
+                                class="field-input input--select"
+                                aria-invalid="false"
+                                aria-describedby="input-4-error">
+                            <option value=""></option>
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                        </select>
+                    </div>
+
+
+                    <div class="field-group field-group--has-error">
+                        <label for="textarea-input" class="field-label">
+                            Textarea input
+                            <div class="field-description">
+                                Optional helpful information lorem ipsum dolor sit amet, consectetur adipisicing.
+                            </div>
+                            <div class="field-error">
+                                Understandable error message with a suggestion on how to solve the problem.
+                            </div>
+                        </label>
+                        <textarea
+                            name="textarea-input"
+                            id="textarea-input"
+                            cols="30" rows="10"
+                            class="field-input input--textarea"
+                            placeholder="E.g. Example of the expected information"></textarea>
+                    </div>
+
+
+                    <!-- Checkbox -->
+                    <div class="fieldset-wrapper">
+                        <fieldset class="field-group field-group--has-error checkbox-group">
+
+                            <legend class="group-legend">
+                                Checkbox input
+                            </legend>
+
+                            <div class="field-description">
+                                Always write opt-in consent checkboxes in the affirmative and never don't not use double
+                                negatives&mdash;See?!.
+                            </div>
+                            <div class="field-error">
+                                Understandable error message with a suggestion on how to solve the problem.
+                            </div>
+
+                            <label for="checkbox-input-1">
+                                <input id="checkbox-input-1" name="checkbox-input-1" class="input--checkbox"
+                                       value="data-value" type="checkbox">
+                                <span class="checkbox-label">
+	                  Yes, I agree to this sentence.
+	              </span>
+                            </label>
+
+                        </fieldset>
+                    </div>
+                    <!-- / Checkbox -->
+
+
+                    <!-- Checkbox -->
+                    <div class="fieldset-wrapper">
+                        <fieldset class="field-group field-group--has-error radio-group"
+                                  role="radiogroup"
+                                  aria-required="true">
+
+                            <legend class="group-legend">
+                                Radio input
+                            </legend>
+
+                            <div class="field-description">
+                                Radio options are easier to read and quicker to scan when laid out one under the other
+                                instead of next to each other.
+                            </div>
+                            <div class="field-error">
+                                Understandable error message with a suggestion on how to solve the problem.
+                            </div>
+
+                            <label for="radio-input">
+                                <input id="radio-input" name="radio-input" class="input--radio" value="data-value"
+                                       type="radio" checked>
+                                <span class="radio-label">
+	                  Checked radio option.
+	              </span>
+                            </label>
+                            <label for="radio-input2">
+                                <input id="radio-input2" name="radio-input" class="input--radio" value="data-value"
+                                       type="radio">
+                                <span class="radio-label">
+	                  Another radio option.
+	              </span>
+                            </label>
+
+                        </fieldset>
+                    </div>
+                    <!-- / Checkbox -->
+
+
+                    <!-- Segmented group -->
+                    <fieldset class="field-group field-group--has-error segmented-group-wrapper">
+
+                        <legend class="group-legend">
+                            Segmented options (Radio)
+                        </legend>
+
+                        <div class="field-description">
+                            Optional helpful information lorem ipsum dolor sit amet, consectetur adipisicing.
+                        </div>
+
+                        <div class="field-error">
+                            Understandable error message with a suggestion on how to solve the problem.
+                        </div>
+
+                        <!-- Wrapper for labels -->
+                        <div class="segmented-group">
+
+                            <label for="segmented-option-1">
+                                <input id="segmented-option-1" name="segmented-options" class="input--radio"
+                                       value="data-value" type="radio">
+                                <div class="segmented-label">
+                                    <h2 class="h4">Default option</h2>
+                                    <div class="no-margin">Option description.</div>
+                                </div>
+                            </label>
+
+                            <label for="segmented-option-2">
+                                <input id="segmented-option-2" name="segmented-options" class="input--radio"
+                                       value="data-value" type="radio" checked>
+                                <div class="segmented-label">
+                                    <h2 class="h4">Checked option</h2>
+                                    <div class="no-margin">Option description.</div>
+                                </div>
+                            </label>
+
+                            <label for="segmented-option-3">
+                                <input id="segmented-option-3" name="segmented-options" class="input--radio"
+                                       value="data-value" type="radio" disabled>
+                                <div class="segmented-label">
+                                    <h2 class="h4">Disabled option</h2>
+                                    <div class="no-margin">Option description.</div>
+                                </div>
+                            </label>
+
+                            <label for="segmented-option-4">
+                                <input id="segmented-option-4" name="segmented-options" class="input--radio"
+                                       value="data-value" type="radio">
+                                <div class="segmented-label">
+                                    <h2 class="h4">Default option</h2>
+                                    <div class="no-margin">Option description.</div>
+                                </div>
+                            </label>
+
+                        </div>
+                        <!-- / Wrapper for labels -->
+
+                    </fieldset>
+                    <!-- / Segmented group -->
+
+                    <div class="field-group">
+                        <button class="button button--primary">Action-contextual label, i.e. not 'Submit'</button>
+                    </div>
+
+                </form>
+
+
+                <h5 class="size--l subheading">Search section</h5>
+
+                <form action="">
+
+                    <div class="fieldset-wrapper">
+                        <fieldset>
+
+                            <legend class="visuallyhidden">Search the entire website</legend>
+
+                            <div class="field-group input-group">
+                                <label for="search-input" class="field-label visuallyhidden">
+                                    Search
+                                </label>
+                                <input type="text" placeholder="E.g. Example of a popular search people make">
+                                <div class="input-group__button">
+                                    <button class="button button--primary">Search</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="lists" class="heading size--xl no-margin">Lists</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The list section is used to create a list of content, be it links or benefits.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <h5 class="h4">Clean list</h5>
+
+                <ul class="clean-list">
+                    <li>Sherlock Holmes</li>
+                    <li>Dr. Watson</li>
+                    <li>Inspector Lestrade</li>
+                    <li>Mary Morstan</li>
+                    <li>Thaddeus Sholto</li>
+                    <li>Bartholomew Sholto</li>
+                    <li>Det. Insp. Atherly Jones</li>
+                    <li>Jonathan Small</li>
+                    <li>Tonga</li>
+                    <li>Maj. John Sholto</li>
+                    <li>Toby</li>
+                </ul>
+
+                <h5 class="h4">Definition list</h5>
+
+                <dl>
+                    <dt>1887</dt>
+                    <dd>A Study in Scarlet</dd>
+
+                    <dt>1890</dt>
+                    <dd>The Sign of the Four</dd>
+
+                    <dt>1892</dt>
+                    <dd>The Adventure of Silver Blaze</dd>
+
+                    <dt>1893</dt>
+                    <dd>The Adventure of the Musgrave Ritual</dd>
+
+                    <dt>1902</dt>
+                    <dd>The Hound of the Baskervilles</dd>
+
+                    <dt>1915</dt>
+                    <dd>The Valley of Fear</dd>
+                </dl>
+
+
+                <h5 class="h4">Ordered list</h5>
+
+                <ol>
+                    <li>A Scandal in Bohemia</li>
+                    <li>The Red-Headed League</li>
+                    <li>A Case of Identity
+                        <ol>
+                            <li>The Five Orange Pips</li>
+                            <li>The Man with the Twisted Lip</li>
+                            <li>The Adventure of the Blue Carbuncle</li>
+                            <li>The Adventure of the Speckled Band</li>
+                        </ol>
+                    </li>
+                    <li>The Boscombe Valley Mystery</li>
+                    <li>The Five Orange Pips</li>
+                    <li>The Man with the Twisted Lip</li>
+                    <li>The Adventure of the Blue Carbuncle</li>
+                    <li>The Adventure of the Speckled Band
+                        <ol>
+                            <li>The Five Orange Pips</li>
+                            <li>The Man with the Twisted Lip</li>
+                            <li>The Adventure of the Blue Carbuncle</li>
+                            <li>The Adventure of the Speckled Band</li>
+                        </ol>
+                    </li>
+                    <li>The Adventure of the Engineer’s Thumb</li>
+                    <li>The Adventure of the Noble Bachelor</li>
+                    <li>The Adventure of the Beryl Coronet</li>
+                    <li>The Adventure of the Copper Beeches</li>
+                </ol>
+
+                <h5 class="h4">Unordered list</h5>
+
+                <ul>
+                    <li>Sherlock Holmes</li>
+                    <li>Dr. Watson</li>
+                    <li>Inspector Lestrade</li>
+                    <li>Mary Morstan</li>
+                    <li>Thaddeus Sholto</li>
+                    <li>Bartholomew Sholto</li>
+                    <li>Det. Insp. Atherly Jones</li>
+                    <li>Jonathan Small</li>
+                    <li>Tonga</li>
+                    <li>Maj. John Sholto</li>
+                    <li>Toby</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="media" class="heading size--xl no-margin">Media</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The media section is an image with descriptive copy. <strong>When including an image, a descriptive
+                        textual version also needs to be added.</strong></p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <h4 class="heading size--xl subheading">Media</h4>
+
+
+                <figure class="media">
+                    <img class="media__image" src="/assets/images/sherlock-16-9.jpg" alt="Descriptive text.">
+                    <figcaption class="media__caption">
+                        <h3 class="h4">Sherlock Holmes</h3>
+                        <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned.</p>
+                        <a href="link" class="button button--primary">
+                            <span>Call Mrs. Hudson</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-right"/>
+                            </svg>
+                        </a>
+                    </figcaption>
+                </figure>
+
+
+                <figure class="media media--abreast media--left-on-lap">
+                    <img class="media__image" src="/assets/images/sherlock-16-9.jpg" alt="Descriptive text.">
+                    <figcaption class="media__caption">
+                        <h3 class="h4">Sherlock Holmes</h3>
+                        <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned.</p>
+                        <a href="link" class="button button--primary">
+                            <span>Call Mrs. Hudson</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-right"/>
+                            </svg>
+                        </a>
+                    </figcaption>
+                </figure>
+
+
+                <figure class="media media--abreast media--right-on-lap">
+                    <img class="media__image" src="/assets/images/sherlock-16-9.jpg" alt="Descriptive text.">
+                    <figcaption class="media__caption">
+                        <h3 class="h4">Sherlock Holmes</h3>
+                        <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned.</p>
+                        <a href="link" class="button button--primary">
+                            <span>Call Mrs. Hudson</span>
+                            <svg class="icon">
+                                <use xlink:href="#arrow-right"/>
+                            </svg>
+                        </a>
+                    </figcaption>
+                </figure>
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="metadata" class="heading size--xl no-margin">Metadata</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The metadata section displays information about the content on the page, i.e. tag, author and time
+                    stamp information on a news story.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <ul class="metadata">
+                    <li>
+                        <a href="" class="taxonomy">The Hound of the Baskervilles</a>
+                    </li>
+                    <li>
+                        <span class="metadata__author">Dr. Watson</span>
+                    </li>
+                    <li>
+                        <time pubdate datetime="2016-03-14">14 March 1902</time>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="navigation" class="heading size--xl no-margin">Navigation</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The navigation section</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <h4 class="heading size--xl subheading">Primary navigation</h4>
+
+                <nav class="nav nav--primary">
+                    <ul class="nav-list inline-list">
+                        <li><a href="/">
+                                <img src="/assets/images/logo.png" alt="Logo name">
+                            </a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+
+                        <!-- Special search link -->
+                        <li>
+                            <a href="/search">
+                                <svg class="icon">
+                                    <use xlink:href="#search"/>
+                                </svg>
+                                <span>Search</span>
+                            </a>
+                        </li>
+                        <!-- / Special search link -->
+
+                    </ul>
+                </nav>
+
+
+                <h4 class="heading size--xl subheading">Secondary navigation</h4>
+
+
+                <nav class="nav nav--secondary">
+                    <ul class="clean-list bg bg--subtle padding--surround">
+                        <li><a href="javascript:void(0)">A Scandal in Bohemia</a></li>
+                        <li><a href="javascript:void(0)">The Red-Headed League</a></li>
+                        <li><a href="javascript:void(0)">A Case of Identity</a></li>
+                        <li><a href="javascript:void(0)">The Boscombe Valley Mystery</a></li>
+                        <li><a href="javascript:void(0)">The Five Orange Pips</a></li>
+                        <li><a href="javascript:void(0)">The Man with the Twisted Lip</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="notes" class="heading size--xl no-margin">Notes &#10004;</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The note section is copy which needs more attention. Reserve the use of notes sections for really
+                    important information which benefits your visitors. If abused, they will ignore it.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <div class="note" aria-label="Information">
+                    <h3 class="heading size--xl">Sherlock Holmes</h3>
+                    <p>At three o’clock precisely I was at <a href="javascript:void(0)">Baker Street</a>, but Holmes had
+                        not yet returned. The landlady informed me that he had left the house shortly after eight
+                        o’clock in the morning.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="pager" class="heading size--xl no-margin">Pager &#10004;</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The pager section is links to previous and next items.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <ul class="pager group" role="navigation" aria-label="Pager">
+                    <li class="group__item">
+                        <a href="#" rel="prev" class="pager__previous">
+                            <span class="small-caps color--subtle">Previous</span>
+                            <p class="heading size--l margin--third">The Adventure of the Engineer’s Thumb</p>
+                        </a>
+                    </li>
+                    <li class="group__item align-right-from-lap">
+                        <a href="#" rel="next" class="pager__next">
+                            <span class="small-caps color--subtle">Next</span>
+                            <p class="heading size--l margin--third">The Adventure of the Noble Bachelor</p>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="pagination" class="heading size--xl no-margin">Pagination &#10004;</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The pagination section is a list of links to jump to pages lorem ipsum dolor sit amet, consectetur
+                    adipisicing..</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <ul class="inline-list pagination" role="navigation" aria-label="Pagination">
+                    <li class="pagination__item">
+                        <a href="#">
+                            <span class="visuallyhidden">Page</span>1<span class="visuallyhidden">of 123</span>
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <span>&hellip;</span>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="#">
+                            <span class="visuallyhidden">Page</span>40<span class="visuallyhidden">of 123</span>
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="#" rel="prev">
+                            <span class="visuallyhidden">Page</span>41<span class="visuallyhidden">of 123</span>
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <span class="visuallyhidden">You&rsquo;re currently on page</span>42<span
+                            class="visuallyhidden">of 123</span>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="#" rel="next">
+                            <span class="visuallyhidden">Page</span>43<span class="visuallyhidden">of 123</span>
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="#">
+                            <span class="visuallyhidden">Page</span>44<span class="visuallyhidden">of 123</span>
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <span>&hellip;</span>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="#">
+                            <span class="visuallyhidden">Page</span>123<span class="visuallyhidden">of 123</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="quotes" class="heading size--xl no-margin">Quotes</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The quote section is copy with attribution. Optionally, you can include an image. <strong>When
+                        including an image, a descriptive textual version also needs to be added.</strong></p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <h4 class="heading size--xl subheading">Quotes</h4>
+
+                <figure class="quote quote--block">
+                    <blockquote>
+                        <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned. The
+                            landlady informed me that he had left the house shortly after eight o’clock in the
+                            morning.</p>
+                    </blockquote>
+                    <figcaption>
+                        <p class="quote__attribution">Sherlock Holmes</p>
+                    </figcaption>
+                </figure>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="share" class="heading size--xl no-margin">Share</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The share section allows your visitors to share the page they are viewing.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <!-- Share this -->
+                <a href="#share-this" class="towncrier__share-button" aria-label="Open share panel" data-origin="page" aria-expanded="false" aria-haspopup="true">
+                    <svg class="icon towncrier__share-icon" aria-hidden="true">
+                        <use xlink:href="#share" />
+                    </svg><span class="towncrier__share-text">Share this</span>
+                </a>
+
+                <div class="towncrier__panel" data-share-uri="" id="share-this">
+                    <p class="towncrier__title" aria-hidden="true">Share this with</p>
+                    <ul class="inline-list towncrier__channels">
+                        <li class="towncrier__channel towncrier__channel--email">
+                            <a class="towncrier__channel-link" href="mailto:?subject={ESCAPED SUBJECT}&amp;body={ESCAPED URL}">
+                                <svg class="icon size--xxl towncrier__share-icon" aria-hidden="true">
+                                    <use xlink:href="#email" />
+                                </svg>
+                                <span class="visuallyhidden">Share this with Email</span>
+                            </a>
+                        </li>
+                        <li class="towncrier__channel towncrier__channel--facebook">
+                            <a class="towncrier__channel-link" href="">
+                                <svg class="icon size--xxl towncrier__share-icon" aria-hidden="true">
+                                    <use xlink:href="#facebook" />
+                                </svg>
+                                <span class="visuallyhidden">Share this with Facebook</span>
+                            </a>
+                        </li>
+                        <li class="towncrier__channel towncrier__channel--twitter">
+                            <a class="towncrier__channel-link" href="">
+                                <svg class="icon size--xxl towncrier__share-icon" aria-hidden="true">
+                                    <use xlink:href="#twitter" />
+                                </svg>
+                                <span class="visuallyhidden">Share this with Twitter</span>
+                            </a>
+                        </li>
+                        <li class="towncrier__channel towncrier__channel--pinterest">
+                            <a class="towncrier__channel-link" href="">
+                                <svg class="icon size--xxl towncrier__share-icon" aria-hidden="true">
+                                    <use xlink:href="#pinterest" />
+                                </svg>
+                                <span class="visuallyhidden">Share this with Pinterest</span>
+                            </a>
+                        </li>
+                        <li class="towncrier__channel towncrier__channel--whatsapp">
+                            <a class="towncrier__channel-link" href="whatsapp://send?text=BBC%20News%20%7C%20UKIP%27s%20Steven%20Woolfe%20in%20hospital%20%27after%20altercation%27%20-%20http%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fuk-politics-37572377%3Focid%3Dwsnews.chat-apps.in-app-msg.whatsapp.trial.link1_.auin">
+                                <svg class="icon size--xxl towncrier__share-icon" aria-hidden="true">
+                                    <use xlink:href="#whatsapp" />
+                                </svg>
+                                <span class="visuallyhidden">Share this with WhatsApp</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="towncrier__close-button">
+                        <span class="visuallyhidden">Close share panel</span>
+                        <svg class="icon towncrier__share-icon" aria-hidden="true">
+                            <use xlink:href="#close" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- / Share this -->
+
+
+            </div>
+        </div>
+
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="tables" class="heading size--xl no-margin">Tables</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The table section Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et tempore odio,
+                    provident..</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <table class="table table--primary">
+                    <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Ring</th>
+                        <th>Position</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <!-- tfoot comes before tbody -->
+                    <tfoot>
+                        <tr>
+                            <td>thingy</td>
+                            <td>sg</td>
+                            <td>tjhing</td>
+                            <td>sdh</td>
+                        </tr>
+                    </tfoot>
+                    <!-- tfoot comes before tbody -->
+                    <tbody>
+                    <tr>
+                        <td>Ascot</td>
+                        <td>Flat Tattersalls</td>
+                        <td><strong>£300,000</strong> Guide price</td>
+                        <td><a href="/link">Enquire</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ascot</td>
+                        <td>Flat Tattersalls</td>
+                        <td><strong>£24,000</strong> (7 bids) <span class="alert">4 min left (Today 15:45)</span></td>
+                        <td><a href="/link">Place bid</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ascot</td>
+                        <td>Flat Tattersalls</td>
+                        <td>Offers</td>
+                        <td><a href="/link">Enquire</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ascot</td>
+                        <td>Flat Tattersalls</td>
+                        <td><strong>£24,000</strong> (54 bids) span.</td>
+                        <td><a href="/link">Place bid</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="tabs" class="heading size--xl no-margin">Tabs &#10004;</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The tab section is a grouped content.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+
+                <!-- Accessible tabs -->
+                <div class="js-tab-interface tab-interface">
+                    <ul>
+                        <li><a href="#tab-name-one">A Scandal in Bohemia</a></li>
+                        <li><a href="#tab-name-two">The Red-Headed League</a></li>
+                    </ul>
+                    <section id="tab-name-one">
+
+                        <h1 class="heading size--l">A Scandal in Bohemia</h1>
+                        <p>To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any
+                            other name. In his eyes she eclipses and predominates the whole of her sex. It was not that
+                            he felt any emotion akin to love for Irene Adler.</p>
+                        <p>All emotions, and that one particularly, were abhorrent to his cold, precise but admirably
+                            balanced mind. He was, I take it, the most perfect reasoning and observing machine that the
+                            world has seen, but as a lover he would have placed himself in a false position. He never
+                            spoke of the softer passions, save with a gibe and a sneer.</p>
+
+                    </section>
+                    <section id="tab-name-two">
+
+                        <h1 class="heading size--l">The Red-Headed League</h1>
+                        <p>At three o’clock precisely I was at Baker Street, but Holmes had not yet returned. The
+                            landlady informed me that he had left the house shortly after eight o’clock in the morning.
+                            I sat down beside the fire, however, with the intention of awaiting him, however long he
+                            might be.</p>
+                        <p>I was already deeply interested in his inquiry, for, though it was surrounded by none of the
+                            grim and strange features which were associated with the two crimes which I have already
+                            recorded, still, the nature of the case and the exalted station of his client gave it a
+                            character of its own.</p>
+
+                    </section>
+                </div>
+                <!-- / Accessible tabs -->
+
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="taxonomies" class="heading size--xl no-margin">Taxonomies</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+
+                <p>The taxonomy section is a list of related links through your taxonomies.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <ul class="taxonomies">
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                    <li><a class="taxonomy" href="#">Taxonomy</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Sections</h3>
+                <h4 id="videos" class="heading size--xl no-margin">Videos</h4>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The video section is an image with descriptive copy.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <figure class="media media--video media--video-16:9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0"
+                            allowfullscreen></iframe>
+                </figure>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- / Sections -------------------------------------------------- -->
+
+
+    <!-- Templates intro -------------------------------------------------- -->
+    <section class="island island--fullpage">
+        <div class="group">
+            <div class="group__item group__item--primary">
+
+                <h1 class="heading size--xxxl">Templates</h1>
+                <div class="lead">
+                    <p>Groups of Sections are called Templates. Most pages are created by choosing a Templates, some
+                        allow you to choose Sections as well and then completing the page with content.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Templates intro -------------------------------------------------- -->
+
+
+    <!-- Templates -------------------------------------------------- -->
+    <section>
+
+
+        <div class="group">
+            <div class="group__item">
+
+                <h3 class="small-caps">Templates</h3>
+                <h3 id="t-example-template" class="heading size--xl no-margin">Example template</h3>
+
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__item group__item--secondary">
+
+                <p>The Example template is used to illustrate how templates are included in the Guide.</p>
+
+            </div>
+            <div class="group__item group__item--primary">
+
+                <p>Example template.</p>
+
+                <p><a href="/accommodations">View live Example template</a></p>
+
+                <figure class="media media--video media--video-16:9">
+                    <iframe style="transform: scale(1);" src="/example-template" frameborder="0"></iframe>
+                </figure>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- / Templates -------------------------------------------------- -->
+
+
+</main>
+<!-- / Main -->
+
+
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/global-footer.html'); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/_includes/scripts__footer.html'); ?>
+
+</body>
+</html>

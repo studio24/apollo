@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    #Colours
+\*------------------------------------*/
+
+
+
+.bg {
+
+	.lead {
+
+		color: inherit;
+
+	}
+
+	a {
+
+		// Remove fancy link underlines
+	background-image: none;
+	text-shadow: none;
+
+	}
+
+	// `bg` has to be included with any use of `bg--[modifier]`
+	a:not(.button):not(.quote__link) {
+
+		// color: inherit;
+		// border-color: currentColor;
+
+
+		&:visited {
+
+			// color: inherit;
+
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+
+			// color: inherit;
+
+		}
+
+	}
+
+
+
+	&--primary {
+
+		background-color: $primary-color;
+		color: contrast($primary-color);
+
+	}
+
+	&--secondary {
+
+		background-color: $secondary-color;
+		color: contrast($secondary-color);
+
+	}
+
+	&--tertiary {
+
+		background-color: $tertiary-color;
+		color: contrast($tertiary-color);
+
+	}
+
+	&--accent {
+
+		background-color: $accent-color;
+		color: contrast($accent-color);
+
+	}
+
+	&--subtle {
+
+		background-color: $subtle-color;
+		color: contrast($subtle-color);
+
+	}
+
+	// Neutrals
+
+	&--white {
+
+		background-color: $white;
+		color: contrast($white);
+
+	}
+
+	&--black {
+
+		background-color: $black;
+		color: contrast($black);
+
+	}
+
+	// System colour palette
+
+	&--alert {
+
+		background-color: $alert-color;
+		color: contrast($alert-color);
+
+	}
+
+	&--warning {
+
+		background-color: $input-error-color;
+		color: contrast($input-error-color);
+
+	}
+
+}
+
+
+
+.color {
+
+	&--primary { color: $primary-color; }
+	&--secondary { color: $secondary-color; }
+	&--tertiary { color: $tertiary-color; }
+	&--accent { color: $accent-color; }
+
+}

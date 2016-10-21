@@ -1,0 +1,237 @@
+/*------------------------------------*\
+    #Groups (using Flexbox)
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    #Flex parent wrapper
+\*------------------------------------*/
+.group {
+
+	// To remove list-style from when this is used on list items
+	padding-left: 0;
+
+	width: 100%;
+  max-width: em($breakpoint-width);
+
+  margin-left: auto;
+  margin-right: auto;
+
+	// Allows us to have flex children on narrow viewports.
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    display: table\9; /* Fallback for IE6-9 */
+		table-layout: fixed\9; /* Fallback for IE6-9 */
+
+	@include mq($breakpoint-lap) {
+
+		flex-direction: row;
+
+	}
+}
+
+.group--column {
+
+	flex-direction: column;
+
+}
+
+.group--row {
+
+	flex-direction: row;
+
+}
+
+.group--end {
+
+	justify-content: flex-end;
+	align-items: flex-end;
+
+}
+
+.group--island {
+
+	// margin: 0 auto 3rem auto;
+
+	/**
+	 * Shorthand for flex-grow, flex-shrink and flex-basis.
+	 * Default assumed value is `0 1 auto`
+	 */
+	flex: 0 1 auto;
+
+}
+
+
+
+/*------------------------------------*\
+    #Flex children
+\*------------------------------------*/
+.group__item {
+
+	/**
+	 * Shorthand for flex-grow, flex-shrink and flex-basis.
+	 * Default values (when omitted) are `1 1 0%`
+	 */
+	flex: 1;
+
+	// To remove list-style from when this is used on list items
+	display: block;
+
+	display: table-cell\9; /* Fallback for IE6-9 */
+	width: 2%\9; /* Fallback for IE6-9 */
+
+	@include mq($breakpoint-lap) {
+
+		// display: flex;
+		// flex-flow: column nowrap;
+
+
+		//Remove axiomatic owl when laying group__items side-by-side
+		margin-top: 0;
+
+		+ .group__item {
+
+			// margin-left: em($font-leading*2);
+			// Same as axiomatic owl on most elements
+			margin-left: em($font-leading);
+
+		}
+
+	};
+
+}
+
+
+
+/*------------------------------------*\
+    #Flex modifiers
+\*------------------------------------*/
+/*
+ * Mapped to a 12-column style structuring to ease mental-mapping the
+ * way flex handles things.
+ *
+ * i.e. three `group__item` with `flex-3` is an three-column (equal) layout,
+ * but you could just as well declare them using only `group__item` as the
+ * default behaviour is for `group__item`s to take up equal space.
+ */
+[class~="flex-1"] { flex-grow: 1; }
+[class~="flex-2"] { flex-grow: 2; }
+[class~="flex-3"] { flex-grow: 3; }
+[class~="flex-4"] { flex-grow: 4; }
+[class~="flex-5"] { flex-grow: 5; }
+[class~="flex-6"] { flex-grow: 6; }
+[class~="flex-7"] { flex-grow: 7; }
+[class~="flex-8"] { flex-grow: 8; }
+[class~="flex-9"] { flex-grow: 9; }
+[class~="flex-10"] { flex-grow: 10; }
+[class~="flex-11"] { flex-grow: 11; }
+[class~="flex-12"] { flex-grow: 12; }
+
+
+
+.group__item--grow {
+
+	flex-grow: 1;
+
+}
+
+
+.group__item--shrink {
+
+	flex-shrink: 1;
+
+}
+
+
+/* flex-basis should be unit-less but because of a browsers bug in IE10-11
+ * (where it ignores unit-less flex-basis shorthand) we instead declare it
+ * as `0%`, which prevents minifiers from turning it into `0` (for some reason)
+ *
+ * REF: http://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/
+ */
+.group__item--basis {
+
+	flex-basis: 0%;
+
+}
+
+
+
+/*------------------------------------*\
+    #Special splits
+\*------------------------------------*/
+.group__item--primary {
+
+	/*
+	 * I would prefer this to be a golden split to get away from having the
+	 * usual 66/33 or 75/25 splits which most websites use. But the `nav`
+	 * elements in the Guide need more space so `2` it is.
+	 */
+	flex-grow: 1.618;
+	// flex-grow: 2;
+
+}
+
+
+
+.group__item--secondary.sort-last-from-lap + .group__item--primary,
+.group__item--primary + .group__item--secondary.sort-first-from-lap {
+
+	/* Double the spacing for groups which have primary and secondary
+	 * items.
+	 */
+	@include mq($breakpoint-lap) {
+
+		margin-left: 0;
+
+	}
+
+}
+
+
+
+.group__item--primary + .group__item--secondary.sort-first-from-lap {
+
+	@include mq($breakpoint-lap) {
+
+		margin-right: em($font-leading*2);
+
+	}
+
+}
+
+
+
+/* CSS Quantity Query
+ *
+ * If there's only 1 child in the main element. Cap its width for a good
+ * measure (line-length)
+ */
+.group__item--primary:nth-last-child(-n+1):first-child,
+.group__item--primary:nth-last-child(-n+1):first-child ~ .group__item--primary {
+
+	max-width: 42em;
+
+}
+
+
+
+/*------------------------------------*\
+    #Sort flex-children
+\*------------------------------------*/
+.sort-first-from-lap {
+	@include mq($breakpoint-lap) {
+		order: -1;
+	}
+}
+
+
+
+.sort-last-from-lap {
+	@include mq($breakpoint-lap) {
+		order: 99;
+	}
+}

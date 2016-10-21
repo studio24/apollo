@@ -1,0 +1,42 @@
+/*
+ * ===========================================================================
+ *
+ * Placeholders
+ *
+ * ===========================================================================
+ *
+ */
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+%visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.visuallyhidden { @extend %visuallyhidden; }
+/*
+ * Bring back an element that has been visually hidden
+ */
+%visible {
+	border: initial;
+	clip: auto;
+	height: auto;
+	margin: initial;
+	overflow: initial;
+	padding: initial;
+	position: static;
+	width: auto;
+}

@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    #Logo
+\*------------------------------------*/
+
+
+
+.logo {
+
+	display: inline-block;
+	max-width: 6em;
+
+  position: absolute;
+  top: 0;
+  left: 1em;
+
+  // Position it higher than the nav items
+  z-index: z("nav", "logo");
+
+  border: 0;
+  // border: 2px solid white;
+  // border-width: 0 2px 2px 2px;
+
+  @include mq($breakpoint-lap) {
+
+
+
+  }
+
+  @include mq($breakpoint-width) {
+
+    left: 50%;
+    margin-left: em(- $breakpoint-width/2);
+
+  }
+
+}

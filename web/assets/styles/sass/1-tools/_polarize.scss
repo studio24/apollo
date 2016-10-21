@@ -1,0 +1,77 @@
+/*
+ * ===========================================================================
+ *
+ * Polarize
+ *
+ * ===========================================================================
+ *
+ * Calculates the perceived brightness by measuring weighted distance
+ * in 3D RGB space
+ *
+ * Based on the work from:
+ * http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
+ *
+ * http://cadik.posvete.cz/color_to_gray_evaluation/
+ *
+ */
+
+
+
+/* Polarize variables
+   ========================================================================== */
+$polarize-black:				#222 !default;
+$polarize-white:				#eee !default;
+
+
+
+/* Every value in the range of 128-145 gives acceptable results */
+$polarize-cutoff:				130 !default;
+
+$polarize-red-coefficients:		241 !default;
+$polarize-green-coefficients:	691 !default;
+$polarize-blue-coefficients:	68 !default;
+
+$polarize-brightness-divisor: 	$polarize-red-coefficients + $polarize-green-coefficients + $polarize-blue-coefficients;
+
+
+$polarize-cutoff: round((unitless(lightness($polarize-white)) - unitless(lightness($polarize-black))) * ($polarize-cutoff / 200)) +0%;
+
+
+
+@function brightness($polarize-color) {
+
+	// Extract color components
+	$polarize-red-component: red($polarize-color);
+	$polarize-green-component: green($polarize-color);
+	$polarize-blue-component: blue($polarize-color);
+
+	// Calculate a brightness value in 3d color space between 0 and 255
+	$number: sqrt((($polarize-red-component * $polarize-red-component * $polarize-red-coefficients) + ($polarize-green-component * $polarize-green-component * $polarize-green-coefficients) + ($polarize-blue-component * 	$polarize-blue-component * $polarize-blue-coefficients)) / $polarize-brightness-divisor);
+
+	// Convert to percentage and return
+	@return 100% * $number / 255;
+}
+
+
+
+@function contrast($polarize-color, $w: $polarize-white, $b: $polarize-black) {
+
+	@if brightness($polarize-color) < $polarize-cutoff {
+
+		// For debugging
+		@if $polarize-cutoff < 60 {
+			// @warn "The difference is less than 60";
+			// @warn "The difference between `#{brightness($polarize-color)}` is only `#{$polarize-cutoff}` which doesn't have sufficient contrast.";
+		}
+
+		@return $w;
+
+	}
+
+	@else {
+
+		@return $b;
+
+	}
+
+}

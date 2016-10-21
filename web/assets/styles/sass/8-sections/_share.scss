@@ -1,0 +1,133 @@
+/*------------------------------------*\
+    #Share
+\*------------------------------------*/
+.towncrier__share-button {
+
+    @extend .button;
+    @extend .button--subtle;
+
+}
+
+.towncrier__close-button {
+
+    @extend .button;
+    @extend .button--primary;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+}
+
+.towncrier__panel {
+
+    margin-top: 0;
+
+    background-color: $subtle-color;
+    color: contrast($subtle-color);
+
+    padding: 1rem;
+
+    position: relative;
+
+}
+
+// ul
+.towncrier__channels {
+
+
+}
+
+// li
+.towncrier__channel {
+
+
+}
+
+// a
+.towncrier__channel-link  {
+
+}
+
+/*------------------------------------*\
+    #Brand colours
+\*------------------------------------*/
+.towncrier__channel--facebook .towncrier__channel-link {
+
+    color: $bc-facebook;
+
+    &:visited {
+
+        color: $bc-facebook;
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        color: deviate($bc-facebook);
+
+    }
+
+}
+
+.towncrier__channel--twitter .towncrier__channel-link {
+
+    color: $bc-twitter;
+
+    &:visited {
+
+        color: $bc-twitter;
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        color: deviate($bc-twitter);
+
+    }
+
+}
+
+.towncrier__channel--pinterest .towncrier__channel-link {
+
+    color: $bc-pinterest;
+
+    &:visited {
+
+        color: $bc-pinterest;
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        color: deviate($bc-pinterest);
+
+    }
+
+}
+
+.towncrier__channel--whatsapp .towncrier__channel-link {
+
+    color: $bc-whatsapp;
+
+    &:visited {
+
+        color: $bc-whatsapp;
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        color: deviate($bc-whatsapp);
+
+    }
+
+}
