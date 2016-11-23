@@ -55,7 +55,7 @@
  */
 /*------------------------------------*    #Settings
 \*------------------------------------*/
-/*------------------------------------*    #Agt
+/*------------------------------------*    #Apollo
 \*------------------------------------*/
 /*
  * Trello: https://trello.com/board-name-hash
@@ -195,6 +195,10 @@
 
 * + * {
   margin-top: 1em;
+}
+
+.visuallyhidden + * {
+  margin-top: 0;
 }
 
 * + li,
@@ -636,6 +640,9 @@ textarea {
 \*------------------------------------*/
 /*------------------------------------*    #Columns
 \*------------------------------------*/
+/**
+ * Smart columns adjust themselves according to what makes sense
+ */
 @media screen and (min-width: 40.0625em) {
   .columns {
     -webkit-columns: 2 1.5em;
@@ -654,27 +661,21 @@ textarea {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: table\9;
-  /* Fallback for IE6-9 */
-  table-layout: fixed\9;
-  /* Fallback for IE6-9 */
 }
 
 @media screen and (min-width: 40.0625em) {
   .group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    display: table \9;
+    table-layout: fixed \9;
   }
 }
 
@@ -686,10 +687,20 @@ textarea {
 }
 
 .group--row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.group--row .group__item + .group__item {
+  margin-top: 0;
+  margin-left: 1.5em;
 }
 
 .group--end {
@@ -704,9 +715,9 @@ textarea {
 
 .group--island {
   /**
-	 * Shorthand for flex-grow, flex-shrink and flex-basis.
-	 * Default assumed value is `0 1 auto`
-	 */
+     * Shorthand for flex-grow, flex-shrink and flex-basis.
+     * Default assumed value is `0 1 auto`
+     */
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
@@ -716,21 +727,35 @@ textarea {
 \*------------------------------------*/
 .group__item {
   /**
-	 * Shorthand for flex-grow, flex-shrink and flex-basis.
-	 * Default values (when omitted) are `1 1 0%`
-	 */
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+     * To remove list-style from when this is used on list items
+     */
   display: block;
-  display: table-cell\9;
-  /* Fallback for IE6-9 */
-  width: 2%\9;
-  /* Fallback for IE6-9 */
 }
 
 @media screen and (min-width: 40.0625em) {
   .group__item {
+    /**
+         * Shorthand for flex-grow, flex-shrink and flex-basis.
+         * Default values (when omitted) are `1 1 0%`
+         * IE defaults to `0 0 auto` rather than `0 1 auto`
+         * flex-basis should be unit-less but because of a browsers bug in IE10-11
+         * (where it ignores unit-less flex-basis shorthand) we instead declare it
+         * as `0%`, which prevents minifiers from turning it into `0` (for some reason)
+         *
+         * REF: http://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/
+         */
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0%;
+            flex: 1 1 0%;
+    /**
+         * Force the new `min-width/min-height:auto` behaviour to the previous default of `0`
+         *
+         * https://bugzilla.mozilla.org/show_bug.cgi?id=1043520
+         */
+    min-width: 0;
+    min-height: 0;
+    display: table-cell \9;
+    width: 2% \9;
     margin-top: 0;
   }
   .group__item + .group__item {
@@ -820,15 +845,41 @@ textarea {
           flex-grow: 12;
 }
 
+/**
+ * Single purpose class modifiers for flex
+ */
 .group__item--grow {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.group__item--dont-grow {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  min-width: auto;
+  min-height: auto;
 }
 
 .group__item--shrink {
   -ms-flex-negative: 1;
       flex-shrink: 1;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.group__item--dont-shrink {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  min-width: auto;
+  min-height: auto;
 }
 
 /* flex-basis should be unit-less but because of a browsers bug in IE10-11
@@ -846,38 +897,32 @@ textarea {
 \*------------------------------------*/
 .group__item--primary {
   /*
-	 * I would prefer this to be a golden split to get away from having the
-	 * usual 66/33 or 75/25 splits which most websites use. But the `nav`
-	 * elements in the Guide need more space so `2` it is.
-	 */
-  -webkit-box-flex: 1.618;
-      -ms-flex-positive: 1.618;
-          flex-grow: 1.618;
+     * I would prefer this to be a golden split to get away from having the
+     * usual 66/33 or 75/25 splits which most websites use. But the `nav`
+     * elements in the Guide need more space so `2` it is.
+     */
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
-.group__item--secondary.sort-last-from-lap + .group__item--primary,
-.group__item--primary + .group__item--secondary.sort-first-from-lap {
+.group__item--primary + .group__item--secondary,
+.group__item--secondary + .group__item--primary {
   /* Double the spacing for groups which have primary and secondary
-	 * items.
-	 */
+     * items.
+     */
 }
 
 @media screen and (min-width: 40.0625em) {
-  .group__item--secondary.sort-last-from-lap + .group__item--primary,
-  .group__item--primary + .group__item--secondary.sort-first-from-lap {
-    margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 40.0625em) {
-  .group__item--primary + .group__item--secondary.sort-first-from-lap {
-    margin-right: 3em;
+  .group__item--primary + .group__item--secondary,
+  .group__item--secondary + .group__item--primary {
+    margin-left: 3em;
   }
 }
 
 /* CSS Quantity Query
  *
- * If there's only 1 child in the main element. Cap its width for a good
+ * If Primary is a lonely child, cap its width for a good
  * measure (line-length)
  */
 .group__item--primary:nth-last-child(-n+1):first-child,
@@ -1006,7 +1051,7 @@ button:focus,
 \*------------------------------------*/
 /*------------------------------------*    #Buttons
 \*------------------------------------*/
-.button, .towncrier__share-button, .towncrier__close-button {
+.button, .towncrier__share-button {
   border: 0;
   color: inherit;
   display: inline-block;
@@ -1017,24 +1062,23 @@ button:focus,
   box-shadow: inset 0 2px 0 rgba(247, 247, 247, 0.2);
 }
 
-button.button, button.towncrier__share-button, button.towncrier__close-button,
+button.button, button.towncrier__share-button,
 input[type="submit"].button,
-input[type="submit"].towncrier__share-button,
-input[type="submit"].towncrier__close-button {
+input[type="submit"].towncrier__share-button {
   text-decoration: none;
 }
 
-.button--primary.button--primary, .towncrier__close-button {
+.button--primary.button--primary {
   background-color: #27354F;
   color: #F7F7F7;
 }
 
-.button--primary.button--primary:visited, .towncrier__close-button:visited {
+.button--primary.button--primary:visited {
   background-color: #27354F;
   color: #F7F7F7;
 }
 
-.button--primary.button--primary:hover, .towncrier__close-button:hover, .button--primary.button--primary:focus, .towncrier__close-button:focus, .button--primary.button--primary:active, .towncrier__close-button:active {
+.button--primary.button--primary:hover, .button--primary.button--primary:focus, .button--primary.button--primary:active {
   background-color: #384c71;
   color: #F7F7F7;
 }
@@ -1107,38 +1151,30 @@ input[type="submit"].towncrier__close-button {
   text-align: center;
 }
 
-.button[disabled], [disabled].towncrier__share-button, [disabled].towncrier__close-button,
+.button[disabled], [disabled].towncrier__share-button,
 .button.is-disabled,
 .is-disabled.towncrier__share-button,
-.is-disabled.towncrier__close-button,
 span.button.button,
-span.towncrier__share-button,
-span.towncrier__close-button {
+span.towncrier__share-button {
   cursor: not-allowed;
   background-color: #cccccc;
   color: rgba(34, 34, 34, 0.54);
   box-shadow: none;
 }
 
-.button[disabled]:hover, [disabled].towncrier__share-button:hover, [disabled].towncrier__close-button:hover, .button[disabled]:focus, [disabled].towncrier__share-button:focus, [disabled].towncrier__close-button:focus, .button[disabled]:active, [disabled].towncrier__share-button:active, [disabled].towncrier__close-button:active,
+.button[disabled]:hover, [disabled].towncrier__share-button:hover, .button[disabled]:focus, [disabled].towncrier__share-button:focus, .button[disabled]:active, [disabled].towncrier__share-button:active,
 .button.is-disabled:hover,
 .is-disabled.towncrier__share-button:hover,
-.is-disabled.towncrier__close-button:hover,
 .button.is-disabled:focus,
 .is-disabled.towncrier__share-button:focus,
-.is-disabled.towncrier__close-button:focus,
 .button.is-disabled:active,
 .is-disabled.towncrier__share-button:active,
-.is-disabled.towncrier__close-button:active,
 span.button.button:hover,
 span.towncrier__share-button:hover,
-span.towncrier__close-button:hover,
 span.button.button:focus,
 span.towncrier__share-button:focus,
-span.towncrier__close-button:focus,
 span.button.button:active,
-span.towncrier__share-button:active,
-span.towncrier__close-button:active {
+span.towncrier__share-button:active {
   outline: 0;
   background-color: #cccccc;
   color: rgba(34, 34, 34, 0.54);
@@ -1154,7 +1190,6 @@ a,
   display: inline;
   color: blue;
   border: 0;
-  font-weight: 600;
   -webkit-transition: box-shadow 100ms ease-in-out 0ms;
   transition: box-shadow 100ms ease-in-out 0ms;
 }
@@ -1226,7 +1261,8 @@ h1, h2, h3, h4, h5, h6 {
  * `.heading--primary` but ordinal numbers in Latin is even more
  * difficult to mentally map than the Greek alphabet.
  */
-.size--s,
+.size--s, small,
+.small,
 .size--m,
 .size--l,
 .lead,
@@ -1294,14 +1330,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.size--s {
+.size--s, small,
+.small {
   font-size: 0.88889rem;
   line-height: 1.5;
   font-weight: 400;
 }
 
 @media screen and (min-width: 40.0625em) {
-  .size--s {
+  .size--s, small,
+  .small {
     font-size: 0.83333rem;
     line-height: 1.5;
   }
@@ -1326,7 +1364,8 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 0 #222;
 }
 
-strong {
+strong,
+.strong {
   font-weight: 600;
 }
 
@@ -1356,21 +1395,27 @@ em {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto;
+  padding: 1.5em;
   position: relative;
 }
 
-.banner img {
+.banner__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   object-fit: cover;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.banner figcaption {
-  max-width: 40%;
-  position: absolute;
-  top: 20%;
-  right: 20%;
+.banner__caption {
+  max-width: 61.8%;
   padding: 1.5em;
+  position: relative;
+  z-index: 2;
   background-color: #e5e5e5;
   color: #222;
 }
@@ -1444,7 +1489,11 @@ em {
 }
 
 * + .collapsible-heading {
-  margin-top: 0.75em;
+  margin-top: 0.5em;
+}
+
+.collapsible-heading [aria-expanded] {
+  padding-left: 3.5rem;
 }
 
 .collapsible-heading [aria-expanded]:before {
@@ -1455,13 +1504,9 @@ em {
   text-align: center;
   position: absolute;
   top: 50%;
-  right: 1em;
-  margin-top: -0.5em;
+  left: 1em;
+  margin-top: -0.625em;
   line-height: 1;
-  border-radius: 50%;
-  background-color: #27354F;
-  color: #F7F7F7;
-  font-weight: 600;
 }
 
 .collapsible-heading [aria-expanded="true"]:before {
@@ -1683,15 +1728,16 @@ input[required]:valid {
           flex: 0 1 auto;
 }
 
-.input-group__button .button, .input-group__button .towncrier__share-button, .input-group__button .towncrier__close-button {
+.input-group__button .button, .input-group__button .towncrier__share-button {
   /**
              * Make sure button aligns vertically with input field by changing the button padding to match the input
              *
              */
   padding: 1em 1.5em;
-  margin-left: 0.7em;
 }
 
+/*------------------------------------*    #Collapsible input grouping
+\*------------------------------------*/
 .js-input-collapsible {
   max-height: 0;
   overflow: hidden;
@@ -1796,8 +1842,8 @@ input[required]:valid {
   border-color: #384c71 !important;
 }
 
-/*------------------------------------*                #Radio buttons
-            \*------------------------------------*/
+/*------------------------------------*    #Radio buttons
+\*------------------------------------*/
 .radio-group input {
   /* Hide the actual radio */
   position: absolute;
@@ -1885,10 +1931,10 @@ input[required]:valid {
   background-color: #384c71 !important;
 }
 
-/*------------------------------------*                #Segmented options
+/*------------------------------------*    #Segmented options
 
-                This can either be radio or checkbox, the purpose is to show all available options outright, rather than hide them behind a select
-            \*------------------------------------*/
+    This can either be radio or checkbox, the purpose is to show all available options outright, rather than hide them behind a select
+\*------------------------------------*/
 .segmented-group-wrapper {
   max-width: none;
 }
@@ -1929,9 +1975,9 @@ input[required]:valid {
 
 * + .segmented-group label {
   /**
-                 * Add more space between rows of segmented options, this makes it easier
-                 * for the eye to scan and read the options.
-                 */
+     * Add more space between rows of segmented options, this makes it easier
+     * for the eye to scan and read the options.
+     */
   margin-top: 3px;
 }
 
@@ -2042,8 +2088,8 @@ input[required]:valid {
   background-size: 100% 100%;
 }
 
-/*------------------------------------*                #Error states
-            \*------------------------------------*/
+/*------------------------------------*    #Error states
+\*------------------------------------*/
 * + .field-error {
   margin-top: 0.5em;
 }
@@ -2123,14 +2169,21 @@ span:not(.visuallyhidden) + .icon {
 /*------------------------------------*    #Images
 \*------------------------------------*/
 img {
+  /**
+	 * We should be defining dimensions on images inline using the
+	 * width and height attributes so that the browser can reserve space
+	 * for images, which in turns saves on the number of repaints. But we still
+	 * want responsive images.
+	 */
   width: 100%;
+  height: auto;
   vertical-align: middle;
 }
 
 /*------------------------------------*    #Islands
 \*------------------------------------*/
 /*
- * The island object is used when content demans its own screen presence.
+ * The island object is used when content demands its own screen presence.
  */
 .island {
   padding: 1em;
@@ -2145,6 +2198,10 @@ img {
 .island--fullpage {
   margin-top: 0;
   width: 100%;
+  /**
+     * Always show that there's more content. Gives our design/content more
+     * affordance
+     */
   min-height: 90%;
   min-height: 90vh;
   padding: 1em 0;
@@ -2273,7 +2330,7 @@ dd + dt:before {
   content: " ";
   display: block;
   width: 100%;
-  height: 1px;
+  height: 0.125em;
   position: absolute;
   top: 0;
   left: 0;
@@ -2438,40 +2495,8 @@ main {
   padding: 2em 1em 1.5em 1em;
 }
 
-.nav--primary a {
-  color: inherit;
-}
-
-.nav--primary a:visited {
-  color: inherit;
-}
-
-.nav--primary a:hover {
-  color: inherit;
-}
-
-.nav--primary a:focus, .nav--primary a:active {
-  color: inherit;
-}
-
 .nav--secondary {
   padding: 1em 0;
-}
-
-.nav--secondary a {
-  color: inherit;
-}
-
-.nav--secondary a:visited {
-  color: inherit;
-}
-
-.nav--secondary a:hover {
-  color: inherit;
-}
-
-.nav--secondary a:focus, .nav--secondary a:active {
-  color: inherit;
 }
 
 .nav-toggle {
@@ -2491,7 +2516,7 @@ main {
 }
 
 .note a:visited {
-  color: #331741;
+  color: #c4c4c4;
 }
 
 .note a:hover,
@@ -2676,68 +2701,219 @@ main {
 \*------------------------------------*/
 /*------------------------------------*    #Share
 \*------------------------------------*/
+.towncrier {
+  position: relative;
+}
+
+.towncrier__share-button {
+  text-decoration: none;
+}
+
 .towncrier__close-button {
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 2em;
+  line-height: 1;
+  border-radius: 0.2rem;
+}
+
+.towncrier__close-button:hover, .towncrier__close-button:focus, .towncrier__close-button:active {
+  background-color: #cccccc;
 }
 
 .towncrier__panel {
-  margin-top: 0;
+  margin-top: 1rem;
   background-color: #e5e5e5;
   color: #222;
-  padding: 1rem;
+  box-shadow: 0 0.125em 0.125em rgba(34, 34, 34, 0.2);
+  padding: 1rem 4rem 1rem 1rem;
+  border-radius: 0.2em;
   position: relative;
+}
+
+.js .towncrier__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.towncrier__panel:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: -0.75em;
+  left: 1em;
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 1em solid #e5e5e5;
+}
+
+.towncrier__channels {
+  padding-left: 0;
+  margin-top: 2em;
+}
+
+.js .towncrier__channels {
+  max-width: 32em;
+}
+
+.towncrier__channel {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.js .towncrier__channel {
+  display: block;
+}
+
+.towncrier__channel-label.towncrier__channel-label a {
+  color: #F7F7F7;
+}
+
+.towncrier__channel-label.towncrier__channel-label a:visited {
+  color: #c4c4c4;
+}
+
+.towncrier__channel-label.towncrier__channel-label a:hover,
+.towncrier__channel-label.towncrier__channel-label a:focus,
+.towncrier__channel-label.towncrier__channel-label a:active {
+  color: #dedede;
+}
+
+.js .towncrier__panel[aria-hidden="true"] {
+  visibility: hidden;
+}
+
+.js .towncrier__panel[aria-hidden="false"] {
+  visibility: visible;
+}
+
+.towncrier__close-button {
+  display: none;
+}
+
+.js .towncrier__close-button {
+  display: block;
+}
+
+.towncrier__panel .towncrier__share-icon {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+  background-color: blue;
+  color: #F7F7F7;
+}
+
+.towncrier__channel-link:visited .towncrier__panel .towncrier__share-icon {
+  background-color: purple;
+  color: purple;
+}
+
+.towncrier__channel-link:hover .towncrier__panel .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__panel .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__panel .towncrier__share-icon {
+  background-color: red;
+  color: #F7F7F7;
 }
 
 /*------------------------------------*    #Brand colours
 \*------------------------------------*/
-.towncrier__channel--facebook .towncrier__channel-link {
-  color: #3b5998;
+.towncrier__channel--facebook .towncrier__share-icon {
+  background-color: #3b5998;
+  color: white;
 }
 
-.towncrier__channel--facebook .towncrier__channel-link:visited {
-  color: #3b5998;
+.towncrier__channel-link:visited .towncrier__channel--facebook .towncrier__share-icon {
+  background-color: #3b5998;
 }
 
-.towncrier__channel--facebook .towncrier__channel-link:hover, .towncrier__channel--facebook .towncrier__channel-link:focus, .towncrier__channel--facebook .towncrier__channel-link:active {
-  color: #4c70ba;
+.towncrier__channel-link:hover .towncrier__channel--facebook .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__channel--facebook .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__channel--facebook .towncrier__share-icon {
+  background-color: #4c70ba;
 }
 
-.towncrier__channel--twitter .towncrier__channel-link {
-  color: #55acee;
+.towncrier__channel--twitter .towncrier__share-icon {
+  background-color: #55acee;
+  color: white;
 }
 
-.towncrier__channel--twitter .towncrier__channel-link:visited {
-  color: #55acee;
+.towncrier__channel-link:visited .towncrier__channel--twitter .towncrier__share-icon {
+  background-color: #55acee;
 }
 
-.towncrier__channel--twitter .towncrier__channel-link:hover, .towncrier__channel--twitter .towncrier__channel-link:focus, .towncrier__channel--twitter .towncrier__channel-link:active {
-  color: #83c3f3;
+.towncrier__channel-link:hover .towncrier__channel--twitter .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__channel--twitter .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__channel--twitter .towncrier__share-icon {
+  background-color: #83c3f3;
 }
 
-.towncrier__channel--pinterest .towncrier__channel-link {
-  color: #cc2127;
+.towncrier__channel--pinterest .towncrier__share-icon {
+  background-color: #cc2127;
+  color: white;
 }
 
-.towncrier__channel--pinterest .towncrier__channel-link:visited {
-  color: #cc2127;
+.towncrier__channel-link:visited .towncrier__channel--pinterest .towncrier__share-icon {
+  background-color: #cc2127;
 }
 
-.towncrier__channel--pinterest .towncrier__channel-link:hover, .towncrier__channel--pinterest .towncrier__channel-link:focus, .towncrier__channel--pinterest .towncrier__channel-link:active {
-  color: #e04046;
+.towncrier__channel-link:hover .towncrier__channel--pinterest .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__channel--pinterest .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__channel--pinterest .towncrier__share-icon {
+  background-color: #e04046;
 }
 
-.towncrier__channel--whatsapp .towncrier__channel-link {
-  color: #4dc247;
+.towncrier__channel--whatsapp .towncrier__share-icon {
+  background-color: #4dc247;
+  color: white;
 }
 
-.towncrier__channel--whatsapp .towncrier__channel-link:visited {
-  color: #4dc247;
+.towncrier__channel-link:visited .towncrier__channel--whatsapp .towncrier__share-icon {
+  background-color: #4dc247;
 }
 
-.towncrier__channel--whatsapp .towncrier__channel-link:hover, .towncrier__channel--whatsapp .towncrier__channel-link:focus, .towncrier__channel--whatsapp .towncrier__channel-link:active {
-  color: #72cf6d;
+.towncrier__channel-link:hover .towncrier__channel--whatsapp .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__channel--whatsapp .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__channel--whatsapp .towncrier__share-icon {
+  background-color: #72cf6d;
+}
+
+.towncrier__channel--linkedin .towncrier__share-icon {
+  background-color: #0976b4;
+  color: white;
+}
+
+.towncrier__channel-link:visited .towncrier__channel--linkedin .towncrier__share-icon {
+  background-color: #0976b4;
+}
+
+.towncrier__channel-link:hover .towncrier__channel--linkedin .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__channel--linkedin .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__channel--linkedin .towncrier__share-icon {
+  background-color: #0b96e5;
+}
+
+.towncrier__channel--google-plus .towncrier__share-icon {
+  background-color: #dd4b39;
+  color: white;
+}
+
+.towncrier__channel-link:visited .towncrier__channel--google-plus .towncrier__share-icon {
+  background-color: #dd4b39;
+}
+
+.towncrier__channel-link:hover .towncrier__channel--google-plus .towncrier__share-icon,
+.towncrier__channel-link:focus .towncrier__channel--google-plus .towncrier__share-icon,
+.towncrier__channel-link:active .towncrier__channel--google-plus .towncrier__share-icon {
+  background-color: #e47365;
 }
 
 /*------------------------------------*    #Tab interface
@@ -2918,11 +3094,6 @@ td {
   color: inherit;
 }
 
-.bg a {
-  background-image: none;
-  text-shadow: none;
-}
-
 .bg--primary {
   background-color: #27354F;
   color: #F7F7F7;
@@ -2963,9 +3134,37 @@ td {
   color: #F7F7F7;
 }
 
+.bg--alert a {
+  color: #F7F7F7;
+}
+
+.bg--alert a:visited {
+  color: #c4c4c4;
+}
+
+.bg--alert a:hover,
+.bg--alert a:focus,
+.bg--alert a:active {
+  color: #dedede;
+}
+
 .bg--warning {
   background-color: #fed41d;
   color: #222;
+}
+
+.bg--warning a {
+  color: #222;
+}
+
+.bg--warning a:visited {
+  color: #555555;
+}
+
+.bg--warning a:hover,
+.bg--warning a:focus,
+.bg--warning a:active {
+  color: #3c3c3c;
 }
 
 .color--primary {

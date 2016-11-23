@@ -2,12 +2,14 @@
     #Columns
 \*------------------------------------*/
 
-
+/**
+ * Smart columns adjust themselves according to what makes sense
+ */
 .columns {
 
   @include mq($breakpoint-lap) {
 
-    columns: 2 1.5em;
+    columns: 2 em($font-leading);
 
   }
 

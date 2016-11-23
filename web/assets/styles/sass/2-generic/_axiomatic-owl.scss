@@ -17,6 +17,12 @@
 
 }
 
+.visuallyhidden + * {
+
+	margin-top: 0;
+
+}
+
 * + li,
 .margin--half {
 

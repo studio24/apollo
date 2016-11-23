@@ -2,125 +2,114 @@
     #Colours
 \*------------------------------------*/
 
-
-
 .bg {
 
-	.lead {
+    .lead {
 
-		color: inherit;
+        color: inherit;
 
-	}
+    }
 
-	a {
+    &--primary {
 
-		// Remove fancy link underlines
-	background-image: none;
-	text-shadow: none;
+        background-color: $primary-color;
+        color: contrast($primary-color);
 
-	}
+        //@include inverted-links($primary-color);
 
-	// `bg` has to be included with any use of `bg--[modifier]`
-	a:not(.button):not(.quote__link) {
+    }
 
-		// color: inherit;
-		// border-color: currentColor;
+    &--secondary {
 
+        background-color: $secondary-color;
+        color: contrast($secondary-color);
 
-		&:visited {
+        //@include inverted-links($secondary-color);
 
-			// color: inherit;
+    }
 
-		}
+    &--tertiary {
 
-		&:hover,
-		&:focus,
-		&:active {
+        background-color: $tertiary-color;
+        color: contrast($tertiary-color);
 
-			// color: inherit;
+        //@include inverted-links($tertiary-color);
 
-		}
+    }
 
-	}
+    &--accent {
 
+        background-color: $accent-color;
+        color: contrast($accent-color);
 
+        //@include inverted-links($accent-color);
 
-	&--primary {
+    }
 
-		background-color: $primary-color;
-		color: contrast($primary-color);
+    &--subtle {
 
-	}
+        background-color: $subtle-color;
+        color: contrast($subtle-color);
 
-	&--secondary {
+        //@include inverted-links($subtle-color);
 
-		background-color: $secondary-color;
-		color: contrast($secondary-color);
+    }
 
-	}
+    // Neutrals
 
-	&--tertiary {
+    &--white {
 
-		background-color: $tertiary-color;
-		color: contrast($tertiary-color);
+        background-color: $white;
+        color: contrast($white);
 
-	}
+        //@include inverted-links($white);
 
-	&--accent {
+    }
 
-		background-color: $accent-color;
-		color: contrast($accent-color);
+    &--black {
 
-	}
+        background-color: $black;
+        color: contrast($black);
 
-	&--subtle {
+        //@include inverted-links($black);
 
-		background-color: $subtle-color;
-		color: contrast($subtle-color);
+    }
 
-	}
+    // System colour palette
 
-	// Neutrals
+    &--alert {
 
-	&--white {
+        background-color: $alert-color;
+        color: contrast($alert-color);
 
-		background-color: $white;
-		color: contrast($white);
+        @include links($alert-color);
 
-	}
+    }
 
-	&--black {
+    &--warning {
 
-		background-color: $black;
-		color: contrast($black);
+        background-color: $input-error-color;
+        color: contrast($input-error-color);
 
-	}
+        @include links($input-error-color);
 
-	// System colour palette
-
-	&--alert {
-
-		background-color: $alert-color;
-		color: contrast($alert-color);
-
-	}
-
-	&--warning {
-
-		background-color: $input-error-color;
-		color: contrast($input-error-color);
-
-	}
+    }
 
 }
 
-
-
 .color {
 
-	&--primary { color: $primary-color; }
-	&--secondary { color: $secondary-color; }
-	&--tertiary { color: $tertiary-color; }
-	&--accent { color: $accent-color; }
+    &--primary {
+        color: $primary-color;
+    }
+    &--secondary {
+        color: $secondary-color;
+    }
+    &--tertiary {
+        color: $tertiary-color;
+    }
+    &--accent {
+        color: $accent-color;
+    }
 
 }

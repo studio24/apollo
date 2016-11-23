@@ -1,46 +1,120 @@
 /*------------------------------------*\
     #Share
 \*------------------------------------*/
+
+.towncrier {
+
+    position: relative;
+
+}
+
 .towncrier__share-button {
 
     @extend .button;
     @extend .button--subtle;
 
+    text-decoration: none;
+
 }
 
 .towncrier__close-button {
 
-    @extend .button;
-    @extend .button--primary;
+    //@extend .button;
+    //@extend .button--primary;
+
+    background-color: transparent;
+    border: 0;
+
+    display: inline-block;
 
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: rem(8);
+    right: rem(8);
+
+    padding: 0.25rem 0.5rem;
+    font-size: 2em;
+    line-height: 1;
+    border-radius: 0.2rem;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        background-color: darken($subtle-color, $deviate);
+
+    }
 
 }
 
 .towncrier__panel {
 
-    margin-top: 0;
+    margin-top: 1rem;
 
     background-color: $subtle-color;
     color: contrast($subtle-color);
 
-    padding: 1rem;
+    box-shadow: 0 em(2) em(2) rgba($black, 0.2);
+
+    padding: 1rem 4rem 1rem 1rem;
+    border-radius: 0.2em;
 
     position: relative;
+
+    .js & {
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+    }
+
+    &:before {
+
+        content: " ";
+        display: block;
+
+        position: absolute;
+        top: em(- 12);
+        left: em(16);
+
+        width: 0;
+        height: 0;
+        border-left: em(16) solid transparent;
+        border-right: em(16) solid transparent;
+
+        border-bottom: em(16) solid $subtle-color;
+
+    }
 
 }
 
 // ul
 .towncrier__channels {
 
+    padding-left: 0;
+    margin-top: 2em;
+
+    .js & {
+
+        max-width: 32em;
+
+    }
 
 }
 
 // li
 .towncrier__channel {
 
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    .js & {
+
+        display: block;
+
+    }
 
 }
 
@@ -49,84 +123,193 @@
 
 }
 
+// span // label for sighted users (hidden with aria-hidden)
+.towncrier__channel-label.towncrier__channel-label {
+
+    @include links;
+
+}
+
+.js .towncrier__panel[aria-hidden="true"] {
+
+    visibility: hidden;
+    //max-height: 0;
+    //overflow: hidden;
+
+}
+
+.js .towncrier__panel[aria-hidden="false"] {
+
+    visibility: visible;
+    //max-height: 12em;
+    //overflow: visible;
+
+}
+
+.towncrier__close-button {
+
+    display: none;
+
+    .js & {
+
+        display: block;
+
+    }
+
+}
+
+.towncrier__panel .towncrier__share-icon {
+
+    width: 2em;
+    height: 2em;
+
+    padding: 0.5em;
+
+    background-color: $link-color;
+    color: contrast($link-color);
+
+    .towncrier__channel-link:visited & {
+
+        background-color: $link-color--visited;
+        color: ($link-color--visited);
+
+    }
+
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
+
+        background-color: $link-color--hover;
+        color: contrast($link-color--hover);
+
+    }
+
+}
+
 /*------------------------------------*\
     #Brand colours
 \*------------------------------------*/
-.towncrier__channel--facebook .towncrier__channel-link {
+.towncrier__channel--facebook .towncrier__share-icon {
 
-    color: $bc-facebook;
+    background-color: $bc-facebook;
+    color: white;
 
-    &:visited {
+    .towncrier__channel-link:visited & {
 
-        color: $bc-facebook;
-
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-
-        color: deviate($bc-facebook);
+        background-color: $bc-facebook;
 
     }
 
-}
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
 
-.towncrier__channel--twitter .towncrier__channel-link {
-
-    color: $bc-twitter;
-
-    &:visited {
-
-        color: $bc-twitter;
-
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-
-        color: deviate($bc-twitter);
+        background-color: deviate($bc-facebook);
 
     }
 
 }
 
-.towncrier__channel--pinterest .towncrier__channel-link {
+.towncrier__channel--twitter .towncrier__share-icon {
 
-    color: $bc-pinterest;
+    background-color: $bc-twitter;
+    color: white;
 
-    &:visited {
+    .towncrier__channel-link:visited & {
 
-        color: $bc-pinterest;
+        background-color: $bc-twitter;
 
     }
 
-    &:hover,
-    &:focus,
-    &:active {
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
 
-        color: deviate($bc-pinterest);
+        background-color: deviate($bc-twitter);
 
     }
 
 }
 
-.towncrier__channel--whatsapp .towncrier__channel-link {
+.towncrier__channel--pinterest .towncrier__share-icon {
 
-    color: $bc-whatsapp;
+    background-color: $bc-pinterest;
+    color: white;
 
-    &:visited {
+    .towncrier__channel-link:visited & {
 
-        color: $bc-whatsapp;
+        background-color: $bc-pinterest;
 
     }
 
-    &:hover,
-    &:focus,
-    &:active {
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
 
-        color: deviate($bc-whatsapp);
+        background-color: deviate($bc-pinterest);
+
+    }
+
+}
+
+.towncrier__channel--whatsapp .towncrier__share-icon {
+
+    background-color: $bc-whatsapp;
+    color: white;
+
+    .towncrier__channel-link:visited & {
+
+        background-color: $bc-whatsapp;
+
+    }
+
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
+
+        background-color: deviate($bc-whatsapp);
+
+    }
+
+}
+
+.towncrier__channel--linkedin .towncrier__share-icon {
+
+    background-color: $bc-linkedin;
+    color: white;
+
+    .towncrier__channel-link:visited & {
+
+        background-color: $bc-linkedin;
+
+    }
+
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
+
+        background-color: deviate($bc-linkedin);
+
+    }
+
+}
+
+.towncrier__channel--google-plus .towncrier__share-icon {
+
+    background-color: $bc-google-plus;
+    color: white;
+
+    .towncrier__channel-link:visited & {
+
+        background-color: $bc-google-plus;
+
+    }
+
+    .towncrier__channel-link:hover &,
+    .towncrier__channel-link:focus &,
+    .towncrier__channel-link:active & {
+
+        background-color: deviate($bc-google-plus);
 
     }
 

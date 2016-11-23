@@ -9,24 +9,6 @@
 
     padding: 1rem;
 
-    a {
-
-        color: contrast($accent-color);
-
-    }
-
-    a:visited {
-
-        color: subtle($accent-color);
-
-    }
-
-    a:hover,
-    a:focus,
-    a:active {
-
-        color: deviate(contrast($accent-color));
-
-    }
+    @include links($accent-color);
 
 }

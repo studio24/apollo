@@ -285,7 +285,7 @@ input[required]:valid {
              */
             padding: #{(0.125em * 2) + 0.75em} 1.5em;
 
-            margin-left: 0.7em;
+            //margin-left: 0.7em;
 
         }
 
@@ -294,21 +294,23 @@ input[required]:valid {
 }
 
 
-
+/*------------------------------------*\
+    #Collapsible input grouping
+\*------------------------------------*/
 .js-input-collapsible {
 
-     max-height: 0;
-     overflow: hidden;
+    max-height: 0;
+    overflow: hidden;
 
-     visibility: hidden;
+    visibility: hidden;
 
-     margin-bottom: 0;
+    margin-bottom: 0;
 
-     @include transition;
-     transition-property: max-height, visibility;
-     transition-delay: 0ms, 150ms;
+    @include transition;
+    transition-property: max-height, visibility;
+    transition-delay: 0ms, 150ms;
 
-     &.is-active {
+    &.is-active {
 
         max-height: 12em;
         overflow: auto;
@@ -317,537 +319,553 @@ input[required]:valid {
 
         margin-bottom: 1.5em;
 
-     }
+    }
 
 }
-
-
 
 /*------------------------------------*\
     #Checkboxes
 \*------------------------------------*/
-            .input--checkbox {
+.input--checkbox {
 
-                /* Hide the actual checkbox */
-                position: absolute;
-                left: -3em;
+    /* Hide the actual checkbox */
+    position: absolute;
+    left: -3em;
 
-            }
-            .checkbox-group label {
+}
 
-                display: block;
+.checkbox-group label {
 
-                position: relative;
-                padding-left: 2.25em;
-                // Remove because we're using axiomatic owl instead
-                // margin-bottom: 1.5em;
-                cursor: pointer;
+    display: block;
 
-                /* Hide the real checkboc inputs */
-                overflow: hidden;
+    position: relative;
+    padding-left: 2.25em;
+    // Remove because we're using axiomatic owl instead
+    // margin-bottom: 1.5em;
+    cursor: pointer;
 
-            }
+    /* Hide the real checkboc inputs */
+    overflow: hidden;
 
-            * + .checkbox-group label {
+}
 
-                margin-top: em($font-leading/3);
+* + .checkbox-group label {
 
-            }
+    margin-top: em($font-leading/3);
 
-            .checkbox-label:before,
-            .checkbox-label:after {
+}
 
-                content: '';
-                position: absolute;
+.checkbox-label:before,
+.checkbox-label:after {
 
-            }
+    content: '';
+    position: absolute;
 
-            /* Box */
-            .checkbox-label:before {
+}
 
-                left: 0;
-                top: 0;
+/* Box */
+.checkbox-label:before {
 
-                width: 1.5em;
-                height: 1.5em;
+    left: 0;
+    top: 0;
 
-                border: 2px solid luma(60);
-                border-radius: 0.33em;
+    width: 1.5em;
+    height: 1.5em;
 
-                // @include transition;
+    border: 2px solid luma(60);
+    border-radius: 0.33em;
 
-            }
+    // @include transition;
 
-            /* Check */
-            .checkbox-label:after {
+}
 
-                width: 0.75em;
-                height: 0.5em;
+/* Check */
+.checkbox-label:after {
 
-                border: 2px solid transparent;
-                border-width: 0 0 2px 2px;
+    width: 0.75em;
+    height: 0.5em;
 
-                top: 0.375em;
-                left: 0.375em;
+    border: 2px solid transparent;
+    border-width: 0 0 2px 2px;
 
-                transform: rotate(-45deg);
+    top: 0.375em;
+    left: 0.375em;
 
-                // @include transition;
+    transform: rotate(-45deg);
 
-            }
+    // @include transition;
 
-            /* Focused */
-            .input--checkbox:focus + .checkbox-label:before {
+}
 
-                border-color: $primary-color;
+/* Focused */
+.input--checkbox:focus + .checkbox-label:before {
 
-            }
+    border-color: $primary-color;
 
-            /* Checked and Focused */
-            .input--checkbox:checked:focus + .checkbox-label:before {
+}
 
-                background-color: lighten($primary-color, $deviate);
-                border-color: lighten($primary-color, $deviate);
+/* Checked and Focused */
+.input--checkbox:checked:focus + .checkbox-label:before {
 
-            }
-            .input--checkbox:checked:focus + .checkbox-label:after {
+    background-color: lighten($primary-color, $deviate);
+    border-color: lighten($primary-color, $deviate);
 
-                border-color: $white;
+}
 
-            }
+.input--checkbox:checked:focus + .checkbox-label:after {
 
-            /* Checked */
-            .input--checkbox:checked + .checkbox-label:before {
+    border-color: $white;
 
-                background-color: $primary-color;
-                border-color: $primary-color;
+}
 
-            }
-            .input--checkbox:checked + .checkbox-label:after {
+/* Checked */
+.input--checkbox:checked + .checkbox-label:before {
 
-                border-color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
 
-            }
+}
 
-            /* Hover */
-            .checkbox-group label:hover .checkbox-label:before {
+.input--checkbox:checked + .checkbox-label:after {
 
-                border-color: $primary-color !important;
+    border-color: $white;
 
-            }
-            .input--checkbox:checked + .checkbox-label:hover:before {
+}
 
-                background-color: lighten($primary-color, $deviate) !important;
-                border-color: lighten($primary-color, $deviate) !important;
+/* Hover */
+.checkbox-group label:hover .checkbox-label:before {
 
-            }
+    border-color: $primary-color !important;
 
-            /*------------------------------------*\
-                #Radio buttons
-            \*------------------------------------*/
-            .radio-group input {
+}
 
-                /* Hide the actual radio */
-                position: absolute;
-                left: -3em;
+.input--checkbox:checked + .checkbox-label:hover:before {
 
-            }
+    background-color: lighten($primary-color, $deviate) !important;
+    border-color: lighten($primary-color, $deviate) !important;
 
-            // Wrapper for input and span.radio-label
-            .radio-group label {
+}
 
-                display: block;
-                line-height: 1.5;
+/*------------------------------------*\
+    #Radio buttons
+\*------------------------------------*/
+.radio-group input {
 
-                position: relative;
-                padding-left: 2.25em;
-                // Remove because we're using axiomatic owl instead
-                // margin-bottom: 1.5em;
-                cursor: pointer;
+    /* Hide the actual radio */
+    position: absolute;
+    left: -3em;
 
-                /* Hide the real radio inputs */
-                overflow: hidden;
+}
 
-            }
+// Wrapper for input and span.radio-label
+.radio-group label {
 
-            * + .radio-group label {
+    display: block;
+    line-height: 1.5;
 
-                margin-top: em($font-leading/3);
+    position: relative;
+    padding-left: 2.25em;
+    // Remove because we're using axiomatic owl instead
+    // margin-bottom: 1.5em;
+    cursor: pointer;
 
-            }
+    /* Hide the real radio inputs */
+    overflow: hidden;
 
-            .radio-label {
+}
 
-                margin-top: 0;
+* + .radio-group label {
 
-                display: inline-block;
-                max-width: 32em;
+    margin-top: em($font-leading/3);
 
-            }
+}
 
-            .radio-label:before,
-            .radio-label:after {
+.radio-label {
 
-                content: '';
-                position: absolute;
+    margin-top: 0;
 
-            }
+    display: inline-block;
+    max-width: 32em;
 
-            /* Box */
-            .radio-label:before {
+}
 
-                left: 0;
-                top: 0;
+.radio-label:before,
+.radio-label:after {
 
-                width: 1.5em;
-                height: 1.5em;
+    content: '';
+    position: absolute;
 
-                border-radius: 50%;
+}
 
-                border: 2px solid luma(60);
+/* Box */
+.radio-label:before {
 
-                // @include transition;
+    left: 0;
+    top: 0;
 
-            }
+    width: 1.5em;
+    height: 1.5em;
 
-            /* Check */
-            .radio-label:after {
+    border-radius: 50%;
 
-                width: 0.75em;
-                height: 0.75em;
+    border: 2px solid luma(60);
 
-                border-radius: 50%;
+    // @include transition;
 
-                top: 0.375em;
-                left: 0.375em;
+}
 
-                // @include transition;
+/* Check */
+.radio-label:after {
 
-            }
+    width: 0.75em;
+    height: 0.75em;
 
-            /* Focused */
-            .input--radio:focus + .radio-label:before {
+    border-radius: 50%;
 
-                border-color: $primary-color;
+    top: 0.375em;
+    left: 0.375em;
 
-            }
+    // @include transition;
 
-            /* Checked and Focused */
-            .input--radio:checked:focus + .radio-label:before {
+}
 
-                // background-color: lighten($primary-color, $deviate);
-                border-color: lighten($primary-color, $deviate);
+/* Focused */
+.input--radio:focus + .radio-label:before {
 
-            }
-            .input--radio:checked:focus + .radio-label:after {
+    border-color: $primary-color;
 
-                background-color: lighten($primary-color, $deviate);
+}
 
-            }
+/* Checked and Focused */
+.input--radio:checked:focus + .radio-label:before {
 
-            /* Checked */
-            .input--radio:checked + .radio-label:before {
+    // background-color: lighten($primary-color, $deviate);
+    border-color: lighten($primary-color, $deviate);
 
-                // background-color: $primary-color;
-                border-color: $primary-color;
+}
 
-            }
-            .input--radio:checked + .radio-label:after {
+.input--radio:checked:focus + .radio-label:after {
 
-                background-color: $primary-color;
+    background-color: lighten($primary-color, $deviate);
 
-            }
+}
 
-            /* Hover */
-            .radio-group label:hover .radio-label:before {
+/* Checked */
+.input--radio:checked + .radio-label:before {
 
-                border-color: $primary-color !important;
+    // background-color: $primary-color;
+    border-color: $primary-color;
 
-            }
-            .input--radio:checked + .radio-label:hover:before {
+}
 
-                border-color: lighten($primary-color, $deviate) !important;
+.input--radio:checked + .radio-label:after {
 
-            }
-            .input--radio:checked + .radio-label:hover:after {
+    background-color: $primary-color;
 
-                background-color: lighten($primary-color, $deviate) !important;
+}
 
-            }
+/* Hover */
+.radio-group label:hover .radio-label:before {
 
-            /*------------------------------------*\
-                #Segmented options
+    border-color: $primary-color !important;
 
-                This can either be radio or checkbox, the purpose is to show all available options outright, rather than hide them behind a select
-            \*------------------------------------*/
-            .segmented-group-wrapper {
+}
 
-                // Remove our default max-width cap
-                max-width: none;
+.input--radio:checked + .radio-label:hover:before {
 
-            }
-            // Wrapper for
-            .segmented-group {
+    border-color: lighten($primary-color, $deviate) !important;
 
-                display: flex;
-                flex-flow: row wrap;
+}
 
-                @include mq($breakpoint-lap) {
+.input--radio:checked + .radio-label:hover:after {
 
-                    // flex-flow: row wrap;
+    background-color: lighten($primary-color, $deviate) !important;
 
-                }
+}
 
-            }
-            .segmented-group input {
+/*------------------------------------*\
+    #Segmented options
 
-                /* Hide the actual radio */
-                position: absolute;
-                left: -3em;
+    This can either be radio or checkbox, the purpose is to show all available options outright, rather than hide them behind a select
+\*------------------------------------*/
+.segmented-group-wrapper {
 
-            }
+    // Remove our default max-width cap
+    max-width: none;
 
-            // Wrapper for input and div.segmented-label
-            .segmented-group label {
+}
 
-                display: block;
-                padding: 1.5em;
+// Wrapper for
+.segmented-group {
 
-                position: relative;
+    display: flex;
+    flex-flow: row wrap;
 
-                // Fix IE11 not wrapping long texts.
-                // max-width: 15em;
+    @include mq($breakpoint-lap) {
 
-                /* Hide the real radio inputs */
-                overflow: hidden;
+        // flex-flow: row wrap;
 
-                @include mq($breakpoint-lap) {
+    }
 
-                    width: 50%;
+}
 
-                }
+.segmented-group input {
 
-                @include mq($breakpoint-desk) {
+    /* Hide the actual radio */
+    position: absolute;
+    left: -3em;
 
-                    width: 25%;
+}
 
-                }
+// Wrapper for input and div.segmented-label
+.segmented-group label {
 
-            }
+    display: block;
+    padding: 1.5em;
 
-            * + .segmented-group label {
-                /**
-                 * Add more space between rows of segmented options, this makes it easier
-                 * for the eye to scan and read the options.
-                 */
-                margin-top: 3px;
-                // margin-top: 0;
+    position: relative;
 
-            }
+    // Fix IE11 not wrapping long texts.
+    // max-width: 15em;
 
-            .segmented-label {
+    /* Hide the real radio inputs */
+    overflow: hidden;
 
-                margin-top: 0;
+    @include mq($breakpoint-lap) {
 
-                display: inline-block;
-                max-width: 32em;
+        width: 50%;
 
-                * {
+    }
 
-                    position: relative;
-                    z-index: z("segmented", "label");
+    @include mq($breakpoint-desk) {
 
-                }
+        width: 25%;
 
-            }
+    }
 
-            .segmented-label:before {
+}
 
-                content: " ";
-                position: absolute;
+* + .segmented-group label {
+    /**
+     * Add more space between rows of segmented options, this makes it easier
+     * for the eye to scan and read the options.
+     */
+    margin-top: 3px;
+    // margin-top: 0;
 
-            }
+}
 
-            /* Box */
-            .segmented-label:before {
+.segmented-label {
 
-                left: 2px;
-                top: 2px;
+    margin-top: 0;
 
-                width: calc(100% - 4px);
-                height: calc(100% - 4px);
+    display: inline-block;
+    max-width: 32em;
 
-                border-radius: em(4);
+    * {
 
-                border: em(2) solid luma(60);
-                box-shadow: inset 0 -0.125em 0 0 $grey;
+        position: relative;
+        z-index: z("segmented", "label");
 
-                z-index: z("segmented", "background");
+    }
 
-                // @include transition;
+}
 
-            }
+.segmented-label:before {
 
-            /* Focused */
-            .input--radio:focus + .segmented-label:before {
+    content: " ";
+    position: absolute;
 
-                border-color: $primary-color;
-                outline: em(2) solid $focus-color;
+}
 
-            }
+/* Box */
+.segmented-label:before {
 
-            /* Checked and Focused */
-            .input--radio:checked:focus + .segmented-label:before {
+    left: 2px;
+    top: 2px;
 
-                // background-color: lighten($primary-color, $deviate);
-                border-color: lighten($segment-selected-bg-color, $deviate);
-                box-shadow: inset 0 0.125em 0 0 $grey;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
 
-            }
-            .input--radio:checked:focus + .segmented-label:after {
+    border-radius: em(4);
 
-                background-color: deviate($segment-selected-bg-color);
-                color: contrast(deviate($segment-selected-bg-color));
+    border: em(2) solid luma(60);
+    box-shadow: inset 0 -0.125em 0 0 $grey;
 
-            }
+    z-index: z("segmented", "background");
 
-            /* Checked */
-            .input--radio:checked + .segmented-label:before {
+    // @include transition;
 
-                // background-color: $segment-selected-bg-color;
-                background-color: $segment-selected-bg-color;
-                color: contrast($segment-selected-bg-color);
-                box-shadow: inset 0 0.125em 0 0 darken($segment-selected-bg-color, $deviate);
-                border-color: darken($segment-selected-bg-color, $deviate);
-                border-width: em(4);
+}
 
-            }
-            .input--radio:checked + .segmented-label {
+/* Focused */
+.input--radio:focus + .segmented-label:before {
 
-                background-color: $segment-selected-bg-color;
-                color: contrast($segment-selected-bg-color);
+    border-color: $primary-color;
+    outline: em(2) solid $focus-color;
 
-            }
-            .input--radio:checked + .segmented-label:after {
+}
 
-                background-color: $segment-selected-bg-color;
-                color: contrast($segment-selected-bg-color);
+/* Checked and Focused */
+.input--radio:checked:focus + .segmented-label:before {
 
-            }
+    // background-color: lighten($primary-color, $deviate);
+    border-color: lighten($segment-selected-bg-color, $deviate);
+    box-shadow: inset 0 0.125em 0 0 $grey;
 
-            /* Default hover */
-            .segmented-group label:hover .segmented-label:before {
+}
 
-                // border-color: $primary-color;
-                box-shadow: inset 0 em(2) 0 0 darken($segment-selected-bg-color, $deviate/2);
+.input--radio:checked:focus + .segmented-label:after {
 
-            }
-            /* Checked hover */
-            .input--radio:checked + .segmented-label:hover:before {
+    background-color: deviate($segment-selected-bg-color);
+    color: contrast(deviate($segment-selected-bg-color));
 
-                border-color: lighten($primary-color, $deviate);
+}
 
-            }
-            /* Checked hover */
-            .input--radio:checked + .segmented-label:hover:after {
+/* Checked */
+.input--radio:checked + .segmented-label:before {
 
-                background-color: deviate($primary-color);
-                color: contrast(deviate($primary-color));
+    // background-color: $segment-selected-bg-color;
+    background-color: $segment-selected-bg-color;
+    color: contrast($segment-selected-bg-color);
+    box-shadow: inset 0 0.125em 0 0 darken($segment-selected-bg-color, $deviate);
+    border-color: darken($segment-selected-bg-color, $deviate);
+    border-width: em(4);
 
-            }
+}
 
-            /* Disabled */
-            .segmented-group label:hover .input--radio:disabled + .segmented-label:before {
+.input--radio:checked + .segmented-label {
 
-                border-color: luma(90);
-                box-shadow: none;
-                cursor: not-allowed;
+    background-color: $segment-selected-bg-color;
+    color: contrast($segment-selected-bg-color);
 
-            }
-            .input--radio:disabled + .segmented-label:before {
+}
 
-                border-color: luma(90);
-                box-shadow: none;
+.input--radio:checked + .segmented-label:after {
 
-            }
-            .input--radio:disabled + .segmented-label {
+    background-color: $segment-selected-bg-color;
+    color: contrast($segment-selected-bg-color);
 
-                // text-decoration: line-through;
-                color: luma(60);
+}
 
-            }
-            .input--radio:disabled + .segmented-label:after {
+/* Default hover */
+.segmented-group label:hover .segmented-label:before {
 
-                content: " ";
+    // border-color: $primary-color;
+    box-shadow: inset 0 em(2) 0 0 darken($segment-selected-bg-color, $deviate/2);
 
-                width: 100%;
-                height: 100%;
+}
 
-                top: 0;
-                left: 0;
+/* Checked hover */
+.input--radio:checked + .segmented-label:hover:before {
 
-                // Still needs work, not possible to get a diagonal line across a dynamically sized box
-                background-image: linear-gradient(157.5deg, $white 0%, $white 48%, $segment-selected-bg-color 49%, $segment-selected-bg-color 50%, $white 51%, $white 100%);
-                background-size: 100% 100%;
-                // color: contrast(luma(90));
+    border-color: lighten($primary-color, $deviate);
 
-            }
+}
 
-            /*------------------------------------*\
-                #Error states
-            \*------------------------------------*/
-            * + .field-error {
+/* Checked hover */
+.input--radio:checked + .segmented-label:hover:after {
 
-                margin-top: em($font-leading/3);
+    background-color: deviate($primary-color);
+    color: contrast(deviate($primary-color));
 
-            }
+}
 
-            .field-group--has-error .field-label {
+/* Disabled */
+.segmented-group label:hover .input--radio:disabled + .segmented-label:before {
 
-                + input,
-                + select,
-                + textarea {
+    border-color: luma(90);
+    box-shadow: none;
+    cursor: not-allowed;
 
-                    margin-top: 0;
-                    border-radius: 0 0 0.25em 0.25em;
+}
 
-                }
+.input--radio:disabled + .segmented-label:before {
 
-            }
+    border-color: luma(90);
+    box-shadow: none;
 
-            .field-error + .segmented-group,
-            .field-input + .field-error {
+}
 
-                margin-top: 0;
+.input--radio:disabled + .segmented-label {
 
-            }
+    // text-decoration: line-through;
+    color: luma(60);
 
-            .field-group--has-error input,
-            .field-group--has-error select,
-            .field-group--has-error textarea {
+}
 
-                border-color: $input-error-color;
+.input--radio:disabled + .segmented-label:after {
 
-                box-shadow: inset 2px 2px 0 0 $input-error-color,
-                inset 2px -2px 0 0 $input-error-color,
-                inset -2px -2px 0 0 $input-error-color,
-                inset -2px 2px 0 0 $input-error-color;
+    content: " ";
 
-            }
+    width: 100%;
+    height: 100%;
 
-            // For segmented groups we can't use box-shadow so let's make at a border
-            .field-group--has-error .segmented-group {
+    top: 0;
+    left: 0;
 
-                border: 4px solid $input-error-color;
+    // Still needs work, not possible to get a diagonal line across a dynamically sized box
+    background-image: linear-gradient(157.5deg, $white 0%, $white 48%, $segment-selected-bg-color 49%, $segment-selected-bg-color 50%, $white 51%, $white 100%);
+    background-size: 100% 100%;
+    // color: contrast(luma(90));
 
-            }
+}
 
-            .field-error:not(:empty) {
+/*------------------------------------*\
+    #Error states
+\*------------------------------------*/
+* + .field-error {
 
-                background-color: $input-error-color;
-                color: contrast($input-error-color);
+    margin-top: em($font-leading/3);
 
-                padding: 1em;
-                border-radius: 0.25em 0.25em 0 0;
+}
 
-            }
+.field-group--has-error .field-label {
+
+    + input,
+    + select,
+    + textarea {
+
+        margin-top: 0;
+        border-radius: 0 0 0.25em 0.25em;
+
+    }
+
+}
+
+.field-error + .segmented-group,
+.field-input + .field-error {
+
+    margin-top: 0;
+
+}
+
+.field-group--has-error input,
+.field-group--has-error select,
+.field-group--has-error textarea {
+
+    border-color: $input-error-color;
+
+    box-shadow: inset 2px 2px 0 0 $input-error-color,
+    inset 2px -2px 0 0 $input-error-color,
+    inset -2px -2px 0 0 $input-error-color,
+    inset -2px 2px 0 0 $input-error-color;
+
+}
+
+// For segmented groups we can't use box-shadow so let's make at a border
+.field-group--has-error .segmented-group {
+
+    border: 4px solid $input-error-color;
+
+}
+
+.field-error:not(:empty) {
+
+    background-color: $input-error-color;
+    color: contrast($input-error-color);
+
+    padding: 1em;
+    border-radius: 0.25em 0.25em 0 0;
+
+}

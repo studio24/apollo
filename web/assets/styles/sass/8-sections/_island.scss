@@ -5,7 +5,7 @@
 
 
 /*
- * The island object is used when content demans its own screen presence.
+ * The island object is used when content demands its own screen presence.
  */
 .island {
     
@@ -26,7 +26,10 @@
     margin-top: 0;
     
     width: 100%;
-    // Always show that there's more content.
+    /**
+     * Always show that there's more content. Gives our design/content more
+     * affordance
+     */
     min-height: 90%;
     min-height: 90vh;
 

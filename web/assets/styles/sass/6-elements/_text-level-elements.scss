@@ -4,7 +4,12 @@
 
 
 
-// small { font-size: 0.75em; }
+ small,
+ .small {
+
+	 @extend .size--s;
+
+ }
 
 
 .small-caps {
@@ -19,7 +24,8 @@
 
 
 
-strong {
+strong,
+.strong{
 
 	// color: red;
 	font-weight: $emphasis-weight;

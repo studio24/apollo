@@ -16,7 +16,7 @@ a,
 
 	// box-shadow: inset 0 em(- 2) 0 rgba($link-color, 0.25);
 
-	font-weight: $emphasis-weight;
+	//font-weight: $emphasis-weight;
 
 	&:visited {
 
@@ -48,9 +48,9 @@ a,
 
 
 
-@mixin inverted-links {
+.inverted-links {
 
-
+ //@include inverted-links;
 
 }
 

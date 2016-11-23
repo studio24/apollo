@@ -51,7 +51,7 @@
 // Reduce owl-spacing
 * + .collapsible-heading {
 
-    margin-top: em($font-leading/2);
+    margin-top: em(8);
 
 }
 
@@ -59,7 +59,7 @@
 .collapsible-heading [aria-expanded] {
 
     // Make room for icon
-    // padding-left: 1rem;
+     padding-left: 3.5rem;
 
     &:before {
 
@@ -72,16 +72,10 @@
 
         position: absolute;
         top: 50%;
-        right: 1em;
+        left: 1em;
 
-        margin-top: -0.5em;
+        margin-top: -0.625em;
         line-height: 1;
-
-        border-radius: 50%;
-
-        background-color: $primary-color;
-        color: contrast($primary-color);
-        font-weight: $emphasis-weight;
 
     }
 

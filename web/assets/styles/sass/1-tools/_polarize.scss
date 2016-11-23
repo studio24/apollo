@@ -41,6 +41,7 @@ $polarize-cutoff: round((unitless(lightness($polarize-white)) - unitless(lightne
 @function brightness($polarize-color) {
 
 	// Extract color components
+	// @warn red($polarize-color);
 	$polarize-red-component: red($polarize-color);
 	$polarize-green-component: green($polarize-color);
 	$polarize-blue-component: blue($polarize-color);
@@ -59,7 +60,7 @@ $polarize-cutoff: round((unitless(lightness($polarize-white)) - unitless(lightne
 	@if brightness($polarize-color) < $polarize-cutoff {
 
 		// For debugging
-		@if $polarize-cutoff < 60 {
+		@if $polarize-cutoff < 65 {
 			// @warn "The difference is less than 60";
 			// @warn "The difference between `#{brightness($polarize-color)}` is only `#{$polarize-cutoff}` which doesn't have sufficient contrast.";
 		}

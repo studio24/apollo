@@ -40,14 +40,12 @@
 /*------------------------------------*\
     #Invert links to stand out against dark backgrounds
 \*------------------------------------*/
-@mixin inverted-links($args...) {
+@mixin links($args: $black) {
 
-    @if length($args) < 1 {
-        $args: $black;
-    }
-
-    border: 5px solid red !important;
-    border-color: green;
+    // If used without an argument, use $black as default
+    //@if length($args) < 1 {
+    //    $args: $black;
+    //}
 
     a {
 
@@ -57,7 +55,7 @@
 
     a:visited {
 
-        color: subtle($args);
+        color: deviate(contrast($args), 20);
 
     }
 
