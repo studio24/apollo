@@ -7,69 +7,112 @@
 \*------------------------------------*/
 .group {
 
-	// To remove list-style from when this is used on list items
-	padding-left: 0;
+  // To remove list-style from when this is used on list items
+  padding-left: 0;
 
-	width: 100%;
-	max-width: em($breakpoint-width);
+  width: 100%;
+  max-width: em($breakpoint-width);
+  max-width: rem($breakpoint-width);
 
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 
-	@include mq($breakpoint-lap) {
+  @include mq($breakpoint-lap) {
 
-		display: flex;
-		flex-wrap: nowrap;
-		flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 
-		// Hack for IE6-9
-		display: table \9;
-		table-layout: fixed \9;
+    // Hack for IE6-9
+    display: table \9;
+    table-layout: fixed \9;
 
-	}
+  }
 }
 
 .group--column {
 
-	flex-direction: column;
+  flex-direction: column;
 
 }
 
 .group--row {
 
-	// Allows us to have flex children on narrow viewports.
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: row;
+  // Allows us to have flex children on narrow viewports.
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 
-	// Keep the spacing on items that are displayed in a row regardless of breakpoint
-	.group__item + .group__item {
+  .group__item {
 
-		margin-top: 0;
+    flex: 1 1 0%;
 
-		// Same as axiomatic owl on most elements
-		margin-left: em($font-leading);
+  }
 
-	}
+  // Keep the spacing on items that are displayed in a row regardless of breakpoint
+  .group__item + .group__item {
+
+    margin-top: 0;
+
+    // Same as axiomatic owl on most elements
+    margin-left: em(20);
+
+  }
+
+}
+
+.group--wide.group--wide {
+
+  @include mq($breakpoint-lap) {
+
+    // Keep the spacing on items that are displayed in a row regardless of breakpoint
+    .group__item + .group__item {
+
+      margin-top: 0;
+
+      // Same as axiomatic owl on most elements
+      margin-left: em(50);
+
+    }
+
+  }
+
+}
+
+.group--compact.group--compact {
+
+  @include mq($breakpoint-lap) {
+
+    // Keep the spacing on items that are displayed in a row regardless of breakpoint
+    .group__item + .group__item {
+
+      margin-top: 0;
+
+      // Same as axiomatic owl on most elements
+      margin-left: em(10);
+
+    }
+
+  }
 
 }
 
 .group--end {
 
-	justify-content: flex-end;
-	align-items: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
 
 }
 
 .group--island {
 
-	// margin: 0 auto 3rem auto;
+  // margin: 0 auto 3rem auto;
 
-	/**
+  /**
      * Shorthand for flex-grow, flex-shrink and flex-basis.
      * Default assumed value is `0 1 auto`
      */
-	flex: 0 1 auto;
+  flex: 0 1 auto;
 
 }
 
@@ -78,15 +121,9 @@
 \*------------------------------------*/
 .group__item {
 
+  @include mq($breakpoint-lap) {
 
-	/**
-     * To remove list-style from when this is used on list items
-     */
-	display: block;
-
-	@include mq($breakpoint-lap) {
-
-		/**
+    /**
          * Shorthand for flex-grow, flex-shrink and flex-basis.
          * Default values (when omitted) are `1 1 0%`
          * IE defaults to `0 0 auto` rather than `0 1 auto`
@@ -96,33 +133,41 @@
          *
          * REF: http://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/
          */
-		flex: 1 1 0%;
+    flex: 1 1 0%;
 
-		/**
+    /**
          * Force the new `min-width/min-height:auto` behaviour to the previous default of `0`
          *
          * https://bugzilla.mozilla.org/show_bug.cgi?id=1043520
          */
-		min-width: 0;
-		min-height: 0;
+    min-width: 0;
+    min-height: 0;
 
-		// Hack for IE6-9
-		display: table-cell \9;
-		width: 2% \9;
+    // Hack for IE6-9
+    display: table-cell \9;
+    width: 2% \9;
 
-		//Remove axiomatic owl when laying group__items side-by-side
-		margin-top: 0;
+    //Remove axiomatic owl when laying group__items side-by-side
+    margin-top: 0;
 
-		+ .group__item {
+    + .group__item {
 
-			// margin-left: em($font-leading*2);
-			// Same as axiomatic owl on most elements
-			margin-left: em($font-leading);
+      // margin-left: em($font-leading*2);
+      // Same as axiomatic owl on most elements
+      margin-left: em($font-leading);
 
-		}
+    }
 
-	}
-;
+  }
+
+}
+
+li.group__item {
+
+  /**
+     * To remove list-style from when this is used on list items
+     */
+  display: block;
 
 }
 
@@ -138,90 +183,93 @@
  * default behaviour is for `group__item`s to take up equal space.
  */
 [class~="flex-1"] {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 [class~="flex-2"] {
-	flex-grow: 2;
+  flex-grow: 2;
 }
 
 [class~="flex-3"] {
-	flex-grow: 3;
+  flex-grow: 3;
 }
 
 [class~="flex-4"] {
-	flex-grow: 4;
+  flex-grow: 4;
 }
 
 [class~="flex-5"] {
-	flex-grow: 5;
+  flex-grow: 5;
 }
 
 [class~="flex-6"] {
-	flex-grow: 6;
+  flex-grow: 6;
 }
 
 [class~="flex-7"] {
-	flex-grow: 7;
+  flex-grow: 7;
 }
 
 [class~="flex-8"] {
-	flex-grow: 8;
+  flex-grow: 8;
 }
 
 [class~="flex-9"] {
-	flex-grow: 9;
+  flex-grow: 9;
 }
 
 [class~="flex-10"] {
-	flex-grow: 10;
+  flex-grow: 10;
 }
 
 [class~="flex-11"] {
-	flex-grow: 11;
+  flex-grow: 11;
 }
 
 [class~="flex-12"] {
-	flex-grow: 12;
+  flex-grow: 12;
 }
 
 
 /**
  * Single purpose class modifiers for flex
+ *
+ * Double up on specificity to mke these are more important than the
+ * default group--row behaviour
  */
-.group__item--grow {
+.group__item--grow.group__item--grow {
 
-	flex-grow: 1;
-	flex-basis: auto;
-
-}
-
-.group__item--dont-grow {
-
-	flex-grow: 0;
-	flex-basis: auto;
-
-	// Change to new behaviour to allow items to not-shrink/not-grow
-	min-width: auto;
-	min-height: auto;
+  flex-grow: 1;
+  flex-basis: auto;
 
 }
 
-.group__item--shrink {
+.group__item--dont-grow.group__item--dont-grow {
 
-	flex-shrink: 1;
-	flex-basis: auto;
+  flex-grow: 0;
+  flex-basis: auto;
+
+  // Change to new behaviour to allow items to not-shrink/not-grow
+  min-width: auto;
+  min-height: auto;
 
 }
 
-.group__item--dont-shrink {
+.group__item--shrink.group__item--shrink {
 
-	flex-shrink: 0;
-	flex-basis: auto;
+  flex-shrink: 1;
+  flex-basis: auto;
 
-	// Change to new behaviour to allow items to not-shrink/not-grow
-	min-width: auto;
-	min-height: auto;
+}
+
+.group__item--dont-shrink.group__item--dont-shrink {
+
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  // Change to new behaviour to allow items to not-shrink/not-grow
+  min-width: auto;
+  min-height: auto;
 
 }
 
@@ -233,7 +281,7 @@
  */
 .group__item--basis {
 
-	flex-basis: 0%;
+  flex-basis: 0%;
 
 }
 
@@ -242,27 +290,68 @@
 \*------------------------------------*/
 .group__item--primary {
 
-	/*
+  /*
      * I would prefer this to be a golden split to get away from having the
      * usual 66/33 or 75/25 splits which most websites use. But the `nav`
      * elements in the Guide need more space so `2` it is.
      */
-	// flex-grow: 1.618;
-	flex-grow: 2;
+  // flex-grow: 1.618;
+  flex-grow: 2;
+
+}
+
+// Offset the secondary column to make its content appear more 'in line'
+// with the primary content.
+.group__item--secondary {
+
+  @include mq($breakpoint-desk) {
+
+    margin-top: 1em;
+
+  }
 
 }
 
 .group__item--primary + .group__item--secondary,
-.group__item--secondary + .group__item--primary {
+.group__item--secondary + .group__item--primary,
+.group__item--secondary.sort-last-from-lap {
 
-	/* Double the spacing for groups which have primary and secondary
+  /* Double the spacing for groups which have primary and secondary
      * items.
      */
-	@include mq($breakpoint-lap) {
+  @include mq($breakpoint-lap) {
 
-		margin-left: em($font-leading*2);
+    margin-left: em($font-leading*2);
 
-	}
+  }
+
+}
+
+.group__item--secondary.sort-first-from-lap {
+
+  /* Double the spacing for groups which have primary and secondary
+     * items.
+     */
+  @include mq($breakpoint-lap) {
+
+    margin-right: em($font-leading*2);
+    margin-left: 0;
+
+  }
+
+}
+
+
+.group__item--secondary.sort-last-from-lap + .group__item--primary {
+
+  /* Double the spacing for groups which have primary and secondary
+     * items.
+     */
+  @include mq($breakpoint-lap) {
+
+    margin-left: 0;
+
+  }
 
 }
 
@@ -274,7 +363,7 @@
 .group__item--primary:nth-last-child(-n+1):first-child,
 .group__item--primary:nth-last-child(-n+1):first-child ~ .group__item--primary {
 
-	max-width: 42em;
+  max-width: 42em;
 
 }
 
@@ -282,13 +371,13 @@
     #Sort flex-children
 \*------------------------------------*/
 .sort-first-from-lap {
-	@include mq($breakpoint-lap) {
-		order: -1;
-	}
+  @include mq($breakpoint-lap) {
+    order: -1;
+  }
 }
 
 .sort-last-from-lap {
-	@include mq($breakpoint-lap) {
-		order: 99;
-	}
+  @include mq($breakpoint-lap) {
+    order: 99;
+  }
 }

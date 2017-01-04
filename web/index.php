@@ -80,7 +80,7 @@
 
 				<h2 class="heading size--xxl">Elements</h2>
 
-				<p>Your content is contained within Elements. Elements are the
+				<p>Our content is contained within Elements. Elements are the
 					smallest building blocks of the
 					interface, such as buttons or links.</p>
 
@@ -199,9 +199,7 @@
 			<div class="group__item group__item--secondary">
 
 				<div class="lead">
-					<p>The web is 95% typography and copy, which is why 95% of
-						your time should be spent thinking about the
-						words you use to express our brand.</p>
+					<p>The web is 95% typography and copy, which is why we spend 95% of our time thinking about the words we use to express our brand.</p>
 				</div>
 
 			</div>
@@ -246,7 +244,7 @@
 
 				<h4 class="heading subheading size--xl">Tertiary</h4>
 
-				<p>The tertiary level of typography is the main text of your
+				<p>The tertiary level of typography is the main text of our
 					design. It is often some of the smallest type in the design,
 					but it needs to be large enough to be completely readable by
 					all potential users. The typeface should be simple and
@@ -332,18 +330,8 @@
 				<p>Consistency of color is critical to maintaining a coherent
 					family of products, and accurately
 					communicating the nature of specific content within an
-					application. For instance, a particular blue
-					background can indicate system-supplied information.</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Unde nulla quod et deleniti adipisci nemo
-					aspernatur illo. Temporibus deleniti consequatur non
-					veritatis, labore quisquam.</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Sit, ad? Laudantium repellendus ut ad,
-					perferendis officia similique neque architecto quas, a
-					laborum voluptate.</p>
+					application.</p>
+				<p>Colors also have a functional impact on readability, eye-strain, ability to attract attention.</p>
 
 				<h4 class="heading size--xl">Brand palette</h4>
 
@@ -503,9 +491,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The button section Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit. Vitae repellendus
-					voluptatibus voluptatum.</p>
+				<p>The Button element is used for submitting forms.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -595,9 +581,8 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The headings section is...</p>
-				<p>Keep your page title under 65 characters (including
-					spaces).</p>
+				<p>The Heading element is used for displaying our content's headings.</p>
+				<p>We keep our headings under 65 characters (including spaces) so that they can be displayed for search engine results.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -635,22 +620,17 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The lead section is used to summary the page your visitors
-					are about to read. On most templates this
-					follow the page heading.</p>
-				<p>Keep you lead concise and under 140 characters (including
-					spaces) because we use this for the page's
-					meta description as well, which allows search engines to
-					display the lead as part of the search
-					result.</p>
+				<p>The Lead element is used for displaying a summary of the page our visitors
+					is about to read. On most templates this follow the H1
+					heading.</p>
+				<p>We keep our lead concise and under 140 characters (including
+					spaces) so that it can be displayed for search engine results as the meta description.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
 
 				<div class="lead">
-					<p>At three o’clock precisely I was at Baker Street, but
-						Holmes had not yet returned. The landlady
-						informed me that he had left the house.</p>
+					<p>The Adventures of Sherlock Holmes is a compilation of twelve short stories that was published on 1892 and written by Sir Arthur Conan Doyle.</p>
 				</div>
 
 
@@ -668,26 +648,41 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The link element allows you to link content from other
-					places. Instead of writing, "Click here," you
-					should always write descriptive texts explaining the
-					destination. This way people aren't frustrated
-					by links leading them places they didn't want to go.</p>
+				<p>The Link element is used for displaying content that links from one place to another.</p>
+				<p>Instead of writing, &ldquo;Click here,&rdquo; we always write descriptive texts explaining the destination. This way people aren&rsquo;t frustrated by links leading them places they didn&rsquo;t want to go.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
 
+
+				<h5 class="size size--xl heading subheading">Example of good links</h5>
+
 				<p>
-					<a href="javascript:void(0)">Give Sherlock Holmes a call</a>
+					<a href="javascript:void(0)">Call Sherlock Holmes</a>
+				</p>
+				<p>
+					<a href="javascript:void(0)">Book your appointment now</a>
 				</p>
 				<p>
 					<a href="javascript:void(0)">
 						<svg class="icon">
 							<use xlink:href="#phone"/>
-						</svg>
-						<span>Give Sherlock Holmes a call</span>
-					</a>
+						</svg><span>Call Sherlock Holmes</span> </a>
 				</p>
+
+
+				<h5 class="size size--xl heading subheading">Example of bad links</h5>
+				<p>
+					<a href="javascript:void(0)">Click here</a>
+				</p>
+				<p>&ldquo;Click here,&rdquo; is instructive instead of descriptive and tells people what they should be doing instead of telling them where a link will take them.</p>
+
+				<p>
+					<a href="javascript:void(0)">Read more</a>
+				</p>
+				<p>&ldquo;Read more,&rdquo; is contextual to its surrounding copy and heading. People browsing using screen readers or other
+					<abbr title="assistive technology">AT</abbr> won&rsquo;t have that context and won&rsquo;t be able to know what, &ldquo;more,&rdquo; they&rsquo;re about to read.</p>
+
 
 			</div>
 		</div>
@@ -704,7 +699,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>Paragraph</p>
+				<p>The Paragraph elements are used for displaying our content. The ideal standard is no more than 20 words per sentence, five sentences per paragraph.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -743,7 +738,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>Text-level</p>
+				<p>The Text-level elements are used for displaying content which needs strong importance (<code>strong</code>) or stressed emphasis (<code>em</code>).</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -811,10 +806,8 @@
 
 				<p>The banner section lets you feature a prominent
 					call-to-action and establish the brand tone.</p>
-				<p><em>Numerous studies have proven that people ignore these
-						when used in carousels which is why we
-						recommend using static imagery with a strong
-						message.</em></p>
+				<p>Numerous studies have proven that people ignore content
+						when used in carousels which is why we use a static image with a strong message.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -866,8 +859,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The breadcrumbs section shows your visitors where they are
-					within the hierarchy of your website.</p>
+				<p>The Breadcrumbs section is used for displaying where our visitors are, within the hierarchy of our website.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -933,7 +925,7 @@
 					<h2 class="h4">Sherlock Holmes</h2>
 					<p>At three o’clock precisely I was at Baker Street, but
 						Holmes had not yet returned.</p>
-					<a href="link" class="button button--accent">
+					<a href="link" class="button button--subtle">
 						<span>Call Mrs. Hudson today</span>
 						<svg class="icon">
 							<use xlink:href="#arrow-right"/>
@@ -941,11 +933,11 @@
 					</a>
 				</figure>
 
-				<figure class="cta bg--secondary padding--surround">
+				<figure class="cta bg--subtle padding--surround">
 					<h2 class="h4">Sherlock Holmes</h2>
 					<p>At three o’clock precisely I was at Baker Street, but
 						Holmes had not yet returned.</p>
-					<a href="link" class="button button--accent">
+					<a href="link" class="button button--secondary">
 						<span>Call Mrs. Hudson today</span>
 						<svg class="icon">
 							<use xlink:href="#arrow-right"/>
@@ -969,20 +961,17 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The callout section is useful for calling of trivia or
-					interesting information.</p>
+				<p>The Callout section is used for displaying emphasised groups of content.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
 
 				<figure class="callout">
 					<figcaption>
-						<h2 class="h4">Title</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing
-							elit. Dolore, placeat exercitationem
-							neque, dolorem ipsam ullam deserunt. Soluta hic
-							atque sint nesciunt maxime enim
-							voluptates?</p>
+						<h2 class="size--l heading">The Adventure of the
+							Engineer’s Thumb</h2>
+						<p>At three o’clock precisely I was at Baker Street,
+							but Holmes had not yet returned.</p>
 					</figcaption>
 				</figure>
 
@@ -1002,14 +991,14 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The collapsible section is useful when there is so much
-					content that contextually revealing it by
-					your visitors request makes more sense. E.g. A <abbr
-						title="Frequently asked questions">FAQs</abbr>
-					section.</p>
+				<p>The Collapsible section is used for displaying groups of content that would otherwise appear daunting.</p>
+				<p>We use jQuery to add the interactive parts and the ARIA attributes.</p>
+				<p>We are careful and don&rsquo;t overuse the Collapsible section, as it increases interaction cost, cognitive load and forces our visitors to activate options that may not be the information they are looking for.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
+
+			<h5 class="heading size size--xl subheading">Collapsibles with Javascript</h5>
 
 				<!-- Collapsibles wrapper -->
 				<div class="collapsibles js-collapsibles">
@@ -1058,6 +1047,58 @@
 				</div>
 				<!-- / Collapsibles wrapper -->
 
+
+				<h5 class="heading size size--xl subheading">Collapsibles without Javascript</h5>
+
+				<!-- Collapsibles wrapper -->
+				<div class="collapsibles">
+
+					<!-- Section: collapsible: item -->
+					<h3 class="heading size--xl">A
+						Scandal in Bohemia</h3>
+					<div class="">
+						<p>To Sherlock Holmes she is always the woman. I have
+							seldom heard him mention her under any
+							other name. In his eyes she eclipses and
+							predominates the whole of her sex. It was not that
+							he felt any emotion akin to love for Irene
+							Adler.</p>
+						<p>All emotions, and that one particularly, were
+							abhorrent to his cold, precise but admirably
+							balanced mind. He was, I take it, the most perfect
+							reasoning and observing machine that the
+							world has seen, but as a lover he would have placed
+							himself in a false position. He never
+							spoke of the softer passions, save with a gibe and a
+							sneer.</p>
+					</div>
+					<!-- / Section: collapsible: item -->
+
+					<!-- Section: collapsible: item -->
+					<h3 class="heading size--xl">The
+						Red-Headed League</h3>
+					<div class="">
+						<p>At three o’clock precisely I was at Baker Street, but
+							Holmes had not yet returned. The
+							landlady informed me that he had left the house
+							shortly after eight o’clock in the morning.
+							I sat down beside the fire, however, with the
+							intention of awaiting him, however long he
+							might be.</p>
+						<p>I was already deeply interested in his inquiry, for,
+							though it was surrounded by none of the
+							grim and strange features which were associated with
+							the two crimes which I have already
+							recorded, still, the nature of the case and the
+							exalted station of his client gave it a
+							character of its own.</p>
+					</div>
+					<!-- / Section: collapsible: item -->
+				</div>
+				<!-- / Collapsibles wrapper -->
+
+
+
 			</div>
 		</div>
 
@@ -1073,8 +1114,8 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The column section is useful when Lorem ipsum dolor sit amet,
-					consectetur adipisicing elit. Nam.</p>
+				<p>The Column section is used for displaying content in columns.</p>
+				<p>We are careful and only use the Column section when it helps readability as people struggle to read information that isn&rsquo;t linear.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1125,8 +1166,12 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The form section is used to collect information from your
+				<p>The Form section is used for displaying form fields which lets us collect information from our
 					visitors.</p>
+				<p>We use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, JavaScript plugin, to enhance picking a date from a calendar.</p>
+				<p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
+				<p>Using Pikaday and Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
+
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1166,7 +1211,7 @@
 
 					<div class="field-group">
 						<label for="guide-form-field-3" class="field-label">
-							Name <small>(Required)</small>
+							Date of birth <small>(Required)</small>
 						</label> <input type="date"
 						                class="field-input field-input--date js-pikaday"
 						                name="guide-form-field-3"
@@ -1197,7 +1242,7 @@
 
 					<div class="field-group">
 						<label for="textarea-input" class="field-label">
-							Textarea input
+							Textarea input <small>(Required)</small>
 							<div class="field-description">
 								Please explain the problem you are having, we&rsquo;ll come up with the solution
 							</div>
@@ -1264,7 +1309,7 @@
 							       required
 							       aria-invalid="false">
 							<span class="radio-label">
-								Checked radio option.
+								Radio option.
 							</span> </label>
 
 						<label for="radio-input2">
@@ -1291,8 +1336,7 @@
 						</legend>
 
 						<div class="field-description">
-							Optional helpful information lorem ipsum dolor sit
-							amet, consectetur adipisicing.
+							We understand that different people enjoy books in different ways, which is why we&rsquo;re giving you lots of options.
 						</div>
 
 						<!-- Wrapper for labels -->
@@ -1308,9 +1352,8 @@
 									required
 									aria-invalid="false">
 								<div class="segmented-label">
-									<h2 class="size--l heading">Default option</h2>
-									<div class="no-margin">Option description.
-									</div>
+									<h2 class="size--l heading">Digital download</h2>
+									<div class="no-margin">Download The Adventure of the Engineer’s Thumb in less than 5 minutes.</div>
 								</div>
 							</label>
 
@@ -1322,9 +1365,8 @@
 									type="radio"
 									checked>
 								<div class="segmented-label">
-									<h2 class="size--l heading">Checked option</h2>
-									<div class="no-margin">Option description.
-									</div>
+									<h2 class="size--l heading">Hardcover</h2>
+									<div class="no-margin">We&rsquo;ll send you the hardcover of The Adventure of the Engineer’s Thumb, expect it in 2 weeks.</div>
 								</div>
 							</label>
 
@@ -1333,25 +1375,10 @@
 									name="segmented-options"
 									class="input--radio"
 									value="data-value"
-									type="radio"
-									disabled>
-								<div class="segmented-label">
-									<h2 class="size--l heading">Disabled option</h2>
-									<div class="no-margin">Option description.
-									</div>
-								</div>
-							</label>
-
-							<label for="segmented-option-4"> <input
-									id="segmented-option-4"
-									name="segmented-options"
-									class="input--radio"
-									value="data-value"
 									type="radio">
 								<div class="segmented-label">
-									<h2 class="size--l heading">Default option</h2>
-									<div class="no-margin">Option description.
-									</div>
+									<h2 class="size--l heading">Digital + Hardcover</h2>
+									<div class="no-margin">Download The Adventure of the Engineer’s Thumb today and get the hardcover book in 2 weeks.</div>
 								</div>
 							</label>
 
@@ -1363,7 +1390,7 @@
 
 
 					<div class="field-group">
-						<button class="button button--primary">Action-contextual
+						<button type="submit" class="button button--primary size--xl">Action-contextual
 							label, i.e. not 'Submit'
 						</button>
 					</div>
@@ -1390,9 +1417,9 @@
 									Search
 								</label>
 								<input type="text"
-								       placeholder="E.g. Example of a popular search people make">
+								       placeholder="E.g. The Noble Bachelor">
 								<div class="input-group__button">
-									<button class="button button--primary">
+									<button type="submit" class="button button--primary">
 										Search
 									</button>
 								</div>
@@ -1419,8 +1446,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The list section is used to create a list of content, be it
-					links or benefits.</p>
+				<p>The List section is used for displaying unordered and ordered lists of content. The definition list is used for displaying terms and their definition.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1465,6 +1491,9 @@
 
 
 				<h5 class="h4">Ordered list</h5>
+
+				<p>Ordered lists are automatically numbered using <abbr
+						title="Cascading Style Sheets">CSS</abbr>.</p>
 
 				<ol>
 					<li>A Scandal in Bohemia</li>
@@ -1524,9 +1553,9 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The media section is an image with descriptive copy. <strong>When
-						including an image, a descriptive
-						textual version also needs to be added.</strong></p>
+				<p>The Media section is used for displaying is an image with optional copy.</p>
+				<p><strong>We always including an alternative text for the image.</strong>. If the image can&rsquo;t be displayed, e.g. it might fail to load or our visitors are using
+					<abbr title="Assistive technology">AT</abbr> such as a screen reader, this text is used to provide alternative information to our visitors.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1538,7 +1567,7 @@
 				<figure class="media">
 					<img class="media__image"
 					     src="/assets/images/sherlock-16-9.jpg"
-					     alt="Descriptive text.">
+					     alt="Sherlock Holmes and Dr. Watson sitting next to each in armchairs, deep in thought.">
 					<figcaption class="media__caption">
 						<h3 class="h4">Sherlock Holmes</h3>
 						<p>At three o’clock precisely I was at Baker Street, but
@@ -1605,9 +1634,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The metadata section displays information about the content
-					on the page, i.e. tag, author and time
-					stamp information on a news story.</p>
+				<p>The Metadata section is used for displaying information about other data, e.g. a timestamp for a news item.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1642,7 +1669,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The navigation section</p>
+				<p>The Navigation section is used for displaying primary and secondary navigation links.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1711,10 +1738,8 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The note section is copy which needs more attention. Reserve
-					the use of notes sections for really
-					important information which benefits your visitors. If
-					abused, they will ignore it.</p>
+				<p>The Note section is used for displaying copy which needs more attention.</p>
+				<p>We reserve the use of Notes sections for really important information which benefits our visitors. If abused, they will ignore it.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1771,7 +1796,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The pager section is links to previous and next items.</p>
+				<p>The Pager section is used for displaying links to previous and next pages.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1812,9 +1837,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The pagination section is a list of links to jump to pages
-					lorem ipsum dolor sit amet, consectetur
-					adipisicing..</p>
+				<p>The Pagination section is used for displaying links to a sequence of pages.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1886,10 +1909,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The quote section is copy with attribution. Optionally, you
-					can include an image. <strong>When
-						including an image, a descriptive textual version also
-						needs to be added.</strong></p>
+				<p>The Quote section is used for displaying content which is quoted from another source.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1926,8 +1946,9 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The share section allows your visitors to share the page they
+				<p>The Share section is used for displaying a list of social sharing links, allowing our visitors to easily share the page they
 					are viewing.</p>
+				<p>People also copy and paste the URL from the address bar so we make sure our URLs are short, memorable, hackable and people-centered.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -2051,9 +2072,8 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The table section Lorem ipsum dolor sit amet, consectetur
-					adipisicing elit. Et tempore odio,
-					provident..</p>
+				<p>The Table section is used for displaying tabular data.</p>
+				<p>We use <a href="https://www.filamentgroup.com/lab/tablesaw.html">Tablesaw</a>, a group of jQuery plugins, to manage tables in a responsive layout.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -2123,14 +2143,16 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The tab section is a grouped content.</p>
+			<p>The Tabs section is used for displaying grouped content. We use Tabs to alternate between views within the same context, not to navigate to different areas.</p>
+			<p>We use jQuery to add the interactive parts and the ARIA attributes.</p>
+			<p>We are careful and don&rsquo;t overuse the Tabs sections. If people need to compare the info behind different tabs, then it&rsquo;s better to put everything on one big page.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
 
 
 
-				<h5 class="heading size size--xl subheading">With JS</h5>
+				<h5 class="heading size size--xl subheading">Tabs with Javascript</h5>
 
 				<!-- Accessible tabs -->
 				<div class="js-tab-interface tab-interface">
@@ -2182,7 +2204,7 @@
 				<!-- / Accessible tabs -->
 
 
-				<h5 class="heading size size--xl subheading">Without JS</h5>
+				<h5 class="heading size size--xl subheading">Tabs without Javascript</h5>
 
 				<!-- Accessible tabs -->
 				<div class="tab-interface">
@@ -2251,7 +2273,7 @@
 			<div class="group__item group__item--secondary">
 
 
-				<p>The taxonomy section is a list of related links through your
+				<p>The Taxonomy section is used for displaying a list of related links through our
 					taxonomies.</p>
 
 			</div>
@@ -2282,7 +2304,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The video section is an image with descriptive copy.</p>
+				<p>The Video section is used for displaying moving visual images. It supports third-party content from e.g. Youtube or Vimeo.</p>
 
 			</div>
 			<div class="group__item group__item--primary">

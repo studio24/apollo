@@ -122,7 +122,7 @@ $(function () {
 
 
 
-    /* Parsey form validation
+    /* Parsley form validation
      -----------------------------------------------------------------------------------------
      */
     var $form = $('.js-validate-form');
@@ -194,7 +194,7 @@ $(function () {
 
         // Add the button inside `.js-collapsible-heading` so both the heading and button semanics are read
 
-        $this.wrapInner('<button aria-expanded="false" aria-controls="' + id + '">');
+        $this.wrapInner('<button aria-expanded="false" type="button" aria-controls="' + id + '">');
         $this.addClass('collapsible-heading');
         var button = $this.children('button');
 

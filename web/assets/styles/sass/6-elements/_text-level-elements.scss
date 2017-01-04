@@ -35,8 +35,8 @@ strong,
 
 em {
 
-	// This is 4.5:1 against #fff and the max desaturated grey we can have and
-	// still be accessible.
-	color: luma(40);
+	// luma(40) is 4.5:1 against #fff and the max desaturated grey we can have
+	// and still be accessible.
+	color: luma(35);
 
 }

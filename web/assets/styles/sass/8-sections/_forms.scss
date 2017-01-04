@@ -625,6 +625,8 @@ input[required]:valid {
 
     position: relative;
 
+    flex: 1 0 33.3333%;
+
     // Fix IE11 not wrapping long texts.
     // max-width: 15em;
 
@@ -633,13 +635,13 @@ input[required]:valid {
 
     @include mq($breakpoint-lap) {
 
-        width: 50%;
+        //width: 50%;
 
     }
 
     @include mq($breakpoint-desk) {
 
-        width: 25%;
+        //width: 25%;
 
     }
 
@@ -826,8 +828,9 @@ input[required]:valid {
     + select,
     + textarea {
 
-        margin-top: 0;
-        border-radius: 0 0 0.25em 0.25em;
+        //margin-top: 0;
+        border-radius: 0.25em 0.25em 0 0;
+
 
     }
 
@@ -862,10 +865,12 @@ input[required]:valid {
 
 .field-error:not(:empty) {
 
+    list-style-type: none;
+
     background-color: $input-error-color;
     color: contrast($input-error-color);
 
     padding: 1em;
-    border-radius: 0.25em 0.25em 0 0;
+    border-radius: 0 0 0.25em 0.25em;
 
 }
