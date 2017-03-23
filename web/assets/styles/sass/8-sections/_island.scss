@@ -30,8 +30,8 @@
      * Always show that there's more content. Gives our design/content more
      * affordance
      */
-    min-height: 90%;
-    min-height: 90vh;
+    min-height: 75%;
+    min-height: 75vh;
 
     // Temp commented out, seemed buggy in IE11
     // display: flex;

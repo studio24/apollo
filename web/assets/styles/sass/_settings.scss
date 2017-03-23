@@ -59,14 +59,14 @@ $font-size:							16;
 $font-leading:						24;
 $font-style:						normal;
 $font-weight:						400;
-$font-family:						Georgia, serif;
+$font-family:						'Proza Libre', sans-serif;
 
 $font-scale--default:               1.125;
 $font-scale--larger:                1.2;
 
 
 
-$heading-family:					Helvetica, Arial, sans-serif;
+$heading-family:					'Playfair Display', serif;
 $heading-weight:					700;
 $heading-style:						normal;
 
@@ -83,7 +83,7 @@ $emphasis-family:					$font-family;
 \*------------------------------------*/
 
 // Brand colours
-$rhino-blue:                            #27354F;
+$rhino-blue:                            hsl(219, 34%, 23%);
 $blaze-orange:                          #f60;
 $orange-peel:                          	#f90;
 $jacarta-purple:                        #512467;
@@ -96,6 +96,7 @@ $mercury-grey:                          #e5e5e5;
 // System
 $pomegranate-red:                       #f04618;
 $candlelight-yellow:                    #fed41d;
+$apple-green:							#2ECC40;
 
 /*
  * Sass variables
@@ -112,12 +113,13 @@ $secondary-color:                       $blaze-orange;
 $tertiary-color:                        $orange-peel;
 $accent-color:                          $jacarta-purple;
 
-$link-color:                            blue;
-$link-color--visited:                   purple;
-$link-color--hover:                     red;
+$link-color:                            hsl(219, 44%, 33%);
+$link-color--visited:                   hsl(219, 34%, 23%);
+$link-color--hover:                     hsl(219, 54%, 44%);
 
 $subtle-color:                          $mercury-grey;
 $alert-color:                           $pomegranate-red;
+$success-color:							$apple-green;
 $input-error-color:                     $candlelight-yellow;
 $focus-color:							$blaze-orange;
 

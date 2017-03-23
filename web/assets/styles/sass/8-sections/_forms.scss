@@ -52,6 +52,8 @@ body:not(:-moz-handler-blocked) fieldset {
     padding: 1em;
     border-radius: 0.5em;
 
+    position: relative;
+
 }
 
 /*------------------------------------*\
@@ -183,6 +185,11 @@ input[required]:valid {
 /*------------------------------------*\
     #Field grouping
 \*------------------------------------*/
+.field-group:not(.group__item) + .field-group:not(.group__item) {
+
+    margin-top: 2em;
+
+}
 .field-group {
 
     // margin-bottom: 1.5em;
@@ -609,7 +616,7 @@ input[required]:valid {
 
 }
 
-.segmented-group input {
+.segmented-group .input--radio {
 
     /* Hide the actual radio */
     position: absolute;
@@ -618,7 +625,7 @@ input[required]:valid {
 }
 
 // Wrapper for input and div.segmented-label
-.segmented-group label {
+.segmented-group > label {
 
     display: block;
     padding: 1.5em;
@@ -632,6 +639,13 @@ input[required]:valid {
 
     /* Hide the real radio inputs */
     overflow: hidden;
+
+    // Make it so that all options after 3 becomes secondary giving them less affordance and emphasis
+    &:nth-child(1n+4) {
+
+        flex: 1 0 0%;
+
+    }
 
     @include mq($breakpoint-lap) {
 
@@ -647,7 +661,7 @@ input[required]:valid {
 
 }
 
-* + .segmented-group label {
+* + .segmented-group > label {
     /**
      * Add more space between rows of segmented options, this makes it easier
      * for the eye to scan and read the options.

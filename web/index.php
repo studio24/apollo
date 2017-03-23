@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="/assets/styles/styles.css" type="text/css"
 	      media="screen"/>
 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Proza+Libre:400,400i,600" rel="stylesheet">
+
 </head>
 
 <?php require_once( $_SERVER['DOCUMENT_ROOT'] . '/_includes/scripts__header.html' ); ?>
@@ -37,7 +39,7 @@
 				of truth.</p>
 
 			<p>This guide introduces and reinforces an understanding of the
-				elements, sections and templates that make a
+				elements, components and templates that make a
 				website through a shared vocabulary which is used for internal
 				as well as client communcation.</p>
 
@@ -96,10 +98,10 @@
 			</div>
 			<div class="group__item">
 
-				<h2 class="heading size--xxl">Sections</h2>
+				<h2 class="heading size--xxl">Components</h2>
 
-				<p>Sections are groups of Elements (and sometimes Sections)
-					joined together to form distinct section of
+				<p>Components are groups of Elements (and sometimes Components)
+					joined together to form distinct component of
 					an interface, for example navigation or comment blocks.</p>
 
 				<ul class="clean-list clean-list--compact">
@@ -130,13 +132,14 @@
 
 				<h2 class="heading size--xxl">Templates</h2>
 
-				<p>Groups of Sections are called Templates. Most pages are
+				<p>Groups of Components are called Templates. Most pages are
 					created by choosing a Templates, some allow
-					you to choose Sections as well and then completing the page
+					you to choose Components as well and then completing the page
 					with content.</p>
 
 				<ul class="clean-list clean-list--compact">
 					<li><a href="#t-example-template">Example template</a></li>
+					<li><a href="donate.php">Donation template</a></li>
 					<!-- 					<li><a href="#t-accommodation-details">Accommodation details</a></li>
 										<li><a href="#t-contact">Contact</a></li>
 										<li><a href="#t-course-landing">Course landing</a></li>
@@ -770,14 +773,14 @@
 	<!-- / Elements -------------------------------------------------- -->
 
 
-	<!-- Sections intro -------------------------------------------------- -->
+	<!-- Components intro -------------------------------------------------- -->
 	<section class="island island--fullpage">
 		<div class="group">
 			<div class="group__item group__item--primary">
 
-				<h1 class="heading size--xxxl">Sections</h1>
+				<h1 class="heading size--xxxl">Components</h1>
 				<div class="lead">
-					<p>Sections are groups of Elements (and sometimes Sections)
+					<p>Components are groups of Elements (and sometimes Components)
 						joined together to form distinct section
 						of an interface, for example navigation or comment
 						blocks.</p>
@@ -786,17 +789,17 @@
 			</div>
 		</div>
 	</section>
-	<!-- / Sections intro -------------------------------------------------- -->
+	<!-- / Components intro -------------------------------------------------- -->
 
 
-	<!-- Sections -------------------------------------------------- -->
+	<!-- Components -------------------------------------------------- -->
 	<section>
 
 
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="banner" class="heading size--xl no-margin">Banner</h4>
 
 			</div>
@@ -804,7 +807,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The banner section lets you feature a prominent
+				<p>The banner component lets you feature a prominent
 					call-to-action and establish the brand tone.</p>
 				<p>Numerous studies have proven that people ignore content
 						when used in carousels which is why we use a static image with a strong message.</p>
@@ -850,7 +853,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="breadcrumbs" class="heading size--xl no-margin">
 					Breadcrumbs &#10004;</h4>
 
@@ -859,7 +862,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Breadcrumbs section is used for displaying where our visitors are, within the hierarchy of our website.</p>
+				<p>The Breadcrumbs component is used for displaying where our visitors are, within the hierarchy of our website.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -905,7 +908,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="call-to-actions" class="heading size--xl no-margin">
 					Call-to-actions</h4>
 
@@ -914,7 +917,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The call-to-action section is used to draw your visitors
+				<p>The call-to-action component is used to draw your visitors
 					attention and encourage them to act on your
 					message.</p>
 
@@ -952,7 +955,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="callouts" class="heading size--xl no-margin">
 					Callouts</h4>
 
@@ -961,7 +964,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Callout section is used for displaying emphasised groups of content.</p>
+				<p>The Callout component is used for displaying emphasised groups of content.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -982,7 +985,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="collapsibles" class="heading size--xl no-margin">
 					Collapsibles &#10004;</h4>
 
@@ -991,9 +994,9 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Collapsible section is used for displaying groups of content that would otherwise appear daunting.</p>
+				<p>The Collapsible component is used for displaying groups of content that would otherwise appear daunting.</p>
 				<p>We use jQuery to add the interactive parts and the ARIA attributes.</p>
-				<p>We are careful and don&rsquo;t overuse the Collapsible section, as it increases interaction cost, cognitive load and forces our visitors to activate options that may not be the information they are looking for.</p>
+				<p>We are careful and don&rsquo;t overuse the Collapsible component, as it increases interaction cost, cognitive load and forces our visitors to activate options that may not be the information they are looking for.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1106,7 +1109,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="columns" class="heading size--xl no-margin">Columns</h4>
 
 			</div>
@@ -1114,8 +1117,8 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Column section is used for displaying content in columns.</p>
-				<p>We are careful and only use the Column section when it helps readability as people struggle to read information that isn&rsquo;t linear.</p>
+				<p>The Column component is used for displaying content in columns.</p>
+				<p>We are careful and only use the Column component when it helps readability as people struggle to read information that isn&rsquo;t linear.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1158,7 +1161,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="forms" class="heading size--xl no-margin">Forms</h4>
 
 			</div>
@@ -1166,7 +1169,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Form section is used for displaying form fields which lets us collect information from our
+				<p>The Form component is used for displaying form fields which lets us collect information from our
 					visitors.</p>
 				<p>We use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, JavaScript plugin, to enhance picking a date from a calendar.</p>
 				<p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
@@ -1400,7 +1403,7 @@
 
 
 
-				<h5 class="size--l subheading">Search section</h5>
+				<h5 class="size--l subheading">Search component</h5>
 
 				<form action="">
 
@@ -1438,7 +1441,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="lists" class="heading size--xl no-margin">Lists</h4>
 
 			</div>
@@ -1446,7 +1449,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The List section is used for displaying unordered and ordered lists of content. The definition list is used for displaying terms and their definition.</p>
+				<p>The List component is used for displaying unordered and ordered lists of content. The definition list is used for displaying terms and their definition.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1545,7 +1548,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="media" class="heading size--xl no-margin">Media</h4>
 
 			</div>
@@ -1553,7 +1556,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Media section is used for displaying is an image with optional copy.</p>
+				<p>The Media component is used for displaying is an image with optional copy.</p>
 				<p><strong>We always including an alternative text for the image.</strong>. If the image can&rsquo;t be displayed, e.g. it might fail to load or our visitors are using
 					<abbr title="Assistive technology">AT</abbr> such as a screen reader, this text is used to provide alternative information to our visitors.</p>
 
@@ -1625,7 +1628,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="metadata" class="heading size--xl no-margin">
 					Metadata</h4>
 
@@ -1634,7 +1637,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Metadata section is used for displaying information about other data, e.g. a timestamp for a news item.</p>
+				<p>The Metadata component is used for displaying information about other data, e.g. a timestamp for a news item.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1660,7 +1663,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="navigation" class="heading size--xl no-margin">
 					Navigation</h4>
 
@@ -1669,7 +1672,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Navigation section is used for displaying primary and secondary navigation links.</p>
+				<p>The Navigation component is used for displaying primary and secondary navigation links.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1729,7 +1732,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="notes" class="heading size--xl no-margin">Notes
 					&#10004;</h4>
 
@@ -1738,8 +1741,8 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Note section is used for displaying copy which needs more attention.</p>
-				<p>We reserve the use of Notes sections for really important information which benefits our visitors. If abused, they will ignore it.</p>
+				<p>The Note component is used for displaying copy which needs more attention.</p>
+				<p>We reserve the use of Notes components for really important information which benefits our visitors. If abused, they will ignore it.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1787,7 +1790,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="pager" class="heading size--xl no-margin">Pager
 					&#10004;</h4>
 
@@ -1796,7 +1799,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Pager section is used for displaying links to previous and next pages.</p>
+				<p>The Pager component is used for displaying links to previous and next pages.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1828,7 +1831,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="pagination" class="heading size--xl no-margin">
 					Pagination &#10004;</h4>
 
@@ -1837,7 +1840,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Pagination section is used for displaying links to a sequence of pages.</p>
+				<p>The Pagination component is used for displaying links to a sequence of pages.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1901,7 +1904,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="quotes" class="heading size--xl no-margin">Quotes</h4>
 
 			</div>
@@ -1909,7 +1912,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Quote section is used for displaying content which is quoted from another source.</p>
+				<p>The Quote component is used for displaying content which is quoted from another source.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -1938,7 +1941,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="share" class="heading size--xl no-margin">Share</h4>
 
 			</div>
@@ -1946,7 +1949,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Share section is used for displaying a list of social sharing links, allowing our visitors to easily share the page they
+				<p>The Share component is used for displaying a list of social sharing links, allowing our visitors to easily share the page they
 					are viewing.</p>
 				<p>People also copy and paste the URL from the address bar so we make sure our URLs are short, memorable, hackable and people-centered.</p>
 
@@ -2064,7 +2067,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="tables" class="heading size--xl no-margin">Tables</h4>
 
 			</div>
@@ -2072,7 +2075,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Table section is used for displaying tabular data.</p>
+				<p>The Table component is used for displaying tabular data.</p>
 				<p>We use <a href="https://www.filamentgroup.com/lab/tablesaw.html">Tablesaw</a>, a group of jQuery plugins, to manage tables in a responsive layout.</p>
 
 			</div>
@@ -2134,7 +2137,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="tabs" class="heading size--xl no-margin">Tabs
 					&#10004;</h4>
 
@@ -2143,9 +2146,9 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-			<p>The Tabs section is used for displaying grouped content. We use Tabs to alternate between views within the same context, not to navigate to different areas.</p>
+			<p>The Tabs component is used for displaying grouped content. We use Tabs to alternate between views within the same context, not to navigate to different areas.</p>
 			<p>We use jQuery to add the interactive parts and the ARIA attributes.</p>
-			<p>We are careful and don&rsquo;t overuse the Tabs sections. If people need to compare the info behind different tabs, then it&rsquo;s better to put everything on one big page.</p>
+			<p>We are careful and don&rsquo;t overuse the Tabs components. If people need to compare the info behind different tabs, then it&rsquo;s better to put everything on one big page.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -2263,7 +2266,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="taxonomies" class="heading size--xl no-margin">
 					Taxonomies</h4>
 
@@ -2273,7 +2276,7 @@
 			<div class="group__item group__item--secondary">
 
 
-				<p>The Taxonomy section is used for displaying a list of related links through our
+				<p>The Taxonomy component is used for displaying a list of related links through our
 					taxonomies.</p>
 
 			</div>
@@ -2296,7 +2299,7 @@
 		<div class="group">
 			<div class="group__item">
 
-				<h3 class="small-caps">Sections</h3>
+				<h3 class="small-caps">Components</h3>
 				<h4 id="videos" class="heading size--xl no-margin">Videos</h4>
 
 			</div>
@@ -2304,7 +2307,7 @@
 		<div class="group">
 			<div class="group__item group__item--secondary">
 
-				<p>The Video section is used for displaying moving visual images. It supports third-party content from e.g. Youtube or Vimeo.</p>
+				<p>The Video component is used for displaying moving visual images. It supports third-party content from e.g. Youtube or Vimeo.</p>
 
 			</div>
 			<div class="group__item group__item--primary">
@@ -2320,7 +2323,7 @@
 		</div>
 
 	</section>
-	<!-- / Sections -------------------------------------------------- -->
+	<!-- / Components -------------------------------------------------- -->
 
 
 	<!-- Templates intro -------------------------------------------------- -->
@@ -2330,9 +2333,9 @@
 
 				<h1 class="heading size--xxxl">Templates</h1>
 				<div class="lead">
-					<p>Groups of Sections are called Templates. Most pages are
+					<p>Groups of Components are called Templates. Most pages are
 						created by choosing a Templates, some
-						allow you to choose Sections as well and then completing
+						allow you to choose Components as well and then completing
 						the page with content.</p>
 				</div>
 

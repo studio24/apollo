@@ -13,14 +13,15 @@
 
 	display: inline-block;
 
-	padding: 0.5em 1em;
+	padding: em(11) em(16) em(10) em(16);
 	letter-spacing: 0.015em;
 	font-weight: $font-weight;
 
 	border-radius: 0.2em;
 
 	// Give button a smidge more affordance
-	box-shadow: inset 0 2px 0 rgba($white, 0.2);
+	box-shadow: inset 0 em(2) 0 rgba($white, 0.2),
+				inset 0 em(- 2) 0 rgba($black, 0.2);
 
 }
 
@@ -154,6 +155,30 @@ input[type="submit"].button {
 
 		background-color: deviate($subtle-color);
 		color: contrast(deviate($subtle-color));
+
+	}
+
+}
+
+
+.button--success.button--success {
+
+	background-color: $success-color;
+	color: contrast($success-color);
+
+	&:visited {
+
+		background-color: $success-color;
+		color: contrast($success-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($success-color);
+		color: contrast(deviate($success-color));
 
 	}
 

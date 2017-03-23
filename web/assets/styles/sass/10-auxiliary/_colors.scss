@@ -95,6 +95,15 @@
 
     }
 
+    &--success {
+
+        background-color: $success-color;
+        color: contrast($success-color);
+
+        @include links($success-color);
+
+    }
+
 }
 
 .color {
@@ -111,5 +120,7 @@
     &--accent {
         color: $accent-color;
     }
-
+    &--success {
+        color: $success-color;
+    }
 }

@@ -173,6 +173,18 @@ $(function () {
 
 
 
+    /* Oliver | Credit card enhancement
+     -----------------------------------------------------------------------------------------
+     */
+    var $creditcard = $('.js-credit-card');
+    var $paymentFields = $('.js-payment-fields input');
+
+    $paymentFields.focus(function(){
+
+        newClass = $(this).attr('name');
+        $creditcard.attr('data-focussed', newClass);
+    });
+
     /* Progressive collapsibles
      -----------------------------------------------------------------------------------------
      */

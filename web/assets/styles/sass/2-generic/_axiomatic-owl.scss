@@ -17,22 +17,19 @@
 
 }
 
+.margin--default {
+
+	margin-top: 1em !important;
+
+}
+
 .visuallyhidden + * {
 
 	margin-top: 0;
 
 }
 
-* + li,
-.margin--half {
+* + li { margin-top: 0.5em; }
 
-	margin-top: 0.5em;
-
-}
-
-
-.margin--third {
-
-	margin-top: 0.3333em;
-
-}
+.margin--half {margin-top: 0.5em !important; }
+.margin--third { margin-top: 0.3333em !important; }

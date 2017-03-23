@@ -7,7 +7,7 @@
 .swatches {
 
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 
 	// font-size: 0.88em;
 	//
@@ -22,16 +22,16 @@
 
 	margin-top: 0;
 
-	// display: block;
+	 display: block;
 
-	flex: 1 0 25%;
+	//flex: 1 0 25%;
 	// width: 25%;
 	// width: calc(25% - 0.75em);
 	margin-bottom: 1.25em;
 
 	padding: 1em;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
+	//margin-left: 0.5em;
+	//margin-right: 0.5em;
 
 	border: 1px solid luma(80);
 	box-shadow: 0 0.25em 0.25em -0.25em rgba($black, 0.1);
@@ -56,17 +56,20 @@
 
 	width: 100%;
 	width: calc(100% + 2em);
-	height: 4em;
+	width: 50%;
+	height: 3em;
 
 	// border-radius: 50%;
 
-	// position: absolute;
-	// top: 1em;
-	// right: 1em;
+	 position: absolute;
+	 top: 1em;
+	 right: 1em;
 
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	transform: skew(-12.5deg, -12.5deg);
 
-	margin: -1em -1em 1em -1em;
+	//border-bottom: 1px solid rgba(0,0,0,0.1);
+
+	//margin: -1em -1em 1em -1em;
 
 }
 

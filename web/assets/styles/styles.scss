@@ -83,6 +83,7 @@
     Add third-party plugins here.
 \*------------------------------------*/
 @import "sass/7-plugins/brandcolors";
+@import "sass/7-plugins/pikaday";
 
 
 
@@ -120,6 +121,9 @@
 @import "sass/8-sections/tables";
 @import "sass/8-sections/taxonomies";
 @import "sass/8-sections/thematic-break";
+
+// This should cascade higher than _icons
+@import "sass/8-sections/credit-card";
 
 
 

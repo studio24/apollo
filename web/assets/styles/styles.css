@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------*    #Agt
 \*------------------------------------*/
 /*
@@ -197,17 +198,24 @@
   margin-top: 1em;
 }
 
+.margin--default {
+  margin-top: 1em !important;
+}
+
 .visuallyhidden + * {
   margin-top: 0;
 }
 
-* + li,
-.margin--half {
+* + li {
   margin-top: 0.5em;
 }
 
+.margin--half {
+  margin-top: 0.5em !important;
+}
+
 .margin--third {
-  margin-top: 0.3333em;
+  margin-top: 0.3333em !important;
 }
 
 /*------------------------------------*    #Box-sizing
@@ -659,6 +667,7 @@ textarea {
   padding-left: 0;
   width: 100%;
   max-width: 75em;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -698,9 +707,29 @@ textarea {
           flex-direction: row;
 }
 
+.group--row .group__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
+
 .group--row .group__item + .group__item {
   margin-top: 0;
-  margin-left: 1.5em;
+  margin-left: 1.25em;
+}
+
+@media screen and (min-width: 40.0625em) {
+  .group--wide.group--wide .group__item + .group__item {
+    margin-top: 0;
+    margin-left: 3.125em;
+  }
+}
+
+@media screen and (min-width: 40.0625em) {
+  .group--compact.group--compact .group__item + .group__item {
+    margin-top: 0;
+    margin-left: 0.625em;
+  }
 }
 
 .group--end {
@@ -725,13 +754,6 @@ textarea {
 
 /*------------------------------------*    #Flex children
 \*------------------------------------*/
-.group__item {
-  /**
-     * To remove list-style from when this is used on list items
-     */
-  display: block;
-}
-
 @media screen and (min-width: 40.0625em) {
   .group__item {
     /**
@@ -761,6 +783,13 @@ textarea {
   .group__item + .group__item {
     margin-left: 1.5em;
   }
+}
+
+li.group__item {
+  /**
+     * To remove list-style from when this is used on list items
+     */
+  display: block;
 }
 
 /*------------------------------------*    #Flex modifiers
@@ -847,8 +876,11 @@ textarea {
 
 /**
  * Single purpose class modifiers for flex
+ *
+ * Double up on specificity to mke these are more important than the
+ * default group--row behaviour
  */
-.group__item--grow {
+.group__item--grow.group__item--grow {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -856,7 +888,7 @@ textarea {
       flex-basis: auto;
 }
 
-.group__item--dont-grow {
+.group__item--dont-grow.group__item--dont-grow {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -866,14 +898,14 @@ textarea {
   min-height: auto;
 }
 
-.group__item--shrink {
+.group__item--shrink.group__item--shrink {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
 
-.group__item--dont-shrink {
+.group__item--dont-shrink.group__item--dont-shrink {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -ms-flex-preferred-size: auto;
@@ -906,8 +938,15 @@ textarea {
           flex-grow: 2;
 }
 
+@media screen and (min-width: 64.0625em) {
+  .group__item--secondary {
+    margin-top: 1em;
+  }
+}
+
 .group__item--primary + .group__item--secondary,
-.group__item--secondary + .group__item--primary {
+.group__item--secondary + .group__item--primary,
+.group__item--secondary.sort-last-from-lap {
   /* Double the spacing for groups which have primary and secondary
      * items.
      */
@@ -915,8 +954,34 @@ textarea {
 
 @media screen and (min-width: 40.0625em) {
   .group__item--primary + .group__item--secondary,
-  .group__item--secondary + .group__item--primary {
+  .group__item--secondary + .group__item--primary,
+  .group__item--secondary.sort-last-from-lap {
     margin-left: 3em;
+  }
+}
+
+.group__item--secondary.sort-first-from-lap {
+  /* Double the spacing for groups which have primary and secondary
+     * items.
+     */
+}
+
+@media screen and (min-width: 40.0625em) {
+  .group__item--secondary.sort-first-from-lap {
+    margin-right: 3em;
+    margin-left: 0;
+  }
+}
+
+.group__item--secondary.sort-last-from-lap + .group__item--primary {
+  /* Double the spacing for groups which have primary and secondary
+     * items.
+     */
+}
+
+@media screen and (min-width: 40.0625em) {
+  .group__item--secondary.sort-last-from-lap + .group__item--primary {
+    margin-left: 0;
   }
 }
 
@@ -974,7 +1039,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 1em;
-  font-family: Georgia, serif;
+  font-family: "Proza Libre", sans-serif;
   line-height: 1.5;
 }
 
@@ -1016,21 +1081,17 @@ button:focus,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
   margin-left: -0.5em;
   margin-right: -0.5em;
 }
 
 .swatch {
   margin-top: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
+  display: block;
   margin-bottom: 1.25em;
   padding: 1em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
   border: 1px solid #cccccc;
   box-shadow: 0 0.25em 0.25em -0.25em rgba(34, 34, 34, 0.1);
   position: relative;
@@ -1041,9 +1102,13 @@ button:focus,
   display: block;
   width: 100%;
   width: calc(100% + 2em);
-  height: 4em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin: -1em -1em 1em -1em;
+  width: 50%;
+  height: 3em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  -webkit-transform: skew(-12.5deg, -12.5deg);
+          transform: skew(-12.5deg, -12.5deg);
 }
 
 /* Used for styleguide */
@@ -1055,11 +1120,11 @@ button:focus,
   border: 0;
   color: inherit;
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.6875em 1em 0.625em 1em;
   letter-spacing: 0.015em;
   font-weight: 400;
   border-radius: 0.2em;
-  box-shadow: inset 0 2px 0 rgba(247, 247, 247, 0.2);
+  box-shadow: inset 0 0.125em 0 rgba(247, 247, 247, 0.2), inset 0 -0.125em 0 rgba(34, 34, 34, 0.2);
 }
 
 button.button, button.towncrier__share-button,
@@ -1069,12 +1134,12 @@ input[type="submit"].towncrier__share-button {
 }
 
 .button--primary.button--primary {
-  background-color: #27354F;
+  background-color: #27354f;
   color: #F7F7F7;
 }
 
 .button--primary.button--primary:visited {
-  background-color: #27354F;
+  background-color: #27354f;
   color: #F7F7F7;
 }
 
@@ -1143,6 +1208,21 @@ input[type="submit"].towncrier__share-button {
   color: #222;
 }
 
+.button--success.button--success {
+  background-color: #2ECC40;
+  color: #222;
+}
+
+.button--success.button--success:visited {
+  background-color: #2ECC40;
+  color: #222;
+}
+
+.button--success.button--success:hover, .button--success.button--success:focus, .button--success.button--success:active {
+  background-color: #54d964;
+  color: #222;
+}
+
 /*------------------------------------*    #Modifiers
 \*------------------------------------*/
 .button--is-block {
@@ -1188,7 +1268,7 @@ a,
 	 * as the text wraps into multiple lines.
 	 */
   display: inline;
-  color: blue;
+  color: #2f4979;
   border: 0;
   -webkit-transition: box-shadow 100ms ease-in-out 0ms;
   transition: box-shadow 100ms ease-in-out 0ms;
@@ -1196,14 +1276,14 @@ a,
 
 a:visited,
 .link:visited {
-  color: purple;
+  color: #27354f;
 }
 
 a:hover, a:focus, a:active,
 .link:hover,
 .link:focus,
 .link:active {
-  color: red;
+  color: #345ead;
   /**
 		 * arbitrary webkit-only property that forces a redraw which updates the
 		 * currentColor to the hover value of the border-bottom
@@ -1275,7 +1355,7 @@ h1, h2, h3, h4, h5, h6 {
 .heading {
   font-style: normal;
   font-weight: 700;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 .size--xxxl {
@@ -1355,6 +1435,10 @@ h1, h2, h3, h4, h5, h6 {
 \*------------------------------------*/
 /*------------------------------------*    #Leads
 \*------------------------------------*/
+.lead {
+  font-family: "Playfair Display", serif;
+}
+
 /*------------------------------------*    #Elements
 \*------------------------------------*/
 .small-caps {
@@ -1384,6 +1468,239 @@ em {
 
    ========================================================================== */
 /* Rev: 1431959028 (based on filename) */
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+  content: " ";
+  display: table;
+}
+
+.pika-single:after {
+  clear: both;
+}
+
+.pika-single {
+  *zoom: 1;
+}
+
+.pika-single.is-hidden {
+  display: none;
+}
+
+.pika-single.is-bound {
+  position: absolute;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+
+.pika-title {
+  position: relative;
+  text-align: center;
+}
+
+.pika-label {
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  /* hide text using text-indent trick, using width value (it's enough) */
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: .5;
+  *position: absolute;
+  *top: 0;
+}
+
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");
+  *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");
+  *right: 0;
+}
+
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+  cursor: default;
+  opacity: .2;
+}
+
+.pika-select {
+  display: inline-block;
+  *display: inline;
+}
+
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+
+.pika-table th,
+.pika-table td {
+  width: 14.285714285714286%;
+  padding: 0;
+}
+
+.pika-table th {
+  color: #999;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pika-button {
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  background: #f5f5f5;
+}
+
+.pika-week {
+  font-size: 11px;
+  color: #999;
+}
+
+.is-today .pika-button {
+  color: #33aaff;
+  font-weight: bold;
+}
+
+.is-selected .pika-button,
+.has-event .pika-button {
+  color: #fff;
+  font-weight: bold;
+  background: #33aaff;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
+}
+
+.has-event .pika-button {
+  background: #005da9;
+  box-shadow: inset 0 1px 3px #0076c9;
+}
+
+.is-disabled .pika-button,
+.is-inrange .pika-button {
+  background: #D5E9F7;
+}
+
+.is-startrange .pika-button {
+  color: #fff;
+  background: #6CB31D;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-endrange .pika-button {
+  color: #fff;
+  background: #33aaff;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-disabled .pika-button,
+.is-outside-current-month .pika-button {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+  opacity: .3;
+}
+
+.pika-button:hover {
+  color: #fff;
+  background: #ff8000;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+/* styling for abbr */
+.pika-table abbr {
+  border-bottom: none;
+  cursor: help;
+}
+
 /*------------------------------------*    #Sections
 \*------------------------------------*/
 /*------------------------------------*    #Address
@@ -1570,6 +1887,7 @@ body:not(:-moz-handler-blocked) fieldset {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1em;
   border-radius: 0.5em;
+  position: relative;
 }
 
 /*------------------------------------*    #Default form styling
@@ -1597,7 +1915,7 @@ textarea:hover,
 textarea:focus,
 textarea:active {
   background-color: #f1f1f1;
-  border-color: #27354F;
+  border-color: #27354f;
 }
 
 /* Axiomatic owl-ish. We want input to sit a little closer to their
@@ -1647,7 +1965,7 @@ select[required]:active,
 textarea[required]:hover,
 textarea[required]:focus,
 textarea[required]:active {
-  box-shadow: inset 2px 2px 0 0 #27354F, inset 2px -2px 0 0 #27354F, inset -2px -2px 0 0 #27354F, inset -2px 2px 0 0 #27354F;
+  box-shadow: inset 2px 2px 0 0 #27354f, inset 2px -2px 0 0 #27354f, inset -2px -2px 0 0 #27354f, inset -2px 2px 0 0 #27354f;
 }
 
 input[required]:valid {
@@ -1656,6 +1974,10 @@ input[required]:valid {
 
 /*------------------------------------*    #Field grouping
 \*------------------------------------*/
+.field-group:not(.group__item) + .field-group:not(.group__item) {
+  margin-top: 2em;
+}
+
 .field-group {
   max-width: 32em;
   position: relative;
@@ -1809,7 +2131,7 @@ input[required]:valid {
 
 /* Focused */
 .input--checkbox:focus + .checkbox-label:before {
-  border-color: #27354F;
+  border-color: #27354f;
 }
 
 /* Checked and Focused */
@@ -1824,8 +2146,8 @@ input[required]:valid {
 
 /* Checked */
 .input--checkbox:checked + .checkbox-label:before {
-  background-color: #27354F;
-  border-color: #27354F;
+  background-color: #27354f;
+  border-color: #27354f;
 }
 
 .input--checkbox:checked + .checkbox-label:after {
@@ -1834,7 +2156,7 @@ input[required]:valid {
 
 /* Hover */
 .checkbox-group label:hover .checkbox-label:before {
-  border-color: #27354F !important;
+  border-color: #27354f !important;
 }
 
 .input--checkbox:checked + .checkbox-label:hover:before {
@@ -1897,7 +2219,7 @@ input[required]:valid {
 
 /* Focused */
 .input--radio:focus + .radio-label:before {
-  border-color: #27354F;
+  border-color: #27354f;
 }
 
 /* Checked and Focused */
@@ -1911,16 +2233,16 @@ input[required]:valid {
 
 /* Checked */
 .input--radio:checked + .radio-label:before {
-  border-color: #27354F;
+  border-color: #27354f;
 }
 
 .input--radio:checked + .radio-label:after {
-  background-color: #27354F;
+  background-color: #27354f;
 }
 
 /* Hover */
 .radio-group label:hover .radio-label:before {
-  border-color: #27354F !important;
+  border-color: #27354f !important;
 }
 
 .input--radio:checked + .radio-label:hover:before {
@@ -1947,13 +2269,13 @@ input[required]:valid {
       flex-flow: row wrap;
 }
 
-.segmented-group input {
+.segmented-group .input--radio {
   /* Hide the actual radio */
   position: absolute;
   left: -3em;
 }
 
-.segmented-group label {
+.segmented-group > label {
   display: block;
   padding: 1.5em;
   position: relative;
@@ -1964,7 +2286,13 @@ input[required]:valid {
   overflow: hidden;
 }
 
-* + .segmented-group label {
+.segmented-group > label:nth-child(1n+4) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+}
+
+* + .segmented-group > label {
   /**
      * Add more space between rows of segmented options, this makes it easier
      * for the eye to scan and read the options.
@@ -2002,7 +2330,7 @@ input[required]:valid {
 
 /* Focused */
 .input--radio:focus + .segmented-label:before {
-  border-color: #27354F;
+  border-color: #27354f;
   outline: 0.125em solid #f60;
 }
 
@@ -2144,12 +2472,12 @@ input[required]:valid {
   fill: currentColor;
   vertical-align: middle;
   position: relative;
-  top: -0.125em;
+  top: -0.0625em;
 }
 
 .icon--l {
-  width: 3em;
-  height: 3em;
+  width: 4em;
+  height: 4em;
 }
 
 .icon + span:not(.visuallyhidden),
@@ -2193,8 +2521,8 @@ img {
      * Always show that there's more content. Gives our design/content more
      * affordance
      */
-  min-height: 90%;
-  min-height: 90vh;
+  min-height: 75%;
+  min-height: 75vh;
   padding: 1em 0;
 }
 
@@ -2263,7 +2591,7 @@ ol:not(.breadcrumbs) > li:before {
   position: absolute;
   top: 0;
   left: 0;
-  color: #27354F;
+  color: #27354f;
 }
 
 /*------------------------------------*    #Definition list
@@ -2481,7 +2809,7 @@ main {
 }
 
 .nav--primary {
-  background-color: #27354F;
+  background-color: #27354f;
   color: #F7F7F7;
   padding: 2em 1em 1.5em 1em;
 }
@@ -2657,12 +2985,12 @@ main {
 /*------------------------------------*    #Current item
 \*------------------------------------*/
 .is-current {
-  color: #27354F;
+  color: #27354f;
 }
 
 .is-current:after {
-  background-color: #27354F;
-  border-color: #161e2d;
+  background-color: #27354f;
+  border-color: #161e2c;
 }
 
 /*------------------------------------*    #Completed item(s)
@@ -2683,7 +3011,7 @@ main {
 /*------------------------------------*    #Quotes
 \*------------------------------------*/
 .quote {
-  background-color: #27354F;
+  background-color: #27354f;
   color: #F7F7F7;
   padding: 1rem;
 }
@@ -2799,19 +3127,19 @@ main {
   width: 2em;
   height: 2em;
   padding: 0.5em;
-  background-color: blue;
+  background-color: #2f4979;
   color: #F7F7F7;
 }
 
 .towncrier__channel-link:visited .towncrier__panel .towncrier__share-icon {
-  background-color: purple;
-  color: purple;
+  background-color: #27354f;
+  color: #27354f;
 }
 
 .towncrier__channel-link:hover .towncrier__panel .towncrier__share-icon,
 .towncrier__channel-link:focus .towncrier__panel .towncrier__share-icon,
 .towncrier__channel-link:active .towncrier__panel .towncrier__share-icon {
-  background-color: red;
+  background-color: #345ead;
   color: #F7F7F7;
 }
 
@@ -3029,6 +3357,38 @@ td {
 
 /*------------------------------------*    #Thematic break
 \*------------------------------------*/
+/*------------------------------------*    #Icons
+\*------------------------------------*/
+.credit-card {
+  width: 4.875em;
+  height: 3em;
+  margin-top: 2em;
+}
+
+.credit-card .credit-card__outer {
+  fill: black;
+}
+
+.credit-card .credit-card__inner {
+  fill: white;
+}
+
+.credit-card .credit-card__magnetic-strip {
+  fill: black;
+}
+
+.credit-card .credit-card__digits {
+  fill: green;
+}
+
+.credit-card .credit-card__name {
+  fill: blue;
+}
+
+.credit-card .credit-card__cvc {
+  fill: red;
+}
+
 /*------------------------------------*    #Templates
 \*------------------------------------*/
 /*------------------------------------*    #Auxiliary
@@ -3086,7 +3446,7 @@ td {
 }
 
 .bg--primary {
-  background-color: #27354F;
+  background-color: #27354f;
   color: #F7F7F7;
 }
 
@@ -3158,8 +3518,27 @@ td {
   color: #3c3c3c;
 }
 
+.bg--success {
+  background-color: #2ECC40;
+  color: #222;
+}
+
+.bg--success a {
+  color: #222;
+}
+
+.bg--success a:visited {
+  color: #555555;
+}
+
+.bg--success a:hover,
+.bg--success a:focus,
+.bg--success a:active {
+  color: #3c3c3c;
+}
+
 .color--primary {
-  color: #27354F;
+  color: #27354f;
 }
 
 .color--secondary {
@@ -3172,6 +3551,10 @@ td {
 
 .color--accent {
   color: #512467;
+}
+
+.color--success {
+  color: #2ECC40;
 }
 
 /*------------------------------------*    #Paddings
