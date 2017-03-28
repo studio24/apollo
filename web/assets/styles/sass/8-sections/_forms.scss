@@ -185,7 +185,8 @@ input[required]:valid {
 /*------------------------------------*\
     #Field grouping
 \*------------------------------------*/
-.field-group:not(.group__item) + .field-group:not(.group__item) {
+.field-group:not(.group__item) + .field-group:not(.group__item),
+* + .fieldset-wrapper {
 
     margin-top: 2em;
 
@@ -346,7 +347,8 @@ input[required]:valid {
     display: block;
 
     position: relative;
-    padding-left: 2.25em;
+    padding: 0.75em 0.75em 0.75em #{0.75+2.25em};
+    background-color: $subtle-color;
     // Remove because we're using axiomatic owl instead
     // margin-bottom: 1.5em;
     cursor: pointer;
@@ -373,13 +375,13 @@ input[required]:valid {
 /* Box */
 .checkbox-label:before {
 
-    left: 0;
-    top: 0;
+    left: 0.75em;
+    top: 0.75em;
 
     width: 1.5em;
     height: 1.5em;
 
-    border: 2px solid luma(60);
+    border: 2px solid luma(50);
     border-radius: 0.33em;
 
     // @include transition;
@@ -395,8 +397,8 @@ input[required]:valid {
     border: 2px solid transparent;
     border-width: 0 0 2px 2px;
 
-    top: 0.375em;
-    left: 0.375em;
+    top: #{0.375 + 0.75em};
+    left: #{0.375 + 0.75em};
 
     transform: rotate(-45deg);
 
@@ -595,7 +597,8 @@ input[required]:valid {
 
     This can either be radio or checkbox, the purpose is to show all available options outright, rather than hide them behind a select
 \*------------------------------------*/
-.segmented-group-wrapper {
+.segmented-group-wrapper,
+.no-max-width {
 
     // Remove our default max-width cap
     max-width: none;
@@ -639,6 +642,9 @@ input[required]:valid {
 
     /* Hide the real radio inputs */
     overflow: hidden;
+
+    // Give it more affordance
+    cursor: pointer;
 
     // Make it so that all options after 3 becomes secondary giving them less affordance and emphasis
     &:nth-child(1n+4) {
@@ -706,7 +712,9 @@ input[required]:valid {
     border-radius: em(4);
 
     border: em(2) solid luma(60);
-    box-shadow: inset 0 -0.125em 0 0 $grey;
+    //box-shadow: inset 0 -0.125em 0 0 $grey;
+    box-shadow: inset 0 em(4) 0 rgba($white, 0.2),
+    inset 0 em(- 4) 0 rgba($black, 0.2);
 
     z-index: z("segmented", "background");
 

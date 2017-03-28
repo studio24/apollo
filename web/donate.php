@@ -126,6 +126,7 @@
                 </div>
                 <p>We make sure to make the form as easy to complete as
                     possible.</p>
+                <p>The average donation in 2014 was £14.</p>
 
             </div>
             <div class="group__item group__item--primary">
@@ -149,17 +150,17 @@
                             <label for="segmented-option-1"> <input
                                         id="segmented-option-1"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="3"
                                         type="radio"
                                         data-parsley-error-message="Please select your preferred choice."
                                         required
                                         aria-invalid="false">
                                 <div class="segmented-label">
-                                    <h2 class="size--xxl heading">&pound;5</h2>
-                                    <div class="margin--half">Keep our
-                                        air ambulances stocked with much needed Syringes
-                                        and Tourniquets.
+                                    <h2 class="size--xxl heading">&pound;3</h2>
+                                    <div class="margin--half">Keep our air
+                                        ambulances stocked with much needed
+                                        Syringes and Tourniquets.
                                     </div>
                                 </div>
                             </label>
@@ -167,12 +168,12 @@
                             <label for="segmented-option-2"> <input
                                         id="segmented-option-2"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="15"
                                         type="radio"
                                         checked>
                                 <div class="segmented-label">
-                                    <h2 class="size--xxl heading">&pound;25</h2>
+                                    <h2 class="size--xxl heading">&pound;15</h2>
                                     <div class="margin--half">Allows us to stock
                                         our air ambulances with 200 Disposable
                                         Gloves.
@@ -183,11 +184,11 @@
                             <label for="segmented-option-3"> <input
                                         id="segmented-option-3"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="35"
                                         type="radio">
                                 <div class="segmented-label">
-                                    <h2 class="size--xxl heading">&pound;50</h2>
+                                    <h2 class="size--xxl heading">&pound;35</h2>
                                     <div class="margin--half">Re-fuel one of our
                                         air ambulances.
                                     </div>
@@ -197,8 +198,8 @@
                             <label for="segmented-option-4"> <input
                                         id="segmented-option-4"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="10"
                                         type="radio">
                                 <div class="segmented-label">
                                     <h2 class="size--xxl heading">&pound;10</h2>
@@ -208,8 +209,8 @@
                             <label for="segmented-option-5"> <input
                                         id="segmented-option-5"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="20"
                                         type="radio">
                                 <div class="segmented-label">
                                     <h2 class="size--xxl heading">&pound;20</h2>
@@ -219,8 +220,8 @@
                             <label for="segmented-option-6"> <input
                                         id="segmented-option-6"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="100"
                                         type="radio">
                                 <div class="segmented-label">
                                     <h2 class="size--xxl heading">&pound;100</h2>
@@ -230,8 +231,8 @@
                             <label for="segmented-option-7"> <input
                                         id="segmented-option-7"
                                         name="segmented-options"
-                                        class="input--radio"
-                                        value="data-value"
+                                        class="input--radio js-donation-value"
+                                        value="250"
                                         type="radio">
                                 <div class="segmented-label">
                                     <h2 class="size--xxl heading">&pound;250</h2>
@@ -249,12 +250,11 @@
                             Choose your own amount to donate
                             <small>(Optional)</small>
                         </label> <input type="tel"
-                                        class="field-input field-input--text"
+                                        class="field-input field-input--text js-donation-value js-donation-custom"
                                         name="guide-form-field-12"
                                         id="guide-form-field-12"
                                         placeholder="E.g. &pound;150"
-                                        data-parsley-error-message="Please complete this field with a valid email address."
-                                        required
+                                        value="15"
                                         aria-invalid="false">
                     </div>
 
@@ -267,8 +267,8 @@
                         </legend>
 
                         <div class="field-description">
-                            By donating regularly, even a small donation
-                            can make a big difference.
+                            By donating regularly, even a small donation can
+                            make a big difference.
                         </div>
 
                         <label for="checkbox-input"> <input id="checkbox-input"
@@ -278,8 +278,8 @@
                                                             type="checkbox">
                             <span
                                     class="checkbox-label">
-                                Yes, donate <span
-                                        class="js-donation-amount strong">&pound;25</span> every month
+                                Yes, donate <span class="strong">&pound;<span
+                                            class="js-donation-amount">15</span></span> every month
                             </span> </label>
 
                     </fieldset>
@@ -309,20 +309,26 @@
                                     type="checkbox"> <span
                                     class="checkbox-label">
                                 Yes, make my donation worth <span
-                                        class="js-giftaid-amount strong">&pound;31.25</span> (at no extra cost to me)
+                                        class="strong">&pound;<span
+                                            class="js-giftaid-amount"><?php echo 15 * 1.25; ?></span></span> at no extra cost to me
                             </span> </label>
 
                     </fieldset>
                     <!-- / Checkbox -->
 
 
-
-
-                    <div class="fieldset-wrapper bg bg--subtle js-payment-fields">
+                    <div class="fieldset-wrapper bg bg--subtle payment-fields js-payment-fields">
                         <fieldset>
 
-                            <legend class="heading size--xl">Payment details</legend>
+                            <legend class="heading size--xl">
+                                <svg class="icon lock-icon color--success">
+                                    <use xlink:href="#lock"/>
+                                </svg>
+                                <span>Payment details</span></legend>
 
+
+                            <p><em>We accept VISA, MasterCard, American
+                                    Express.</em></p>
 
 
                             <div class="group">
@@ -330,21 +336,48 @@
                                     <label for="cardnumber"
                                            class="field-label"> Card
                                         number </label> <input type="text"
-                                                               class="field-input field-input--date"
+                                                               class="field-input field-input--cardnumber"
                                                                name="cardnumber"
                                                                id="cardnumber"
                                                                placeholder="E.g. 1234 5678 9012 3456"
                                                                pattern="[0-9]{14,23}"
-                                                               autocomplete="cc-number" maxlength="38"
+                                                               autocomplete="cc-number"
+                                                               maxlength="23"
+                                                               data-parsley-luhn="true"
                                                                data-parsley-error-message="Please complete this field with the card number on the front of your card."
                                                                required
                                                                aria-invalid="false">
                                 </div>
                                 <div class="group__item group__item--dont-grow">
                                     <svg class="icon credit-card js-credit-card"
+                                         viewBox="0 0 78 48"
+                                         width="78"
+                                         height="48"
                                          data-focussed="none"
                                          aria-hidden="true">
-                                        <use xlink:href="#credit-card"/>
+                                        <g id="credit-card" class="credit-cards">
+                                            <title>Credit card</title>
+                                            <desc>human-readable description of
+                                                the message we trying to
+                                                accomplish
+                                            </desc>
+                                            <path class="credit-card__outer"
+                                                  d="M78,42c0,3.3-2.7,6-6,6H6c-3.3,0-6-2.7-6-6V6c0-3.3,2.7-6,6-6h66c3.3,0,6,2.7,6,6V42z"/>
+                                            <path class="credit-card__inner"
+                                                  d="M74,40c0,2.2-1.8,4-4,4H8c-2.2,0-4-1.8-4-4V8c0-2.2,1.8-4,4-4h62c2.2,0,4,1.8,4,4V40z"/>
+                                            <rect class="credit-card__magnetic-strip"
+                                                  x="4" y="10" width="70"
+                                                  height="10"/>
+                                            <rect class="credit-card__digits"
+                                                  x="10" y="26" width="36"
+                                                  height="4"/>
+                                            <rect class="credit-card__name"
+                                                  x="10" y="34" width="24"
+                                                  height="4"/>
+                                            <rect class="credit-card__cvc"
+                                                  x="58" y="26" width="12"
+                                                  height="4"/>
+                                        </g>
                                     </svg>
                                 </div>
                             </div>
@@ -353,42 +386,43 @@
                             <div class="group">
                                 <div class="group__item flex-2 field-group">
                                     <label for="ccname"
-                                           class="field-label"> Name on
-                                        card </label> <input type="text"
-                                                             class="field-input field-input--date"
-                                                             name="ccname"
-                                                             id="ccname"
-                                                             placeholder="E.g. J O SMITH"
-                                                             autocomplete="cc-name"
-                                                             data-parsley-error-message="Please complete this field with the name as it appears on the front of your card."
-                                                             required
-                                                             aria-invalid="false">
+                                           class="field-label">Cardholder name
+                                        (printed on your card)</label> <input
+                                            type="text"
+                                            class="field-input field-input--ccname"
+                                            name="ccname"
+                                            id="ccname"
+                                            placeholder="E.g. J O SMITH"
+                                            autocomplete="cc-name"
+                                            data-parsley-error-message="Please complete this field with the cardholder name as it appears on the front of your card."
+                                            required
+                                            aria-invalid="false">
                                 </div>
                                 <div class="group__item field-group">
                                     <label for="cc-exp"
-                                           class="field-label"> Expiry (MM/YY) </label>
-                                    <input type="tel"
-                                           class="field-input field-input--date"
-                                           name="cc-exp"
-                                           id="cc-exp"
-                                           placeholder="E.g. 10/19"
-                                           autocomplete="cc-exp"
-                                           data-parsley-error-message="Please complete this field with the expiration month and year on the front of your card."
-                                           required
-                                           aria-invalid="false">
+                                           class="field-label"> Expiry
+                                        (MM/YY) </label> <input type="tel"
+                                                                class="field-input field-input--date"
+                                                                name="cc-exp"
+                                                                id="cc-exp"
+                                                                placeholder="E.g. 10/19"
+                                                                autocomplete="cc-exp"
+                                                                data-parsley-error-message="Please complete this field with the expiration month and year on the front of your card."
+                                                                required
+                                                                aria-invalid="false">
                                 </div>
                                 <div class="group__item field-group">
                                     <label for="cvc"
-                                           class="field-label"> CVV (Security
-                                        code) </label> <input type="tel"
-                                                              class="field-input field-input--date"
-                                                              name="cvc"
-                                                              id="cvc"
-                                                              pattern="[0-9]*"
-                                                              autocomplete="cc-csc"
-                                                              data-parsley-error-message="Please complete this field with the 3-digit security number on the back of your card."
-                                                              required
-                                                              aria-invalid="false">
+                                           class="field-label">Security
+                                        code</label> <input type="tel"
+                                                            class="field-input field-input--date"
+                                                            name="cvc"
+                                                            id="cvc"
+                                                            pattern="[0-9]{3,4}"
+                                                            autocomplete="cc-csc"
+                                                            data-parsley-error-message="Please complete this field with the 3-digit security number on the back of your card."
+                                                            required
+                                                            aria-invalid="false">
                                 </div>
                             </div>
 
@@ -397,65 +431,70 @@
 
 
 
-                    <h2 class="heading size size--l">Subscription details
-                        (optional)</h2>
+                        <fieldset>
+
+                            <legend class="heading size--xl">Subscription
+                                details (optional)
+                            </legend>
 
 
-                    <div class="field-group">
-                        <label for="guide-form-field-1" class="field-label">
-                            Email
-                            <small>(Required)</small>
-                            <div class="field-description">
-                                We&rsquo;ll only contact you if there&rsquo;s
-                                something wrong with your order.
+                            <div class="field-group">
+                                <label for="guide-form-field-1"
+                                       class="field-label">Email
+                                    <div class="field-description">
+                                        We&rsquo;ll only contact you if there&rsquo;s
+                                        something wrong with your order.
+                                    </div>
+                                </label> <input type="email"
+                                                class="field-input field-input--text"
+                                                name="guide-form-field-1"
+                                                id="guide-form-field-1"
+                                                placeholder="E.g. jane.smith@example.co.uk"
+                                                autocomplete="email"
+                                                data-parsley-error-message="Please complete this field with a valid email address."
+                                                required
+                                                aria-invalid="false">
                             </div>
-                        </label> <input type="email"
-                                        class="field-input field-input--text"
-                                        name="guide-form-field-1"
-                                        id="guide-form-field-1"
-                                        placeholder="E.g. jane.smith@example.co.uk"
-                                        autocomplete="email"
-                                        data-parsley-error-message="Please complete this field with a valid email address."
-                                        required
-                                        aria-invalid="false">
-                    </div>
 
 
-                    <!-- Checkbox -->
-                    <fieldset class="field-group checkbox-group">
+                            <!-- Checkbox -->
+                            <fieldset class="field-group checkbox-group">
 
-                        <legend class="group-legend">
-                            Subscribe to our newsletter
-                        </legend>
+                                <legend class="group-legend">
+                                    Subscribe to our newsletter
+                                </legend>
 
-                        <div class="field-description">
-                            We will send you a monthly newsletter with
-                            promotions. We will guard your email with our lives
-                            and never give it out to a third-party. <a
-                                    href="/privacy">Our Privacy Policy</a>.
-                        </div>
+                                <div class="field-description">
+                                    We will send you a monthly newsletter with
+                                    promotions. We will guard your email with
+                                    our lives and never give it out to a
+                                    third-party. <a
+                                            href="/privacy">Our Privacy
+                                        Policy</a>.
+                                </div>
 
-                        <label for="checkbox-input"> <input id="checkbox-input"
-                                                            name="checkbox-input"
-                                                            class="input--checkbox"
-                                                            value="data-value"
-                                                            type="checkbox">
-                            <span
-                                    class="checkbox-label">
+                                <label for="checkbox-input"> <input
+                                            id="checkbox-input"
+                                            name="checkbox-input"
+                                            class="input--checkbox"
+                                            value="data-value"
+                                            type="checkbox"> <span
+                                            class="checkbox-label">
                                 Yes, I would love to receive your newsletter once a month
                             </span> </label>
 
-                    </fieldset>
-                    <!-- / Checkbox -->
-                    <hr>
+                            </fieldset>
+                            <!-- / Checkbox -->
+
+                        </fieldset>
 
 
-                    <div class="field-group">
+
+                    <div class="field-group no-max-width">
                         <button type="submit"
                                 class="button button--success size--xl">
-                            <span>Donate <span
-                                        class="js-donation-amount">&pound;25</span>
-                            and save another life</span>
+                            <span>Donate <span>&pound;<span
+                                            class="js-donation-amount">15</span></span> now and save another life
                             <svg class="icon">
                                 <use xlink:href="#arrow-right"/>
                             </svg>
@@ -509,9 +548,11 @@
                 <h2 class="size--xl heading">Encourage your friends to help us
                     as well</h2>
                 <p>or</p>
-                <h2 class="size--xl heading">Spread the word, save another life</h2>
+                <h2 class="size--xl heading">Spread the word, save another
+                    life</h2>
                 <p>or</p>
-                <h2 class="size--xl heading">Show the world your support for us!</h2>
+                <h2 class="size--xl heading">Show the world your support for
+                    us!</h2>
 
                 <!-- Share this -->
                 <div class="towncrier">
