@@ -35,8 +35,7 @@ strong,
 
 em {
 
-	// luma(40) is 4.5:1 against #fff and the max desaturated grey we can have
-	// and still be accessible.
-	color: luma(35);
+	// Passes AA level against $subtle-color as background-color
+	color: luma(30);
 
 }

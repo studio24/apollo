@@ -335,13 +335,13 @@
                                 <div class="group__item flex-3 field-group">
                                     <label for="cardnumber"
                                            class="field-label"> Card
-                                        number </label> <input type="text"
+                                        number </label> <input type="tel"
                                                                class="field-input field-input--cardnumber"
                                                                name="cardnumber"
                                                                id="cardnumber"
                                                                placeholder="E.g. 1234 5678 9012 3456"
-                                                               pattern="[0-9]{14,23}"
                                                                autocomplete="cc-number"
+
                                                                maxlength="23"
                                                                data-parsley-luhn="true"
                                                                data-parsley-error-message="Please complete this field with the card number on the front of your card."
@@ -365,10 +365,9 @@
                                                   d="M78,42c0,3.3-2.7,6-6,6H6c-3.3,0-6-2.7-6-6V6c0-3.3,2.7-6,6-6h66c3.3,0,6,2.7,6,6V42z"/>
                                             <path class="credit-card__inner"
                                                   d="M74,40c0,2.2-1.8,4-4,4H8c-2.2,0-4-1.8-4-4V8c0-2.2,1.8-4,4-4h62c2.2,0,4,1.8,4,4V40z"/>
-                                            <rect class="credit-card__magnetic-strip"
-                                                  x="4" y="10" width="70"
+                                            <rect class="credit-card__magnetic-strip" x="4" y="10" width="70"
                                                   height="10"/>
-                                            <rect class="credit-card__digits"
+                                            <rect class="credit-card__number"
                                                   x="10" y="26" width="36"
                                                   height="4"/>
                                             <rect class="credit-card__name"
@@ -377,6 +376,7 @@
                                             <rect class="credit-card__cvc"
                                                   x="58" y="26" width="12"
                                                   height="4"/>
+                                            <rect class="credit-card__date" x="46" y="34" width="12" height="4" />
                                         </g>
                                     </svg>
                                 </div>
@@ -401,7 +401,7 @@
                                 <div class="group__item field-group">
                                     <label for="cc-exp"
                                            class="field-label"> Expiry
-                                        (MM/YY) </label> <input type="tel"
+                                        (MM / YY) </label> <input type="tel"
                                                                 class="field-input field-input--date"
                                                                 name="cc-exp"
                                                                 id="cc-exp"
@@ -419,8 +419,9 @@
                                                             name="cvc"
                                                             id="cvc"
                                                             pattern="[0-9]{3,4}"
-                                                            autocomplete="cc-csc"
-                                                            data-parsley-error-message="Please complete this field with the 3-digit security number on the back of your card."
+                                                            maxlength="4"
+                                                            autocomplete="off"
+                                                            data-parsley-error-message="Please complete this field with the security code as it appears on of your card."
                                                             required
                                                             aria-invalid="false">
                                 </div>
@@ -443,7 +444,7 @@
                                        class="field-label">Email
                                     <div class="field-description">
                                         We&rsquo;ll only contact you if there&rsquo;s
-                                        something wrong with your order.
+                                        something wrong with your donation.
                                     </div>
                                 </label> <input type="email"
                                                 class="field-input field-input--text"
@@ -465,22 +466,21 @@
                                 </legend>
 
                                 <div class="field-description">
-                                    We will send you a monthly newsletter with
-                                    promotions. We will guard your email with
+                                    We will send you relevant materials, such as promotions, once a month. We will guard your email with
                                     our lives and never give it out to a
-                                    third-party. <a
+                                    third-party. You can unsubscribe at any time. <a
                                             href="/privacy">Our Privacy
                                         Policy</a>.
                                 </div>
 
-                                <label for="checkbox-input"> <input
-                                            id="checkbox-input"
-                                            name="checkbox-input"
+                                <label for="subscribe"> <input
+                                            id="subscribe"
+                                            name="subscribe"
                                             class="input--checkbox"
                                             value="data-value"
                                             type="checkbox"> <span
                                             class="checkbox-label">
-                                Yes, I would love to receive your newsletter once a month
+                                Yes, I would like COMPANY to send me relevant materials
                             </span> </label>
 
                             </fieldset>

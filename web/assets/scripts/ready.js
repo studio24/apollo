@@ -206,86 +206,47 @@ $(function () {
     // $cardNumber = $('#cardnumber');
     // $cardExpiry = $('#cc-exp');
 
-    VMasker(document.getElementById("cardnumber")).maskPattern('9999 9999 9999 9999 99');
-    VMasker(document.getElementById("cc-exp")).maskPattern('99/99');
+    // VMasker(document.getElementById("cardnumber")).maskPattern('9999 9999 9999 9999 99');
+    // VMasker(document.getElementById("cc-exp")).maskPattern('99/99');
     // $cardExpiry.maskPattern('99/99');
     // masker(cardYear).maskPattern('9999');
 
 
 
 
-    (function() {
-        // Floating Labels
-        const floatingLabelsInit = function() {
-            // floating label function
 
 
-            // on keydown, change and window load - fire floating label function
-            $('.form-control').keydown(floatingLabel);
-            $('.form-control').change(floatingLabel);
-            window.addEventListener('load', floatingLabel(true), false);
-
-            // on parsley error
-            $('.js-floating-labels').parsley().on('form:error', function() {
-                $.each(this.fields, function(key, field) {
-                    // if validation fails float label up and add error class to form group
-                    if (field.validationResult !== true) {
-                        field.$element.siblings('label.floating').addClass('up');
-                        field.$element.closest('.form-group').addClass('has-error');
-                    }
-                });
-            });
-
-            // on parsley passed validation
-            $('.js-floating-labels').parsley().on('field:validated', function() {
-                // if validation passes
-                if (this.validationResult === true) {
-                    //remove error class from form group
-                    this.$element.siblings('label.floating');
-                    this.$element.closest('.form-group').removeClass('has-error');
-                } else {
-                    // float label up and add error class to form group
-                    this.$element.siblings('label.floating').addClass('up');
-                    this.$element.closest('.form-group').addClass('has-error');
-                }
-            });
-        };
         // Sets max length for ccv based on card type entered
         const ccvMaxLength = function(type) {
             if(type !== "amex") {
-                $('#ccv').prop('maxlength', 3);
+                $('#cvc').prop('maxlength', 3);
+                $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 3-digit security code on the back of your card.');
+            }
+            else {
+                $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 4-digit security code on the front of your card.');
             }
         };
         // Updates elements and icon based on cc number
         const updatePaymentIcon = function() {
-            // the svg for card icon
-            const iconType = $('svg.payment-method-icon').children().attr('xlink:href');
-            // the card type based on the number entered
-            const cardType = $.payment.cardType($('#credit-card-number').val());
-            // if cardType is null clear svg and return
-            if (cardType === null) {
-                $('svg.payment-method-icon').children().attr('xlink:href', '#');
-                return;
-            }
 
-            //if the svg id is not equal to the card type update the svg id
-            if (iconType.slice(1) !== cardType) {
-                $('svg.payment-method-icon').children().attr('xlink:href', '#' + cardType);
+            // the card type based on the number entered
+            const cardType = $.payment.cardType($('#cardnumber').val());
+            // if cardType is NOT null update data attribute to correct card type
+            if (cardType !== null) {
+                $creditcard.attr('data-cardtype', cardType);
             }
 
             // set the max length for the ccv based on card type
             ccvMaxLength(cardType);
-
-            return;
         };
-        // init invoke, make sure form has class js-floating-labels
-        floatingLabelsInit();
+
         // format inputs with jquery.payment
-        $('#credit-card-number').payment('formatCardNumber');
-        $('#expiration').payment('formatCardExpiry');
-        $('#ccv').payment('formatCardCVC');
+        $('#cardnumber').payment('formatCardNumber');
+        $('#cc-exp').payment('formatCardExpiry');
+        $('#cvc').payment('formatCardCVC');
+
         // on entry of cc number fire updatePaymentIcon function
-        $('#credit-card-number').on("keyup blur", updatePaymentIcon);
+        $('#cardnumber').on("keyup blur", updatePaymentIcon);
         // custom cc validators added to parsley using jquery.payment functions
         window.validateCreditCard = $.payment.validateCardNumber;
         window.cardType = $.payment.cardType;
@@ -295,12 +256,12 @@ $(function () {
                 return validateCreditCard(value) && acceptedCards.includes(cardType(value));
             })
             .addMessage('en', 'creditcard', '');
-        window.Parsley.addValidator('cvv',
+        window.Parsley.addValidator('cvc',
             function(value) {
                 return /^[0-9]{3,4}$/.test(value);
             }, 32)
             .addMessage('en', 'cvv', '');
-        window.Parsley.addValidator('expirydate',
+        window.Parsley.addValidator('cc-exp',
             function(value) {
                 var currentTime, expiry, prefix, ref;
 
@@ -329,7 +290,6 @@ $(function () {
                 return expiry > currentTime;
             }, 32)
             .addMessage('en', 'expirydate', '');
-    }());
 
 
 
