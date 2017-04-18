@@ -217,25 +217,27 @@
                                 </div>
                             </label>
 
-                            <label for="segmented-option-6"> <input
-                                        id="segmented-option-6"
-                                        name="segmented-options"
-                                        class="input--radio js-donation-value"
-                                        value="100"
-                                        type="radio">
-                                <div class="segmented-label">
-                                    <h2 class="size--xxl heading">&pound;100</h2>
-                                </div>
-                            </label>
 
                             <label for="segmented-option-7"> <input
                                         id="segmented-option-7"
                                         name="segmented-options"
                                         class="input--radio js-donation-value"
-                                        value="250"
+                                        value="other"
                                         type="radio">
                                 <div class="segmented-label">
-                                    <h2 class="size--xxl heading">&pound;250</h2>
+
+                                    <div class="field-group no-margin">
+                                        <label for="guide-form-field-12" class="field-label size--xl heading">
+                                            Choose your own amount
+                                        </label> <input type="tel"
+                                                        class="field-input field-input--text js-donation-value js-donation-custom"
+                                                        name="guide-form-field-12"
+                                                        id="guide-form-field-12"
+                                                        placeholder="E.g. &pound;150"
+                                                        value="15"
+                                                        aria-invalid="false">
+                                    </div>
+
                                 </div>
                             </label>
 
@@ -245,24 +247,11 @@
                     </fieldset>
                     <!-- / Segmented group -->
 
-                    <div class="field-group margin--default">
-                        <label for="guide-form-field-12" class="field-label">
-                            Choose your own amount to donate
-                            <small>(Optional)</small>
-                        </label> <input type="tel"
-                                        class="field-input field-input--text js-donation-value js-donation-custom"
-                                        name="guide-form-field-12"
-                                        id="guide-form-field-12"
-                                        placeholder="E.g. &pound;150"
-                                        value="15"
-                                        aria-invalid="false">
-                    </div>
-
 
                     <!-- Checkbox -->
                     <fieldset class="field-group checkbox-group">
 
-                        <legend class="group-legend">
+                        <legend class="group-legend heading size--xl">
                             Save a life, every month
                         </legend>
 
@@ -278,7 +267,7 @@
                                                             type="checkbox">
                             <span
                                     class="checkbox-label">
-                                Yes, donate <span class="strong">&pound;<span
+                                Yes, donate <span class="strong pe-">&pound;<span
                                             class="js-donation-amount">15</span></span> every month
                             </span> </label>
 
@@ -289,7 +278,7 @@
                     <!-- Checkbox -->
                     <fieldset class="field-group checkbox-group">
 
-                        <legend class="group-legend">
+                        <legend class="group-legend heading size--xl">
                             Giftaid
                         </legend>
 
@@ -317,6 +306,28 @@
                     <!-- / Checkbox -->
 
 
+
+                    <div class="field-group">
+                        <label for="guide-form-field-1"
+                               class="field-label">
+                            <span class="heading size--xl">Email</span>
+                            <div class="field-description">
+                                We&rsquo;ll only contact you if there&rsquo;s
+                                something wrong with your donation.
+                            </div>
+                        </label> <input type="email"
+                                        class="field-input field-input--text"
+                                        name="guide-form-field-1"
+                                        id="guide-form-field-1"
+                                        placeholder="E.g. jane.smith@example.co.uk"
+                                        autocomplete="email"
+                                        data-parsley-error-message="Please complete this field with a valid email address."
+                                        required
+                                        aria-invalid="false">
+                    </div>
+
+
+
                     <div class="fieldset-wrapper bg bg--subtle payment-fields js-payment-fields">
                         <fieldset>
 
@@ -330,7 +341,7 @@
                             <p><em>We accept VISA, MasterCard, American
                                     Express.</em></p>
 
-
+                            <!-- Set the field to 'tel' to allow for numberpad on touch devices, making it easier to complete the fields -->
                             <div class="group">
                                 <div class="group__item flex-3 field-group">
                                     <label for="cardnumber"
@@ -341,7 +352,6 @@
                                                                id="cardnumber"
                                                                placeholder="E.g. 1234 5678 9012 3456"
                                                                autocomplete="cc-number"
-
                                                                maxlength="23"
                                                                data-parsley-luhn="true"
                                                                data-parsley-error-message="Please complete this field with the card number on the front of your card."
@@ -411,6 +421,7 @@
                                                                 required
                                                                 aria-invalid="false">
                                 </div>
+                                <!-- The security code (CVC) field should never be stored so turn off autocomplete -->
                                 <div class="group__item field-group">
                                     <label for="cvc"
                                            class="field-label">Security
@@ -432,37 +443,11 @@
 
 
 
-                        <fieldset>
-
-                            <legend class="heading size--xl">Subscription
-                                details (optional)
-                            </legend>
-
-
-                            <div class="field-group">
-                                <label for="guide-form-field-1"
-                                       class="field-label">Email
-                                    <div class="field-description">
-                                        We&rsquo;ll only contact you if there&rsquo;s
-                                        something wrong with your donation.
-                                    </div>
-                                </label> <input type="email"
-                                                class="field-input field-input--text"
-                                                name="guide-form-field-1"
-                                                id="guide-form-field-1"
-                                                placeholder="E.g. jane.smith@example.co.uk"
-                                                autocomplete="email"
-                                                data-parsley-error-message="Please complete this field with a valid email address."
-                                                required
-                                                aria-invalid="false">
-                            </div>
-
-
                             <!-- Checkbox -->
                             <fieldset class="field-group checkbox-group">
 
-                                <legend class="group-legend">
-                                    Subscribe to our newsletter
+                                <legend class="group-legend heading size--xl">
+                                    Subscribe to our newsletter (optional)
                                 </legend>
 
                                 <div class="field-description">
@@ -485,8 +470,6 @@
 
                             </fieldset>
                             <!-- / Checkbox -->
-
-                        </fieldset>
 
 
 

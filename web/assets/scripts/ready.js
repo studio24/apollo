@@ -188,11 +188,29 @@ $(function () {
         // Make sure the val() isn't empty
         if($(this).val() != '') {
 
-            $donationAmount.text($(this).val());
-            $donationCustom.val($(this).val());
-            $giftaidAmount.text($(this).val()*1.25);
+            // $donationAmount.text($(this).val());
+            // $donationCustom.val($(this).val());
+            // $giftaidAmount.text($(this).val()*1.25);
+
+            if($(this).val() != 'other') {
+
+                $donationAmount.text($(this).val());
+                $donationCustom.val($(this).val());
+                $giftaidAmount.text($(this).val()*1.25);
+            }
+            else {
+
+                console.log('radio is first');
+                $donationCustom.focus();
+
+            }
 
         }
+    });
+
+    $donationCustom.focus(function(){
+        console.log('input is first');
+        $('#segmented-option-7').prop('checked', true);
     });
 
     $paymentFields.focus(function(){
@@ -219,10 +237,11 @@ $(function () {
         // Sets max length for ccv based on card type entered
         const ccvMaxLength = function(type) {
             if(type !== "amex") {
-                $('#cvc').prop('maxlength', 3);
+                $('#cvc').prop('maxLength', 3);
                 $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 3-digit security code on the back of your card.');
             }
             else {
+                $('#cvc').prop('maxLength', 4);
                 $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 4-digit security code on the front of your card.');
             }
         };

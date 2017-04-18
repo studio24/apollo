@@ -186,7 +186,8 @@ input[required]:valid {
     #Field grouping
 \*------------------------------------*/
 .field-group:not(.group__item) + .field-group:not(.group__item),
-* + .fieldset-wrapper {
+* + .fieldset-wrapper,
+* + .field-group:not(.group__item) {
 
     margin-top: 2em;
 
@@ -649,7 +650,13 @@ input[required]:valid {
     // Make it so that all options after 3 becomes secondary giving them less affordance and emphasis
     &:nth-child(1n+4) {
 
-        flex: 1 0 0%;
+        flex: 1 0 25%;
+
+    }
+
+    &:nth-child(1n+6) {
+
+        flex: 1 0 50%;
 
     }
 
