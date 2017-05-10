@@ -4,8 +4,8 @@ Static framework
 
 ## Site URLs
 
-* Live: https://www.domain.com (N/A)
-* Staging: http://staging.domain.com (N/A)
+* Live: http://apollo.s24.net/
+* Staging: http://apollo-staging.s24.net
 * Development: http://apollo.dev
 
 ## Building the site
@@ -35,7 +35,11 @@ Deploy the site to staging:
 
 ```
 #!bash
-{deploy command here}
+ssh studio24@goldeneye.studio24.net deploy studio24/apollo staging master nodb
+```
+
+```
+ssh studio24@goldeneye.studio24.net deploy studio24/apollo live master nodb
 ```
 
 ## Documentation
