@@ -38,6 +38,8 @@ Deploy the site to staging:
 ssh studio24@goldeneye.studio24.net deploy studio24/apollo staging master nodb
 ```
 
+Deploy the site to live
+
 ```
 ssh studio24@goldeneye.studio24.net deploy studio24/apollo live master nodb
 ```
