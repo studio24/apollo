@@ -24,13 +24,6 @@ And to continuously watch the project for changes run:
 
 ## Deployment
 
-Deploy the site to live:
-
-```
-#!bash
-{deploy command here}
-```
-
 Deploy the site to staging:
 
 ```
