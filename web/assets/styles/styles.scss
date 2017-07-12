@@ -90,40 +90,40 @@
 /*------------------------------------*\
     #Sections
 \*------------------------------------*/
-@import "sass/8-sections/address";
-@import "sass/8-sections/banner";
-@import "sass/8-sections/breadcrumbs";
-@import "sass/8-sections/callouts";
-@import "sass/8-sections/collapsibles";
-@import "sass/8-sections/cta";
-@import "sass/8-sections/footer";
-@import "sass/8-sections/forms";
-@import "sass/8-sections/header";
-@import "sass/8-sections/icons";
-@import "sass/8-sections/images";
-@import "sass/8-sections/island";
-@import "sass/8-sections/labels";
-@import "sass/8-sections/lists";
-@import "sass/8-sections/logo";
-@import "sass/8-sections/main";
-@import "sass/8-sections/media";
-@import "sass/8-sections/metadata";
-@import "sass/8-sections/navigation";
-@import "sass/8-sections/notes";
-@import "sass/8-sections/pager";
-@import "sass/8-sections/pagination";
-@import "sass/8-sections/prices";
-@import "sass/8-sections/progress-tracker";
-@import "sass/8-sections/quotes";
-@import "sass/8-sections/stats";
-@import "sass/8-sections/share";
-@import "sass/8-sections/tabs";
-@import "sass/8-sections/tables";
-@import "sass/8-sections/taxonomies";
-@import "sass/8-sections/thematic-break";
+@import "sass/8-components/address";
+@import "sass/8-components/banner";
+@import "sass/8-components/breadcrumbs";
+@import "sass/8-components/callouts";
+@import "sass/8-components/collapsibles";
+@import "sass/8-components/cta";
+@import "sass/8-components/footer";
+@import "sass/8-components/forms";
+@import "sass/8-components/header";
+@import "sass/8-components/icons";
+@import "sass/8-components/images";
+@import "sass/8-components/island";
+@import "sass/8-components/labels";
+@import "sass/8-components/lists";
+@import "sass/8-components/logo";
+@import "sass/8-components/main";
+@import "sass/8-components/media";
+@import "sass/8-components/metadata";
+@import "sass/8-components/navigation";
+@import "sass/8-components/notes";
+@import "sass/8-components/pager";
+@import "sass/8-components/pagination";
+@import "sass/8-components/prices";
+@import "sass/8-components/progress-tracker";
+@import "sass/8-components/quotes";
+@import "sass/8-components/stats";
+@import "sass/8-components/share";
+@import "sass/8-components/tabs";
+@import "sass/8-components/tables";
+@import "sass/8-components/taxonomies";
+@import "sass/8-components/thematic-break";
 
 // This should cascade higher than _icons
-@import "sass/8-sections/payment-details";
+@import "sass/8-components/payment-details";
 
 
 

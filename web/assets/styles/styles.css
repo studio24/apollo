@@ -1107,9 +1107,7 @@ button:focus,
   padding: 0.6875em 1em 0.625em 1em;
   letter-spacing: 0.015em;
   font-weight: 400;
-  border-radius: 0.2em;
-  -webkit-box-shadow: inset 0 0.125em 0 rgba(247, 247, 247, 0.2), inset 0 -0.125em 0 rgba(34, 34, 34, 0.2);
-          box-shadow: inset 0 0.125em 0 rgba(247, 247, 247, 0.2), inset 0 -0.125em 0 rgba(34, 34, 34, 0.2); }
+  border-radius: 0; }
 
 button.button, button.towncrier__share-button,
 input[type="submit"].button,

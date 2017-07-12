@@ -1649,7 +1649,7 @@
 			</div>
 			<div class="group__item group__item--primary">
 
-				<ul class="metadata">
+				<ul class="metadata inline-list">
 					<li>
 						<a href="" class="taxonomy">The Hound of the
 							Baskervilles</a>
