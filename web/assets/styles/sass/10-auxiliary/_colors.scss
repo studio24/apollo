@@ -15,7 +15,7 @@
         background-color: $primary-color;
         color: contrast($primary-color);
 
-        //@include inverted-links($primary-color);
+        @include links($primary-color);
 
     }
 
@@ -24,7 +24,7 @@
         background-color: $secondary-color;
         color: contrast($secondary-color);
 
-        //@include inverted-links($secondary-color);
+        @include links($secondary-color);
 
     }
 
@@ -33,7 +33,7 @@
         background-color: $tertiary-color;
         color: contrast($tertiary-color);
 
-        //@include inverted-links($tertiary-color);
+        @include links($tertiary-color);
 
     }
 
@@ -42,7 +42,7 @@
         background-color: $accent-color;
         color: contrast($accent-color);
 
-        //@include inverted-links($accent-color);
+        @include links($accent-color);
 
     }
 
@@ -51,7 +51,7 @@
         background-color: $subtle-color;
         color: contrast($subtle-color);
 
-        //@include inverted-links($subtle-color);
+        @include links($subtle-color);
 
     }
 
@@ -62,7 +62,7 @@
         background-color: $white;
         color: contrast($white);
 
-        //@include inverted-links($white);
+        @include links($white);
 
     }
 
@@ -71,7 +71,7 @@
         background-color: $black;
         color: contrast($black);
 
-        //@include inverted-links($black);
+        @include links($black);
 
     }
 

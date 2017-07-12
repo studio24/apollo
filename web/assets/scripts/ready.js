@@ -104,13 +104,11 @@ $(function () {
     });
 
 
-
-
     /* Pikaday date picker
      -----------------------------------------------------------------------------------------
      */
     var $datepickers = $('.js-pikaday');
-    $datepickers.each(function(index){
+    $datepickers.each(function (index) {
 
         var $datepicker = $(this);
 
@@ -120,14 +118,12 @@ $(function () {
     });
 
 
-
-
     /* Parsley form validation
      -----------------------------------------------------------------------------------------
      */
     var $form = $('.js-validate-form');
 
-    if($form.length > 0) {
+    if ($form.length > 0) {
 
         $form.find('fieldset').each(function (index) {
             var fieldset = this;
@@ -169,8 +165,8 @@ $(function () {
             $element.removeAttr('aria-describedby');
         });
 
-    }; // End of if
-
+    }
+    ; // End of if
 
 
     /* Oliver | Credit card enhancement
@@ -183,24 +179,22 @@ $(function () {
     var $donationCustom = $('.js-donation-custom');
     var $giftaidAmount = $('.js-giftaid-amount');
 
-    $donationValueInput.on('change keyup', function(){
+
+    // Update the text fields with the donation amount
+    $donationValueInput.on('change keyup', function () {
 
         // Make sure the val() isn't empty
-        if($(this).val() != '') {
+        if ($(this).val() != '') {
 
-            // $donationAmount.text($(this).val());
-            // $donationCustom.val($(this).val());
-            // $giftaidAmount.text($(this).val()*1.25);
-
-            if($(this).val() != 'other') {
+            // As long as the value is not `other`
+            if ($(this).val() != 'other') {
 
                 $donationAmount.text($(this).val());
                 $donationCustom.val($(this).val());
-                $giftaidAmount.text($(this).val()*1.25);
+                $giftaidAmount.text($(this).val() * 1.25);
             }
             else {
 
-                console.log('radio is first');
                 $donationCustom.focus();
 
             }
@@ -208,109 +202,101 @@ $(function () {
         }
     });
 
-    $donationCustom.focus(function(){
-        console.log('input is first');
+
+    // When the custom input for donation amount gets focus, change to check the right radio button
+    // We're matching the ID but it might be better matching to the last radio option
+    $donationCustom.focus(function () {
+
         $('#segmented-option-7').prop('checked', true);
     });
 
-    $paymentFields.focus(function(){
+
+    // Shows the SVG when any payment gets focus
+    $paymentFields.focus(function () {
 
         newClass = $(this).attr('name');
         $creditcard.addClass('is-visible');
         $creditcard.attr('data-focussed', newClass);
+
     });
 
-    // Vanilla-masker (mask inputs for readability)
-    // $cardNumber = $('#cardnumber');
-    // $cardExpiry = $('#cc-exp');
-
-    // VMasker(document.getElementById("cardnumber")).maskPattern('9999 9999 9999 9999 99');
-    // VMasker(document.getElementById("cc-exp")).maskPattern('99/99');
-    // $cardExpiry.maskPattern('99/99');
-    // masker(cardYear).maskPattern('9999');
 
 
+    // Sets max length for ccv based on card type entered
+    const ccvMaxLength = function (type) {
+        if (type !== "amex") {
+            $('#cvc').prop('maxLength', 3);
+            $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 3-digit security code on the back of your card.');
+        }
+        else {
+            $('#cvc').prop('maxLength', 4);
+            $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 4-digit security code on the front of your card.');
+        }
+    };
+    // Updates elements and icon based on cc number
+    const updatePaymentIcon = function () {
 
+        // the card type based on the number entered
+        const cardType = $.payment.cardType($('#cardnumber').val());
+        // if cardType is NOT null update data attribute to correct card type
+        if (cardType !== null) {
+            $creditcard.attr('data-cardtype', cardType);
+        }
 
+        // set the max length for the ccv based on card type
+        ccvMaxLength(cardType);
+    };
 
+    // format inputs with jquery.payment
+    $('#cardnumber').payment('formatCardNumber');
+    $('#cc-exp').payment('formatCardExpiry');
+    $('#cvc').payment('formatCardCVC');
 
-        // Sets max length for ccv based on card type entered
-        const ccvMaxLength = function(type) {
-            if(type !== "amex") {
-                $('#cvc').prop('maxLength', 3);
-                $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 3-digit security code on the back of your card.');
+    // on entry of cc number fire updatePaymentIcon function
+    $('#cardnumber').on("keyup blur", updatePaymentIcon);
+    // custom cc validators added to parsley using jquery.payment functions
+    window.validateCreditCard = $.payment.validateCardNumber;
+    window.cardType = $.payment.cardType;
+    window.Parsley.addValidator('creditcard',
+        function (value) {
+            const acceptedCards = ['amex', 'visa', 'mastercard'];
+            return validateCreditCard(value) && acceptedCards.includes(cardType(value));
+        })
+        .addMessage('en', 'creditcard', '');
+    window.Parsley.addValidator('cvc',
+        function (value) {
+            return /^[0-9]{3,4}$/.test(value);
+        }, 32)
+        .addMessage('en', 'cvv', '');
+    window.Parsley.addValidator('cc-exp',
+        function (value) {
+            var currentTime, expiry, prefix, ref;
+
+            var date = value.split('/'),
+                month = date[0].trim(),
+                year = date[1].trim();
+
+            if (!/^\d+$/.test(month)) {
+                return false;
             }
-            else {
-                $('#cvc').prop('maxLength', 4);
-                $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 4-digit security code on the front of your card.');
+            if (!/^\d+$/.test(year)) {
+                return false;
             }
-        };
-        // Updates elements and icon based on cc number
-        const updatePaymentIcon = function() {
-
-            // the card type based on the number entered
-            const cardType = $.payment.cardType($('#cardnumber').val());
-            // if cardType is NOT null update data attribute to correct card type
-            if (cardType !== null) {
-                $creditcard.attr('data-cardtype', cardType);
+            if (!(parseInt(month, 10) <= 12)) {
+                return false;
             }
-
-            // set the max length for the ccv based on card type
-            ccvMaxLength(cardType);
-        };
-
-        // format inputs with jquery.payment
-        $('#cardnumber').payment('formatCardNumber');
-        $('#cc-exp').payment('formatCardExpiry');
-        $('#cvc').payment('formatCardCVC');
-
-        // on entry of cc number fire updatePaymentIcon function
-        $('#cardnumber').on("keyup blur", updatePaymentIcon);
-        // custom cc validators added to parsley using jquery.payment functions
-        window.validateCreditCard = $.payment.validateCardNumber;
-        window.cardType = $.payment.cardType;
-        window.Parsley.addValidator('creditcard',
-            function(value) {
-                const acceptedCards = ['amex', 'visa', 'mastercard'];
-                return validateCreditCard(value) && acceptedCards.includes(cardType(value));
-            })
-            .addMessage('en', 'creditcard', '');
-        window.Parsley.addValidator('cvc',
-            function(value) {
-                return /^[0-9]{3,4}$/.test(value);
-            }, 32)
-            .addMessage('en', 'cvv', '');
-        window.Parsley.addValidator('cc-exp',
-            function(value) {
-                var currentTime, expiry, prefix, ref;
-
-                var date = value.split('/'),
-                    month = date[0].trim(),
-                    year = date[1].trim();
-
-                if (!/^\d+$/.test(month)) {
-                    return false;
-                }
-                if (!/^\d+$/.test(year)) {
-                    return false;
-                }
-                if (!(parseInt(month, 10) <= 12)) {
-                    return false;
-                }
-                if (year.length === 2) {
-                    prefix = (new Date).getFullYear();
-                    prefix = prefix.toString().slice(0, 2);
-                    year = prefix + year;
-                }
-                expiry = new Date(year, month);
-                currentTime = new Date;
-                expiry.setMonth(expiry.getMonth() - 1);
-                expiry.setMonth(expiry.getMonth() + 1, 1);
-                return expiry > currentTime;
-            }, 32)
-            .addMessage('en', 'expirydate', '');
-
-
+            if (year.length === 2) {
+                prefix = (new Date).getFullYear();
+                prefix = prefix.toString().slice(0, 2);
+                year = prefix + year;
+            }
+            expiry = new Date(year, month);
+            currentTime = new Date;
+            expiry.setMonth(expiry.getMonth() - 1);
+            expiry.setMonth(expiry.getMonth() + 1, 1);
+            return expiry > currentTime;
+        }, 32)
+        .addMessage('en', 'expirydate', '');
 
 
     /* Progressive collapsibles

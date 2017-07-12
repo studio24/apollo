@@ -558,6 +558,12 @@
 						button</a>
 				</p>
 
+                <p>
+                    <a href="link" class="button button--success">Success button</a>
+                    <a href="link" class="button button--warning">Warning button</a>
+                    <a href="link" class="button button--alert">Alert button</a>
+                </p>
+
 				<h4 class="heading size--xl subheading">Semantics</h4>
 
 				<button type="button" class="button
@@ -1759,6 +1765,19 @@
 				</div>
 
 
+                <h4 class="size--xl heading subheading">Success note</h4>
+
+                <div class="note bg bg--success" aria-label="Success">
+                    <h3 class="heading size--xl">Sherlock Holmes</h3>
+                    <p>At three o’clock precisely I was at <a
+                                href="javascript:void(0)">Baker Street</a>, but
+                        Holmes had
+                        not yet returned. The landlady informed me that he had
+                        left the house shortly after eight
+                        o’clock in the morning.</p>
+                </div>
+
+
 				<h4 class="size--xl heading subheading">Warning note</h4>
 
 				<div class="note bg bg--warning" aria-label="Alert">
@@ -1966,7 +1985,7 @@
 					   aria-expanded="false"
 					   aria-haspopup="true">
 						<svg class="icon towncrier__share-icon" aria-hidden="true">
-							<use xlink:href="#share"/>
+							<use xlink:href="#icon-share"/>
 						</svg><span class="towncrier__share-text">Share this</span>
 					</a>
 

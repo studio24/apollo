@@ -34,7 +34,7 @@ $polarize-blue-coefficients:	68 !default;
 $polarize-brightness-divisor: 	$polarize-red-coefficients + $polarize-green-coefficients + $polarize-blue-coefficients;
 
 
-$polarize-cutoff: round((unitless(lightness($polarize-white)) - unitless(lightness($polarize-black))) * ($polarize-cutoff / 200)) +0%;
+
 
 
 
@@ -53,24 +53,26 @@ $polarize-cutoff: round((unitless(lightness($polarize-white)) - unitless(lightne
 	@return 100% * $number / 255;
 }
 
+$polarize-cutoff: (unitless(brightness($polarize-white)) - unitless(brightness($polarize-black))) * ($polarize-cutoff / 255) +0%;
 
-
-@function contrast($polarize-color, $w: $polarize-white, $b: $polarize-black) {
+@function contrast($polarize-color, $w: $polarize-white, $b: $polarize-black, $debug: false) {
 
 	@if brightness($polarize-color) < $polarize-cutoff {
 
 		// For debugging
-		@if $polarize-cutoff < 65 {
-			// @warn "The difference is less than 60";
-			// @warn "The difference between `#{brightness($polarize-color)}` is only `#{$polarize-cutoff}` which doesn't have sufficient contrast.";
+		@if $debug == true {
+			@warn "The brightness difference between your $black and $white is `#{$polarize-cutoff}`. This color brightness is `#{brightness($polarize-color)}`. Using $white (#{$w}) for maximum contrast.";
 		}
-
 		@return $w;
 
 	}
 
 	@else {
 
+		// For debugging
+		@if $debug == true {
+			@warn "The brightness difference between your $black and $white is `#{$polarize-cutoff}`. This color brightness is `#{brightness($polarize-color)}`. Using $black (#{$b}) for maximum contrast.";
+		}
 		@return $b;
 
 	}

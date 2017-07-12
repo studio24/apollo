@@ -184,6 +184,29 @@ input[type="submit"].button {
 
 }
 
+.button--alert.button--alert {
+
+	background-color: $alert-color;
+	color: contrast($alert-color);
+
+	&:visited {
+
+		background-color: $alert-color;
+		color: contrast($alert-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($alert-color);
+		color: contrast(deviate($alert-color));
+
+	}
+
+}
+
 
 /*------------------------------------*\
     #Modifiers

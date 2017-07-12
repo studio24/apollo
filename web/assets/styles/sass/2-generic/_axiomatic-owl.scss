@@ -2,34 +2,56 @@
     #Axiomatic owl
 \*------------------------------------*/
 
-
-
 * {
 
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 
 }
 
 * + * {
 
-	margin-top: 1em;
+    margin-top: 1em;
 
 }
 
 .margin--default {
 
-	margin-top: 1em !important;
+    margin-top: 1em !important;
 
 }
 
+* + li {
+    margin-top: 0.5em;
+}
+
+.margin--half {
+    margin-top: 0.5em !important;
+}
+
+.margin--third {
+    margin-top: 0.3333em !important;
+}
+
+/**
+ * 1. Don't apply axiomatic owl to elements which are for Assistive Technology
+ * 2. Summary: Firefox is an ass hole
+ *
+ * Empty inline elements generate empty inline boxes, but these boxes still
+ * have margins, padding, borders and a line height, and thus influence these
+ * calculations just like elements with content.
+ *
+ * Firefox adds margins to <br> elements
+ * http://www.w3.org/TR/CSS21/visudet.html#line-height
+ */
 .visuallyhidden + * {
 
-	margin-top: 0;
+    margin-top: 0; /* 1 */
 
 }
 
-* + li { margin-top: 0.5em; }
+br {
 
-.margin--half {margin-top: 0.5em !important; }
-.margin--third { margin-top: 0.3333em !important; }
+    margin-top: 0; /* 2 */
+
+}

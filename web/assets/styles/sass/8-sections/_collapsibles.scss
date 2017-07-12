@@ -26,7 +26,8 @@
         border: 0;
         padding: 0;
 
-        background-color: $subtle-color;
+        background-color: transparent;
+        border: $border;
         padding: 1rem;
         color: inherit;
 
@@ -99,7 +100,7 @@
 
     visibility: hidden;
     max-height: 0;
-    margin-top: 0;
+    margin-top: -1px;
 
     padding: 0 1.5em;
 
@@ -120,7 +121,8 @@
     // This really shouldn't be a magic number but it's the only way to animate without jQuery
     max-height: 64em;
 
-    background-color: $subtle-color;
+    background-color: transparent;
+    border: $border;
 
 }
 

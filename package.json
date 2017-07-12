@@ -4,20 +4,25 @@
   "description": "",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0"
+    "gulp-sass": "^3.1.0"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.4",
-    "gulp-connect": "^3.2.2",
-    "gulp-imagemin": "^2.4.0",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-connect": "^5.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-if": "^2.0.0",
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
-    "gulp-minify": "0.0.7",
-    "imagemin-jpegtran": "^4.3.2",
-    "imagemin-pngquant": "^4.2.2",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-minify": "0.0.15",
+    "gulp-notify": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.0",
     "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0"
+    "jshint-stylish": "^2.1.0",
+    "yargs": "^3.31.0"
   },
   "author": ""
 }
