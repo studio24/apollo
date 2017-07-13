@@ -509,8 +509,7 @@
 				<a href="link" class="button button--subtle">Subtle button</a>
 
 				<a href="link" class="button button--primary">
-					<span>Button with icon</span>
-					<svg class="icon">
+					<span>Button with icon</span><svg class="icon">
 						<use xlink:href="#arrow-right"/>
 					</svg>
 				</a>
@@ -525,8 +524,7 @@
 				<a href="link" class="button button--primary">
 					<svg class="icon">
 						<use xlink:href="#instagram"/>
-					</svg>
-					<span>Button with icon</span>
+					</svg><span>Button with icon</span>
 				</a>
 
 
@@ -535,8 +533,7 @@
 				<a href="link" class="button button--primary button--is-block">
 					<svg class="icon">
 						<use xlink:href="#email"/>
-					</svg>
-					<span>Block button with icon</span>
+					</svg><span>Block button with icon</span>
 				</a>
 
 				<!-- `is-disabled` overrides any modifiers -->
@@ -786,8 +783,8 @@
 
 				<h1 class="heading size--xxxl">Components</h1>
 				<div class="lead">
-					<p>Components are groups of Elements (and sometimes Components)
-						joined together to form distinct section
+					<p>Components are groups of Elements  or Components
+						joined together to form distinct sections
 						of an interface, for example navigation or comment
 						blocks.</p>
 				</div>
@@ -828,7 +825,7 @@
 
 				-->
 
-				<figure class="banner" role="banner">
+				<figure class="banner" role="banner" data-apollo-name="Banner">
 					<img class="banner__image"
 					     src="/assets/images/sherlock-banner.jpg"
 					     alt="Descriptive text.">
@@ -876,7 +873,7 @@
 				<h2 class="visuallyhidden">You are here:</h2>
 
 				<ol class="breadcrumbs" itemscope
-				    itemtype="http://schema.org/BreadcrumbList">
+				    itemtype="http://schema.org/BreadcrumbList" data-apollo-name="Breadcrumbs">
 					<li itemprop="itemListElement" itemscope
 					    itemtype="http://schema.org/ListItem">
 						<a href="http://www.domain.com/" itemprop="item">
@@ -1010,7 +1007,7 @@
 			<h5 class="heading size size--xl subheading">Collapsibles with Javascript</h5>
 
 				<!-- Collapsibles wrapper -->
-				<div class="collapsibles js-collapsibles">
+				<div class="collapsibles js-collapsibles" data-apollo-name="Collapsibles">
 
 					<!-- Section: collapsible: item -->
 					<h3 class="heading size--xl js-collapsible-heading">A
@@ -1279,13 +1276,33 @@
 							We will send you a monthly newsletter with promotions. We will guard your email with our lives and never give it out to a third-party.
 						</div>
 
-						<label for="checkbox-input">
-							<input id="checkbox-input"
+						<label for="checkbox-input-1">
+							<input id="checkbox-input-1"
 							       name="checkbox-input"
 							       class="input--checkbox"
 							       value="data-value"
 							       type="checkbox">
 							<span class="checkbox-label">
+                                Yes, I would love to receive your newsletter once a month
+                            </span> </label>
+
+                        <label for="checkbox-input-2">
+                            <input id="checkbox-input-2"
+                                   name="checkbox-input"
+                                   class="input--checkbox"
+                                   value="data-value"
+                                   type="checkbox">
+                            <span class="checkbox-label">
+                                Yes, I would love to receive your newsletter once a month
+                            </span> </label>
+
+                        <label for="checkbox-input-3">
+                            <input id="checkbox-input-3"
+                                   name="checkbox-input"
+                                   class="input--checkbox"
+                                   value="data-value"
+                                   type="checkbox">
+                            <span class="checkbox-label">
                                 Yes, I would love to receive your newsletter once a month
                             </span> </label>
 
@@ -1361,8 +1378,8 @@
 									required
 									aria-invalid="false">
 								<div class="segmented-label">
-									<h2 class="size--l heading">Digital download</h2>
-									<div class="no-margin">Download The Adventure of the Engineer’s Thumb in less than 5 minutes.</div>
+									<h2 class="size--l heading">Approachable option</h2>
+									<div class="">Copy to explain this option in more detail.</div>
 								</div>
 							</label>
 
@@ -1374,8 +1391,8 @@
 									type="radio"
 									checked>
 								<div class="segmented-label">
-									<h2 class="size--l heading">Hardcover</h2>
-									<div class="no-margin">We&rsquo;ll send you the hardcover of The Adventure of the Engineer’s Thumb, expect it in 2 weeks.</div>
+									<h2 class="size--l heading">Bell curve option</h2>
+									<div class="">Copy to explain this option in more detail.</div>
 								</div>
 							</label>
 
@@ -1386,10 +1403,54 @@
 									value="data-value"
 									type="radio">
 								<div class="segmented-label">
-									<h2 class="size--l heading">Digital + Hardcover</h2>
-									<div class="no-margin">Download The Adventure of the Engineer’s Thumb today and get the hardcover book in 2 weeks.</div>
+									<h2 class="size--l heading">Expensive option</h2>
+									<div class="">Copy to explain this option in more detail.</div>
 								</div>
 							</label>
+
+                            <label for="segmented-option-4"> <input
+                                        id="segmented-option-4"
+                                        name="segmented-options"
+                                        class="input--radio"
+                                        value="data-value"
+                                        type="radio">
+                                <div class="segmented-label">
+                                    <h2 class="size--l heading">Secondary options</h2>
+                                </div>
+                            </label>
+
+                            <label for="segmented-option-5"> <input
+                                        id="segmented-option-5"
+                                        name="segmented-options"
+                                        class="input--radio"
+                                        value="data-value"
+                                        type="radio">
+                                <div class="segmented-label">
+                                    <h2 class="size--l heading">Secondary options</h2>
+                                </div>
+                            </label>
+
+                            <label for="segmented-option-6"> <input
+                                        id="segmented-option-6"
+                                        name="segmented-options"
+                                        class="input--radio"
+                                        value="data-value"
+                                        type="radio">
+                                <div class="segmented-label">
+                                    <h2 class="size--l heading">Secondary options</h2>
+                                </div>
+                            </label>
+
+                            <label for="segmented-option-7"> <input
+                                        id="segmented-option-7"
+                                        name="segmented-options"
+                                        class="input--radio"
+                                        value="data-value"
+                                        type="radio">
+                                <div class="segmented-label">
+                                    <h2 class="size--l heading">Secondary options</h2>
+                                </div>
+                            </label>
 
 						</div>
 						<!-- / Wrapper for labels -->
@@ -1409,9 +1470,9 @@
 
 
 
-				<h5 class="size--l subheading">Search component</h5>
+				<h5 class="heading size--l subheading">Search form</h5>
 
-				<form action="">
+				<form action="" data-apollo-name="Search">
 
 					<div class="fieldset-wrapper">
 						<fieldset>
@@ -1460,7 +1521,7 @@
 			</div>
 			<div class="group__item group__item--primary">
 
-				<h5 class="h4">Clean list</h5>
+                <h5 class="heading size--l subheading">Clean list</h5>
 
 				<ul class="clean-list">
 					<li>Sherlock Holmes</li>
@@ -1476,7 +1537,8 @@
 					<li>Toby</li>
 				</ul>
 
-				<h5 class="h4">Definition list</h5>
+
+                <h5 class="heading size--l subheading">Definition list</h5>
 
 				<dl>
 					<dt>1887</dt>
@@ -1498,8 +1560,7 @@
 					<dd>The Valley of Fear</dd>
 				</dl>
 
-
-				<h5 class="h4">Ordered list</h5>
+                <h5 class="heading size--l subheading">Ordered list</h5>
 
 				<p>Ordered lists are automatically numbered using <abbr
 						title="Cascading Style Sheets">CSS</abbr>.</p>
@@ -1533,7 +1594,7 @@
 					<li>The Adventure of the Copper Beeches</li>
 				</ol>
 
-				<h5 class="h4">Unordered list</h5>
+                <h5 class="heading size--l subheading">Unordered list</h5>
 
 				<ul>
 					<li>Sherlock Holmes</li>
@@ -1574,7 +1635,7 @@
 				<h4 class="heading size--xl subheading">Media</h4>
 
 
-				<figure class="media">
+				<figure class="media" data-apollo-name="Media">
 					<img class="media__image"
 					     src="/assets/images/sherlock-16-9.jpg"
 					     alt="Sherlock Holmes and Dr. Watson sitting next to each in armchairs, deep in thought.">
@@ -1591,8 +1652,9 @@
 					</figcaption>
 				</figure>
 
+                <h4 class="heading size--xl subheading">Media (left on lap)</h4>
 
-				<figure class="media media--abreast media--left-on-lap">
+				<figure class="media media--abreast media--left-on-lap" data-apollo-name="Media">
 					<img class="media__image"
 					     src="/assets/images/sherlock-16-9.jpg"
 					     alt="Descriptive text.">
@@ -1610,7 +1672,10 @@
 				</figure>
 
 
-				<figure class="media media--abreast media--right-on-lap">
+                <h4 class="heading size--xl subheading">Media (right on lap)</h4>
+
+
+				<figure class="media media--abreast media--right-on-lap" data-apollo-name="Media">
 					<img class="media__image"
 					     src="/assets/images/sherlock-16-9.jpg"
 					     alt="Descriptive text.">
@@ -1686,22 +1751,22 @@
 
 				<h4 class="heading size--xl subheading">Primary navigation</h4>
 
-				<nav class="nav nav--primary">
+				<nav class="nav nav--primary" data-apollo-name="Navigation">
 					<ul class="nav-list inline-list">
-						<li><a href="/">
+						<li><a href="javascript:void(0)">
 								<img src="/assets/images/logo.png"
 								     alt="Logo name">
 							</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
+						<li><a href="javascript:void(0)">About</a></li>
+						<li><a href="javascript:void(0)">Services</a></li>
+						<li><a href="javascript:void(0)">Contact us</a></li>
 
 						<!-- Special search link -->
 						<li>
-							<a href="/search">
+							<a href="javascript:void(0)">
 								<svg class="icon">
 									<use xlink:href="#search"/>
-								</svg>
-								<span>Search</span>
+								</svg><span class="visuallyhidden">Search</span>
 							</a>
 						</li>
 						<!-- / Special search link -->
@@ -1721,6 +1786,20 @@
 						<li><a href="javascript:void(0)">The Red-Headed
 								League</a></li>
 						<li><a href="javascript:void(0)">A Case of Identity</a>
+                            <ul class="">
+                                <li><a href="javascript:void(0)">A Scandal in
+                                        Bohemia</a></li>
+                                <li><a href="javascript:void(0)">The Red-Headed
+                                        League</a></li>
+                                <li><a href="javascript:void(0)">A Case of Identity</a>
+                                </li>
+                                <li><a href="javascript:void(0)">The Boscombe Valley
+                                        Mystery</a></li>
+                                <li><a href="javascript:void(0)">The Five Orange
+                                        Pips</a></li>
+                                <li><a href="javascript:void(0)">The Man with the
+                                        Twisted Lip</a></li>
+                            </ul>
 						</li>
 						<li><a href="javascript:void(0)">The Boscombe Valley
 								Mystery</a></li>
@@ -1754,45 +1833,7 @@
 			</div>
 			<div class="group__item group__item--primary">
 
-				<div class="note" aria-label="Information">
-					<h3 class="heading size--xl">Sherlock Holmes</h3>
-					<p>At three o’clock precisely I was at <a
-							href="javascript:void(0)">Baker Street</a>, but
-						Holmes had
-						not yet returned. The landlady informed me that he had
-						left the house shortly after eight
-						o’clock in the morning.</p>
-				</div>
-
-
-                <h4 class="size--xl heading subheading">Success note</h4>
-
-                <div class="note bg bg--success" aria-label="Success">
-                    <h3 class="heading size--xl">Sherlock Holmes</h3>
-                    <p>At three o’clock precisely I was at <a
-                                href="javascript:void(0)">Baker Street</a>, but
-                        Holmes had
-                        not yet returned. The landlady informed me that he had
-                        left the house shortly after eight
-                        o’clock in the morning.</p>
-                </div>
-
-
-				<h4 class="size--xl heading subheading">Warning note</h4>
-
-				<div class="note bg bg--warning" aria-label="Alert">
-					<h3 class="heading size--xl">Sherlock Holmes</h3>
-					<p>At three o’clock precisely I was at <a
-							href="javascript:void(0)">Baker Street</a>, but
-						Holmes had
-						not yet returned. The landlady informed me that he had
-						left the house shortly after eight
-						o’clock in the morning.</p>
-				</div>
-
-				<h4 class="size--xl heading subheading">Alert note</h4>
-
-				<div class="note bg bg--alert" aria-label="Alert">
+				<div class="note" aria-label="Information" data-apollo-name="Notes">
 					<h3 class="heading size--xl">Sherlock Holmes</h3>
 					<p>At three o’clock precisely I was at <a
 							href="javascript:void(0)">Baker Street</a>, but
@@ -1825,7 +1866,7 @@
 			<div class="group__item group__item--primary">
 
 
-				<ul class="pager group" role="navigation" aria-label="Pager">
+				<ul class="pager group" role="navigation" aria-label="Pager" data-apollo-name="Pager">
 					<li class="group__item">
 						<a href="#" rel="prev" class="pager__previous">
 							<span
@@ -1867,7 +1908,7 @@
 
 
 				<ul class="inline-list pagination" role="navigation"
-				    aria-label="Pagination">
+				    aria-label="Pagination" data-apollo-name="Pagination">
 					<li class="pagination__item">
 						<a href="#">
 							<span class="visuallyhidden">Page</span>1<span
@@ -1940,7 +1981,7 @@
 
 				<h4 class="heading size--xl subheading">Quotes</h4>
 
-				<figure class="quote quote--block">
+				<figure class="quote quote--block" data-apollo-name="Quotes">
 					<blockquote>
 						<p>At three o’clock precisely I was at Baker Street, but
 							Holmes had not yet returned. The
@@ -1962,7 +2003,7 @@
 			<div class="group__item">
 
 				<h3 class="small-caps">Components</h3>
-				<h4 id="share" class="heading size--xl no-margin">Share</h4>
+				<h4 id="share" class="heading size--xl no-margin">Share &#10004;</h4>
 
 			</div>
 		</div>
@@ -1978,101 +2019,101 @@
 
 
 				<!-- Share this -->
-				<div class="towncrier">
+				<div class="share" data-apollo-name="Share">
 					<a href="#share-this"
-					   class="towncrier__share-button js-towncrier__share-button"
+					   class="share__share-button js-share__share-button"
 					   aria-label="Open share panel"
 					   aria-expanded="false"
 					   aria-haspopup="true">
-						<svg class="icon towncrier__share-icon" aria-hidden="true">
+						<svg class="icon share__share-icon" aria-hidden="true">
 							<use xlink:href="#icon-share"/>
-						</svg><span class="towncrier__share-text">Share this</span>
+						</svg><span class="share__share-text">Share this</span>
 					</a>
 
 					<!-- change aria-hidden to `true` if js -->
-					<div class="towncrier__panel js-towncrier__panel"
+					<div class="share__panel js-share__panel"
 					     id="share-this"
 					     aria-hidden="true">
 
-						<p class="heading size--xl towncrier__title" aria-hidden="true">Share this
+						<p class="heading size--xl share__title" aria-hidden="true">Share this
 							with</p>
 
-						<ul class="towncrier__channels">
-							<li class="towncrier__channel towncrier__channel--email">
-								<a class="towncrier__channel-link"
+						<ul class="share__channels">
+							<li class="share__channel share__channel--email">
+								<a class="share__channel-link"
 								   href="mailto:?subject={SUBJECT}&amp;body={URL}">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#email"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">Email</span>
+									</svg><span class="share__channel-label" aria-hidden="true">Email</span>
 									<span class="visuallyhidden">Share this with Email</span>
 								</a>
 							</li>
-							<li class="towncrier__channel towncrier__channel--facebook">
-								<a class="towncrier__channel-link"
+							<li class="share__channel share__channel--facebook">
+								<a class="share__channel-link"
 								   href="https://www.facebook.com/sharer/sharer.php?u={URL}">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#facebook"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">Facebook</span>
+									</svg><span class="share__channel-label" aria-hidden="true">Facebook</span>
 									<span class="visuallyhidden">Share this with Facebook</span>
 								</a>
 							</li>
-							<li class="towncrier__channel towncrier__channel--twitter">
-								<a class="towncrier__channel-link"
+							<li class="share__channel share__channel--twitter">
+								<a class="share__channel-link"
 								   href="https://twitter.com/intent/tweet?text={TEXT}&amp;url={URL}">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#twitter"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">Twitter</span>
+									</svg><span class="share__channel-label" aria-hidden="true">Twitter</span>
 									<span class="visuallyhidden">Share this with Twitter</span>
 								</a>
 							</li>
-							<li class="towncrier__channel towncrier__channel--pinterest">
-								<a class="towncrier__channel-link"
+							<li class="share__channel share__channel--pinterest">
+								<a class="share__channel-link"
 								   href="https://uk.pinterest.com/pin/create/bookmarklet/?url={URL}&amp;description={DESCRIPTION}&amp;title={TITLE}&amp;media={IMAGE}">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#pinterest"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">Pinterest</span>
+									</svg><span class="share__channel-label" aria-hidden="true">Pinterest</span>
 									<span class="visuallyhidden">Share this with Pinterest</span>
 								</a>
 							</li>
-							<li class="towncrier__channel towncrier__channel--whatsapp">
-								<a class="towncrier__channel-link"
+							<li class="share__channel share__channel--whatsapp">
+								<a class="share__channel-link"
 								   href="whatsapp://send?text={TEXT - URL}%3Focid%3Dwsnews.chat-apps.in-app-msg.whatsapp.trial.link1_.auin">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#whatsapp"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">WhatsApp</span>
+									</svg><span class="share__channel-label" aria-hidden="true">WhatsApp</span>
 									<span class="visuallyhidden">Share this with WhatsApp</span>
 								</a>
 							</li>
-							<li class="towncrier__channel towncrier__channel--linkedin">
-								<a class="towncrier__channel-link"
+							<li class="share__channel share__channel--linkedin">
+								<a class="share__channel-link"
 								   href="https://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={SUMMARY optional}&source={SOURCE optional}">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#linkedin"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">LinkedIn</span>
+									</svg><span class="share__channel-label" aria-hidden="true">LinkedIn</span>
 									<span class="visuallyhidden">Share this with LinkedIn</span>
 								</a>
 							</li>
-							<li class="towncrier__channel towncrier__channel--google-plus">
-								<a class="towncrier__channel-link"
+							<li class="share__channel share__channel--google-plus">
+								<a class="share__channel-link"
 								   href="https://plus.google.com/share?url={URL}">
-									<svg class="icon towncrier__share-icon"
+									<svg class="icon share__share-icon"
 									     aria-hidden="true">
 										<use xlink:href="#google-plus"/>
-									</svg><span class="towncrier__channel-label" aria-hidden="true">Google +</span>
+									</svg><span class="share__channel-label" aria-hidden="true">Google +</span>
 									<span class="visuallyhidden">Share this with Google plus</span>
 								</a>
 							</li>
 						</ul>
 
-						<button class="towncrier__close-button js-towncrier__share-button">
+						<button class="share__close-button js-share__share-button">
 							<span class="visuallyhidden">Close share panel</span>
-							<span class="towncrier__close-button-graphic"
+							<span class="share__close-button-graphic"
 							      aria-hidden="true">×</span>
 						</button>
 					</div>
@@ -2101,7 +2142,7 @@
 			</div>
 			<div class="group__item group__item--primary">
 
-				<table class="table table--primary">
+				<table class="table table--primary" data-apollo-name="Tables">
 					<thead>
 					<tr>
 						<th>Course</th>
@@ -2178,7 +2219,7 @@
 				<h5 class="heading size size--xl subheading">Tabs with Javascript</h5>
 
 				<!-- Accessible tabs -->
-				<div class="js-tab-interface tab-interface">
+				<div class="js-tab-interface tab-interface" data-apollo-name="Tabs">
 					<ul>
 						<li><a href="#tab-name-one">A Scandal in Bohemia</a>
 						</li>
@@ -2332,7 +2373,7 @@
 			</div>
 			<div class="group__item group__item--primary">
 
-				<figure class="media media--video media--video-16:9">
+				<figure class="media media--video media--video-16:9" data-apollo-name="Videos">
 					<iframe width="560" height="315"
 					        src="https://www.youtube.com/embed/NpEaa2P7qZI"
 					        frameborder="0"

@@ -340,13 +340,13 @@ $(function () {
     /* Towncrier
      -----------------------------------------------------------------------------------------
      */
-    var $towncrierShareButton = $('.js-towncrier__share-button');
-    var $towncrierPanel = $('.js-towncrier__panel');
+    var $shareShareButton = $('.js-share__share-button');
+    var $sharePanel = $('.js-share__panel');
 
-    $towncrierShareButton.click(function (event) {
-        var state = $towncrierShareButton.attr('aria-expanded') === 'false' ? true : false;
-        $towncrierShareButton.attr('aria-expanded', state);
-        $towncrierPanel.attr('aria-hidden', !state);
+    $shareShareButton.click(function (event) {
+        var state = $shareShareButton.attr('aria-expanded') === 'false' ? true : false;
+        $shareShareButton.attr('aria-expanded', state);
+        $sharePanel.attr('aria-hidden', !state);
 
         event.preventDefault();
         // Debug

@@ -1100,7 +1100,7 @@ button:focus,
 \*------------------------------------*/
 /*------------------------------------*    #Buttons
 \*------------------------------------*/
-.button, .towncrier__share-button {
+.button, .share__share-button {
   border: 0;
   color: inherit;
   display: inline-block;
@@ -1109,9 +1109,9 @@ button:focus,
   font-weight: 400;
   border-radius: 0; }
 
-button.button, button.towncrier__share-button,
+button.button, button.share__share-button,
 input[type="submit"].button,
-input[type="submit"].towncrier__share-button {
+input[type="submit"].share__share-button {
   text-decoration: none; }
 
 .button--primary.button--primary {
@@ -1154,13 +1154,13 @@ input[type="submit"].towncrier__share-button {
     background-color: #d9d9d9;
     color: #222; }
 
-.button--subtle.button--subtle, .towncrier__share-button {
+.button--subtle.button--subtle, .share__share-button {
   background-color: #e5e5e5;
   color: #222; }
-  .button--subtle.button--subtle:visited, .towncrier__share-button:visited {
+  .button--subtle.button--subtle:visited, .share__share-button:visited {
     background-color: #e5e5e5;
     color: #222; }
-  .button--subtle.button--subtle:hover, .towncrier__share-button:hover, .button--subtle.button--subtle:focus, .towncrier__share-button:focus, .button--subtle.button--subtle:active, .towncrier__share-button:active {
+  .button--subtle.button--subtle:hover, .share__share-button:hover, .button--subtle.button--subtle:focus, .share__share-button:focus, .button--subtle.button--subtle:active, .share__share-button:active {
     background-color: #cccccc;
     color: #222; }
 
@@ -1172,6 +1172,16 @@ input[type="submit"].towncrier__share-button {
     color: #222; }
   .button--success.button--success:hover, .button--success.button--success:focus, .button--success.button--success:active {
     background-color: #54d964;
+    color: #222; }
+
+.button--warning.button--warning {
+  background-color: #fed41d;
+  color: #222; }
+  .button--warning.button--warning:visited {
+    background-color: #fed41d;
+    color: #222; }
+  .button--warning.button--warning:hover, .button--warning.button--warning:focus, .button--warning.button--warning:active {
+    background-color: #fede50;
     color: #222; }
 
 .button--alert.button--alert {
@@ -1191,29 +1201,29 @@ input[type="submit"].towncrier__share-button {
   width: 100%;
   text-align: center; }
 
-.button[disabled], [disabled].towncrier__share-button,
+.button[disabled], [disabled].share__share-button,
 .button.is-disabled,
-.is-disabled.towncrier__share-button,
+.is-disabled.share__share-button,
 span.button.button,
-span.towncrier__share-button {
+span.share__share-button {
   cursor: not-allowed;
   background-color: #cccccc;
   color: rgba(34, 34, 34, 0.54);
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .button[disabled]:hover, [disabled].towncrier__share-button:hover, .button[disabled]:focus, [disabled].towncrier__share-button:focus, .button[disabled]:active, [disabled].towncrier__share-button:active,
+  .button[disabled]:hover, [disabled].share__share-button:hover, .button[disabled]:focus, [disabled].share__share-button:focus, .button[disabled]:active, [disabled].share__share-button:active,
   .button.is-disabled:hover,
-  .is-disabled.towncrier__share-button:hover,
+  .is-disabled.share__share-button:hover,
   .button.is-disabled:focus,
-  .is-disabled.towncrier__share-button:focus,
+  .is-disabled.share__share-button:focus,
   .button.is-disabled:active,
-  .is-disabled.towncrier__share-button:active,
+  .is-disabled.share__share-button:active,
   span.button.button:hover,
-  span.towncrier__share-button:hover,
+  span.share__share-button:hover,
   span.button.button:focus,
-  span.towncrier__share-button:focus,
+  span.share__share-button:focus,
   span.button.button:active,
-  span.towncrier__share-button:active {
+  span.share__share-button:active {
     outline: 0;
     background-color: #cccccc;
     color: rgba(34, 34, 34, 0.54); }
@@ -1293,11 +1303,12 @@ h1, h2, h3, h4, h5, h6 {
 .size--l,
 .lead,
 .size--xl,
+.quote blockquote,
 .size--xxl,
 .size--xxxl {
   line-height: 1.25; }
 
-.heading {
+.heading, .quote blockquote {
   font-style: normal;
   font-weight: 700;
   font-family: "Playfair Display", serif; }
@@ -1314,10 +1325,10 @@ h1, h2, h3, h4, h5, h6 {
     .size--xxl {
       font-size: 1.728rem; } }
 
-.size--xl {
+.size--xl, .quote blockquote {
   font-size: 1.26562rem; }
   @media screen and (min-width: 40.0625em) {
-    .size--xl {
+    .size--xl, .quote blockquote {
       font-size: 1.44rem; } }
 
 .size--l, .lead {
@@ -1678,7 +1689,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     border: 0;
     padding: 0;
     background-color: transparent;
-    border: 1px solid #4d4d4d;
+    border: 2px solid #4d4d4d;
     padding: 1rem;
     color: inherit;
     cursor: pointer;
@@ -1718,7 +1729,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   visibility: visible;
   max-height: 64em;
   background-color: transparent;
-  border: 1px solid #4d4d4d; }
+  border: 2px solid #4d4d4d; }
 
 /*------------------------------------*    #Cta (call-to-actions)
 \*------------------------------------*/
@@ -1754,9 +1765,9 @@ body:not(:-moz-handler-blocked) fieldset {
   display: table-cell; }
 
 .fieldset-wrapper {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid #4d4d4d;
   padding: 1em;
-  border-radius: 0.5em;
+  border-radius: 0;
   position: relative; }
 
 /*------------------------------------*    #Default form styling
@@ -1771,7 +1782,7 @@ textarea {
   background: white;
   color: #222;
   border: 0.125em solid #b7b7b7;
-  border-radius: 0.25em;
+  border-radius: 0;
   -webkit-transition: all 100ms ease-in-out 0ms;
   transition: all 100ms ease-in-out 0ms; }
   input:hover, input:focus, input:active,
@@ -1902,7 +1913,7 @@ input[required]:valid {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto; }
-    .input-group__button .button, .input-group__button .towncrier__share-button {
+    .input-group__button .button, .input-group__button .share__share-button {
       /**
              * Make sure button aligns vertically with input field by changing the button padding to match the input
              *
@@ -1938,7 +1949,7 @@ input[required]:valid {
 .checkbox-group label {
   display: block;
   position: relative;
-  padding: 0.75em 0.75em 0.75em 3em;
+  padding: 0.5em 0.5em 0.5em 3em;
   background-color: #e5e5e5;
   cursor: pointer;
   /* Hide the real checkboc inputs */
@@ -1955,11 +1966,11 @@ input[required]:valid {
 /* Box */
 .checkbox-label:before {
   left: 0.75em;
-  top: 0.75em;
+  top: 0.5em;
   width: 1.5em;
   height: 1.5em;
-  border: 2px solid #8d8d8d;
-  border-radius: 0.33em; }
+  border: 2px solid #4d4d4d;
+  border-radius: 0; }
 
 /* Check */
 .checkbox-label:after {
@@ -1967,7 +1978,7 @@ input[required]:valid {
   height: 0.5em;
   border: 2px solid transparent;
   border-width: 0 0 2px 2px;
-  top: 1.125em;
+  top: 0.875em;
   left: 1.125em;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -2012,7 +2023,7 @@ input[required]:valid {
   display: block;
   line-height: 1.5;
   position: relative;
-  padding-left: 2.25em;
+  padding: 0.5em 0.5em 0.5em 3em;
   cursor: pointer;
   /* Hide the real radio inputs */
   overflow: hidden; }
@@ -2032,20 +2043,20 @@ input[required]:valid {
 
 /* Box */
 .radio-label:before {
-  left: 0;
-  top: 0;
+  left: 0.75em;
+  top: 0.5em;
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  border: 2px solid #a2a2a2; }
+  border: 2px solid #4d4d4d; }
 
 /* Check */
 .radio-label:after {
   width: 0.75em;
   height: 0.75em;
   border-radius: 50%;
-  top: 0.375em;
-  left: 0.375em; }
+  top: 0.875em;
+  left: 1.125em; }
 
 /* Focused */
 .input--radio:focus + .radio-label:before {
@@ -2111,10 +2122,6 @@ input[required]:valid {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 25%;
             flex: 1 0 25%; }
-  .segmented-group > label:nth-child(1n+6) {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%; }
 
 * + .segmented-group > label {
   /**
@@ -2542,6 +2549,14 @@ main {
   background-color: #4d4d4d;
   color: #F7F7F7;
   padding: 2em 1em 1.5em 1em; }
+  .nav--primary a {
+    color: #F7F7F7; }
+  .nav--primary a:visited {
+    color: #c4c4c4; }
+  .nav--primary a:hover,
+  .nav--primary a:focus,
+  .nav--primary a:active {
+    color: #dedede; }
 
 .nav--secondary {
   padding: 1em 0; }
@@ -2706,22 +2721,26 @@ main {
 
 /*------------------------------------*    #Quotes
 \*------------------------------------*/
-.quote {
-  background-color: #4d4d4d;
-  color: #F7F7F7;
-  padding: 1rem; }
+.quote blockquote {
+  quotes: "“" "”" "‘" "’"; }
+
+.quote blockquote p:first-child:before {
+  content: open-quote; }
+
+.quote blockquote p:last-of-type:after {
+  content: close-quote; }
 
 /*------------------------------------*    #Stats
 \*------------------------------------*/
 /*------------------------------------*    #Share
 \*------------------------------------*/
-.towncrier {
+.share {
   position: relative; }
 
-.towncrier__share-button {
+.share__share-button {
   text-decoration: none; }
 
-.towncrier__close-button {
+.share__close-button {
   background-color: transparent;
   border: 0;
   display: inline-block;
@@ -2730,25 +2749,22 @@ main {
   right: 0.5rem;
   padding: 0.25rem 0.5rem;
   font-size: 2em;
-  line-height: 1;
-  border-radius: 0.2rem; }
-  .towncrier__close-button:hover, .towncrier__close-button:focus, .towncrier__close-button:active {
+  line-height: 1; }
+  .share__close-button:hover, .share__close-button:focus, .share__close-button:active {
     background-color: #cccccc; }
 
-.towncrier__panel {
+.share__panel {
   margin-top: 1rem;
   background-color: #e5e5e5;
   color: #222;
-  -webkit-box-shadow: 0 0.125em 0.125em rgba(34, 34, 34, 0.2);
-          box-shadow: 0 0.125em 0.125em rgba(34, 34, 34, 0.2);
   padding: 1rem 4rem 1rem 1rem;
   border-radius: 0.2em;
   position: relative; }
-  .js .towncrier__panel {
+  .js .share__panel {
     position: absolute;
     top: 100%;
     left: 0; }
-  .towncrier__panel:before {
+  .share__panel:before {
     content: " ";
     display: block;
     position: absolute;
@@ -2760,116 +2776,116 @@ main {
     border-right: 1em solid transparent;
     border-bottom: 1em solid #e5e5e5; }
 
-.towncrier__channels {
+.share__channels {
   padding-left: 0;
   margin-top: 2em; }
-  .js .towncrier__channels {
+  .js .share__channels {
     max-width: 32em; }
 
-.towncrier__channel {
+.share__channel {
   display: inline-block;
   margin-right: 1em;
   margin-bottom: 1em; }
-  .js .towncrier__channel {
+  .js .share__channel {
     display: block; }
 
-.towncrier__channel-label.towncrier__channel-label a {
+.share__channel-label.share__channel-label a {
   color: #F7F7F7; }
 
-.towncrier__channel-label.towncrier__channel-label a:visited {
+.share__channel-label.share__channel-label a:visited {
   color: #c4c4c4; }
 
-.towncrier__channel-label.towncrier__channel-label a:hover,
-.towncrier__channel-label.towncrier__channel-label a:focus,
-.towncrier__channel-label.towncrier__channel-label a:active {
+.share__channel-label.share__channel-label a:hover,
+.share__channel-label.share__channel-label a:focus,
+.share__channel-label.share__channel-label a:active {
   color: #dedede; }
 
-.js .towncrier__panel[aria-hidden="true"] {
+.js .share__panel[aria-hidden="true"] {
   visibility: hidden; }
 
-.js .towncrier__panel[aria-hidden="false"] {
+.js .share__panel[aria-hidden="false"] {
   visibility: visible; }
 
-.towncrier__close-button {
+.share__close-button {
   display: none; }
-  .js .towncrier__close-button {
+  .js .share__close-button {
     display: block; }
 
-.towncrier__panel .towncrier__share-icon {
+.share__panel .share__share-icon {
   width: 2em;
   height: 2em;
   padding: 0.5em;
   background-color: blue;
   color: #F7F7F7; }
-  .towncrier__channel-link:visited .towncrier__panel .towncrier__share-icon {
+  .share__channel-link:visited .share__panel .share__share-icon {
     background-color: #8000ff;
     color: #8000ff; }
-  .towncrier__channel-link:hover .towncrier__panel .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__panel .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__panel .towncrier__share-icon {
+  .share__channel-link:hover .share__panel .share__share-icon,
+  .share__channel-link:focus .share__panel .share__share-icon,
+  .share__channel-link:active .share__panel .share__share-icon {
     background-color: red;
     color: #222; }
 
 /*------------------------------------*    #Brand colours
 \*------------------------------------*/
-.towncrier__channel--facebook .towncrier__share-icon {
+.share__channel--facebook .share__share-icon {
   background-color: #3b5998;
   color: white; }
-  .towncrier__channel-link:visited .towncrier__channel--facebook .towncrier__share-icon {
+  .share__channel-link:visited .share__channel--facebook .share__share-icon {
     background-color: #3b5998; }
-  .towncrier__channel-link:hover .towncrier__channel--facebook .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__channel--facebook .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__channel--facebook .towncrier__share-icon {
+  .share__channel-link:hover .share__channel--facebook .share__share-icon,
+  .share__channel-link:focus .share__channel--facebook .share__share-icon,
+  .share__channel-link:active .share__channel--facebook .share__share-icon {
     background-color: #4c70ba; }
 
-.towncrier__channel--twitter .towncrier__share-icon {
+.share__channel--twitter .share__share-icon {
   background-color: #55acee;
   color: white; }
-  .towncrier__channel-link:visited .towncrier__channel--twitter .towncrier__share-icon {
+  .share__channel-link:visited .share__channel--twitter .share__share-icon {
     background-color: #55acee; }
-  .towncrier__channel-link:hover .towncrier__channel--twitter .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__channel--twitter .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__channel--twitter .towncrier__share-icon {
+  .share__channel-link:hover .share__channel--twitter .share__share-icon,
+  .share__channel-link:focus .share__channel--twitter .share__share-icon,
+  .share__channel-link:active .share__channel--twitter .share__share-icon {
     background-color: #83c3f3; }
 
-.towncrier__channel--pinterest .towncrier__share-icon {
+.share__channel--pinterest .share__share-icon {
   background-color: #cc2127;
   color: white; }
-  .towncrier__channel-link:visited .towncrier__channel--pinterest .towncrier__share-icon {
+  .share__channel-link:visited .share__channel--pinterest .share__share-icon {
     background-color: #cc2127; }
-  .towncrier__channel-link:hover .towncrier__channel--pinterest .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__channel--pinterest .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__channel--pinterest .towncrier__share-icon {
+  .share__channel-link:hover .share__channel--pinterest .share__share-icon,
+  .share__channel-link:focus .share__channel--pinterest .share__share-icon,
+  .share__channel-link:active .share__channel--pinterest .share__share-icon {
     background-color: #e04046; }
 
-.towncrier__channel--whatsapp .towncrier__share-icon {
+.share__channel--whatsapp .share__share-icon {
   background-color: #4dc247;
   color: white; }
-  .towncrier__channel-link:visited .towncrier__channel--whatsapp .towncrier__share-icon {
+  .share__channel-link:visited .share__channel--whatsapp .share__share-icon {
     background-color: #4dc247; }
-  .towncrier__channel-link:hover .towncrier__channel--whatsapp .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__channel--whatsapp .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__channel--whatsapp .towncrier__share-icon {
+  .share__channel-link:hover .share__channel--whatsapp .share__share-icon,
+  .share__channel-link:focus .share__channel--whatsapp .share__share-icon,
+  .share__channel-link:active .share__channel--whatsapp .share__share-icon {
     background-color: #72cf6d; }
 
-.towncrier__channel--linkedin .towncrier__share-icon {
+.share__channel--linkedin .share__share-icon {
   background-color: #0976b4;
   color: white; }
-  .towncrier__channel-link:visited .towncrier__channel--linkedin .towncrier__share-icon {
+  .share__channel-link:visited .share__channel--linkedin .share__share-icon {
     background-color: #0976b4; }
-  .towncrier__channel-link:hover .towncrier__channel--linkedin .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__channel--linkedin .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__channel--linkedin .towncrier__share-icon {
+  .share__channel-link:hover .share__channel--linkedin .share__share-icon,
+  .share__channel-link:focus .share__channel--linkedin .share__share-icon,
+  .share__channel-link:active .share__channel--linkedin .share__share-icon {
     background-color: #0b96e5; }
 
-.towncrier__channel--google-plus .towncrier__share-icon {
+.share__channel--google-plus .share__share-icon {
   background-color: #dd4b39;
   color: white; }
-  .towncrier__channel-link:visited .towncrier__channel--google-plus .towncrier__share-icon {
+  .share__channel-link:visited .share__channel--google-plus .share__share-icon {
     background-color: #dd4b39; }
-  .towncrier__channel-link:hover .towncrier__channel--google-plus .towncrier__share-icon,
-  .towncrier__channel-link:focus .towncrier__channel--google-plus .towncrier__share-icon,
-  .towncrier__channel-link:active .towncrier__channel--google-plus .towncrier__share-icon {
+  .share__channel-link:hover .share__channel--google-plus .share__share-icon,
+  .share__channel-link:focus .share__channel--google-plus .share__share-icon,
+  .share__channel-link:active .share__channel--google-plus .share__share-icon {
     background-color: #e47365; }
 
 /*------------------------------------*    #Tab interface
@@ -2942,13 +2958,17 @@ a[aria-selected], a[role="tab"]:focus {
 /*------------------------------------*    #Tables
 \*------------------------------------*/
 table {
-  width: 100%; }
+  width: 100%;
+  border-collapse: collapse; }
 
 th {
-  padding: 1rem; }
+  padding: 0.75rem;
+  text-align: start;
+  border: 2px solid #4d4d4d; }
 
 td {
-  padding: 1rem; }
+  padding: 0.75rem;
+  border: 2px solid #4d4d4d; }
 
 /*------------------------------------*    #Tags
 \*------------------------------------*/
@@ -3388,5 +3408,20 @@ td {
 
 /*------------------------------------*    #Visibility
 \*------------------------------------*/
+/*------------------------------------*    #Wireframes
+\*------------------------------------*/
+[data-apollo-name] {
+  position: relative;
+  border: 2px dashed #222; }
+  [data-apollo-name]:before {
+    font-size: 0.75em;
+    display: inline-block;
+    content: attr(data-apollo-name) " component";
+    position: absolute;
+    bottom: 100%;
+    right: -2px;
+    padding: 0.25em 0.5em;
+    background: #222;
+    color: #F7F7F7; }
 
 /*# sourceMappingURL=styles.css.map */

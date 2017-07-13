@@ -124,8 +124,9 @@ $link-color--visited:                   hsl(270, 100%, 50%);
 $link-color--hover:                     hsl(0, 100%, 50%);
 
 $subtle-color:                          $mercury-grey;
-$alert-color:                           $pomegranate-red;
 $success-color:							$apple-green;
+$warning-color:							$candlelight-yellow;
+$alert-color:                           $pomegranate-red;
 $input-error-color:                     $candlelight-yellow;
 $focus-color:							$link-color;
 
@@ -178,7 +179,7 @@ $z-index-map: (
     #Border
 \*------------------------------------*/
 $border-style:						solid;
-$border-width:						1px;
+$border-width:						2px;
 $border-color:						$primary-color;
 
 // Shorthand for ease-of-use

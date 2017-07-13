@@ -2,13 +2,13 @@
     #Share
 \*------------------------------------*/
 
-.towncrier {
+.share {
 
     position: relative;
 
 }
 
-.towncrier__share-button {
+.share__share-button {
 
     @extend .button;
     @extend .button--subtle;
@@ -17,7 +17,7 @@
 
 }
 
-.towncrier__close-button {
+.share__close-button {
 
     //@extend .button;
     //@extend .button--primary;
@@ -34,7 +34,6 @@
     padding: 0.25rem 0.5rem;
     font-size: 2em;
     line-height: 1;
-    border-radius: 0.2rem;
 
 
     &:hover,
@@ -47,14 +46,14 @@
 
 }
 
-.towncrier__panel {
+.share__panel {
 
     margin-top: 1rem;
 
     background-color: $subtle-color;
     color: contrast($subtle-color);
 
-    box-shadow: 0 em(2) em(2) rgba($black, 0.2);
+    //box-shadow: 0 em(2) em(2) rgba($black, 0.2);
 
     padding: 1rem 4rem 1rem 1rem;
     border-radius: 0.2em;
@@ -90,7 +89,7 @@
 }
 
 // ul
-.towncrier__channels {
+.share__channels {
 
     padding-left: 0;
     margin-top: 2em;
@@ -104,7 +103,7 @@
 }
 
 // li
-.towncrier__channel {
+.share__channel {
 
     display: inline-block;
     margin-right: 1em;
@@ -119,18 +118,18 @@
 }
 
 // a
-.towncrier__channel-link  {
+.share__channel-link  {
 
 }
 
 // span // label for sighted users (hidden with aria-hidden)
-.towncrier__channel-label.towncrier__channel-label {
+.share__channel-label.share__channel-label {
 
     @include links;
 
 }
 
-.js .towncrier__panel[aria-hidden="true"] {
+.js .share__panel[aria-hidden="true"] {
 
     visibility: hidden;
     //max-height: 0;
@@ -138,7 +137,7 @@
 
 }
 
-.js .towncrier__panel[aria-hidden="false"] {
+.js .share__panel[aria-hidden="false"] {
 
     visibility: visible;
     //max-height: 12em;
@@ -146,7 +145,7 @@
 
 }
 
-.towncrier__close-button {
+.share__close-button {
 
     display: none;
 
@@ -158,7 +157,7 @@
 
 }
 
-.towncrier__panel .towncrier__share-icon {
+.share__panel .share__share-icon {
 
     width: 2em;
     height: 2em;
@@ -168,16 +167,16 @@
     background-color: $link-color;
     color: contrast($link-color);
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $link-color--visited;
         color: ($link-color--visited);
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: $link-color--hover;
         color: contrast($link-color--hover);
@@ -189,20 +188,20 @@
 /*------------------------------------*\
     #Brand colours
 \*------------------------------------*/
-.towncrier__channel--facebook .towncrier__share-icon {
+.share__channel--facebook .share__share-icon {
 
     background-color: $bc-facebook;
     color: white;
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $bc-facebook;
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: deviate($bc-facebook);
 
@@ -210,20 +209,20 @@
 
 }
 
-.towncrier__channel--twitter .towncrier__share-icon {
+.share__channel--twitter .share__share-icon {
 
     background-color: $bc-twitter;
     color: white;
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $bc-twitter;
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: deviate($bc-twitter);
 
@@ -231,20 +230,20 @@
 
 }
 
-.towncrier__channel--pinterest .towncrier__share-icon {
+.share__channel--pinterest .share__share-icon {
 
     background-color: $bc-pinterest;
     color: white;
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $bc-pinterest;
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: deviate($bc-pinterest);
 
@@ -252,20 +251,20 @@
 
 }
 
-.towncrier__channel--whatsapp .towncrier__share-icon {
+.share__channel--whatsapp .share__share-icon {
 
     background-color: $bc-whatsapp;
     color: white;
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $bc-whatsapp;
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: deviate($bc-whatsapp);
 
@@ -273,20 +272,20 @@
 
 }
 
-.towncrier__channel--linkedin .towncrier__share-icon {
+.share__channel--linkedin .share__share-icon {
 
     background-color: $bc-linkedin;
     color: white;
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $bc-linkedin;
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: deviate($bc-linkedin);
 
@@ -294,20 +293,20 @@
 
 }
 
-.towncrier__channel--google-plus .towncrier__share-icon {
+.share__channel--google-plus .share__share-icon {
 
     background-color: $bc-google-plus;
     color: white;
 
-    .towncrier__channel-link:visited & {
+    .share__channel-link:visited & {
 
         background-color: $bc-google-plus;
 
     }
 
-    .towncrier__channel-link:hover &,
-    .towncrier__channel-link:focus &,
-    .towncrier__channel-link:active & {
+    .share__channel-link:hover &,
+    .share__channel-link:focus &,
+    .share__channel-link:active & {
 
         background-color: deviate($bc-google-plus);
 

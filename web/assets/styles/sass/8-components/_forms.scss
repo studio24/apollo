@@ -48,9 +48,9 @@ body:not(:-moz-handler-blocked) fieldset {
 // Any styling that would normally go on `fieldset` should be set on the wrapper instead
 .fieldset-wrapper {
 
-    border: 1px solid rgba(black, 0.1);
+    border: $border;
     padding: 1em;
-    border-radius: 0.5em;
+    border-radius: 0;
 
     position: relative;
 
@@ -82,7 +82,7 @@ textarea {
     color: contrast(white);
 
     border: em(2) solid $input-border-color;
-    border-radius: 0.25em;
+    border-radius: 0;
 
     &:hover,
     &:focus,
@@ -348,7 +348,7 @@ input[required]:valid {
     display: block;
 
     position: relative;
-    padding: 0.75em 0.75em 0.75em #{0.75+2.25em};
+    padding: 0.5em 0.5em 0.5em #{0.75+2.25em};
     background-color: $subtle-color;
     // Remove because we're using axiomatic owl instead
     // margin-bottom: 1.5em;
@@ -377,13 +377,13 @@ input[required]:valid {
 .checkbox-label:before {
 
     left: 0.75em;
-    top: 0.75em;
+    top: 0.5em;
 
     width: 1.5em;
     height: 1.5em;
 
-    border: 2px solid luma(50);
-    border-radius: 0.33em;
+    border: $border;
+    border-radius: 0;
 
     // @include transition;
 
@@ -398,7 +398,7 @@ input[required]:valid {
     border: 2px solid transparent;
     border-width: 0 0 2px 2px;
 
-    top: #{0.375 + 0.75em};
+    top: #{0.375 + 0.5em};
     left: #{0.375 + 0.75em};
 
     transform: rotate(-45deg);
@@ -474,7 +474,7 @@ input[required]:valid {
     line-height: 1.5;
 
     position: relative;
-    padding-left: 2.25em;
+    padding: 0.5em 0.5em 0.5em #{0.75+2.25em};
     // Remove because we're using axiomatic owl instead
     // margin-bottom: 1.5em;
     cursor: pointer;
@@ -510,15 +510,15 @@ input[required]:valid {
 /* Box */
 .radio-label:before {
 
-    left: 0;
-    top: 0;
+    left: 0.75em;
+    top: 0.5em;
 
     width: 1.5em;
     height: 1.5em;
 
     border-radius: 50%;
 
-    border: 2px solid luma(60);
+    border: $border;
 
     // @include transition;
 
@@ -532,8 +532,8 @@ input[required]:valid {
 
     border-radius: 50%;
 
-    top: 0.375em;
-    left: 0.375em;
+    top: #{0.375 + 0.5em};
+    left: #{0.375 + 0.75em};
 
     // @include transition;
 
@@ -656,7 +656,7 @@ input[required]:valid {
 
     &:nth-child(1n+6) {
 
-        flex: 1 0 50%;
+        //flex: 1 0 50%;
 
     }
 

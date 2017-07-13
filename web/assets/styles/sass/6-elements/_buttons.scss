@@ -180,6 +180,29 @@ input[type="submit"].button {
 
 }
 
+.button--warning.button--warning {
+
+	background-color: $warning-color;
+	color: contrast($warning-color);
+
+	&:visited {
+
+		background-color: $warning-color;
+		color: contrast($warning-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($warning-color);
+		color: contrast(deviate($warning-color));
+
+	}
+
+}
+
 .button--alert.button--alert {
 
 	background-color: $alert-color;
