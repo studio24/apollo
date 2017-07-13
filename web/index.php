@@ -23,7 +23,7 @@
 <?php require_once( $_SERVER['DOCUMENT_ROOT'] . '/assets/svg/icons.svg' ); ?>
 
 
-<header class="island island--fullpage bg bg--primary">
+<header class="island island--fullpage bg bg--primary" style="background-image: url(/assets/images/apollo.png); background-repeat: no-repeat; background-position: 175% 42%;">
 
 	<div class="group">
 		<div class="group__item group__item--primary">

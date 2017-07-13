@@ -1115,13 +1115,13 @@ input[type="submit"].share__share-button {
   text-decoration: none; }
 
 .button--primary.button--primary {
-  background-color: #4d4d4d;
+  background-color: #1f1f1f;
   color: #F7F7F7; }
   .button--primary.button--primary:visited {
-    background-color: #4d4d4d;
+    background-color: #1f1f1f;
     color: #F7F7F7; }
   .button--primary.button--primary:hover, .button--primary.button--primary:focus, .button--primary.button--primary:active {
-    background-color: #666666;
+    background-color: #383838;
     color: #F7F7F7; }
 
 .button--secondary.button--secondary {
@@ -1689,7 +1689,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     border: 0;
     padding: 0;
     background-color: transparent;
-    border: 2px solid #4d4d4d;
+    border: 2px solid #1f1f1f;
     padding: 1rem;
     color: inherit;
     cursor: pointer;
@@ -1729,7 +1729,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   visibility: visible;
   max-height: 64em;
   background-color: transparent;
-  border: 2px solid #4d4d4d; }
+  border: 2px solid #1f1f1f; }
 
 /*------------------------------------*    #Cta (call-to-actions)
 \*------------------------------------*/
@@ -1765,7 +1765,7 @@ body:not(:-moz-handler-blocked) fieldset {
   display: table-cell; }
 
 .fieldset-wrapper {
-  border: 2px solid #4d4d4d;
+  border: 2px solid #1f1f1f;
   padding: 1em;
   border-radius: 0;
   position: relative; }
@@ -1793,7 +1793,7 @@ textarea {
   textarea:focus,
   textarea:active {
     background-color: #f1f1f1;
-    border-color: #4d4d4d; }
+    border-color: #1f1f1f; }
 
 /* Axiomatic owl-ish. We want input to sit a little closer to their
  * corresponding label for increased usability by visually associating
@@ -1837,8 +1837,8 @@ textarea[required] {
   textarea[required]:hover,
   textarea[required]:focus,
   textarea[required]:active {
-    -webkit-box-shadow: inset 2px 2px 0 0 #4d4d4d, inset 2px -2px 0 0 #4d4d4d, inset -2px -2px 0 0 #4d4d4d, inset -2px 2px 0 0 #4d4d4d;
-            box-shadow: inset 2px 2px 0 0 #4d4d4d, inset 2px -2px 0 0 #4d4d4d, inset -2px -2px 0 0 #4d4d4d, inset -2px 2px 0 0 #4d4d4d; }
+    -webkit-box-shadow: inset 2px 2px 0 0 #1f1f1f, inset 2px -2px 0 0 #1f1f1f, inset -2px -2px 0 0 #1f1f1f, inset -2px 2px 0 0 #1f1f1f;
+            box-shadow: inset 2px 2px 0 0 #1f1f1f, inset 2px -2px 0 0 #1f1f1f, inset -2px -2px 0 0 #1f1f1f, inset -2px 2px 0 0 #1f1f1f; }
 
 input[required]:valid {
   -webkit-box-shadow: inset 0 0 0 0 #b7b7b7;
@@ -1969,7 +1969,7 @@ input[required]:valid {
   top: 0.5em;
   width: 1.5em;
   height: 1.5em;
-  border: 2px solid #4d4d4d;
+  border: 2px solid #1f1f1f;
   border-radius: 0; }
 
 /* Check */
@@ -1986,31 +1986,31 @@ input[required]:valid {
 
 /* Focused */
 .input--checkbox:focus + .checkbox-label:before {
-  border-color: #4d4d4d; }
+  border-color: #1f1f1f; }
 
 /* Checked and Focused */
 .input--checkbox:checked:focus + .checkbox-label:before {
-  background-color: #666666;
-  border-color: #666666; }
+  background-color: #383838;
+  border-color: #383838; }
 
 .input--checkbox:checked:focus + .checkbox-label:after {
   border-color: #F7F7F7; }
 
 /* Checked */
 .input--checkbox:checked + .checkbox-label:before {
-  background-color: #4d4d4d;
-  border-color: #4d4d4d; }
+  background-color: #1f1f1f;
+  border-color: #1f1f1f; }
 
 .input--checkbox:checked + .checkbox-label:after {
   border-color: #F7F7F7; }
 
 /* Hover */
 .checkbox-group label:hover .checkbox-label:before {
-  border-color: #4d4d4d !important; }
+  border-color: #1f1f1f !important; }
 
 .input--checkbox:checked + .checkbox-label:hover:before {
-  background-color: #666666 !important;
-  border-color: #666666 !important; }
+  background-color: #383838 !important;
+  border-color: #383838 !important; }
 
 /*------------------------------------*    #Radio buttons
 \*------------------------------------*/
@@ -2048,7 +2048,7 @@ input[required]:valid {
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  border: 2px solid #4d4d4d; }
+  border: 2px solid #1f1f1f; }
 
 /* Check */
 .radio-label:after {
@@ -2060,31 +2060,31 @@ input[required]:valid {
 
 /* Focused */
 .input--radio:focus + .radio-label:before {
-  border-color: #4d4d4d; }
+  border-color: #1f1f1f; }
 
 /* Checked and Focused */
 .input--radio:checked:focus + .radio-label:before {
-  border-color: #666666; }
+  border-color: #383838; }
 
 .input--radio:checked:focus + .radio-label:after {
-  background-color: #666666; }
+  background-color: #383838; }
 
 /* Checked */
 .input--radio:checked + .radio-label:before {
-  border-color: #4d4d4d; }
+  border-color: #1f1f1f; }
 
 .input--radio:checked + .radio-label:after {
-  background-color: #4d4d4d; }
+  background-color: #1f1f1f; }
 
 /* Hover */
 .radio-group label:hover .radio-label:before {
-  border-color: #4d4d4d !important; }
+  border-color: #1f1f1f !important; }
 
 .input--radio:checked + .radio-label:hover:before {
-  border-color: #666666 !important; }
+  border-color: #383838 !important; }
 
 .input--radio:checked + .radio-label:hover:after {
-  background-color: #666666 !important; }
+  background-color: #383838 !important; }
 
 /*------------------------------------*    #Segmented options
 
@@ -2156,7 +2156,7 @@ input[required]:valid {
 
 /* Focused */
 .input--radio:focus + .segmented-label:before {
-  border-color: #4d4d4d;
+  border-color: #1f1f1f;
   outline: 0.125em solid blue; }
 
 /* Checked and Focused */
@@ -2193,11 +2193,11 @@ input[required]:valid {
 
 /* Checked hover */
 .input--radio:checked + .segmented-label:hover:before {
-  border-color: #666666; }
+  border-color: #383838; }
 
 /* Checked hover */
 .input--radio:checked + .segmented-label:hover:after {
-  background-color: #666666;
+  background-color: #383838;
   color: #F7F7F7; }
 
 /* Disabled */
@@ -2373,7 +2373,7 @@ ol:not(.breadcrumbs) {
       position: absolute;
       top: 0;
       left: 0;
-      color: #4d4d4d; }
+      color: #1f1f1f; }
 
 /*------------------------------------*    #Definition list
 \*------------------------------------*/
@@ -2546,7 +2546,7 @@ main {
     border: 0; }
 
 .nav--primary {
-  background-color: #4d4d4d;
+  background-color: #1f1f1f;
   color: #F7F7F7;
   padding: 2em 1em 1.5em 1em; }
   .nav--primary a {
@@ -2701,11 +2701,11 @@ main {
 /*------------------------------------*    #Current item
 \*------------------------------------*/
 .is-current {
-  color: #4d4d4d; }
+  color: #1f1f1f; }
 
 .is-current:after {
-  background-color: #4d4d4d;
-  border-color: #333333; }
+  background-color: #1f1f1f;
+  border-color: #050505; }
 
 /*------------------------------------*    #Completed item(s)
 \*------------------------------------*/
@@ -2964,11 +2964,11 @@ table {
 th {
   padding: 0.75rem;
   text-align: start;
-  border: 2px solid #4d4d4d; }
+  border: 2px solid #1f1f1f; }
 
 td {
   padding: 0.75rem;
-  border: 2px solid #4d4d4d; }
+  border: 2px solid #1f1f1f; }
 
 /*------------------------------------*    #Tags
 \*------------------------------------*/
@@ -3251,7 +3251,7 @@ td {
   color: inherit; }
 
 .bg--primary {
-  background-color: #4d4d4d;
+  background-color: #1f1f1f;
   color: #F7F7F7; }
   .bg--primary a {
     color: #F7F7F7; }
@@ -3371,7 +3371,7 @@ td {
     color: #3c3c3c; }
 
 .color--primary {
-  color: #4d4d4d; }
+  color: #1f1f1f; }
 
 .color--secondary {
   color: #595959; }
