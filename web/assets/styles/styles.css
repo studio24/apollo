@@ -868,10 +868,6 @@ li.group__item {
       -ms-flex-positive: 2;
           flex-grow: 2; }
 
-@media screen and (min-width: 64.0625em) {
-  .group__item--secondary {
-    margin-top: 1em; } }
-
 .group__item--primary + .group__item--secondary,
 .group__item--secondary + .group__item--primary,
 .group__item--secondary.sort-last-from-lap {

@@ -538,117 +538,101 @@
                     us!</h2>
 
                 <!-- Share this -->
-                <div class="towncrier">
+                <div class="share">
                     <a href="#share-this"
-                       class="towncrier__share-button js-towncrier__share-button"
+                       class="share__share-button js-share__share-button"
                        aria-label="Open share panel"
                        aria-expanded="false"
                        aria-haspopup="true">
-                        <svg class="icon towncrier__share-icon"
-                             aria-hidden="true">
-                            <use xlink:href="#share"/>
-                        </svg>
-                        <span class="towncrier__share-text">Share this</span>
+                        <svg class="icon share__share-icon" aria-hidden="true">
+                            <use xlink:href="#icon-share"/>
+                        </svg><span class="share__share-text">Share this</span>
                     </a>
 
                     <!-- change aria-hidden to `true` if js -->
-                    <div class="towncrier__panel js-towncrier__panel"
+                    <div class="share__panel js-share__panel"
                          id="share-this"
                          aria-hidden="true">
 
-                        <p class="heading size--xl towncrier__title"
-                           aria-hidden="true">Share this with</p>
+                        <p class="heading size--xl share__title" aria-hidden="true">Share this
+                            with</p>
 
-                        <ul class="towncrier__channels">
-                            <li class="towncrier__channel towncrier__channel--email">
-                                <a class="towncrier__channel-link"
+                        <ul class="share__channels">
+                            <li class="share__channel share__channel--email">
+                                <a class="share__channel-link"
                                    href="mailto:?subject={SUBJECT}&amp;body={URL}">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#email"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">Email</span> <span
-                                            class="visuallyhidden">Share this with Email</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">Email</span>
+                                    <span class="visuallyhidden">Share this with Email</span>
                                 </a>
                             </li>
-                            <li class="towncrier__channel towncrier__channel--facebook">
-                                <a class="towncrier__channel-link"
+                            <li class="share__channel share__channel--facebook">
+                                <a class="share__channel-link"
                                    href="https://www.facebook.com/sharer/sharer.php?u={URL}">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#facebook"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">Facebook</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">Facebook</span>
                                     <span class="visuallyhidden">Share this with Facebook</span>
                                 </a>
                             </li>
-                            <li class="towncrier__channel towncrier__channel--twitter">
-                                <a class="towncrier__channel-link"
+                            <li class="share__channel share__channel--twitter">
+                                <a class="share__channel-link"
                                    href="https://twitter.com/intent/tweet?text={TEXT}&amp;url={URL}">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#twitter"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">Twitter</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">Twitter</span>
                                     <span class="visuallyhidden">Share this with Twitter</span>
                                 </a>
                             </li>
-                            <li class="towncrier__channel towncrier__channel--pinterest">
-                                <a class="towncrier__channel-link"
+                            <li class="share__channel share__channel--pinterest">
+                                <a class="share__channel-link"
                                    href="https://uk.pinterest.com/pin/create/bookmarklet/?url={URL}&amp;description={DESCRIPTION}&amp;title={TITLE}&amp;media={IMAGE}">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#pinterest"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">Pinterest</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">Pinterest</span>
                                     <span class="visuallyhidden">Share this with Pinterest</span>
                                 </a>
                             </li>
-                            <li class="towncrier__channel towncrier__channel--whatsapp">
-                                <a class="towncrier__channel-link"
+                            <li class="share__channel share__channel--whatsapp">
+                                <a class="share__channel-link"
                                    href="whatsapp://send?text={TEXT - URL}%3Focid%3Dwsnews.chat-apps.in-app-msg.whatsapp.trial.link1_.auin">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#whatsapp"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">WhatsApp</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">WhatsApp</span>
                                     <span class="visuallyhidden">Share this with WhatsApp</span>
                                 </a>
                             </li>
-                            <li class="towncrier__channel towncrier__channel--linkedin">
-                                <a class="towncrier__channel-link"
+                            <li class="share__channel share__channel--linkedin">
+                                <a class="share__channel-link"
                                    href="https://www.linkedin.com/shareArticle?mini=true&url={URL}&title={TITLE}&summary={SUMMARY optional}&source={SOURCE optional}">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#linkedin"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">LinkedIn</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">LinkedIn</span>
                                     <span class="visuallyhidden">Share this with LinkedIn</span>
                                 </a>
                             </li>
-                            <li class="towncrier__channel towncrier__channel--google-plus">
-                                <a class="towncrier__channel-link"
+                            <li class="share__channel share__channel--google-plus">
+                                <a class="share__channel-link"
                                    href="https://plus.google.com/share?url={URL}">
-                                    <svg class="icon towncrier__share-icon"
+                                    <svg class="icon share__share-icon"
                                          aria-hidden="true">
                                         <use xlink:href="#google-plus"/>
-                                    </svg>
-                                    <span class="towncrier__channel-label"
-                                          aria-hidden="true">Google +</span>
+                                    </svg><span class="share__channel-label" aria-hidden="true">Google +</span>
                                     <span class="visuallyhidden">Share this with Google plus</span>
                                 </a>
                             </li>
                         </ul>
 
-                        <button class="towncrier__close-button js-towncrier__share-button">
+                        <button class="share__close-button js-share__share-button">
                             <span class="visuallyhidden">Close share panel</span>
-                            <span class="towncrier__close-button-graphic"
+                            <span class="share__close-button-graphic"
                                   aria-hidden="true">×</span>
                         </button>
                     </div>
