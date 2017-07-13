@@ -1083,16 +1083,11 @@ button:focus,
 .swatch__sample {
   margin-top: 0;
   display: block;
-  width: 100%;
-  width: calc(100% + 2em);
-  width: 50%;
-  height: 3em;
+  width: 4em;
+  height: 4em;
   position: absolute;
   top: 1em;
   right: 1em;
-  -webkit-transform: skew(-12.5deg, -12.5deg);
-      -ms-transform: skew(-12.5deg, -12.5deg);
-          transform: skew(-12.5deg, -12.5deg);
   border: 1px solid #cccccc; }
 
 /* Used for styleguide */
