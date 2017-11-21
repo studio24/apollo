@@ -1,107 +1,63 @@
-# Apollo 
+# Apollo #
 
-Static framework
+Static (HTML, CSS and Javascript) framework with performance and accessibility as first-class passenger.
+
+When Apollo is used in the Studio24 Wordpress starter theme, it becomes the `src/assets` folder.
+
+### What is this repository for? ###
 
 ## Site URLs
 
-* Live: https://www.domain.com (N/A)
-* Staging: http://staging.domain.com (N/A)
-* Development: http://apollo.dev
+* Live - http://apollo.s24.net/
+* Development - http://local.apollo.s24.net
 
-## Building the site
+* Quick summary
+* v 2.0.0
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-To build the site once:
+### How do I get set up? ###
 
-    gulp build
+* [Summary of set up](#summary-of-set-up)
+* Configuration
+* Dependencies
+* Database configuration (none)
+* How to run tests
+* Deployment instructions
 
-And to continuously watch the project for changes run:
+### Contribution guidelines ###
 
-    gulp
+* Writing tests (none)
+* Code review
+* Other guidelines
 
-## Hosting
+### Who do I talk to? ###
 
-* The website is hosted on: {server name / shared server}
+- **Carlos Eriksson** - *Repo owner*
+- **Marie Manandise** - *Contributor*
+- **Sean Dunwoody** - *Contributor*
 
-## Deployment
+***
 
-Deploy the site to live:
+## Summary of set up ##
 
-```
-#!bash
-{deploy command here}
-```
+Install the project dependencies.
 
-Deploy the site to staging:
+````bash
+# Install theme dependencies
+cd web/wp-content/themes/Pantheon
+npm install
+````
 
-```
-#!bash
-{deploy command here}
-```
+Build assets (such as styles). Add `--production` flag to prepare files for commit.
 
-## Documentation
+````bash
+cd web/wp-content/themes/Pantheon
+gulp build
+````
 
-Please see docs at https://bitbucket.org/studio24/{repo-name}/wiki
+Watch for changes. Add `--production` flag to prepare files for commit.
 
-## Synching tasks
-
-### Sync files from live to staging
-
-Run on your local Mac. Remove *-n* to run this live.
-
-```
-#!bash
-ssh studio24@scaramanga.studio24.net 'rsync -n -av /var/www/{client}/{domain.com}/live/web/files/ /var/www/{client}/{domain.com}/staging/web/files'
-```
-
-### Sync files from live to local dev
-
-Run on your local Mac. Remove *-n* to run this live.
-
-```
-#!bash
-rsync -n -e "ssh" -av studio24@scaramanga.studio24.net:/var/www/{client}/{domain.com}/live/web/files/ ~/Sites/{project-name}/web/files
-```
-
-## Installation
-
-{Clear installation instructions, see example below. Ensure you edit this to make this README accurate. If you have very extensive installation instructions move these into a INSTALL.md file and link from this README}
-
-### Requirements
-
-* PHP 5.5+
-* [Composer](https://getcomposer.org/) 
-* [Bower](http://bower.io/) 
-* [Grunt](http://gruntjs.com/) 
-* [Node](https://nodejs.org)
-
-### Composer
-
-The project uses Composer for PHP dependencies. For the initial build run:
-
-    composer install
-
-### Bower
-
-The project uses Bower for JavaScript dependencies. For the initial build run:
-
-    bower install
-
-### Gulp
-
-This project uses Grunt to build the Sass and JavaScript. For the initial build run:
-
-    # Install project dependencies
-    sudo npm install
-
-    # Build the site for the first time
-    gulp
-
-### Initialise project environment
-
-This will setup any required empty folders.
-
-```
-#!bash
-chmod a+x scripts/init.sh
-./scripts/init.sh
-```
+````bash
+cd web/wp-content/themes/Pantheon
+gulp
+````

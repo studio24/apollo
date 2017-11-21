@@ -70,7 +70,10 @@ select,
 textarea {
 
     // Make form fields inherit the document styling
-    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    line-height: inherit;
 
     display: block;
     width: 100%;
@@ -229,6 +232,7 @@ input[required]:valid {
 .field-label {
 
     display: block;
+    font-size: 0.9em;
     // margin-bottom: 0.75em;
 
 }
@@ -700,10 +704,32 @@ input[required]:valid {
 
 }
 
-.segmented-label:before {
+.segmented-label:before,
+.segmented-label:after {
 
     content: " ";
     position: absolute;
+
+}
+
+.segmented-label:after {
+
+    background-color: transparent;
+
+    width: 1.5em;
+    height: 1em;
+
+    border: em(2) solid white;
+    border-width: 0 0 em(2) em(2);
+
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+
+    z-index: z("segmented", "label");
+
+    @include transition($property: transform)
+    transform: scale(0) rotate(45deg);
 
 }
 
@@ -748,8 +774,8 @@ input[required]:valid {
 
 .input--radio:checked:focus + .segmented-label:after {
 
-    background-color: deviate($segment-selected-bg-color);
-    color: contrast(deviate($segment-selected-bg-color));
+    //background-color: deviate($segment-selected-bg-color);
+    //color: contrast(deviate($segment-selected-bg-color));
 
 }
 
@@ -774,8 +800,10 @@ input[required]:valid {
 
 .input--radio:checked + .segmented-label:after {
 
-    background-color: $segment-selected-bg-color;
-    color: contrast($segment-selected-bg-color);
+    transform: scale(1) rotate(-45deg);
+
+    //background-color: $segment-selected-bg-color;
+    //color: contrast($segment-selected-bg-color);
 
 }
 
@@ -797,8 +825,8 @@ input[required]:valid {
 /* Checked hover */
 .input--radio:checked + .segmented-label:hover:after {
 
-    background-color: deviate($primary-color);
-    color: contrast(deviate($primary-color));
+    //background-color: deviate($primary-color);
+    //color: contrast(deviate($primary-color));
 
 }
 

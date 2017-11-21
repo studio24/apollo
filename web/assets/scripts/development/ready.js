@@ -1,3 +1,5 @@
+//Browserify require definitions
+
 $(function () {
 
 
@@ -14,7 +16,7 @@ $(function () {
 
     // Add js hook using vanilla Javascript in head tag instead.
     // Needed for basil to run on ready()
-    html.addClass('js');
+    // html.addClass('js');
 
 
     var basil = $('.basil');

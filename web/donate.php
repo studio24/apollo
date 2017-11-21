@@ -75,7 +75,7 @@
 
                 <figure class="banner" role="banner">
                     <img class="banner__image"
-                         src="/assets/images/abraham-osorio-184519-cropped.jpg"
+                         src="/assets/images/production/abraham-osorio-184519-cropped.jpg"
                          alt="Descriptive text.">
                     <figcaption class="banner__caption">
 
@@ -283,6 +283,10 @@
                         </legend>
 
                         <div class="field-description">
+                            <div class="giftaid-logo">
+                                <svg width="401" height="142" viewBox="0 0 401 142" xmlns="http://www.w3.org/2000/svg"><title>Giftaid</title><path d="M246.7 25.6c-.6.8-.5 3.3 1 4.6 1 1 1 1 1 2 .2 1.4 1 1.5 2.6 1.4 1.7 0 3-1.2 3.3-3.7.2-2.5-2.2-4.6-4-5-2-.6-3-.4-4 .6zm34.4 35s0 3.4.3 6.3c.2 2.5 1 8 2 9.8 1.5 2.7 4.5 2.7 7 1.4 3-1.8 1.5-5 .3-6.2-1-1-3.5-2.2-4.2-6.3-.5-2.5 0-13.5.6-17.3.5-2.5 2-7.8 3.4-10.3 1.2-2.3 8.5-16 8.6-20.7 0-2-2-3.7-5.4-3.4-3.4.3-4.2 3-4.2 4.8 0 1.7-3.7 14.2-3.8 14.8-.3 1-1 6-2.7 6-4.2 0-7.6 1-11 3.6-1.6 1.3-7.3 5.8-10.6 10.4-1.6 2-8.4 11-7.6 21.4.7 9.6 7.4 8 9.3 7.6C272 81.2 278 67 279 65c1.6-3 1-2.2 2.3-4.5zm-5.2-13s3-2.6 4.3-2.6c.6 0-.4 1.7 1.7 2.7 1 .5-1.2 7.7-5.7 14.6-10.3 16-15 15.2-15.6 10.4-.8-10 12.5-23 15.4-25.2zm55.4-27.8c1.8 3.5 5 2.3 5.5 1.4.5-1 1-1 2.4-1.7 3-1-2-6-6.4-4.6-1 0-1 1.3-1 1.3 0 1-1 2.3-.4 3.5zm-9 55.6c5 4.6 10 1.7 12.4-.3 7.7-6 23.6-34.3 23.6-34.3 0 1-6.6 33.3 2.3 37 5.8 2.2 19.2-9.3 20.7-10.3 8.8-6 3.4-8.3 1.7-8.3-4.6 0-3.8 3.3-5 4.8-2 2.5-10.4 11-14.4 8.7-2.2-1.2-1.7-8.4-1.5-10 1.4-17.2 1.8-20.3 2.7-24.2.6-2.2 3.3-2.2 5-2.5 22-4 26-2.4 28.7-3.7 2.2-1 2.6-5.6-.5-6.6-1.6-.5-3.4.6-6.6 1.8-3.2 1.2-19.5 4.8-22 5.2-2 .3-2.6 0-3-.7-.6-.7.4-8.7 3.5-15.4 1.3-3 1.3-7.3-3.2-7.7-1.8 0-3.4.4-4 2-.8 1.6-2 16-2.4 16.8-.3 1-2 1.7-2.4 3.3-.4 1.6 0 2.7-1.2 3-1.2.4-4.2.7-5.4 1-1.3.3-2 2.8-2.2 4.3 0 1.4 2.3.6 3.4.4 1.3-.2 4.5-1.8 2.3 1-1 1-16.3 25-22.3 30-7 5.5-6.4-5.6-6.2-7.5 1-11.5 6-19 6.7-21 .7-1.7 1-7-5-6-1.7.4-2.7 2.3-2.8 2.8v.2c-.6 5.3-10.8 29-3 36.4zM148.8 52.6l-6.3 1.3c-3 .3-4.4 2-4.3 4 .2 1.7.8 2.6 3.3 2 2.3-.3 4.3-2.3 6.3-2.3 0 0-4.2 17.5-4.4 19.8-.3 2.3-1.5 8.7 1 12.4 5.6 8 16.8-1.3 17.8-2.3.8-.8 8-7 10.3-12 1.2-2.4-1-3-2.3-3.5-1.4-.5-4.4.4-4.8 2.2-1 4-10.7 14.8-15.5 12.6-5.7-2.5 4.6-31.2 4.6-31.2 1.2-.5 7.4-2 13.3-3.6 6.8-1.8 27.6-6 23-12-2.4-3-8.3 1.5-10.3 2.5-7.2 3.4-24.8 8.5-24.8 8.5s2.2-10.3 3-12.4c.8-2.3 4-3.8 4.4-8 .5-4.7-5.3-7-8-1.7-.7 1.2-1.5 4.2-1.5 4.3-.8.7-7.2 3.2-13.5 6.2-2 1-13.2 5-13.2 5s3.4-10.8 7.3-19.8c2.8-6 6.5-14.3 13-16 6-1.6 3.2 4.8 6 6.4 3.5 2.2 5.7-.4 6.2-3 .4-2 .3-12.4-10.3-11.3-10.2 1-18.3 16.4-28.2 45.2 0 0-8 5-14.6 6.4-3.2.6-4.6 1-5 2-1.2 3 .8 5.2 1 5.5 2 2.2 16.6-7.5 16.6-7.4-.3.4-12.3 46-12.4 46.5-.7 4-4.5 14-4.3 18.4.2 2.4 1 7.2 4.5 7 7 .5 5.7-9.4 5.2-11.2-1-3.8 4-28.6 8.6-47l3.2-11.2c.5-2.5 2-4.2 3.7-5 0 0 25.3-12 25.5-11.8l-4 14.4zM98 31.4c-.4-1-2.7-3.7-5.8-1.5-4.6 3.2.7 7.7 1.5 10 1 2 5.5 4 4.8-.4 0-.7.8-5.6-.4-8.2zm-8.6 21c-3.2 0-3 2.4-3.6 4.4-.6 2-6 20-6.8 23.2-.7 3.2-1.2 6 0 10.6 1 4.5 6 3.2 6.6 2.4 2.5-3.6.3-4.6.2-7 0-2.7.7-5.4 1.2-9 .2-1.2.6-6.8.8-7.6.2-.8 2-7.2 4.5-11 1-1.7 2-6-3-6zm-29.5 63c-.5.6-.8 1.3-1.2 2-4 6.3-9 12-15.2 16-8.5 5.7-16.4 7.8-25.3 7.7-5.2 0-10.2-.8-14.5-3.5-3.5-2.2-4-5.7-3-8 1.6-3.2 6.2-3 8-1 5 4.5 8 6.3 14.2 6 5-.2 10.4-1.8 14.6-4.3C63.6 115 63.3 88 64.4 71.5c0-1-.5-.3-.6.2-1 2.8-2.5 6.2-4.7 10-1.7 3.5-5.2 8.4-10.8 12-3.3 2.2-8.6 3.3-12.4.8-1.4-.8-9.3-5.5-2.6-19.4 4.3-8.6 13.2-14.7 15.2-16 5-3 8.4-4.6 12-4.3 2 0 2.3 1 3.7.8 1-1 1.3-1.6 2.6-2 1.8-.2 4 1.3 4.7 4 .8 2.8-1.3 7.3-2 9.5 0 0 2 28-9.4 48.4zm-2.8-56c-5.3.5-14.8 13-16.7 17.6-2 4.6-2.8 9-.4 10.8 5 3.8 10-2.6 11.6-4 1-1 7.4-8.2 9-15.3 1.2-4.8 1.7-9.7-3.4-9.2zm188-7.4c-2 3.5-3.2 7.7-3.7 11.6-.3 2-.7 11-.6 12 0 .2.2 4.2.7 6 .2 1 2 4.3-3.4 5-3 .5-3-7.3-3-8.6-.2-2.7.2-12.2.5-13.6.3-1.5-.3 0-1 1-1.2 2.2-2.7 5.2-4.5 8-2.5 4-7.8 13.2-15 12.6-3-.2-5.7-.5-7.3-8.2-.6-3-.3-6.8-.3-9 0-.5 0-1-.4-1-2.6 6.2-11 24-20.5 20-4.4-1.8-6.6-7.5-1.7-18.6C190 58.2 202 45 206.6 44c4.3-.8 4.7 1.3 4.7 1.3.4-.8 3-.7 3.6.5.8 1.5 1.3 1.7.8 5.7-.3 2.3-2.4 16.7-2 21.7 0 2.3.5 8 3 8.3 4 .5 9-8.3 9.5-9.2 1.3-1.8 10-16.7 11.2-18.8L240 48c.7-1.6 3-1.8 5-.4s1 3.2.3 4.4zm-42 16c11.2-17.4 5.6-20 5-19.8-10.8 6-19 24.4-18.3 30.5 1 8.4 7.4-1.5 13.3-10.8z" fill="#000" fill-rule="evenodd"/></svg>
+
+                            </div>
                             I am a UK taxpayer and I understand that if I pay
                             less Income and /or Capital Gains Tax than the
                             amount of Gift Aid claimed on all my donations in
@@ -304,6 +308,11 @@
 
                     </fieldset>
                     <!-- / Checkbox -->
+
+<!--                    Turn that into £62.50 with Gift Aid-->
+<!--                    Tick ‘Yes’ to Gift Aid and the Government will give us 25% on top of your donation.-->
+<!---->
+<!--                    It doesn’t cost you a penny, and helps to keep us going.-->
 
 
 
@@ -328,11 +337,65 @@
 
 
 
+
+
+                    <!-- Segmented group -->
+                    <fieldset
+                            class="field-group segmented-group-wrapper">
+
+                        <legend class="group-legend heading size--xxl">
+                            Select your payment method
+                        </legend>
+
+                        <!-- Wrapper for labels -->
+                        <div class="segmented-group">
+
+                            <label for="payment-option-1"> <input
+                                        id="payment-option-1"
+                                        name="payment-options"
+                                        class="input--radio js-payment-method"
+                                        value="3"
+                                        type="radio"
+                                        data-parsley-error-message="Please select your preferred payment method."
+                                        required
+                                        aria-invalid="false">
+                                <div class="segmented-label">
+                                    <h2 class="size--xxl heading">Donate by card</h2>
+                                </div>
+                            </label>
+
+                            <label for="payment-option-2"> <input
+                                        id="payment-option-2"
+                                        name="payment-options"
+                                        class="input--radio js-payment-method"
+                                        value="15"
+                                        type="radio"
+                                        checked>
+                                <div class="segmented-label">
+                                    <h2 class="size--xxl heading visuallyhidden">Donate using Paypal</h2>
+                                    <div class="margin--half">
+                                        <div class="svg">
+                                            <?php include_once ('assets/svg/paypal.svg'); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+
+                        </div>
+                        <!-- / Wrapper for labels -->
+
+                    </fieldset>
+                    <!-- / Segmented group -->
+
+
+
+
+
                     <div class="fieldset-wrapper bg bg--subtle payment-fields js-payment-fields">
                         <fieldset>
 
                             <legend class="heading size--xl">
-                                <svg class="icon lock-icon color--success">
+                                <svg class="icon lock-icon color--primary">
                                     <use xlink:href="#lock"/>
                                 </svg>
                                 <span>Payment details</span></legend>
@@ -397,7 +460,7 @@
                                 <div class="group__item flex-2 field-group">
                                     <label for="ccname"
                                            class="field-label">Cardholder name
-                                        (printed on your card)</label> <input
+                                        (as printed on your card)</label> <input
                                             type="text"
                                             class="field-input field-input--ccname"
                                             name="ccname"
@@ -438,51 +501,63 @@
                                 </div>
                             </div>
 
-                        </fieldset>
-                    </div>
-
-
-
-                            <!-- Checkbox -->
-                            <fieldset class="field-group checkbox-group">
-
-                                <legend class="group-legend heading size--xl">
-                                    Subscribe to our newsletter (optional)
-                                </legend>
-
-                                <div class="field-description">
-                                    We will send you relevant materials, such as promotions, once a month. We will guard your email with
-                                    our lives and never give it out to a
-                                    third-party. You can unsubscribe at any time. <a
-                                            href="/privacy">Our Privacy
-                                        Policy</a>.
+                            <div class="group">
+                                <div class="group__item">
+	                                <?php include_once ('assets/svg/stripe.svg'); ?>
                                 </div>
+                            </div>
 
-                                <label for="subscribe"> <input
-                                            id="subscribe"
-                                            name="subscribe"
-                                            class="input--checkbox"
-                                            value="data-value"
-                                            type="checkbox"> <span
-                                            class="checkbox-label">
-                                Yes, I would like COMPANY to send me relevant materials
-                            </span> </label>
+                            <hr>
 
-                            </fieldset>
-                            <!-- / Checkbox -->
-
-
-
-                    <div class="field-group no-max-width">
-                        <button type="submit"
-                                class="button button--success size--xl">
+                            <div class="field-group no-max-width">
+                                <button type="submit"
+                                        class="button button--success size--xl">
                             <span>Donate <span>&pound;<span
                                             class="js-donation-amount">15</span></span> now and save another life
                             <svg class="icon">
                                 <use xlink:href="#arrow-right"/>
                             </svg>
-                        </button>
+                                </button>
+                            </div>
+
+
+
+                        </fieldset>
                     </div>
+
+
+
+<!--                            <!-- Checkbox -->
+<!--                            <fieldset class="field-group checkbox-group">-->
+<!---->
+<!--                                <legend class="group-legend heading size--xl">-->
+<!--                                    Subscribe to our newsletter (optional)-->
+<!--                                </legend>-->
+<!---->
+<!--                                <div class="field-description">-->
+<!--                                    We will send you relevant materials, such as promotions, once a month. We will guard your email with-->
+<!--                                    our lives and never give it out to a-->
+<!--                                    third-party. You can unsubscribe at any time. <a-->
+<!--                                            href="/privacy">Our Privacy-->
+<!--                                        Policy</a>.-->
+<!--                                </div>-->
+<!---->
+<!--                                <label for="subscribe"> <input-->
+<!--                                            id="subscribe"-->
+<!--                                            name="subscribe"-->
+<!--                                            class="input--checkbox"-->
+<!--                                            value="data-value"-->
+<!--                                            type="checkbox"> <span-->
+<!--                                            class="checkbox-label">-->
+<!--                                Yes, I would like COMPANY to send me relevant materials-->
+<!--                            </span> </label>-->
+<!---->
+<!--                            </fieldset>-->
+<!--                            <!-- / Checkbox -->
+
+
+
+
 
 
                 </form>

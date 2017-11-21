@@ -11,20 +11,32 @@
  */
 %hidden {
     display: none !important;
+}
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+%invisible {
     visibility: hidden;
 }
 /*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 %visuallyhidden {
     border: 0;
-    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    display: inline-block;
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
     width: 1px;
+    white-space: nowrap; /* 1 */
 }
 .visuallyhidden { @extend %visuallyhidden; }
 /*
@@ -39,4 +51,5 @@
 	padding: initial;
 	position: static;
 	width: auto;
+    white-space: initial;
 }
