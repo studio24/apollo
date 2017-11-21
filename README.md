@@ -9,6 +9,7 @@ When Apollo is used in the Studio24 Wordpress starter theme, it becomes the `src
 ## Site URLs
 
 * Live - http://apollo.s24.net/
+* Staging - http://apollo-staging.s24.net
 * Development - http://local.apollo.s24.net
 
 * Quick summary
@@ -22,7 +23,7 @@ When Apollo is used in the Studio24 Wordpress starter theme, it becomes the `src
 * Dependencies
 * Database configuration (none)
 * How to run tests
-* Deployment instructions
+* [Deployment instructions](deployment-instructions)
 
 ### Contribution guidelines ###
 
@@ -60,4 +61,18 @@ Watch for changes. Add `--production` flag to prepare files for commit.
 ````bash
 cd web/wp-content/themes/Pantheon
 gulp
+````
+
+## Deployment instructions ##
+
+### Deploying to Staging ###
+
+````bash
+ssh studio24@goldeneye.studio24.net deploy studio24/apollo staging master nodb
+````
+
+### Deploying to Live ###
+
+````bash
+ssh studio24@goldeneye.studio24.net deploy studio24/apollo live master nodb
 ````
