@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #Empathise
+\*------------------------------------*/
+
+@if $empathise == true {
+
+	html {
+		
+		/* An approximation of how your vision degrades as we age.
+		 * This is not scientifically accurate because people experience
+		 * different levels of presbyopia
+		 */
+		-webkit-filter: blur(2px) unquote("contrast(25%)") !important;
+		filter: blur(2px) unquote("contrast(25%)") !important;
+	}
+
+}

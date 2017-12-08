@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #Islands
+\*------------------------------------*/
+
+
+
+/*
+ * The island object is used when content demands its own screen presence.
+ */
+.island {
+    
+    padding: 1em;
+
+    @include mq($breakpoint-lap) {
+
+        padding: 3em;
+
+    }
+    
+}
+
+
+.island--fullpage {
+
+    // Fullpage islands should sit flused with other sections.
+    margin-top: 0;
+    
+    width: 100%;
+    /**
+     * Always show that there's more content. Gives our design/content more
+     * affordance
+     */
+    min-height: 75%;
+    min-height: 75vh;
+
+    // Temp commented out, seemed buggy in IE11
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    padding: 1em 0;
+
+    @include mq($breakpoint-lap) {
+    
+        padding: 3em 0;
+
+    }
+
+}

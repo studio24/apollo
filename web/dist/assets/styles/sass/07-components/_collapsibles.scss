@@ -1,0 +1,134 @@
+/*------------------------------------*\
+    #Collapsible
+\*------------------------------------*/
+
+
+
+// Wrapper for all collapsible items
+.collapsibles {
+
+    // For debugging
+    // background-color: rgba(red, 0.1);
+
+}
+
+.collapsible-heading {
+
+    position: relative;
+
+    /*
+     * This is added via jQuery and won't exist in the DOM if Javascript
+     * is disabled.
+     */
+    button {
+
+        // Reset default button styling.
+        border: 0;
+        padding: 0;
+
+        background-color: transparent;
+        border: $border;
+        padding: 1rem;
+        color: inherit;
+
+        cursor: pointer;
+
+        // Cover entire select area
+        width: 100%;
+        text-align: inherit;
+
+        &:hover,
+        &:focus,
+        &:active {
+
+            // color: deviate($primary-color);
+
+        }
+
+    }
+
+}
+
+// Reduce owl-spacing
+* + .collapsible-heading {
+
+    margin-top: em(8);
+
+}
+
+
+.collapsible-heading [aria-expanded] {
+
+    // Make room for icon
+     padding-left: 3.5rem;
+
+    &:before {
+
+        content: "+";
+        display: block;
+
+        width: 1em;
+        height: 1em;
+        text-align: center;
+
+        position: absolute;
+        top: 50%;
+        left: 1em;
+
+        margin-top: -0.625em;
+        // Match the line-height to the headings line-height (?)
+        line-height: 1.25;
+
+    }
+
+}
+
+// Change icon when
+.collapsible-heading [aria-expanded="true"] {
+
+    &:before {
+
+        content: "-";
+
+    }
+
+}
+
+
+
+// Collapsed content
+.collapsible-heading + [aria-hidden] {
+
+    visibility: hidden;
+    max-height: 0;
+    margin-top: -1px;
+
+    padding: 0 1.5em;
+
+    @include transition;
+
+}
+
+
+// Expanded content
+.collapsible-heading + [aria-hidden="false"] {
+
+    // Return axiomatic owl
+    // margin-top: em($font-leading);
+
+    padding: 1.5em;
+
+    visibility: visible;
+    // This really shouldn't be a magic number but it's the only way to animate without jQuery
+    max-height: 64em;
+
+    background-color: transparent;
+    border: $border;
+
+}
+
+
+
+[aria-hidden] + .collapsible-heading {
+
+}

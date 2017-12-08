@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    #Alignments
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    #Default alignments
+\*------------------------------------*/
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+
+
+/*------------------------------------*\
+    #Change text-alignment depending on viewport dimensions
+\*------------------------------------*/
+.align-left-from-lap {
+
+	@include mq($breakpoint-lap) {
+
+		text-align: left;
+
+	}
+
+
+}
+
+
+
+.align-center-from-lap {
+
+	@include mq($breakpoint-lap) {
+
+		text-align: center;
+
+	}
+
+}
+
+
+
+.align-right-from-lap {
+
+	@include mq($breakpoint-lap) {
+
+		text-align: right;
+
+	}
+	
+}
+
+
+
+/*------------------------------------*\
+    #Vertically align `groups`
+\*------------------------------------*/
+.group.valign--center {
+
+	// align-items: center;
+
+}
+
+/*------------------------------------*\
+    #Vertically align `group__items`
+\*------------------------------------*/
+.group__item.valign--center {
+
+	align-self: center;
+
+}

@@ -1,0 +1,269 @@
+/*------------------------------------*\
+    #Buttons
+\*------------------------------------*/
+
+
+
+.button {
+
+	// Remove link styling from links styled as buttons
+	// text-decoration: none;
+	border: 0;
+	color: inherit;
+
+	display: inline-block;
+
+	padding: em(11) em(16) em(10) em(16);
+	letter-spacing: 0.015em;
+	font-weight: $font-weight;
+
+	border-radius: 0;
+
+}
+
+
+button.button,
+input[type="submit"].button {
+
+	// Remove link styling from actual buttons styled as buttons
+	text-decoration: none;
+
+}
+
+
+// Double specificty so links as buttons keep their styling even within
+// elements that would otherwise override it, but without !important
+.button--primary.button--primary {
+
+	background-color: $primary-color;
+	color: contrast($primary-color);
+
+	&:visited {
+
+		background-color: $primary-color;
+		color: contrast($primary-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($primary-color);
+		color: contrast(deviate($primary-color));
+
+	}
+
+}
+
+
+
+.button--secondary.button--secondary {
+
+	background-color: $secondary-color;
+	color: contrast($secondary-color);
+
+	&:visited {
+
+		background-color: $secondary-color;
+		color: contrast($secondary-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($secondary-color);
+		color: contrast(deviate($secondary-color));
+
+	}
+
+}
+
+
+
+.button--tertiary.button--tertiary {
+
+	background-color: $tertiary-color;
+	color: contrast($tertiary-color);
+
+	&:visited {
+
+		background-color: $tertiary-color;
+		color: contrast($tertiary-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($tertiary-color);
+		color: contrast(deviate($tertiary-color));
+
+	}
+
+}
+
+
+
+.button--accent.button--accent {
+
+	background-color: $accent-color;
+	color: contrast($accent-color);
+
+	&:visited {
+
+		background-color: $accent-color;
+		color: contrast($accent-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($accent-color);
+		color: contrast(deviate($accent-color));
+
+	}
+
+}
+
+
+
+.button--subtle.button--subtle {
+
+	background-color: $subtle-color;
+	color: contrast($subtle-color);
+
+	&:visited {
+
+		background-color: $subtle-color;
+		color: contrast($subtle-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($subtle-color);
+		color: contrast(deviate($subtle-color));
+
+	}
+
+}
+
+
+.button--success.button--success {
+
+	background-color: $success-color;
+	color: contrast($success-color);
+
+	&:visited {
+
+		background-color: $success-color;
+		color: contrast($success-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($success-color);
+		color: contrast(deviate($success-color));
+
+	}
+
+}
+
+.button--warning.button--warning {
+
+	background-color: $warning-color;
+	color: contrast($warning-color);
+
+	&:visited {
+
+		background-color: $warning-color;
+		color: contrast($warning-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($warning-color);
+		color: contrast(deviate($warning-color));
+
+	}
+
+}
+
+.button--alert.button--alert {
+
+	background-color: $alert-color;
+	color: contrast($alert-color);
+
+	&:visited {
+
+		background-color: $alert-color;
+		color: contrast($alert-color);
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: deviate($alert-color);
+		color: contrast(deviate($alert-color));
+
+	}
+
+}
+
+
+/*------------------------------------*\
+    #Modifiers
+\*------------------------------------*/
+
+// Want bigger buttons
+
+.button--is-block {
+
+	display: block;
+	width: 100%;
+
+	text-align: center;
+
+}
+
+
+
+.button[disabled],
+.button.is-disabled,
+span.button.button {
+
+	cursor: not-allowed;
+
+	background-color: luma(80);
+	color: rgba(contrast(luma(80)), 0.54);
+
+	box-shadow: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		outline: 0;
+
+		background-color: luma(80);
+		color: rgba(contrast(luma(80)), 0.54);
+
+	}
+
+}

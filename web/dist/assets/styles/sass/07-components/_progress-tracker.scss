@@ -1,0 +1,210 @@
+/*------------------------------------*\
+    #Progress-tracker
+\*------------------------------------*/
+
+
+/*
+ * Namespace the variables to avoid naming conflicts with
+ * Foundation, Bootstrap, etc. Would it be better to map them instead?
+ */
+$apo-progress-tracker-item-color-text:				red !default;
+
+
+/*
+ * TODO: Document all of this, copied from previous project
+ */
+.progress-tracker {
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	flex-flow: column wrap;
+	
+	// The default border. Also the last line after the last item
+	border: 0.25em solid luma(80);
+	border-width: 0 0 0 0.25em;
+
+	padding-left: 1.5em;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+
+	position: relative;
+	
+	// This is the `half`-line before the first item
+	&:before {
+
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 0.25em;
+		height: 20%;
+		top: 0;
+		left: -0.25em;
+		// Should have the same colour as the `is-complete` line
+		background-color: luma(60);
+
+	}
+
+    @include mq($breakpoint-lap) {
+
+		flex-flow: row nowrap;
+
+		padding-left: 0;
+		margin-left: 0;
+		border-width: 0.25em 0 0 0;
+		padding-top: 1.5em;
+		margin-top: 1em;
+
+        &:before {
+
+			width: 20%;
+			height: 0.25em;
+			top: -0.25em;
+			left: 0;
+
+        }
+
+    }
+
+
+}
+
+
+
+.progress-tracker__item {
+	
+	// Remove axiomatic owl
+	margin-top: 0;
+
+	width: 100%;
+	padding-left: 1.5rem;
+	position: relative;
+
+	// Let's style the text
+	font-size: 0.88em;
+	
+	// This is the line after the dot, i.e. between li and li+li
+    &:before {
+
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 0.25rem;
+		height: 100%;
+		top: 1rem;
+		left: -1.75rem;
+		background-color: luma(80);
+
+    }
+	
+	// Change the last-child's line to be shorter.
+    &:last-child:before {
+
+		width: 0.25rem;
+		height: 50%;
+
+		@include mq($breakpoint-lap) {
+
+			width: 50%;
+			height: auto;
+
+		}
+
+    }
+	
+	// This is the dot
+    &:after {
+
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 1rem;
+		height: 1rem;
+		top: 50%;
+		left: -2.125rem;
+		margin-top: -0.5rem;
+		border-radius: 50%;
+		background-color: white;
+		border: 0.125rem solid luma(80);
+
+    }
+	
+
+	// Progress-tracker__itrem
+    @include mq($breakpoint-lap) {
+
+		flex: 1;
+		text-align: center;
+		padding-left: 0;
+
+		&:before {
+
+			width: 100%;
+			height: 0.25rem;
+			top: -1.75rem;
+			left: 50%;
+
+		}
+
+		&:after {
+
+			width: 2rem;
+			height: 2rem;
+			top: -2.625rem;
+			left: 50%;
+			margin-top: 0;
+			margin-left: -1rem;	
+
+		}
+
+    }
+}
+
+
+
+/*------------------------------------*\
+    #Current item
+\*------------------------------------*/
+// The text
+.is-current {
+
+    color: $primary-color;
+
+}
+
+// The dot
+.is-current:after {
+
+    background-color: $primary-color;
+    border-color: darken($primary-color, $deviate);
+
+}
+
+
+
+/*------------------------------------*\
+    #Completed item(s)
+\*------------------------------------*/
+// The text
+.is-completed {
+	
+    color: luma(50);
+
+}
+
+// The line
+.is-completed:before {
+
+    background-color: luma(60);
+
+}
+
+// The dot
+.is-completed:after {
+	
+    background-color: luma(70);
+    border-color: luma(70);
+
+}

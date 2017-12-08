@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    #Colours
+\*------------------------------------*/
+
+.bg {
+
+    .lead {
+
+        color: inherit;
+
+    }
+
+    &--primary {
+
+        background-color: $primary-color;
+        color: contrast($primary-color);
+
+        @include links($primary-color);
+
+    }
+
+    &--secondary {
+
+        background-color: $secondary-color;
+        color: contrast($secondary-color);
+
+        @include links($secondary-color);
+
+    }
+
+    &--tertiary {
+
+        background-color: $tertiary-color;
+        color: contrast($tertiary-color);
+
+        @include links($tertiary-color);
+
+    }
+
+    &--accent {
+
+        background-color: $accent-color;
+        color: contrast($accent-color);
+
+        @include links($accent-color);
+
+    }
+
+    &--subtle {
+
+        background-color: $subtle-color;
+        color: contrast($subtle-color);
+
+        @include links($subtle-color);
+
+    }
+
+    // Neutrals
+
+    &--white {
+
+        background-color: $white;
+        color: contrast($white);
+
+        @include links($white);
+
+    }
+
+    &--black {
+
+        background-color: $black;
+        color: contrast($black);
+
+        @include links($black);
+
+    }
+
+    // System colour palette
+
+    &--alert {
+
+        background-color: $alert-color;
+        color: contrast($alert-color);
+
+        @include links($alert-color);
+
+    }
+
+    &--warning {
+
+        background-color: $input-error-color;
+        color: contrast($input-error-color);
+
+        @include links($input-error-color);
+
+    }
+
+    &--success {
+
+        background-color: $success-color;
+        color: contrast($success-color);
+
+        @include links($success-color);
+
+    }
+
+}
+
+.color {
+
+    &--primary {
+        color: $primary-color;
+    }
+    &--secondary {
+        color: $secondary-color;
+    }
+    &--tertiary {
+        color: $tertiary-color;
+    }
+    &--accent {
+        color: $accent-color;
+    }
+    &--success {
+        color: $success-color;
+    }
+}

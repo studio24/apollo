@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+th {
+
+    padding: 0.75rem;
+    // Allow text-direction to change with `ltr`
+    text-align: start;
+    border: $border;
+
+}
+
+td {
+
+    padding: 0.75rem;
+    border: $border;
+
+}

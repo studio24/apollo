@@ -1,0 +1,234 @@
+/*------------------------------------*\
+    #Apollo
+\*------------------------------------*/
+/*
+ * Trello: https://trello.com/board-name-hash
+ */
+
+
+
+/*------------------------------------*\
+    #Box-model
+\*------------------------------------*/
+/*
+ * The box-model is set on the `HTML` element and is inherited by everything
+ * else. This way you can change the box-model on a per-component basis by
+ * changing it for the parent element and its children will inherit the right
+ * box-model.
+*/
+$box-sizing:						border-box;
+
+
+
+/*------------------------------------*\
+    #Breakpoints
+\*------------------------------------*/
+/*
+ * The measurements presented here are only for guidance and should be updated
+ * to reflect the design/content needs.
+ */
+$breakpoint-wrist:					321;
+$breakpoint-palm:					481;
+$breakpoint-lap:					641;
+$breakpoint-desk:					1025;
+$breakpoint-wall:					1201;
+$breakpoint-mall:					1367;
+
+$max-width:							1200;
+
+$breakpoint-width:					$max-width;
+
+// Set to `true` to scope media-queries to `.lt-ie9`
+$IE9:								false;
+
+
+
+/*------------------------------------*\
+    #Paths
+\*------------------------------------*/
+$img-path:							"/assets/images/";
+$font-path:							"/assets/fonts/";
+$svg-path:							"/assets/svg/";
+
+
+
+/*------------------------------------*\
+    #Typography
+\*------------------------------------*/
+$font-size:							16;
+$font-leading:						24;
+$font-style:						normal;
+$font-weight:						400;
+$font-family:						'Proza Libre', sans-serif;
+
+$font-scale--default:               1.125;
+$font-scale--larger:                1.2;
+
+
+
+$heading-family:					'Playfair Display', serif;
+$heading-weight:					700;
+$heading-style:						normal;
+
+$mono-family:						Consolas, monaco, monospace;
+
+$emphasis-weight:					600;
+$emphasis--more:                    800;
+$emphasis-family:					$font-family;
+
+
+// Prototype for new viewport contextual size mapping. We want to loop through these creating a mixin which allows the call for a size (and classes for all of them, allowing reuse in markup). Use the map name for the classes, e.g. 'size--2xl'
+$type-sizes: (
+    'default': (
+        's':    ('size': 24, 'leading': 24),
+        'm':    ('size': 20, 'leading': 24),
+        'l':    ('size': 19, 'leading': 24),
+        'xl':   ('size': 18, 'leading': 24),
+        '2xl':  ('size': 17, 'leading': 24),
+        '3xl':  ('size': 16, 'leading': 24)
+    ),
+    'lap': (
+        's':    ('size': 48, 'leading': 24),
+        'm':    ('size': 40, 'leading': 24),
+        'l':    ('size': 31, 'leading': 24),
+        'xl':   ('size': 25, 'leading': 24),
+        '2xl':  ('size': 20, 'leading': 24),
+        '3xl':  ('size': 16, 'leading': 24)
+    ),
+);
+
+
+/*------------------------------------*\
+    #Palette
+\*------------------------------------*/
+
+// Studio 24 colours
+$rhino-blue:                            hsl(219, 34%, 23%);
+$blaze-orange:                          #f60;
+$orange-peel:                          	#f90;
+$jacarta-purple:                        #512467;
+
+// Brand colours
+$tundora-grey:                          hsl(0, 0%, 12%);
+$scorpion-grey:                         hsl(0, 0%, 35%);
+$nobel-grey:                          	hsl(0, 0%, 70%);
+$silver-grey:                          	hsl(0, 0%, 75%);
+
+// Neutrals
+$wild-sand-white:                       #F7F7F7;
+$mine-shaft-black:                      #222;
+$mercury-grey:                          #e5e5e5;
+
+// System
+$pomegranate-red:                      	#F04819;
+$candlelight-yellow:                    #fed41d;
+$apple-green:							#2ECC40;
+
+/*
+ * Sass variables
+ */
+$white:                                 $wild-sand-white;
+$black:                                 $mine-shaft-black;
+
+// Colours for copy ( used by contrast() which is defined in _polarize )
+$polarize-black:                        $black;
+$polarize-white:                        $white;
+
+$primary-color:                         $tundora-grey;
+$secondary-color:                       $scorpion-grey;
+$tertiary-color:                        $nobel-grey;
+$accent-color:                          $silver-grey;
+
+$link-color:                            hsl(240, 100%, 50%);
+$link-color--visited:                   hsl(270, 100%, 50%);
+$link-color--hover:                     hsl(0, 100%, 50%);
+
+$subtle-color:                          $mercury-grey;
+$success-color:							$apple-green;
+$warning-color:							$candlelight-yellow;
+$alert-color:                           $pomegranate-red;
+$input-error-color:                     $candlelight-yellow;
+$focus-color:							$link-color;
+
+/*
+ * Accessible colours
+ * This is still in prototype-stage
+ */
+$grey:                                  rgba(0,0,0,0.54);
+
+/*
+ * Use luma to get any desaturated shade between `$white` and `$black`
+ */
+
+// luma(x)
+/*
+ * You can use Sass `darken` and `lighten` to change hues, and use `$deviate`
+ * to set the amount of change consistently across partials.
+ */
+$deviate:                               10;
+
+
+
+/*------------------------------------*\
+    #Z-index mapping
+\*------------------------------------*/
+$z-index-map: (
+	"header":						10,
+	"nav": (
+		"wrapper":					20,
+		"toggle":					21,
+        "logo":                     22,
+	),
+    "segmented": (
+        "background":               2,
+        "label":                    3,
+    ),
+    "media": (
+        "cover-image":              1,
+        "cover-caption":            2,
+    ),
+    "default":                      1,
+    "below":                        -1,
+    "bottomless-pit":               -9000,
+    "top":                          900,
+);
+
+
+
+/*------------------------------------*\
+    #Border
+\*------------------------------------*/
+$border-style:						solid;
+$border-width:						2px;
+$border-color:						$primary-color;
+
+// Shorthand for ease-of-use
+$border: $border-width $border-style $border-color;
+
+
+
+/*------------------------------------*\
+    #Transitions
+\*------------------------------------*/
+$transition-property-default: 		all;
+$transition-duration-default: 		100ms;
+$transition-timing-default: 		ease-in-out;
+$transition-delay-default: 			0ms;
+/*
+ * Named timings
+ */
+$bounce:							cubic-bezier(.64,.57,.67,1.53);
+
+
+
+/*------------------------------------*\
+    #Empathise with other people
+\*------------------------------------*/
+$empathise:                         false;
+
+
+
+/*------------------------------------*\
+    #Debugging helpers
+\*------------------------------------*/
+$pesticide:							false;

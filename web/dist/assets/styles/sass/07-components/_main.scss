@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #Main
+\*------------------------------------*/
+
+
+// Doesn't need a class because, like the Highlander, there can only be one
+main {
+
+	// margin-top: 0;
+
+  padding: 0 1em;
+
+  @include mq($breakpoint-lap) {
+
+    padding: 0;
+
+  }
+
+}

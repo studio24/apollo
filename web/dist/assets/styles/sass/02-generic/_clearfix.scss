@@ -1,0 +1,19 @@
+/**
+* Micro clearfix, from:
+* http://nicolasgallagher.com/micro-clearfix-hack/
+*
+* Adopted for modern browsers.
+*
+* Extend the clearfix class with Sass to avoid it appearing over and over in
+* your markup.
+*/
+
+%clearfix {
+
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+}

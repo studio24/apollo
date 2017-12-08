@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #Notes
+\*------------------------------------*/
+
+.note {
+
+    background-color: $accent-color;
+    color: contrast($accent-color);
+
+    padding: 1rem;
+
+    @include links($accent-color);
+
+}
