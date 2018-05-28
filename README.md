@@ -24,7 +24,7 @@ cd ~/Sites
 git clone git@bitbucket.org:studio24/apollo.git
 cd apollo
 # Switch your version of Node using NVM
-nvm use v6.9.5
+nvm use v10.2.1
 # Install dependencies
 npm install
 ````
