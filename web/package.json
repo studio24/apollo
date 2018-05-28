@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "npm scripts for building Apollo",
   "scripts": {
+    "sass": "node-sass -o=dist/assets/styles --output-style=nested apollo/assets/styles/*.scss",
+    "autoprefixer": "autoprefixer-cli -d dist/assets/styles dist/assets/styles/*.css",
+    "css": "npm run sass && npm run autoprefixer"
   },
   "author": "Studio 24",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "node-sass": "^4.9.0"
+  }
 }
