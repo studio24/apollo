@@ -1,4 +1,3 @@
-<?php define('DOC_ROOT', dirname($_SERVER['DOCUMENT_ROOT'])); ?>
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -18,7 +17,7 @@
 
 <body>
 
-<?php require_once( DOC_ROOT. '/web/dist/assets/svg/icons.svg' ); ?>
+<?php require_once( 'dist/assets/svg/icons.svg' ); ?>
 
 
 <header class="island island--fullpage bg bg--primary" style="background-image: url(/dist/assets/images/apollo.png); background-repeat: no-repeat; background-position: 175% 42%;">
@@ -2483,8 +2482,8 @@
 <!-- / Main -->
 
 
-<?php require_once( DOC_ROOT. 'delete-this-folder-in-wp/_includes/global-footer.html' ); ?>
-<?php require_once( DOC_ROOT. 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
+<?php require_once( 'delete-this-folder-in-wp/_includes/global-footer.html' ); ?>
+<?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
 
 </body>
 </html>

@@ -1,8 +1,6 @@
 //Browserify require definitions
 
 $(function () {
-
-
     // Traverse DOM and create variables
     var html = $('html'),
         viewport = $(window),

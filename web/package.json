@@ -14,12 +14,19 @@
     "images": "npm-run-all --parallel images:imagemin images:svg",
     "fonts": "shx cp -r apollo/assets/fonts/* dist/assets/fonts",
     "prefonts": "shx mkdir -p dist/assets/fonts",
-    "js:copylibraries": "shx cp apollo/assets/js/libraries/* dist/assets/js/libraries/",
+    "js:copylibraries": "shx cp -r apollo/assets/js/libraries/* dist/assets/js/libraries/",
     "prejs:copylibraries": "shx mkdir -p dist/assets/js/libraries",
     "js:babel": "babel apollo/assets/js --out-dir dist/assets/js --minified --compact --ignore apollo/assets/js/libraries",
-    "prejs:babel": "shx mkdir -p dits/assets/js",
+    "prejs:babel": "shx mkdir -p dist/assets/js",
     "js": "npm-run-all --parallel js:copylibraries js:babel",
-    "build": "npm-run-all --parallel css images fonts js"
+    "build": "npm-run-all --parallel css images fonts js",
+    "watch:css": "watch 'npm run css' apollo/assets/styles",
+    "watch:images:svg": "watch 'npm run images:svg' apollo/assets/svg",
+    "watch:images:imagemin": "watch 'npm run images:imagemin' apollo/assets/images",
+    "watch:fonts": "watch 'npm run fonts' apollo/assets/fonts",
+    "watch:js:copylibraries": "watch 'npm run js:copylibraries' apollo/assets/js/libraries",
+    "watch:js:babel": "watch 'npm run js:babel' apollo/assets/js",
+    "watch": "npm-run-all --parallel watch:* watch:*:*"
   },
   "author": "Studio 24",
   "license": "ISC",
@@ -30,6 +37,7 @@
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.3",
     "shx": "^0.2.2",
-    "svgo": "^1.0.5"
+    "svgo": "^1.0.5",
+    "watch": "^1.0.2"
   }
 }
