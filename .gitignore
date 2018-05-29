@@ -39,7 +39,7 @@ node_modules
 .sass_cache
 
 # dist
-web/assets/dist
+web/dist
 
 # Wordpress
 # Account for plugins that include a vendor directory but no composer.json file

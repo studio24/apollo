@@ -11,9 +11,6 @@
 
     <link rel="stylesheet" href="/dist/assets/styles/styles.css" type="text/css"
           media="screen"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Proza+Libre:400,400i,600" rel="stylesheet">
-
 </head>
 
 <?php //require_once( DOC_ROOT. '/delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
