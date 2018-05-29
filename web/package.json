@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "npm scripts for building Apollo",
   "scripts": {
-    "sass": "node-sass -o=dist/assets/styles --output-style=nested apollo/assets/styles/*.scss",
+    "sass": "node-sass -o=dist/assets/styles --output-style=compressed apollo/assets/styles/*.scss",
     "autoprefixer": "autoprefixer-cli -d dist/assets/styles dist/assets/styles/*.css",
     "css": "npm run sass && npm run autoprefixer"
   },
