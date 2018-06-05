@@ -33,7 +33,7 @@ nvm use v10.2.1
 # Install dependencies
 npm install
 npm run build
-````
+```
 
 ### Configuration
 
