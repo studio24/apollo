@@ -1,4 +1,3 @@
-<?php define('DOC_ROOT', dirname($_SERVER['DOCUMENT_ROOT'])); ?>
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -9,11 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
-    <link rel="stylesheet" href="/dist/assets/styles/styles.css" type="text/css"
+    <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css"
           media="screen"/>
-
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Proza+Libre:400,400i,600" rel="stylesheet">
-
 </head>
 
 <?php //require_once( DOC_ROOT. '/delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
@@ -21,7 +17,7 @@
 
 <body>
 
-<?php require_once( DOC_ROOT. '/web/dist/assets/svg/icons.svg' ); ?>
+<?php require_once( 'dist/assets/svg/icons.svg' ); ?>
 
 
 <header class="island island--fullpage bg bg--primary" style="background-image: url(/dist/assets/images/apollo.png); background-repeat: no-repeat; background-position: 175% 42%;">
@@ -2486,8 +2482,8 @@
 <!-- / Main -->
 
 
-<?php require_once( DOC_ROOT. 'delete-this-folder-in-wp/_includes/global-footer.html' ); ?>
-<?php require_once( DOC_ROOT. 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
+<?php require_once( 'delete-this-folder-in-wp/_includes/global-footer.html' ); ?>
+<?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
 
 </body>
 </html>

@@ -19,39 +19,46 @@ Apollo is used in the Studio24 Wordpress starter theme with the same name. It's 
 
 ### Clone the repository
 
-````bash
+```bash
 cd ~/Sites
 git clone git@bitbucket.org:studio24/apollo.git
-cd apollo
+```
+
+### Installation
+
+```bash
+cd apollo/web
 # Switch your version of Node using NVM
-nvm use v6.9.5
+nvm use v10.2.1
 # Install dependencies
 npm install
+npm run build
 ````
 
 ### Configuration
 
-#### YAML config file
-
-Update the `config.yml` to change the location for where the production files are saved.
-
-#### Gulp config file
-
-Update the `gulpfile.babel.js` to change the URL of your local server. This allows [Browsersync](https://www.browsersync.io/) to preview and reload the site as you change it.
-
 #### NPM config file
 
-Update the `package.json` to manage the packages required to build the site's assets.
+If needed, update `package.json` to manage the packages and NPM scripts required to build the site's assets.
 
-#### Webpack config file
+### Build
 
-Update the `webpack.config.js` to change which Javascript modules are bundled for use in a browser. Default bundles jQuery.
+To re-build the assets once
+
+```bash
+npm run build
+```
+
+To watch for changes
+
+```bash
+npm run watch
+```
 
 ## Dependencies
 
 - [NPM](https://www.npmjs.com/) - Package manager for Javascript
 - [NVM](https://github.com/creationix/nvm) - Manage multiple active versions of node.js
-- [Gulp](https://gulpjs.com/) - Task runner
 
 ## Deployment instructions
 

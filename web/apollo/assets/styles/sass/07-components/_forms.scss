@@ -728,7 +728,7 @@ input[required]:valid {
 
     z-index: z("segmented", "label");
 
-    @include transition($property: transform)
+    @include transition($property: transform);
     transform: scale(0) rotate(45deg);
 
 }

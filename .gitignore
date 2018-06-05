@@ -38,6 +38,9 @@ node_modules
 # SASS
 .sass_cache
 
+# dist
+web/dist
+
 # Wordpress
 # Account for plugins that include a vendor directory but no composer.json file
 !web/wp-content/plugins/**/vendor

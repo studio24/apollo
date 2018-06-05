@@ -1,70 +1,42 @@
 {
   "name": "apollo",
-  "title": "Apollo",
-  "version": "2.0.0",
-  "description": "Apollo is a static (HTML, CSS and Javascript) framework.",
-  "homepage": "http://apollo.s24.net/",
-  "license": "MIT",
-  "main": "gulpfile.js",
-
+  "version": "1.0.0",
+  "description": "npm scripts for building and watching Apollo",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build --production"
+    "css:mainsass:compressed": "node-sass --output-style=compressed --source-map=true apollo/assets/styles/styles.scss dist/assets/styles/styles.min.css",
+    "css:mainsass:uncompressed": "node-sass apollo/assets/styles/styles.scss dist/assets/styles/styles.css",
+    "css:sass": "npm-run-all --parallel css:mainsass:*",
+    "css:autoprefixer": "autoprefixer-cli -d dist/assets/styles dist/assets/styles/*.css",
+    "css": "npm-run-all --sequential css:sass css:autoprefixer",
+    "images:imagemin": "imagemin apollo/assets/images/* --out-dir=dist/assets/images",
+    "images:svg": "svgo --folder=apollo/assets/svg --output=dist/assets/svg",
+    "images": "npm-run-all --parallel images:imagemin images:svg",
+    "fonts": "shx cp -r apollo/assets/fonts/* dist/assets/fonts",
+    "js:copylibraries": "shx cp -r apollo/assets/js/libraries/* dist/assets/js/libraries/",
+    "jsmain:babel:compressed": "babel apollo/assets/js/app.js --out-file dist/assets/js/app.min.js --minified --compact",
+    "jsmain:babel:uncompressed": "babel apollo/assets/js/app.js --out-file dist/assets/js/app.js",
+    "js": "npm-run-all --parallel js:copylibraries jsmain:babel:*",
+    "build": "npm-run-all --parallel css images fonts js",
+    "prebuild": "shx rm -rf dist && shx mkdir -p dist/assets/fonts && shx mkdir dist/assets/images && shx mkdir dist/assets/js && shx mkdir dist/assets/js/libraries && shx mkdir dist/assets/styles && shx mkdir dist/assets/svg",
+    "watch:css": "watch 'npm run css' apollo/assets/styles --interval=1",
+    "watch:images:svg": "watch 'npm run images:svg' apollo/assets/svg --interval=1",
+    "watch:images:imagemin": "watch 'npm run images:imagemin' apollo/assets/images --interval=1",
+    "watch:fonts": "watch 'npm run fonts' apollo/assets/fonts --interval=1",
+    "watch:js:copylibraries": "watch 'npm run js:copylibraries' apollo/assets/js/libraries --interval=1",
+    "watch:jsmainbabel:compressed": "watch 'npm run jsmain:babel:compressed' apollo/assets/js/ --ignoreDirectoryPattern=/libraries\/.*/ --interval=1",
+    "watch:jsmainbabel:uncompressed": "watch 'npm run jsmain:babel:uncompressed' apollo/assets/js/ --ignoreDirectoryPattern=/libraries\/.*/ --interval=1",
+    "watch": "npm-run-all --parallel watch:* watch:*:*"
   },
-
-  "keywords": [
-    "Apollo",
-    "WordPress",
-    "starter theme",
-    "Studio 24",
-    "semantic",
-    "mobile first",
-    "customizable",
-    "responsive"
-  ],
-
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-register": "^6.7.2",
-    "browser-sync": "^2.10.0",
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.3.1",
-    "gulp-cli": "^1.2.1",
-    "gulp-concat": "^2.5.2",
-    "gulp-extname": "^0.2.0",
-    "gulp-if": "^2.0.0",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.2.0",
-    "js-yaml": "^3.4.6",
-    "panini": "^1.3.0",
-    "rimraf": "^2.4.3",
-    "style-sherpa": "^1.0.0",
-    "vinyl-named": "^1.1.0",
-    "webpack": "^2.6.1",
-    "webpack-stream": "^3.2.0",
-    "yargs": "^3.8.0"
-  },
-
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/studio24/apollo/overview"
-  },
-
-  "bugs": {
-    "url": "https://bitbucket.org/studio24/apollo/issues?status=new&status=open"
-  },
-
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
+  "author": "Studio 24",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "babel-cli": "^6.26.0",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "shx": "^0.2.2",
+    "svgo": "^1.0.5",
+    "watch": "^1.0.2"
   }
-
 }
