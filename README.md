@@ -82,6 +82,13 @@ Open a ticket in the [Issues section of this repository](https://bitbucket.org/s
 
 ### To submit a bug fix or an enhancement
 
+I'm so excited that you want to contribute to Apollo. Before you do though, please take a moment to consider how you would answer the following questions. A single 'Yes,' already tells us we would want your addition.
+
+1. Does this solution already exist? (drop-down, select menu, tooltip, video player, etc.)
+2. Could others use it? (Yes, no, maybe)
+3. Have you already seen a working solution for this? (It works well, it needs improvement)
+4. Does it solve the problem? (Yes, no, partially)
+
 Create a new branch (one per fix/improvement) and apply your fix. When you are done, submit a pull request to the repository maintainer (Carlos) for review.
 
 ## Who do I talk to?
