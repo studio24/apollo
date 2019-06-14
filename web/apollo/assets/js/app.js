@@ -1,488 +1,371 @@
-//Browserify require definitions
+/**
+ * Element.closest polyfill:
+ * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+ */
+if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+        Element.prototype.webkitMatchesSelector;
+}
 
-$(function () {
-    // Traverse DOM and create variables
-    var html = $('html'),
-        viewport = $(window),
-        distance = 0,
-        searchToggler = $('.js-search-toggle'),
-        globalSearch = $('.js-global-search');
-
-    var scrollEventFired = false,
-        scrollEventFrequency = 100;
-
-
-    // Add js hook using vanilla Javascript in head tag instead.
-    // Needed for basil to run on ready()
-    // html.addClass('js');
-
-
-    var basil = $('.basil');
-    // Run Basil on ready in case there's any elements already in 'view'
-    basil.each(function (i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-            el.addClass('is-visible');
-        }
-    });
+if (!Element.prototype.closest) {
+    Element.prototype.closest = function (s) {
+        var el = this;
+        if (!document.documentElement.contains(el)) return null;
+        do {
+            if (el.matches(s)) return el;
+            el = el.parentElement || el.parentNode;
+        } while (el !== null && el.nodeType === 1);
+        return null;
+    };
+}
 
 
-    var navigationToggler = $('.js-nav-toggle'),
-        nav = $('.js-nav-wrapper');
+/**
+ * Does it dijon?
+ *
+ * The matchMedia API is supported by IE10 and IE11.
+ * If the browser supports this then we know it has better standards support than IE9.
+ */
+if (typeof window.matchMedia !== 'undefined') {
 
-    // Toggle class names on click event
-    navigationToggler.click(function (e) {
+    // The default behaviour is to add a `js` class to the HTML element if
+    // Javascript is available. The class is added in the <head> for better performance
 
-        navigationToggler.toggleClass('is-toggled');
-        nav.toggleClass('is-active');
+    // Helper function for finding elements
+    function findElement(target) {
+        // querySelector returns the first element on a page that matches the selector.
+        // For IDs, there should only be one match per page. For classes, it would return the first element with that class.
+        return document.querySelector(target);
+    }
 
-        //Don't "return false" as it stops event propagation
-        e.preventDefault();
-
-    });
-
-
-    // Set throttle to true when a scroll event fires
-    viewport.scroll(function () {
-
-        scrollEventFired = true;
-
-
-        // Check if any elements should become visible, this should be
-        // moved to exist within setInterval.scrollEventFired()
-        basil.each(function (i, el) {
-            var el = $(el);
-            if (el.visible(true)) {
-                el.addClass('is-visible');
-            }
-        });
+    // Check for if an element exists
+    function exists(elem) {
+        return (elem != null && (elem.length >= 0 || elem.innerHTML.length >= 0) )
+    }
 
 
-    });
+    // classList polyfill until browser support is better
 
+    /*
+ * classList.js: Cross-browser full element.classList implementation.
+ * 1.2.20171210
+ *
+ * By Eli Grey, http://eligrey.com
+ * License: Dedicated to the public domain.
+ *   See https://github.com/eligrey/classList.js/blob/master/LICENSE.md
+ */
 
-    // Allow scroll event to run according to scrollEventFrequency
-    setInterval(function () {
-        if (scrollEventFired) {
+    /*global self, document, DOMException */
 
-            scrollEventFired = false;
-            // console.log('Scroll fired');
+    /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
 
-            // Check distance from top
-            if (viewport.scrollTop() > distance) {
-                // nav.addClass('is-collapsed');
-                // searchToggler.addClass('is-moved');
-                // navigationToggler.addClass('is-active');
-            }
-            else {
-                // nav.removeClass('is-collapsed');
-                // searchToggler.removeClass('is-moved');
-                // navigationToggler.removeClass('is-active');
-            }
+    if ("document" in self) {
 
-        }
-    }, scrollEventFrequency);
+// Full polyfill for browsers with no classList support
+// Including IE < Edge missing SVGElement.classList
+        if (
+            !("classList" in document.createElement("_"))
+            || document.createElementNS
+            && !("classList" in document.createElementNS("http://www.w3.org/2000/svg","g"))
+        ) {
 
+            (function (view) {
 
-    var skipToContent = $('.js-skip-to-content');
-    // Bind a click event to the 'skip' link
-    skipToContent.click(function (event) {
+                "use strict";
 
-        // strip the leading hash and declare
-        // the content we're skipping to
-        var skipTo = '#' + this.href.split('#')[1];
+                if (!('Element' in view)) return;
 
-        // Setting 'tabindex' to -1 takes an element out of normal
-        // tab flow but allows it to be focused via javascript
-        $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
+                var
+                    classListProp = "classList"
+                    , protoProp = "prototype"
+                    , elemCtrProto = view.Element[protoProp]
+                    , objCtr = Object
+                    , strTrim = String[protoProp].trim || function () {
+                        return this.replace(/^\s+|\s+$/g, "");
+                    }
+                    , arrIndexOf = Array[protoProp].indexOf || function (item) {
+                        var
+                            i = 0
+                            , len = this.length
+                        ;
+                        for (; i < len; i++) {
+                            if (i in this && this[i] === item) {
+                                return i;
+                            }
+                        }
+                        return -1;
+                    }
+                    // Vendors: please allow content code to instantiate DOMExceptions
+                    , DOMEx = function (type, message) {
+                        this.name = type;
+                        this.code = DOMException[type];
+                        this.message = message;
+                    }
+                    , checkTokenAndGetIndex = function (classList, token) {
+                        if (token === "") {
+                            throw new DOMEx(
+                                "SYNTAX_ERR"
+                                , "The token must not be empty."
+                            );
+                        }
+                        if (/\s/.test(token)) {
+                            throw new DOMEx(
+                                "INVALID_CHARACTER_ERR"
+                                , "The token must not contain space characters."
+                            );
+                        }
+                        return arrIndexOf.call(classList, token);
+                    }
+                    , ClassList = function (elem) {
+                        var
+                            trimmedClasses = strTrim.call(elem.getAttribute("class") || "")
+                            , classes = trimmedClasses ? trimmedClasses.split(/\s+/) : []
+                            , i = 0
+                            , len = classes.length
+                        ;
+                        for (; i < len; i++) {
+                            this.push(classes[i]);
+                        }
+                        this._updateClassName = function () {
+                            elem.setAttribute("class", this.toString());
+                        };
+                    }
+                    , classListProto = ClassList[protoProp] = []
+                    , classListGetter = function () {
+                        return new ClassList(this);
+                    }
+                ;
+// Most DOMException implementations don't allow calling DOMException's toString()
+// on non-DOMExceptions. Error's toString() is sufficient here.
+                DOMEx[protoProp] = Error[protoProp];
+                classListProto.item = function (i) {
+                    return this[i] || null;
+                };
+                classListProto.contains = function (token) {
+                    return ~checkTokenAndGetIndex(this, token + "");
+                };
+                classListProto.add = function () {
+                    var
+                        tokens = arguments
+                        , i = 0
+                        , l = tokens.length
+                        , token
+                        , updated = false
+                    ;
+                    do {
+                        token = tokens[i] + "";
+                        if (!~checkTokenAndGetIndex(this, token)) {
+                            this.push(token);
+                            updated = true;
+                        }
+                    }
+                    while (++i < l);
 
-            // when focus leaves this element,
-            // remove the tabindex attribute
-            $(this).removeAttr('tabindex');
+                    if (updated) {
+                        this._updateClassName();
+                    }
+                };
+                classListProto.remove = function () {
+                    var
+                        tokens = arguments
+                        , i = 0
+                        , l = tokens.length
+                        , token
+                        , updated = false
+                        , index
+                    ;
+                    do {
+                        token = tokens[i] + "";
+                        index = checkTokenAndGetIndex(this, token);
+                        while (~index) {
+                            this.splice(index, 1);
+                            updated = true;
+                            index = checkTokenAndGetIndex(this, token);
+                        }
+                    }
+                    while (++i < l);
 
-        }).focus(); // focus on the content container
-    });
+                    if (updated) {
+                        this._updateClassName();
+                    }
+                };
+                classListProto.toggle = function (token, force) {
+                    var
+                        result = this.contains(token)
+                        , method = result ?
+                        force !== true && "remove"
+                        :
+                        force !== false && "add"
+                    ;
 
+                    if (method) {
+                        this[method](token);
+                    }
 
-    /* Pikaday date picker
-     -----------------------------------------------------------------------------------------
-     */
-    var $datepickers = $('.js-pikaday');
-    $datepickers.each(function (index) {
-
-        var $datepicker = $(this);
-
-        $datepicker
-            .attr('type', 'text')
-            .pikaday();
-    });
-
-
-    /* Parsley form validation
-     -----------------------------------------------------------------------------------------
-     */
-    var $form = $('.js-validate-form');
-
-    if ($form.length > 0) {
-
-        $form.find('fieldset').each(function (index) {
-            var fieldset = this;
-            var $fieldset = $(fieldset);
-            if (fieldset.hasAttribute('required')) {
-                $fieldset.find('input')
-                    .prop('required', true)
-                    .attr('data-parsley-multiple', 'field-group-' + index);
-            }
-        });
-
-        $form.parsley({
-            trigger: 'change keyup touchend blur',
-            triggerAfterFailure: 'change keyup touchend select blur',
-            errorClass: 'field-group--has-error',
-            errorsWrapper: '<ul class="field-error" aria-live="assertive" role="status"></ul>',
-            errorsContainer: function (ParsleyField) {
-                var $field = $(ParsleyField.$element);
-                var $formItem = $field.closest('.form-group');
-                if ($formItem.length > 0) {
-                    return $formItem;
-                } else {
-                    return $field.closest('.field-group');
+                    if (force === true || force === false) {
+                        return force;
+                    } else {
+                        return !result;
+                    }
+                };
+                classListProto.replace = function (token, replacement_token) {
+                    var index = checkTokenAndGetIndex(token + "");
+                    if (~index) {
+                        this.splice(index, 1, replacement_token);
+                        this._updateClassName();
+                    }
                 }
-            },
-            classHandler: function (ParsleyField) {
-                return $(ParsleyField.$element).closest('.field-group');
-            }
-        }).on('field:error', function () {
-            var $element = this.$element;
-            $element.attr('aria-invalid', true);
-            var $errorElement = $element.closest('.field-group').find('.field-error');
-            var errorElementId = $errorElement.attr('id');
-            $element.attr('aria-describedby', errorElementId);
+                classListProto.toString = function () {
+                    return this.join(" ");
+                };
 
-        }).on('field:success', function () {
-            var $element = this.$element;
-            $element.attr('aria-invalid', false);
-            $element.removeAttr('aria-describedby');
-        });
+                if (objCtr.defineProperty) {
+                    var classListPropDesc = {
+                        get: classListGetter
+                        , enumerable: true
+                        , configurable: true
+                    };
+                    try {
+                        objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
+                    } catch (ex) { // IE 8 doesn't support enumerable:true
+                        // adding undefined to fight this issue https://github.com/eligrey/classList.js/issues/36
+                        // modernie IE8-MSW7 machine has IE8 8.0.6001.18702 and is affected
+                        if (ex.number === undefined || ex.number === -0x7FF5EC54) {
+                            classListPropDesc.enumerable = false;
+                            objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
+                        }
+                    }
+                } else if (objCtr[protoProp].__defineGetter__) {
+                    elemCtrProto.__defineGetter__(classListProp, classListGetter);
+                }
+
+            }(self));
+
+        }
+
+// There is full or partial native classList support, so just check if we need
+// to normalize the add/remove and toggle APIs.
+
+        (function () {
+            "use strict";
+
+            var testElement = document.createElement("_");
+
+            testElement.classList.add("c1", "c2");
+
+            // Polyfill for IE 10/11 and Firefox <26, where classList.add and
+            // classList.remove exist but support only one argument at a time.
+            if (!testElement.classList.contains("c2")) {
+                var createMethod = function(method) {
+                    var original = DOMTokenList.prototype[method];
+
+                    DOMTokenList.prototype[method] = function(token) {
+                        var i, len = arguments.length;
+
+                        for (i = 0; i < len; i++) {
+                            token = arguments[i];
+                            original.call(this, token);
+                        }
+                    };
+                };
+                createMethod('add');
+                createMethod('remove');
+            }
+
+            testElement.classList.toggle("c3", false);
+
+            // Polyfill for IE 10 and Firefox <24, where classList.toggle does not
+            // support the second argument.
+            if (testElement.classList.contains("c3")) {
+                var _toggle = DOMTokenList.prototype.toggle;
+
+                DOMTokenList.prototype.toggle = function(token, force) {
+                    if (1 in arguments && !this.contains(token) === !force) {
+                        return force;
+                    } else {
+                        return _toggle.call(this, token);
+                    }
+                };
+
+            }
+
+            // replace() polyfill
+            if (!("replace" in document.createElement("_").classList)) {
+                DOMTokenList.prototype.replace = function (token, replacement_token) {
+                    var
+                        tokens = this.toString().split(" ")
+                        , index = tokens.indexOf(token + "")
+                    ;
+                    if (~index) {
+                        tokens = tokens.slice(index);
+                        this.remove.apply(this, tokens);
+                        this.add(replacement_token);
+                        this.add.apply(this, tokens.slice(1));
+                    }
+                }
+            }
+
+            testElement = null;
+        }());
 
     }
-    ; // End of if
+
+    if (matchMedia) {
+        var mq = window.matchMedia("(min-width: 1000px)");
+        mq.addListener(updateARIAroles);
+    }
+
+    var contentToggler = document.querySelectorAll('[data-toggler]');
+
+    function updateARIAroles() {
+
+        if (exists(contentToggler)) {
+
+            // This allows us to iterate on multiple elements [1]
+            var index = 0;
+            for (index = 0; index < contentToggler.length; index++) {
+
+                // Find the element's toggle target by looking for data-toggle
+                // Note: we're using `getAttribute` instead of `dataset.` due to better browser support for the former
+                var target = contentToggler[index].getAttribute('data-toggler');
+                var contentTarget = [];
+                contentTarget[index] = $('[data-toggle="' + target + '"]');
+
+                if (mq.matches && target == "nav") {
+
+                    // Set default aria attributes
+                    // Hide all elements
+                    contentToggler[index].setAttribute('aria-expanded', true);
+                    contentTarget[index].setAttribute('aria-hidden', false);
+                    // contentTarget[index].setAttribute('hidden', true);
+
+                }
+                else {
+
+                    // Set default aria attributes
+                    // Hide all elements
+                    contentToggler[index].setAttribute('aria-expanded', false);
+                    contentTarget[index].setAttribute('aria-hidden', true);
+
+                }
 
 
-    /* Oliver | Credit card enhancement
-     -----------------------------------------------------------------------------------------
-     */
-    var $creditcard = $('.js-credit-card');
-    var $paymentFields = $('.js-payment-fields input');
-    var $donationValueInput = $('.js-donation-value');
-    var $donationAmount = $('.js-donation-amount');
-    var $donationCustom = $('.js-donation-custom');
-    var $giftaidAmount = $('.js-giftaid-amount');
-
-
-    // Update the text fields with the donation amount
-    $donationValueInput.on('change keyup', function () {
-
-        // Make sure the val() isn't empty
-        if ($(this).val() != '') {
-
-            // As long as the value is not `other`
-            if ($(this).val() != 'other') {
-
-                $donationAmount.text($(this).val());
-                $donationCustom.val($(this).val());
-                $giftaidAmount.text($(this).val() * 1.25);
             }
-            else {
-
-                $donationCustom.focus();
-
-            }
-
-        }
-    });
 
 
-    // When the custom input for donation amount gets focus, change to check the right radio button
-    // We're matching the ID but it might be better matching to the last radio option
-    $donationCustom.focus(function () {
+        } // end of exists
 
-        $('#segmented-option-7').prop('checked', true);
-    });
+    } // end of function
 
+    document.addEventListener('DOMContentLoaded', function () {
 
-    // Shows the SVG when any payment gets focus
-    $paymentFields.focus(function () {
+        updateARIAroles();
 
-        newClass = $(this).attr('name');
-        $creditcard.addClass('is-visible');
-        $creditcard.attr('data-focussed', newClass);
+        // Traverse DOM and create variables
+        var body = findElement('body');
 
     });
+    //End of ready()
 
-
-
-    // Sets max length for ccv based on card type entered
-    const ccvMaxLength = function (type) {
-        if (type !== "amex") {
-            $('#cvc').prop('maxLength', 3);
-            $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 3-digit security code on the back of your card.');
-        }
-        else {
-            $('#cvc').prop('maxLength', 4);
-            $('#cvc').attr('data-parsley-error-message', 'Please complete this field with the 4-digit security code on the front of your card.');
-        }
-    };
-    // Updates elements and icon based on cc number
-    const updatePaymentIcon = function () {
-
-        // the card type based on the number entered
-        const cardType = $.payment.cardType($('#cardnumber').val());
-        // if cardType is NOT null update data attribute to correct card type
-        if (cardType !== null) {
-            $creditcard.attr('data-cardtype', cardType);
-        }
-
-        // set the max length for the ccv based on card type
-        ccvMaxLength(cardType);
-    };
-
-    // format inputs with jquery.payment
-    $('#cardnumber').payment('formatCardNumber');
-    $('#cc-exp').payment('formatCardExpiry');
-    $('#cvc').payment('formatCardCVC');
-
-    // on entry of cc number fire updatePaymentIcon function
-    $('#cardnumber').on("keyup blur", updatePaymentIcon);
-    // custom cc validators added to parsley using jquery.payment functions
-    window.validateCreditCard = $.payment.validateCardNumber;
-    window.cardType = $.payment.cardType;
-    window.Parsley.addValidator('creditcard',
-        function (value) {
-            const acceptedCards = ['amex', 'visa', 'mastercard'];
-            return validateCreditCard(value) && acceptedCards.includes(cardType(value));
-        })
-        .addMessage('en', 'creditcard', '');
-    window.Parsley.addValidator('cvc',
-        function (value) {
-            return /^[0-9]{3,4}$/.test(value);
-        }, 32)
-        .addMessage('en', 'cvv', '');
-    window.Parsley.addValidator('cc-exp',
-        function (value) {
-            var currentTime, expiry, prefix, ref;
-
-            var date = value.split('/'),
-                month = date[0].trim(),
-                year = date[1].trim();
-
-            if (!/^\d+$/.test(month)) {
-                return false;
-            }
-            if (!/^\d+$/.test(year)) {
-                return false;
-            }
-            if (!(parseInt(month, 10) <= 12)) {
-                return false;
-            }
-            if (year.length === 2) {
-                prefix = (new Date).getFullYear();
-                prefix = prefix.toString().slice(0, 2);
-                year = prefix + year;
-            }
-            expiry = new Date(year, month);
-            currentTime = new Date;
-            expiry.setMonth(expiry.getMonth() - 1);
-            expiry.setMonth(expiry.getMonth() + 1, 1);
-            return expiry > currentTime;
-        }, 32)
-        .addMessage('en', 'expirydate', '');
-
-
-    /* Progressive collapsibles
-     -----------------------------------------------------------------------------------------
-     */
-
-    var $collapsibleHeading = $('.js-collapsible-heading');
-
-    $collapsibleHeading.each(function () {
-
-        var $this = $(this);
-
-        // create unique id for a11y relationship
-
-        var id = 'collapsible-' + $this.index();
-
-        // wrap the content and make it focusable
-
-        $this.nextUntil('.js-collapsible-heading').wrapAll('<div class="js-collapsible-content collapsible-content" id="' + id + '" aria-hidden="true">');
-        var panel = $this.next();
-
-        // Add the button inside `.js-collapsible-heading` so both the heading and button semanics are read
-
-        $this.wrapInner('<button aria-expanded="false" type="button" aria-controls="' + id + '">');
-        $this.addClass('collapsible-heading');
-        var button = $this.children('button');
-
-        // Toggle the state properties
-
-        button.on('click', function () {
-            var state = $(this).attr('aria-expanded') === 'false' ? true : false;
-            $(this).attr('aria-expanded', state);
-            panel.attr('aria-hidden', !state);
-
-            // Debug
-            // console.log('State is now:' + state);
-        });
-
-    });
-
-    /* Towncrier
-     -----------------------------------------------------------------------------------------
-     */
-    var $shareShareButton = $('.js-share__share-button');
-    var $sharePanel = $('.js-share__panel');
-
-    $shareShareButton.click(function (event) {
-        var state = $shareShareButton.attr('aria-expanded') === 'false' ? true : false;
-        $shareShareButton.attr('aria-expanded', state);
-        $sharePanel.attr('aria-hidden', !state);
-
-        event.preventDefault();
-        // Debug
-        // console.log('State is now:' + state);
-    });
-
-
-    /* Tab Interface
-     -----------------------------------------------------------------------------------------
-     */
-
-// The class for the container div
-
-    var $container = '.js-tab-interface';
-
-// The setup
-
-    $($container + '> ul').attr('role', 'tablist');
-    $($container + ' [role="tablist"] li').attr('role', 'presentation');
-    $('[role="tablist"] a').attr({
-        'role': 'tab',
-        'tabindex': '-1'
-    });
-
-// Make each aria-controls correspond id of targeted section (re href)
-
-    $('[role="tablist"] a').each(function () {
-        $(this).attr(
-            'aria-controls', $(this).attr('href').substring(1)
-        );
-    });
-
-// Make the first tab selected by default and allow it focus
-
-    $('[role="tablist"] li:first-child a').attr({
-        'aria-selected': 'true',
-        'tabindex': '0'
-    });
-
-// Make each section focusable and give it the tabpanel role
-
-    $($container + ' section').attr({
-        'role': 'tabpanel'
-    });
-
-// Make first child of each panel focusable programmatically
-
-    $($container + ' section > *:first-child').attr({
-        'tabindex': '0'
-    });
-
-// Make all but the first section hidden (ARIA state and display CSS)
-
-    $('[role="tabpanel"]:not(:first-of-type)').attr({
-        'aria-hidden': 'true'
-    });
-
-
-// Change focus between tabs with arrow keys
-
-    $('[role="tab"]').on('keydown', function (e) {
-
-        // define current, previous and next (possible) tabs
-
-        var $original = $(this);
-        var $prev = $(this).parents('li').prev().children('[role="tab"]');
-        var $next = $(this).parents('li').next().children('[role="tab"]');
-        var $target;
-
-        // find the direction (prev or next)
-
-        switch (e.keyCode) {
-            case 37:
-                $target = $prev;
-                break;
-            case 39:
-                $target = $next;
-                break;
-            default:
-                $target = false
-                break;
-        }
-
-        if ($target.length) {
-            $original.attr({
-                'tabindex': '-1',
-                'aria-selected': null
-            });
-            $target.attr({
-                'tabindex': '0',
-                'aria-selected': true
-            }).focus();
-        }
-
-        // Hide panels
-
-        $($container + ' [role="tabpanel"]')
-            .attr('aria-hidden', 'true');
-
-        // Show panel which corresponds to target
-
-        $('#' + $(document.activeElement).attr('href').substring(1))
-            .attr('aria-hidden', null);
-
-    });
-
-// Handle click on tab to show + focus tabpanel
-
-    $('[role="tab"]').on('click', function (e) {
-
-        e.preventDefault();
-
-        // remove focusability [sic] and aria-selected
-
-        $('[role="tab"]').attr({
-            'tabindex': '-1',
-            'aria-selected': null
-        });
-
-        // replace above on clicked tab
-
-        $(this).attr({
-            'aria-selected': true,
-            'tabindex': '0'
-        });
-
-        // Hide panels
-
-        $($container + ' [role="tabpanel"]').attr('aria-hidden', 'true');
-
-        // show corresponding panel
-
-        $('#' + $(this).attr('href').substring(1))
-            .attr('aria-hidden', null);
-
-    });
-
-
-}); // End of Jquery document ready function()
+}
+// End of dijon
