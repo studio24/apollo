@@ -8,8 +8,6 @@ require_once (__DIR__ . '/functions.php');
 
 $componentStructureArray = buildComponentStructureArray(__DIR__ . '/components');
 
-
-
 foreach ($componentStructureArray as $component):
     echo '<a href="#components-' . $component['name'] . '">' . $component['name'] . '</a>';
     echo '<br>';

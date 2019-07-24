@@ -22,29 +22,3 @@ function getSubfoldersInFolder($folder)
 {
     return glob($folder . '/*' , GLOB_ONLYDIR);
 }
-
-function getAllFilesInFolder($folder)
-{
-
-    if (!file_exists($folder)) {
-        throw new \Exception('Folder does not exist');
-    }
-
-    // Get all files in Dir
-    $directory = dir($folder);
-    $files = array();
-
-    while (false !== ($entry = $directory->read())) {
-        if (is_file($folder . $entry)) {
-            // check it isnt a filesystem directories
-            if ($entry != '.' && $entry != '..' && $entry != '.DS_Store') {
-                $files[] = $entry;
-            }
-        }
-    }
-    $directory->close();
-
-    asort($files);
-
-    return $files;
-}
