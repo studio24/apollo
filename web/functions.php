@@ -9,7 +9,7 @@ function buildComponentStructureArray($componentDir)
           'path'  => $folder,
           'name'  => basename($folder),
           'text' => file_get_contents($folder.'/'.basename($folder).'.md'),
-          'html' => $folder.'/'.basename($folder).'.html',
+          'html' => file_get_contents($folder.'/'.basename($folder).'.html'),
           'markup' => htmlspecialchars( file_get_contents($folder.'/'.basename($folder).'.html'))
         ];
     }

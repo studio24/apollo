@@ -17,11 +17,12 @@ $componentStructureArray = buildComponentStructureArray(__DIR__ . '/components')
 foreach ($componentStructureArray as $component):
     echo '<a href="#components-' . $component['name'] . '">' . $component['name'] . '</a>';
     echo '<br>';
-	echo "<h2>explanation</h2>";
+	echo "<h2>Explanation</h2>";
     echo $component['text'];
-	include( $component['html'] );
-    echo '<textarea>';
-    echo "<h2>example</h2>";
+    echo '<br>';
+	echo $component['html'];
+	echo "<h2>Example</h2>";
+    echo '<textarea style="width: 500px;" rows="10">';
 	echo  $component['markup'];
 	echo '</textarea>';
     echo '<br><hr><br>';
