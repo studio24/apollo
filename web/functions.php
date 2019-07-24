@@ -8,8 +8,9 @@ function buildComponentStructureArray($componentDir)
         $componentStructure[basename($folder)] = [
           'path'  => $folder,
           'name'  => basename($folder),
-          'text' => $folder.'/'.basename($folder).'.md',
-          'html' => $folder.'/'.basename($folder).'.html'
+          'text' => file_get_contents($folder.'/'.basename($folder).'.md'),
+          'html' => $folder.'/'.basename($folder).'.html',
+          'markup' => htmlspecialchars( file_get_contents($folder.'/'.basename($folder).'.html'))
         ];
     }
 
