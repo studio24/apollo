@@ -23,8 +23,8 @@
     "watch:images:imagemin": "watch 'npm run images:imagemin' apollo/assets/images --interval=1",
     "watch:fonts": "watch 'npm run fonts' apollo/assets/fonts --interval=1",
     "watch:js:copylibraries": "watch 'npm run js:copylibraries' apollo/assets/js/libraries --interval=1",
-    "watch:jsmainbabel:compressed": "watch 'npm run jsmain:babel:compressed' apollo/assets/js/ --ignoreDirectoryPattern=/libraries\/.*/ --interval=1",
-    "watch:jsmainbabel:uncompressed": "watch 'npm run jsmain:babel:uncompressed' apollo/assets/js/ --ignoreDirectoryPattern=/libraries\/.*/ --interval=1",
+    "watch:jsmainbabel:compressed": "watch 'npm run jsmain:babel:compressed' apollo/assets/js/ --ignoreDirectoryPattern=/libraries/.*/ --interval=1",
+    "watch:jsmainbabel:uncompressed": "watch 'npm run jsmain:babel:uncompressed' apollo/assets/js/ --ignoreDirectoryPattern=/libraries/.*/ --interval=1",
     "watch": "npm-run-all --parallel watch:* watch:*:*"
   },
   "author": "Studio 24",

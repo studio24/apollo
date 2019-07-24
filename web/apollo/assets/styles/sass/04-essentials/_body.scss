@@ -23,14 +23,14 @@ body {
 
 	min-height: 100%;
 
-	background: $white;
-	color: contrast($white);
-
-	font-style: $font-style;
-	font-weight: $font-weight;
-	font-size: 1em;
-	font-family: $font-family;
-	line-height: $font-leading/$font-size;
+	//background: $white;
+	//color: contrast($white);
+	//
+	//font-style: $font-style;
+	//font-weight: $font-weight;
+	//font-size: 1em;
+	//font-family: $font-family;
+	//line-height: $font-leading/$font-size;
 
   @include mq($breakpoint-lap) {
 

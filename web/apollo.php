@@ -1,23 +1,417 @@
+<?php require_once( 'Parsedown.php' ); ?>
+
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-    <meta charset="utf-8">
-    <title>Apollo</title>
-    <!-- Force IE to use latest rendering engine -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
 
-    <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css"
-          media="screen"/>
+<head>
+	<?php // Charset: Must be in first 1024 bytes of the document  ?>
+    <meta charset="utf-8">
+	<?php // Title: To avoid a potential encoding-related security issue in IE  ?>
+    <title>Apollo</title>
+	<?php // Compatibility: https://msdn.microsoft.com/en-us/library/cc288325.aspx  ?>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<?php // Description: The description meta tag provides a short description of the page (Including Open Graph support)  ?>
+    <meta property="og:description" name="description" content="The living content- and style guide for Studio 24 by Studio 24."/>
+	<?php // Viewport:  Make it zommable ya'll  ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<?php // Manifest: Web manifest for a richer websites (PWAs)  ?>
+    <link rel="manifest" href="site.webmanifest">
+
+	<?php // The only script we want (avoids FOUC)  ?>
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+
+	<?php // Canonical: Even though this page is different, treat this href as the Primary page instead  ?>
+    <link rel="canonical" href="https://moz.com/learn/seo/canonicalization">
+
+
+	<?php // DNS-prefetch: Resolve DNS  ?>
+    <link rel="dns-prefetch" href="//domain.com">
+
+	<?php // Preconnect: Resolve DNS, TCP handshake and optional TLS negotiation  ?>
+    <link rel="preconnect" href="//domain.com">
+
+	<?php // Prefetch: assets MAY be requested by the browser and stored in cache  ?>
+    <link rel="prefetch" href="/image/hero.jpg" as="image">
+
+	<?php // Prerender: load, render and paint the page (USE WITH EXTREME CAUTION)  ?>
+    <link rel="prerender" href="/checkout-step-2" as="document">
+
+	<?php // Preload: assets must be requested by the browser, must include `as` value otherwise it's treated as an XHR request (narrow browser support)  ?>
+    <link rel="preload" href="/folder/name.woff2" as="font" type="font/woff2" crossorigin>
+
+
+	<?php // Icons  ?>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<?php // Safari pinned: Use a square single-layer SVG with transparent background, viewBox "0 0 16 16" and 100% black  ?>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bada55">
+
+
+	<?php // Styles  ?>
+    <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
+
+
+	<?php // Only used for Apollo ?>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        * + * {
+            margin-top: 1em;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+
+        body {
+            font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1200 - 320)));
+            line-height: 1.5;
+            font-family: 'Georgia', sans-serif;
+        }
+
+        .lead, blockquote {
+            font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
+            line-height: 1.2;
+        }
+
+        h1, .alpha {
+            font-size: calc(25.632px + (81.008 - 25.632) * ((100vw - 320px) / (1200 - 320)));
+            line-height: 1.05
+        }
+
+        h2, .beta {
+            font-size: calc(22.784px + (54 - 22.784) * ((100vw - 320px) / (1200 - 320)));
+            line-height: 1.1
+        }
+
+        h3, .gamma {
+            font-size: calc(20.256px + (36 - 20.256) * ((100vw - 320px) / (1200 - 320)));
+            line-height: 1.15
+        }
+
+        h4, .delta {
+            font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
+            line-height: 1.2
+        }
+
+        .main {
+            max-width: 75vw;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        * + .main {
+            margin-top: 3em;
+        }
+
+        .first {
+            margin-top: 3em;
+        }
+
+        .last {
+            margin-bottom: 3em;
+        }
+
+        nav a {
+            display: block;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
+            margin-top: 0.5em;
+        }
+
+        a[href*="http"]:after {
+            content: "\2B08";
+            display: inline-block;
+            margin-left: 0.125em;
+            position: relative;
+            top: -0.1em;
+        }
+
+        section {
+            flex: 1 1 auto;
+            max-width: 49.5vw;
+            margin-left: 1.5em;
+            margin-top: 0;
+        }
+
+        aside {
+            position: sticky;
+            top: 5.5em;
+            flex: 1 1 auto;
+            align-self: flex-start;
+        }
+
+        picture {
+            display: block;
+            overflow: hidden;
+        }
+
+        figure {
+            margin: 0;
+            width: 100%;
+        }
+
+        .blur-up {
+            filter: blur(12px);
+            transition: filter 400ms;
+        }
+
+        .blur-up.lazyloaded {
+            filter: blur(0);
+        }
+
+        figcaption {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 75vw;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
+        }
+
+        .abreasted {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .abreasted picture {
+            width: 50%;
+            margin-top: 0;
+        }
+
+        .abreasted figcaption {
+            width: 100%;
+        }
+
+        .content-width {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-width figcaption {
+            max-width: 49.5vw;
+            margin-right: 0;
+        }
+
+        .fukol-grid {
+            list-style: none;
+            padding-left: 0;
+            width: 100%;
+        }
+
+        img {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .icon {
+            width: 2em;
+        }
+
+        pre {
+            white-space: pre-line;
+        }
+
+        table {
+            width: 100%;
+            /*table-layout: fixed;*/
+            font-family: monospace;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
+        }
+
+        th, td {
+            text-align: right;
+        }
+
+        td {
+            border-top: 1px solid silver;
+        }
+
+        @media screen and (min-width: 321px) {
+            .fukol-grid {
+                display: flex; /* 1 */
+                flex-wrap: wrap; /* 2 */
+                margin-left: auto; /* 5 (edit me!) */
+                margin-right: auto; /* 5 (edit me!) */
+            }
+
+            .fukol-grid > * {
+                flex: 1 0 5em; /* 3 (edit me!) */
+                margin-top: 0;
+                /*margin-left: 0.5em; !* 4 (edit me!) *!*/
+                /*margin-right: 0.5em; !* 4 (edit me!) *!*/
+            }
+
+            .fukol-grid > * + * {
+                margin-left: 1em;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .fukol-grid, .content-width, .table-wrapper {
+                max-width: 75vw;
+            }
+        }
+    </style>
+
+
+	<?php // Google tag manager (GTM)  ?>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-XXXX');</script>
+
+
+	<?php // Open Graph tags (description is included below standard title ?>
+	<?php // https://developers.facebook.com/tools/debug/sharing/ ?>
+	<?php // https://cards-dev.twitter.com/validator ?>
+    <meta property="og:url" content="http://apollo.s24.net/"/>
+    <meta property="og:image" content="http://apollo.s24.net/dist/assets/images/apollo.png"/>
+
+	<?php // Twitter doesn't understand the standard title tag ?>
+    <meta property="og:title" content="Apollo"/>
+	<?php // Replace `summary_large_image` with `summary` for a smaller Twitter card ?>
+    <meta name="twitter:card" content="summary_large_image"/>
+
+
 </head>
 
 <?php //require_once( DOC_ROOT. '/delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
-<?php require_once( 'delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
+<?php //require_once( 'delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
 
 <body>
 
-<?php require_once( 'dist/assets/svg/icons.svg' ); ?>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<main class="main first">
+
+    <aside>
+        <h2 class="delta">Table of content</h2>
+
+        <nav>
+
+	    <?php
+	    $files  = array();
+	    $handle = opendir( 'components' );
+	    echo '<h3 class="gamma">Components</h3>';
+	    while ( false !== ( $file = readdir( $handle ) ) ):
+		    if ( substr( $file, - 5 ) == '.html' ):
+			    $files[] = $file;
+		    endif;
+	    endwhile;
+	    sort( $files );
+	    foreach ( $files as $file ):
+		    echo '<a href="#components-' . $file . '">' . $file . '</a>';
+	    endforeach;
+	    ?>
+
+        </nav>
+
+<!--        <nav>-->
+<!--            <a href="#problem">Problem</a> <a href="#challenge">Challenge</a>-->
+<!--            <a href="#solution">Solution</a> <a href="#gotchas">Gotchas</a>-->
+<!--            <a href="#tools-and-resources">Tools and resources</a>-->
+<!--            <p>Scenarios</p>-->
+<!--            <a href="#fullwidth-images">Full-width images</a>-->
+<!--            <a href="#contentwidth-images">Content-width images</a>-->
+<!--            <a href="#multicolumn-images">Multi-column images</a>-->
+<!--            <a href="#iconography">Iconography with type attributes</a>-->
+<!--        </nav>-->
+    </aside>
+
+    <section>
+
+        <h1>Apollo</h1>
+        <div class="lead">
+            <p>The living content- and style guide for Studio 24 by <a
+                        href="http://studio24.net">Studio 24</a>.</p>
+        </div>
+
+        <p>Named in honour of Apollo, the Greek god of truth. This guide and
+            its content serve as one single source of truth.</p>
+
+        <p>This guide introduces and reinforces an understanding of the
+            elements, components and templates that make a website through a
+            shared vocabulary which is used for internal as well as client
+            communcation.</p>
+
+
+
+
+
+
+
+	<?php
+	$Parsedown = new Parsedown();
+	$files  = array();
+	$documentations = array();
+	$handle = opendir( 'components' );
+	//print_r($handle);
+
+	while ( false !== ( $file = readdir( $handle ) ) ):
+		if ( substr( $file, - 5 ) == '.html' ):
+			$files[] = $file;
+		endif;
+	endwhile;
+
+	while ( false !== ( $documentation = readdir( $handle ) ) ):
+		if ( substr( $documentation, - 3 ) == '.md' ):
+			$documentations[] = $documentation;
+		endif;
+	endwhile;
+
+	sort( $files );
+	sort( $documentations  );
+	foreach ( $files as $key=>$file ):
+		echo '<div class="pattern">';
+		echo '<div class="display">';
+		include( 'components/' . $file );
+		echo '</div>';
+		echo '<div class="source">';
+		echo '<textarea rows="6" cols="30">';
+		echo htmlspecialchars( file_get_contents( 'components/' . $file ) );
+		echo '</textarea>';
+		echo '<div>'. $Parsedown->text( 'The Video component is used for displaying moving visual images. It supports third-party content from e.g. Youtube or Vimeo.' ) . '</div>';
+		echo '<p><a href="components/' . $file . '">' . $file . '</a></p>';
+		echo '</div>';
+		echo '</div>';
+	endforeach;
+	?>
+
+
+
+    </section>
+
+
+
+</main>
+
+
+
 
 
 <header class="island island--fullpage bg bg--primary" style="background-image: url(/dist/assets/images/apollo.png); background-repeat: no-repeat; background-position: 175% 42%;">
@@ -685,8 +1079,8 @@
                 <p>&ldquo;Read more,&rdquo; is contextual to its surrounding
                     copy and heading. People browsing using screen readers or
                     other <abbr title="assistive technology">AT</abbr> won&rsquo;t
-                    have that context and won&rsquo;t be able to know
-                    what, &ldquo;more,&rdquo; they&rsquo;re about to read.</p>
+                    have that context and won&rsquo;t be able to know what,
+                    &ldquo;more,&rdquo; they&rsquo;re about to read.</p>
 
 
             </div>
@@ -807,7 +1201,8 @@
         <div class="group">
             <div class="group__item group__item--secondary">
 
-                <p>The Hero component lets you establish the brand tone and feature a prominent call-to-action.</p>
+                <p>The Hero component lets you establish the brand tone and
+                    feature a prominent call-to-action.</p>
                 <p>Numerous studies have proven that people ignore content when
                     used in carousels which is why we use a static image with a
                     strong message.</p>
@@ -2418,64 +2813,6 @@
 
     </section>
     <!-- / Components -------------------------------------------------- -->
-
-
-    <!-- Templates intro -------------------------------------------------- -->
-    <section class="island island--fullpage">
-        <div class="group">
-            <div class="group__item group__item--primary">
-
-                <h1 class="heading size--xxxl">Templates</h1>
-                <div class="lead">
-                    <p>Groups of Components are called Templates. Most pages are
-                        created by choosing a Templates, some allow you to
-                        choose Components as well and then completing the page
-                        with content.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- / Templates intro -------------------------------------------------- -->
-
-
-    <!-- Templates -------------------------------------------------- -->
-    <section>
-
-
-        <div class="group">
-            <div class="group__item">
-
-                <h3 class="small-caps">Templates</h3>
-                <h3 id="t-example-template" class="heading size--xl no-margin">
-                    Example template</h3>
-
-            </div>
-        </div>
-        <div class="group">
-            <div class="group__item group__item--secondary">
-
-                <p>The Example template is used to illustrate how templates are
-                    included in the Guide.</p>
-
-            </div>
-            <div class="group__item group__item--primary">
-
-                <p>Example template.</p>
-
-                <p><a href="/accommodations">View live Example template</a></p>
-
-                <figure class="media media--video media--video-16:9">
-                    <iframe style="transform: scale(1);" src="/example-template"
-                            frameborder="0"></iframe>
-                </figure>
-
-            </div>
-        </div>
-
-
-    </section>
-    <!-- / Templates -------------------------------------------------- -->
 
 
 </main>
