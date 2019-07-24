@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+}
+
+* + * {
+    margin-top: 1em;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body {
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 1.5;
+    font-family: 'Georgia', sans-serif;
+}
+
+.lead, blockquote {
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 1.2;
+}
+
+h1, .alpha {
+    font-size: calc(25.632px + (81.008 - 25.632) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 1.05
+}
+
+h2, .beta {
+    font-size: calc(22.784px + (54 - 22.784) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 1.1
+}
+
+h3, .gamma {
+    font-size: calc(20.256px + (36 - 20.256) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 1.15
+}
+
+h4, .delta {
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
+    line-height: 1.2
+}
+
+.main {
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+* + .main {
+    margin-top: 3em;
+}
+
+.first {
+    margin-top: 3em;
+}
+
+.last {
+    margin-bottom: 3em;
+}
+
+nav a {
+    display: block;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
+    margin-top: 0.5em;
+}
+
+a[href*="http"]:after {
+    content: "\2B08";
+    display: inline-block;
+    margin-left: 0.125em;
+    position: relative;
+    top: -0.1em;
+}
+
+section {
+    flex: 1 1 auto;
+    max-width: 49.5vw;
+    margin-left: 1.5em;
+    margin-top: 0;
+}
+
+aside {
+    position: sticky;
+    top: 5.5em;
+    flex: 1 1 auto;
+    align-self: flex-start;
+}
+
+picture {
+    display: block;
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+}
+
+.blur-up {
+    filter: blur(12px);
+    transition: filter 400ms;
+}
+
+.blur-up.lazyloaded {
+    filter: blur(0);
+}
+
+figcaption {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75vw;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
+}
+
+.abreasted {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.abreasted picture {
+    width: 50%;
+    margin-top: 0;
+}
+
+.abreasted figcaption {
+    width: 100%;
+}
+
+.content-width {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-width figcaption {
+    max-width: 49.5vw;
+    margin-right: 0;
+}
+
+.fukol-grid {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.icon {
+    width: 2em;
+}
+
+pre {
+    white-space: pre-line;
+}
+
+table {
+    width: 100%;
+    /*table-layout: fixed;*/
+    font-family: monospace;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1200 - 320)));
+}
+
+th, td {
+    text-align: right;
+}
+
+td {
+    border-top: 1px solid silver;
+}
+
+@media screen and (min-width: 321px) {
+    .fukol-grid {
+        display: flex; /* 1 */
+        flex-wrap: wrap; /* 2 */
+        margin-left: auto; /* 5 (edit me!) */
+        margin-right: auto; /* 5 (edit me!) */
+    }
+
+    .fukol-grid > * {
+        flex: 1 0 5em; /* 3 (edit me!) */
+        margin-top: 0;
+        /*margin-left: 0.5em; !* 4 (edit me!) *!*/
+        /*margin-right: 0.5em; !* 4 (edit me!) *!*/
+    }
+
+    .fukol-grid > * + * {
+        margin-left: 1em;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .fukol-grid, .content-width, .table-wrapper {
+        max-width: 75vw;
+    }
+}
