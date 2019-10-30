@@ -149,6 +149,7 @@
             top: 5.5em;
             flex: 1 1 auto;
             align-self: flex-start;
+            overflow: scroll;
         }
 
         picture {
