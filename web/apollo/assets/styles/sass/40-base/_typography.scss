@@ -11,20 +11,31 @@ Flash of Unstyled Content (FOUC) - see https://helenvholmes.com/writing/type-is-
 
 Be sure to include fonts for both Mac OS and Windows. Use quote marks around
 fonts with white space in their name.
+
+https://css-tricks.com/fun-viewport-units/
+1. Font grows 0.25px for every 100px of viewport width and never drops below 16px.
+2. Leading grows with the font, with an additional 0.6em + 0.33px per 100px of the viewport
  */
 body {
 	font-family: 'Lucida Grande', Tahoma, sans-serif;
-	font-size: 1em;
+	font-size: calc(1rem + 0.25vw); /* 1 */
 	font-style: $font-style;
 	font-weight: $font-weight;
-	line-height: $font-leading/$font-size;
+	line-height: calc(1.6em + 0.33vw); /* 2 */
 }
 
 
 
+/**
+All headings start off at the same size by default, so we focus on the semantic hierarchy.
+
+https://css-tricks.com/fun-viewport-units/
+1. Font grows 0.25px for every 100px of viewport width and never drops below 16px -
+ */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lucida Bright', Palatino, serif;
-	font-size: 1.25rem; // Remove size aesthetics so we focus on the semantic hierarchy first.
+	// Font grows 0.25px for every 100px of viewport width and never drops below 20px
+	font-size: calc(1.25rem + 0.25vw); /* 1 */
 	font-style: $heading-style;
 	font-weight: $heading-weight;
 	margin-bottom: 0;
