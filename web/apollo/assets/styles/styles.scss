@@ -62,7 +62,6 @@
     4. Is only used for Apollo's styleguide
 \*------------------------------------*/
 @import "sass/04-essentials/animation";
-@import "sass/04-essentials/body";
 @import "sass/04-essentials/focus";
 @import "sass/04-essentials/swatches"; /* 4 */
 
@@ -77,6 +76,15 @@
 @import "sass/05-elements/paragraphs";
 @import "sass/05-elements/lead";
 @import "sass/05-elements/text-level-elements";
+
+
+
+/*------------------------------------*\
+    #Base --- V2
+\*------------------------------------*/
+@import "sass/40-base/globals";
+@import "sass/40-base/print";
+@import "sass/40-base/typography";
 
 
 
