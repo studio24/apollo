@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #Typography
+\*------------------------------------*/
+
+/**
+Use https://www.cssfontstack.com/ and https://meowni.ca/font-style-matcher/ to pick
+system fonts that are reasonably close to any web fonts needed for the project.
+
+This improves performance, avoids Flash Of Invisible Text (FOIT) and minimises
+Flash of Unstyled Content (FOUC) - see https://helenvholmes.com/writing/type-is-your-right/
+
+Be sure to include fonts for both Mac OS and Windows. Use quote marks around
+fonts with white space in their name.
+ */
+body {
+	font-family: 'Lucida Grande', Tahoma, sans-serif;
+	font-size: 1em;
+	font-style: $font-style;
+	font-weight: $font-weight;
+	line-height: $font-leading/$font-size;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lucida Bright', Palatino, serif;
+	font-size: 1.25rem; // Remove size aesthetics so we focus on the semantic hierarchy first.
+	font-style: $heading-style;
+	font-weight: $heading-weight;
+	margin-bottom: 0;
+}
+
+
+
+/**
+When Font Face Observer has detected that the @font-face files are loaded, then we
+can safely use the web fonts instead of the system fonts.
+ */
+.fonts-loaded {
+
+	body {
+		font-family: $font-family;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $heading-family;
+	}
+
+}
