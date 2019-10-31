@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #Font sizes
+\*------------------------------------*/
+
+/**
+We use mixins to ensure consistent font sizing throughout the project.
+If we need to change them, we can just do it here.
+Font grows 0.25px for every 100px of viewport width - see https://css-tricks.com/fun-viewport-units/
+ */
+@mixin text-4xl {
+	font-size: calc(2.25rem + 0.25vw);
+}
+
+
+@mixin text-3xl {
+	font-size: calc(2rem + 0.25vw);
+}
+
+
+@mixin text-2xl {
+	font-size: calc(1.75rem + 0.25vw);
+}
+
+
+@mixin text-1xl {
+	font-size: calc(1.5rem + 0.25vw);
+}
+
+
+@mixin text-l {
+	font-size: calc(1.25rem + 0.25vw);
+}
+
+
+@mixin text-m {
+	font-size: calc(1rem + 0.25vw);
+}
+
+
+@mixin text-s {
+	font-size: calc(0.85rem + 0.25vw);
+}

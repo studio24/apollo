@@ -7,7 +7,7 @@
  small,
  .small {
 
-	 @extend .size--s;
+	 @include text-s;
 
  }
 

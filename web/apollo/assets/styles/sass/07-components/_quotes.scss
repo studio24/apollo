@@ -8,7 +8,7 @@
 
 	blockquote {
 
-		@extend .size--xl;
+		@include text-1xl;
 
 		quotes: "\201C""\201D""\2018""\2019";
 

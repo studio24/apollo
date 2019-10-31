@@ -37,6 +37,13 @@
 
 
 /*------------------------------------*\
+    #Mixins --- V2
+\*------------------------------------*/
+@import "sass/30-mixins/font-sizes";
+
+
+
+/*------------------------------------*\
     #Generic
 
     3. Nicolas Gallager's Normalize 4.1.1. Modified to allow for axiomatic owl selectors
@@ -73,9 +80,7 @@
 \*------------------------------------*/
 @import "sass/05-elements/buttons";
 @import "sass/05-elements/links";
-@import "sass/05-elements/headings";
 @import "sass/05-elements/paragraphs";
-@import "sass/05-elements/lead";
 @import "sass/05-elements/text-level-elements";
 
 
