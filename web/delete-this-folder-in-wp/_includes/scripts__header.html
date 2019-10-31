@@ -1,7 +1,10 @@
+<script src="../../node_modules/fontfaceobserver/fontfaceobserver.js"></script>
+
 <script>
-    if ( 'querySelector' in document && 'addEventListener' in window ) {
-//        document.documentElement.className += ' js ';
-        // Replace the default `.no-js` with `.js`
-        document.documentElement.className = document.documentElement.className.replace( /(?:^|\s)no-js(?!\S)/g , 'js' );
-    }
+	var fontContent = new FontFaceObserver('Proza Libre');
+	var fontHeadings = new FontFaceObserver('Playfair Display');
+
+	Promise.all([fontContent.load(), fontHeadings.load()]).then(function () {
+		document.documentElement.className += " fonts-loaded";
+	});
 </script>
