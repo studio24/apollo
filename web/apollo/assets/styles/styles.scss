@@ -15,17 +15,18 @@
 
 
 /*------------------------------------*\
-    #Settings
+    #Settings --- V2
 \*------------------------------------*/
-@import "sass/fonts";
-@import "sass/settings";
+@import "sass/10-settings/colors";
+@import "sass/10-settings/sizes";
 
 
 
 /*------------------------------------*\
-    #Settings --- V2
+    #Settings
 \*------------------------------------*/
-@import "sass/10-settings/sizes";
+@import "sass/fonts";
+@import "sass/settings";
 
 
 

@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #Colors
+\*------------------------------------*/
+
+/**
+Base colours that can be used when prototyping. Taken from http://clrs.cc/
+
+1. We avoid using pure black and pure white, because the colour contrast
+is so great that it creates the illusion that text is vibrating on screen.
+ */
+$aqua: #7fdbff;
+$blue: #0074d9;
+$fuchsia: #f012be;
+$green: #2ecc40;
+$grey: #aaa;
+$lime: #01ff70;
+$maroon: #85144b;
+$navy: #001f3f;
+$olive: #3d9970;
+$orange: #ff851b;
+$purple: #b10dc9;
+$red: #ff4136;
+$silver: #ddd;
+$teal: #39cccc;
+$yellow: #ffdc00;
+$black: #222; /* 1 */
+$white: #fafafa; /* 1 */
+
+
+$link-color:                            $blue;
+$link-color--visited:                   $purple;
+$link-color--hover:                     $maroon;
+
+
+$success-color:							$green;
+$warning-color:							$yellow;
+$alert-color:                           $red;
+$input-error-color:                     $yellow;
+$focus-color:							$link-color;
+
+
+/**
+Social media colours that might be useful.
+See: https://brandcolors.net/
+ */
+$facebook: #3b5998;
+$instagram: #405de6;
+$linkedin: #0077b5;
+$twitter: #1da1f2;
+$youtube: #ff0000;
