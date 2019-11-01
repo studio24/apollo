@@ -9,7 +9,8 @@ Applying vertical spacing between items via a class gives us more fine-tuned
 control over where we choose to include it.
 
 The suggested base measurement for the stack matches the base line-height
-as defined in /40-base/typography
+as defined in /40-base/typography. Other stack measures may be useful, e.g.
+a half-space option for labels above form inputs.
 
 By giving `.stack` Flexbox context, we can give it the ability to add an
 auto margin to a chosen element. This way, we can choose to group elements
