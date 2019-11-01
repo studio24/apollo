@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #Stack
+
+    Inspired by https://absolutely.every-layout.dev/layouts/stack/
+\*------------------------------------*/
+
+/**
+Applying vertical spacing between items via a class gives us more fine-tuned
+control over where we choose to include it.
+
+The suggested base measurement for the stack matches the base line-height
+as defined in /40-base/typography
+
+By giving `.stack` Flexbox context, we can give it the ability to add an
+auto margin to a chosen element. This way, we can choose to group elements
+inside the stack to the top/bottom of the vertical space using auto margins,
+which is useful for card-like components.
+ */
+$stack: 1.7rem;
+$stack-half: 0.85rem;
+$stack-double: 3.4rem;
+
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+
+.stack > * + * {
+	margin-top: $stack;
+}
+
+
+.stack-half > * + * {
+	margin-top: $stack-half;
+}
+
+
+.stack-double > * + * {
+	margin-top: $stack-double;
+}
+
+// @TODO: add zero margin exceptions for visually-hidden elements from /02-generic/axiomatic-owl
