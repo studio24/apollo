@@ -59,12 +59,14 @@
         <p>I believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are priviledged to have access to more capable browsers and devices.</p>
         <h2>Points to bear in mind</h2>
         <p>There are certain design schemes that we have tended to follow in recent projects at Studio 24. These are:</p>
-        <ol>
-            <li>Limiting the content width to 90% of the viewport on smaller screens.</li>
-            <li>Expanding this width to 80% of the viewport on mid-sized screens.</li>
-            <li>Setting a max-width for content at 1300px</li>
-            <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. banner/hero components)</li>
-        </ol>
+	    <div class="box">
+		    <ol>
+			    <li>Limiting the content width to 90% of the viewport on smaller screens.</li>
+			    <li>Expanding this width to 80% of the viewport on mid-sized screens.</li>
+			    <li>Setting a max-width for content at 1300px</li>
+			    <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. banner/hero components)</li>
+		    </ol>
+	    </div>
         <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
         <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
 	</main>
