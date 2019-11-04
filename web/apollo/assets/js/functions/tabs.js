@@ -42,57 +42,52 @@
 
         // Change focus between tabs with arrow keys
 
-        findElement('[role="tab"]').onkeydown = function (e) {
+        document.querySelectorAll('[role="tab"]').forEach( obj => {
+            obj.onkeydown = function (e) {
 
-            // define current, previous and next (possible) tabs
+                // define current, previous and next (possible) tabs
+                var original = this;
+                var prev = this.parentElement.previousElementSibling !== null ? this.parentElement.previousElementSibling.children[0] : false;
+                var next = this.parentElement.nextElementSibling !== null ? this.parentElement.nextElementSibling.children[0] : false;
+                var target;
 
-            console.log(this.parent);
+                // find the direction (prev or next)
 
-            var original = this;
-            var prev = this.parents('li').prev().children('[role="tab"]');
-            var next = this.parents('li').next().children('[role="tab"]');
-            var target;
+                switch (e.key) {
+                    case 'ArrowLeft':
+                        target = prev;
+                        break;
 
-            // find the direction (prev or next)
+                    case 'ArrowRight':
+                        target = next;
+                        break;
 
-            switch (e.key) {
-                case 37:
-                    target = prev;
-                    break;
+                    default:
+                        target = false;
+                        break;
+                }
 
-                case 39:
-                    target = next;
-                    break;
+                if (target !== false) {
+                    original.setAttribute('tabindex', '-1');
+                    original.setAttribute('aria-selected', null);
 
-                default:
-                    target = false;
-                    break;
-            }
+                    target.setAttribute('tabindex', '0');
+                    target.setAttribute('aria-selected', true);
+                    target.focus();
+                }
 
-            if (target.length) {
-                original.setAttribute('tabindex', '-1');
-                original.setAttribute('aria-selected', null);
+                // Hide panels
+                document.querySelectorAll(container + ' [role="tabpanel"]').forEach( obj => {
+                    obj.setAttribute('aria-hidden', 'true');
+                });
 
-                target.attr({
-                    'tabindex': '0',
-                    'aria-selected': true
-                }).focus();
-            }
-
-            // Hide panels
-
-            findElement(container + ' [role="tabpanel"]')
-                .setAttribute('aria-hidden', 'true');
-
-            // Show panel which corresponds to target
-
-            findElement('#' + findElement(document.activeElement).attr('href').substring(1))
-                .setAttribute('aria-hidden', null);
-
-        };
+                // Show panel which corresponds to target
+                document.getElementById(document.activeElement.getAttribute('href').substring(1))
+                    .setAttribute('aria-hidden', null);
+            };
+        });
 
         // Handle click on tab to show + focus tabpanel
-
         document.querySelectorAll('[role="tab"]').forEach(obj => {
             obj.onclick = function (e) {
                 e.preventDefault();
@@ -107,7 +102,6 @@
                 });
 
                 // replace above on clicked tab
-
                 this.setAttribute('aria-selected', true);
                 this.setAttribute('tabindex', '0');
 
@@ -117,12 +111,11 @@
                 });
 
                 // show corresponding panel
-
                 findElement('#' + this.getAttribute('href').substring(1))
                     .setAttribute('aria-hidden', null);
             };
         });
-    }
+    };
 
     myApp.extend('tabs', tabs);
 })();
