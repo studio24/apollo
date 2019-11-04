@@ -97,6 +97,7 @@
     #Base --- V2
 \*------------------------------------*/
 @import "sass/40-base/globals";
+@import "sass/40-base/lists";
 @import "sass/40-base/stack";
 @import "sass/40-base/typography";
 @import "sass/40-base/box";
@@ -130,7 +131,6 @@
 @import "sass/07-components/images";
 @import "sass/07-components/island";
 @import "sass/07-components/labels";
-@import "sass/07-components/lists";
 @import "sass/07-components/logo";
 @import "sass/07-components/main";
 @import "sass/07-components/media";
