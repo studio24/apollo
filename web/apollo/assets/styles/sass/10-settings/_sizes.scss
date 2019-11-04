@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #Sizes
+\*------------------------------------*/
+
+/**
+We create a modular size scale, calculated using our base unit of measurement and
+a ratio number taken from the base line-height as defined in /40-base/typography
+
+We can reuse these sizes for margins, padding, border-widths etc for visual harmony.
+They are a bit too large for text sizes though!
+ */
+$ratio: 1.7;
+$size-0: 1rem;
+
+$size-plus1: $size-0 * $ratio;
+$size-plus2: $size-0 * $ratio * $ratio;
+$size-plus3: $size-0 * $ratio * $ratio * $ratio;
+$size-plus4: $size-0 * $ratio * $ratio * $ratio * $ratio;
+
+$size-minus1: $size-0 / $ratio;
+$size-minus2: $size-0 / $ratio / $ratio;
+$size-minus3: $size-0 / $ratio / $ratio / $ratio;
+$size-minus4: $size-0 / $ratio / $ratio / $ratio / $ratio;

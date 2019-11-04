@@ -190,12 +190,12 @@
 \*------------------------------------*/
 .share__channel--facebook .share__share-icon {
 
-    background-color: $bc-facebook;
+    background-color: $facebook;
     color: white;
 
     .share__channel-link:visited & {
 
-        background-color: $bc-facebook;
+        background-color: $facebook;
 
     }
 
@@ -203,7 +203,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($bc-facebook);
+        background-color: deviate($facebook);
 
     }
 
@@ -211,12 +211,12 @@
 
 .share__channel--twitter .share__share-icon {
 
-    background-color: $bc-twitter;
+    background-color: $twitter;
     color: white;
 
     .share__channel-link:visited & {
 
-        background-color: $bc-twitter;
+        background-color: $twitter;
 
     }
 
@@ -224,7 +224,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($bc-twitter);
+        background-color: deviate($twitter);
 
     }
 
@@ -232,12 +232,12 @@
 
 .share__channel--pinterest .share__share-icon {
 
-    background-color: $bc-pinterest;
+    background-color: $pinterest;
     color: white;
 
     .share__channel-link:visited & {
 
-        background-color: $bc-pinterest;
+        background-color: $pinterest;
 
     }
 
@@ -245,7 +245,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($bc-pinterest);
+        background-color: deviate($pinterest);
 
     }
 
@@ -253,12 +253,12 @@
 
 .share__channel--whatsapp .share__share-icon {
 
-    background-color: $bc-whatsapp;
+    background-color: $whatsapp;
     color: white;
 
     .share__channel-link:visited & {
 
-        background-color: $bc-whatsapp;
+        background-color: $whatsapp;
 
     }
 
@@ -266,7 +266,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($bc-whatsapp);
+        background-color: deviate($whatsapp);
 
     }
 
@@ -274,12 +274,12 @@
 
 .share__channel--linkedin .share__share-icon {
 
-    background-color: $bc-linkedin;
+    background-color: $linkedin;
     color: white;
 
     .share__channel-link:visited & {
 
-        background-color: $bc-linkedin;
+        background-color: $linkedin;
 
     }
 
@@ -287,28 +287,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($bc-linkedin);
-
-    }
-
-}
-
-.share__channel--google-plus .share__share-icon {
-
-    background-color: $bc-google-plus;
-    color: white;
-
-    .share__channel-link:visited & {
-
-        background-color: $bc-google-plus;
-
-    }
-
-    .share__channel-link:hover &,
-    .share__channel-link:focus &,
-    .share__channel-link:active & {
-
-        background-color: deviate($bc-google-plus);
+        background-color: deviate($linkedin);
 
     }
 

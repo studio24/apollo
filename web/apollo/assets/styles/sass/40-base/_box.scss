@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #Box
+
+    Inspired by https://absolutely.every-layout.dev/layouts/box/
+\*------------------------------------*/
+
+/**
+The `.box` should have borders and/or padding on all sides, or none at all.
+An element with specific (and asymmetrical) border/padding is no longer
+a box, instead it's trying to solve a more specific problem.
+
+1. High contrast themes tend to eliminate background-color. If there is no
+border set on the box, we need to apply a transparent outline to maintain
+the box shape. The negative outline-offset moves the outline inside the
+perimeter so it behaves like a border and doesn't add to the overall size.
+ */
+.box {
+	background-color: $silver;
+	border: $size-minus4 solid;
+	color: $black;
+	display: block;
+	//outline: $size-minus4 solid transparent; /* 1 */
+	//outline-offset: $size-minus4 * -1; /* 1 */
+	padding: $size-plus1;
+}
+
+.box * {
+	color: inherit;
+}

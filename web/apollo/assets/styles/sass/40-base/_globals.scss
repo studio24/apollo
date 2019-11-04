@@ -2,15 +2,14 @@
     #Globals
 \*------------------------------------*/
 
-
 /*
- * Global selector
+ * Global selectors
  */
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
 	background-color: inherit;
+	box-sizing: border-box;
 	font-family: inherit;
 	color: inherit;
 	margin: 0;
@@ -19,17 +18,13 @@
 }
 
 
+
+
 /*
  * HTML and Body
  */
-html {
-	min-height: 100vh;
-}
-
-
-html,
-body {
-	font-size: percentage($font-size/16);
+:root {
+	min-height: 100%;
 }
 
 

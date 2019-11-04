@@ -115,20 +115,20 @@ $nobel-grey:                          	hsl(0, 0%, 70%);
 $silver-grey:                          	hsl(0, 0%, 75%);
 
 // Neutrals
-$wild-sand-white:                       #F7F7F7;
-$mine-shaft-black:                      #222;
+//$wild-sand-white:                       #F7F7F7;
+//$mine-shaft-black:                      #222;
 $mercury-grey:                          #e5e5e5;
 
 // System
-$pomegranate-red:                      	#F04819;
-$candlelight-yellow:                    #fed41d;
-$apple-green:							#2ECC40;
+//$pomegranate-red:                      	#F04819;
+//$candlelight-yellow:                    #fed41d;
+//$apple-green:							#2ECC40;
 
 /*
  * Sass variables
  */
-$white:                                 $wild-sand-white;
-$black:                                 $mine-shaft-black;
+//$white:                                 $wild-sand-white;
+//$black:                                 $mine-shaft-black;
 
 // Colours for copy ( used by contrast() which is defined in _polarize )
 $polarize-black:                        $black;
@@ -139,16 +139,16 @@ $secondary-color:                       $scorpion-grey;
 $tertiary-color:                        $nobel-grey;
 $accent-color:                          $silver-grey;
 
-$link-color:                            hsl(240, 100%, 50%);
-$link-color--visited:                   hsl(270, 100%, 50%);
-$link-color--hover:                     hsl(0, 100%, 50%);
+//$link-color:                            hsl(240, 100%, 50%);
+//$link-color--visited:                   hsl(270, 100%, 50%);
+//$link-color--hover:                     hsl(0, 100%, 50%);
 
 $subtle-color:                          $mercury-grey;
-$success-color:							$apple-green;
-$warning-color:							$candlelight-yellow;
-$alert-color:                           $pomegranate-red;
-$input-error-color:                     $candlelight-yellow;
-$focus-color:							$link-color;
+//$success-color:							$apple-green;
+//$warning-color:							$candlelight-yellow;
+//$alert-color:                           $pomegranate-red;
+//$input-error-color:                     $candlelight-yellow;
+//$focus-color:							$link-color;
 
 /*
  * Accessible colours

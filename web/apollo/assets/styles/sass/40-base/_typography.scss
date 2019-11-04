@@ -11,24 +11,37 @@ Flash of Unstyled Content (FOUC) - see https://helenvholmes.com/writing/type-is-
 
 Be sure to include fonts for both Mac OS and Windows. Use quote marks around
 fonts with white space in their name.
+
+1. Font grows 0.25px for every 100px of viewport width and never drops below 16px
+(assuming a browser default of 16px) - see https://css-tricks.com/fun-viewport-units/
  */
 body {
 	font-family: 'Lucida Grande', Tahoma, sans-serif;
-	font-size: 1em;
+	font-size: calc(1rem + 0.25vw); /* 1 */
 	font-style: $font-style;
 	font-weight: $font-weight;
-	line-height: $font-leading/$font-size;
+	line-height: 1.7;
 }
 
 
 
+
+/**
+All headings start off at the same size by default, so we focus on the semantic hierarchy.
+
+1. Font grows 0.25px for every 100px of viewport width and never drops below 20px
+(assuming a browser default of 16px) - see https://css-tricks.com/fun-viewport-units/
+ */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lucida Bright', Palatino, serif;
-	font-size: 1.25rem; // Remove size aesthetics so we focus on the semantic hierarchy first.
+	// Font grows 0.25px for every 100px of viewport width and never drops below 20px
+	font-size: calc(1.25rem + 0.25vw); /* 1 */
 	font-style: $heading-style;
 	font-weight: $heading-weight;
+	line-height: 1.4;
 	margin-bottom: 0;
 }
+
 
 
 
@@ -46,4 +59,39 @@ can safely use the web fonts instead of the system fonts.
 		font-family: $heading-family;
 	}
 
+}
+
+
+
+
+/**
+Heading sizes are included via mixins as defined in /30-mixins/font-sizes
+ */
+h1 {
+	@include text-4xl;
+}
+
+
+h2 {
+	@include text-3xl;
+}
+
+
+h3 {
+	@include text-2xl;
+}
+
+
+h4 {
+	@include text-1xl;
+}
+
+
+h5 {
+	@include text-l;
+}
+
+
+h6 {
+	@include text-m;
 }

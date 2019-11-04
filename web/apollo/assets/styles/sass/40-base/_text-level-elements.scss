@@ -1,41 +1,23 @@
 /*------------------------------------*\
-    #Elements
+    #Text-level elements
 \*------------------------------------*/
-
-
 
  small,
  .small {
-
-	 @extend .size--s;
-
+	 @include text-s;
  }
 
 
 .small-caps {
-
-	// font-size: 0.89em;
 	font-size: em(12);
 	letter-spacing: 0.03em;
-	text-transform: uppercase;
 	text-shadow: 0 0 0 $black;
-
+	text-transform: uppercase;
 }
 
 
 
 strong,
-.strong{
-
-	// color: red;
+.strong {
 	font-weight: $emphasis-weight;
-
-}
-
-
-em {
-
-	// Passes AA level against $subtle-color as background-color
-	color: luma(30);
-
 }
