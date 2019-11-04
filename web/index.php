@@ -50,13 +50,13 @@
     <main class="stack stack-m">
         <h1>Overview</h1>
         <p>So, let’s see about getting some basic styles down for the reboot of <em>Apollo</em>. I’m going to need some paragraphs with some reasonably-looking text inside of them to try and create a base natural layout, so that I can accurately assess how these <strong>core</strong> styles are working.</p>
-        <p>My thinking here is drawn from the Springer Nature Front End Playbook approach. That is to say:</p>
+	    <p>My thinking here is drawn from the <span class="small-caps">Springer Nature Front End Playbook</span> approach. That is to say:</p>
         <ul>
             <li>Serve core CSS styles to all browsers for an accessible experience (perhaps not the most exciting, but it works)</li>
             <li>Use a CSS media query to cut the mustard and serve advanced CSS styles to modern browsers (plus IE10/11)</li>
             <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
         </ul>
-        <p>I believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
+	    <p>I believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
         <h2>Points to bear in mind</h2>
         <p>There are certain design schemes that we have tended to follow in recent projects at Studio 24. These are:</p>
 	    <div class="box">
