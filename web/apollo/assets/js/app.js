@@ -89,11 +89,12 @@ if (typeof window.matchMedia !== 'undefined') {
 
     myApp.collaps(collapsibleHeading);
 
+    // Tab
     myApp.tabs();
 
     document.addEventListener('DOMContentLoaded', function () {
 
-        myApp.updateARIAroles();
+        myApp.updateARIAroles(null);
 
         // Traverse DOM and create variables
         var body = findElement('body');
