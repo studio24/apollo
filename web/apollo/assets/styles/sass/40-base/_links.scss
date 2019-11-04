@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #Links
+\*------------------------------------*/
+
+/**
+Default global link styles that do not interfere with component link styles
+- see https://alexcarpenter.me/screencasts/2019/02/global-link-styles/
+
+1. Don't rely on colour alone for styling links.
+ */
+a:not([class]) {
+
+	border: 0;
+	color: $link-color;
+	cursor: pointer;
+	display: inline;
+	text-decoration: underline; /* 1 */
+	text-decoration-skip-ink: auto;
+
+
+	&:visited {
+		color: $link-color--visited;
+	}
+
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $link-color--hover;
+		text-decoration: none;
+	}
+
+
+	/**
+	Remove the outline on focused links when they are also active or hovered.
+	 */
+	&:hover,
+	&:active {
+		outline-width: 0;
+	}
+
+}
+
+
+
+
+/**
+Remove underlines from telephone number links.
+It makes phone numbers easier to read.
+ */
+a[href^="tel:"] {
+
+	border: 0 !important;
+	text-decoration: none !important;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border: 0 !important;
+		text-decoration: none !important;
+	}
+
+}
