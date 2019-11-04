@@ -89,6 +89,8 @@ if (typeof window.matchMedia !== 'undefined') {
 
     myApp.collaps(collapsibleHeading);
 
+    myApp.tabs();
+
     document.addEventListener('DOMContentLoaded', function () {
 
         myApp.updateARIAroles();
