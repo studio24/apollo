@@ -18,10 +18,10 @@
         });
 
         // Make the first tab selected by default and allow it focus
-        findElement('[role="tablist"] li:first-child a').setAttribute('aria-selected', 'true');
-        findElement('[role="tablist"] li:first-child a').setAttribute('tabindex', '0');
+        findElement('[role="tablist"] li a').setAttribute('aria-selected', 'true');
+        findElement('[role="tablist"] li a').setAttribute('tabindex', '0');
 
-        // Make each section focusable and give it the tabpanel role
+        // Give each section tabpanel role
         document.querySelectorAll(container + ' section').forEach( obj => {
             obj.setAttribute('role', 'tabpanel')
         });
@@ -74,7 +74,7 @@
                 });
 
                 // Show panel which corresponds to target
-                document.getElementById(document.activeElement.getAttribute('href').substring(1))
+                findElement('#' + document.activeElement.getAttribute('aria-controls'))
                     .setAttribute('aria-hidden', null);
             };
         });
@@ -88,9 +88,8 @@
 
                 document.querySelectorAll('[role="tab"]').forEach( obj => {
                     obj.setAttribute('tabindex', '-1');
-                });
-                document.querySelectorAll('[role="tab"]').forEach( obj => {
                     obj.setAttribute('aria-selected', null);
+
                 });
 
                 // replace above on clicked tab
@@ -103,7 +102,7 @@
                 });
 
                 // show corresponding panel
-                findElement('#' + this.getAttribute('href').substring(1))
+                findElement('#' + this.getAttribute('aria-controls'))
                     .setAttribute('aria-hidden', null);
             };
         });
