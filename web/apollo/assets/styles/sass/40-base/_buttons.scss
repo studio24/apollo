@@ -3,12 +3,17 @@
 \*------------------------------------*/
 
 /**
-Because the `.stack` applies flexbox in the column direction,
+1. Because the `.stack` applies flexbox in the column direction,
 we need to prevent buttons from stretching horizontally
  */
 button,
 .button {
-	align-self: flex-start;
+	align-self: flex-start; /* 1 */
+	border-radius: 0;
+	color: inherit;
+	font-weight: $font-weight;
+	letter-spacing: 0.015em;
+	padding: em(10) em(15);
 }
 
 
@@ -16,12 +21,7 @@ button,
 
 .button {
 	border: 0;
-	border-radius: 0;
-	color: inherit;
 	display: inline-block;
-	font-weight: $font-weight;
-	letter-spacing: 0.015em;
-	padding: em(10) em(15);
 	text-decoration: none; // Remove link styling from links styled as buttons
 }
 
