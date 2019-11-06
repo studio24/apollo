@@ -411,6 +411,22 @@ input[required]:valid {
 
 }
 
+
+
+.input--checkbox:focus + .checkbox-label:before,
+.input--radio:focus + .radio-label:before,
+.input--course:focus + .course-label:before,
+.input--checkbox:focus + .checkbox-label,
+.input--radio:focus + .radio-label,
+.input--course:focus + .course-label {
+
+    background-color: $focus-color;
+    color: contrast($focus-color);
+
+}
+
+
+
 /* Focused */
 .input--checkbox:focus + .checkbox-label:before {
 

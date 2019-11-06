@@ -2,37 +2,42 @@
     #Buttons
 \*------------------------------------*/
 
+/**
+Because the `.stack` applies flexbox in the column direction,
+we need to prevent buttons from stretching horizontally
+ */
+button,
+.button {
+	align-self: flex-start;
+}
+
+
 
 
 .button {
-
-	// Remove link styling from links styled as buttons
-	// text-decoration: none;
 	border: 0;
-	color: inherit;
-
-	display: inline-block;
-
-	padding: em(11) em(16) em(10) em(16);
-	letter-spacing: 0.015em;
-	font-weight: $font-weight;
-
 	border-radius: 0;
-
+	color: inherit;
+	display: inline-block;
+	font-weight: $font-weight;
+	letter-spacing: 0.015em;
+	padding: em(10) em(15);
+	text-decoration: none; // Remove link styling from links styled as buttons
 }
+
+
 
 
 button.button,
 input[type="submit"].button {
-
-	// Remove link styling from actual buttons styled as buttons
-	text-decoration: none;
-
+	text-decoration: none; // Remove link styling from actual buttons styled as buttons
 }
 
 
-// Double specificty so links as buttons keep their styling even within
-// elements that would otherwise override it, but without !important
+
+
+// Double specificity so links as buttons keep their styling even within
+// elements that would otherwise override it, without using !important
 .button--primary.button--primary {
 
 	background-color: $primary-color;
@@ -55,7 +60,6 @@ input[type="submit"].button {
 	}
 
 }
-
 
 
 .button--secondary.button--secondary {
@@ -82,7 +86,6 @@ input[type="submit"].button {
 }
 
 
-
 .button--tertiary.button--tertiary {
 
 	background-color: $tertiary-color;
@@ -107,7 +110,6 @@ input[type="submit"].button {
 }
 
 
-
 .button--accent.button--accent {
 
 	background-color: $accent-color;
@@ -130,7 +132,6 @@ input[type="submit"].button {
 	}
 
 }
-
 
 
 .button--subtle.button--subtle {
@@ -180,6 +181,7 @@ input[type="submit"].button {
 
 }
 
+
 .button--warning.button--warning {
 
 	background-color: $warning-color;
@@ -202,6 +204,7 @@ input[type="submit"].button {
 	}
 
 }
+
 
 .button--alert.button--alert {
 
@@ -227,42 +230,34 @@ input[type="submit"].button {
 }
 
 
-/*------------------------------------*\
-    #Modifiers
-\*------------------------------------*/
+/**
+Modifiers
+ */
 
-// Want bigger buttons
-
+// For full-width buttons
 .button--is-block {
-
 	display: block;
-	width: 100%;
-
 	text-align: center;
-
+	width: 100%;
 }
 
 
-
+// For disabled buttons
 .button[disabled],
 .button.is-disabled,
 span.button.button {
-
-	cursor: not-allowed;
-
 	background-color: luma(80);
-	color: rgba(contrast(luma(80)), 0.54);
-
 	box-shadow: none;
+	color: rgba(contrast(luma(80)), 0.54);
+	cursor: not-allowed;
 
 	&:hover,
 	&:focus,
 	&:active {
 
-		outline: 0;
-
 		background-color: luma(80);
 		color: rgba(contrast(luma(80)), 0.54);
+		outline: 0;
 
 	}
 

@@ -6,7 +6,8 @@
 Default global link styles that do not interfere with component link styles
 - see https://alexcarpenter.me/screencasts/2019/02/global-link-styles/
 
-1. Don't rely on colour alone for styling links.
+1. Don't rely on colour alone for styling links - see
+https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F73
 
 2. Remove the outline on focused links when they are also active/hovered.
  */
@@ -19,19 +20,9 @@ a:not([class]) {
 	text-decoration: underline; /* 1 */
 	text-decoration-skip-ink: auto;
 
-
-	&:focus {
-		outline: $size-minus3 solid $focus-color;
-		outline-offset: $size-minus4;
-		transform: translateZ(0);
-		z-index: z("top");
-	}
-
-
 	&:visited {
 		color: $link-color--visited;
 	}
-
 
 	&:hover,
 	&:active {

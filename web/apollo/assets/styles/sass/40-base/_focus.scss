@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #Focus
+\*------------------------------------*/
+
+:focus {
+	outline: $size-minus3 solid $focus-color;
+	outline-offset: $size-minus4;
+	transform: translateZ(0);
+	z-index: z("top");
+}
+
+
+
+/**
+An example of this would be the target of a skip navigation link.
+Focus is moved to the target via JavaScript, so it is acceptable
+not to show a focus outline.
+ */
+[tabindex='-1']:focus {
+	outline: none;
+}
