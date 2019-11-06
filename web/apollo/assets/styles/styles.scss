@@ -90,6 +90,7 @@
 \*------------------------------------*/
 @import "sass/40-base/box";
 @import "sass/40-base/buttons";
+@import "sass/40-base/center";
 @import "sass/40-base/focus";
 @import "sass/40-base/fonts";
 @import "sass/40-base/globals";
@@ -169,6 +170,12 @@
 @import "sass/09-utilities/margins";
 @import "sass/09-utilities/visibility";
 @import "sass/09-utilities/wireframes";
+
+
+/*------------------------------------*\
+    #Utilities --- V2
+\*------------------------------------*/
+@import "sass/60-utilities/layout";
 
 /*------------------------------------*\
     #Legacy

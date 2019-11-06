@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #Center
+
+    Inspired by https://absolutely.every-layout.dev/layouts/center/
+\*------------------------------------*/
+/**
+1. We use left and right padding to add some minimum space between the
+contents of `.center` and the edges of the parent element or viewport.
+To avoid making the content narrower than intended, we add an exception
+to our global box-sizing rule.
+ */
+.center {
+
+	box-sizing: content-box /* 1 */;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(1300);
+	padding-left: 5vw;
+	padding-right: 5vw;
+
+	@include mq(1024) {
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
+
+}
