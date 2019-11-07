@@ -18,10 +18,17 @@ button,
 
 
 
-
+/**
+2. High contrast themes tend to eliminate background-color. If there is no
+border set, we need to apply a transparent outline to maintain the shape
+of the button. The negative outline-offset moves the outline inside the
+perimeter so it behaves like a border and doesn't add to the overall size.
+ */
 .button {
 	border: 0;
-	display: inline-block;
+	display: block;
+	outline: $size-minus4 solid transparent; /* 2 */
+	outline-offset: $size-minus4 * -1; /* 2 */
 	text-decoration: none; // Remove link styling from links styled as buttons
 }
 
@@ -231,8 +238,7 @@ input[type="submit"].button {
 
 
 // For full-width buttons
-.button--is-block {
-	display: block;
+.button--wide {
 	text-align: center;
 	width: 100%;
 }
