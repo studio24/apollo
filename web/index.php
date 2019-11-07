@@ -47,7 +47,7 @@
 <body>
 
 	<?php // Start main ?>
-    <main class="stack center">
+    <main class="l-stack l-center">
         <h1>Overview</h1>
         <p>So, let’s see about getting some basic styles down for the reboot of <em>Apollo</em>. I’m going to need some paragraphs with some reasonably-looking text inside of them to try and create a base natural layout, so that I can accurately assess how these <strong>core</strong> styles are working.</p>
 	    <p>My thinking here is drawn from the <span class="small-caps">Springer Nature Front End Playbook</span> approach. That is to say:</p>
@@ -60,7 +60,7 @@
         <button class="u-center">Button</button>
 	    <h2>Points to bear in mind</h2>
         <p>There are certain design schemes that we have tended to follow in recent projects at Studio 24. These are:</p>
-	    <div class="box">
+	    <div class="l-box">
 		    <ol>
 			    <li>Limiting the content width to 90% of the viewport on smaller screens.</li>
 			    <li>Reducing this width to 80% of the viewport on mid-sized screens.</li>
