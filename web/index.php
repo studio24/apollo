@@ -68,6 +68,17 @@
 			    <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. banner/hero components)</li>
 		    </ol>
 	    </div>
+	    <div class="l-cluster">
+		    <ul class="clean-list">
+			    <li><a href="#1" class="button button--primary">Item One</a></li>
+			    <li><a href="#2" class="button button--primary">Item Two</a></li>
+			    <li><a href="#3" class="button button--primary">Item Three</a></li>
+			    <li><a href="#4" class="button button--primary">Item Four</a></li>
+			    <li><a href="#5" class="button button--primary">Item Five</a></li>
+			    <li><a href="#6" class="button button--primary">Item Six</a></li>
+			    <li><a href="#7" class="button button--primary">Item Seven</a></li>
+		    </ul>
+	    </div>
         <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
         <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
 	</main>

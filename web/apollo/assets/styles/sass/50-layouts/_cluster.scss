@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    #Cluster
+
+    Inspired by https://absolutely.every-layout.dev/layouts/cluster/
+
+    `.l-cluster` suits any groups of elements that differ in length and
+    are liable to wrap. Buttons that appear together at the end of forms
+    are ideal candidates, as well as lists of tags, keywords, or other
+    meta information. Use the Cluster to align any groups of horizontally
+    laid out elements to the left or right, or in the center, with even
+    spacing between elements.
+
+    The size variable used below defines the desired spacing between
+    elements inside `.l-cluster` (currently 1rem). Sizes are defined
+    in /10-settings/sizes
+
+    If items need to be in wrapping rows in IE9, use the alternative
+    `.inline-list` class as defined in /40-base/lists
+
+\*------------------------------------*/
+/**
+Suppress horizontal scrolling caused by the negative margin
+in some circumstances.
+ */
+.l-cluster {
+	overflow: hidden;
+}
+
+
+/**
+We use flexbox to configure the elements into clusters without having to
+deal with undesirable word spaces. It also gives us control of how we align
+items within the cluster, with 'align-items` and `justify-content` if desired.
+
+1. Multiply by -1 to create negative margins to pull the items back to the
+edges.
+ */
+.l-cluster > * {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: calc(#{$size-0} / 2 * -1); /* 1 */
+}
+
+
+/**
+We apply an even, symmetrical margin to the elements that we wish to space
+out, but halve it to to account for 'doubling up' at the edges.
+ */
+.l-cluster > * > * {
+	margin: calc(#{$size-0} / 2);
+}

@@ -32,8 +32,6 @@ ul:not([class]) {
 }
 
 
-
-
 ol:not([class]) {
 
 	counter-reset: orderedList;
@@ -70,8 +68,7 @@ ol:not([class]) {
 }
 
 
-
-
+// No bullets or numbering
 .clean-list {
 
 	li {
@@ -81,8 +78,8 @@ ol:not([class]) {
 }
 
 
-
-
+// An alternative to `.l-cluster` (/50-layouts/cluster)
+//if things still need to be aligned in a row in IE9
 .inline-list {
 
 	li {
