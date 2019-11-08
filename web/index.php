@@ -70,7 +70,7 @@
 	    </div>
 	    <div class="l-sidebar">
 		    <div>
-			    <div class="not-sidebar">
+			    <div class="not-sidebar l-stack">
 				    <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
 				    <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
 			    </div>
@@ -196,6 +196,151 @@
 				</tbody>
 			</table>
 		</div>
+
+	    <div class="l-sidebar">
+		    <div>
+			    <div class="sidebar l-stack">
+				    <h2>Forms</h2>
+				    <p>We use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, JavaScript plugin, to enhance picking a date from a calendar.</p>
+				    <p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
+				    <p>Using Pikaday and Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
+			    </div>
+			    <div class="not-sidebar">
+
+				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+					    <div class="field-group">
+						    <label for="guide-form-field-1" class="field-label">Email <small>(Required)</small>
+							    <div class="field-description">We&rsquo;ll only contact you if there&rsquo;s something wrong with your order.</div>
+						    </label>
+						    <input type="email" class="field-input field-input--text" name="guide-form-field-1" id="guide-form-field-1" placeholder="E.g. jane.smith@example.co.uk" data-parsley-error-message="Please complete this field with a valid email address." required aria-invalid="false">
+					    </div>
+
+					    <div class="field-group">
+						    <label for="guide-form-field-2" class="field-label">Name <small>(Required)</small></label>
+						    <input type="text" class="field-input field-input--text" name="guide-form-field-2" id="guide-form-field-2" placeholder="E.g. Jane Smith" data-parsley-error-message="Please complete this field with your name." required aria-invalid="false">
+					    </div>
+
+					    <div class="field-group">
+						    <label for="guide-form-field-3" class="field-label">Date of birth <small>(Required)</small></label>
+						    <input type="date" class="field-input field-input--date js-pikaday" name="guide-form-field-3" id="guide-form-field-3" placeholder="E.g. 21/10/1985" data-parsley-error-message="Please select a date." required aria-invalid="false">
+					    </div>
+
+					    <div class="field-group">
+						    <label for="select-input" class="field-label">Country <small>(Required)</small></label>
+						    <select name="select-input" id="select-input" class="field-input input--select" data-parsley-error-message="Please select an option." required aria-invalid="false">
+							    <option value=""></option>
+							    <option value="1">Option 1</option>
+							    <option value="2">Option 2</option>
+							    <option value="3">Option 3</option>
+						    </select>
+					    </div>
+
+					    <div class="field-group">
+						    <label for="textarea-input" class="field-label">Textarea input <small>(Required)</small>
+							    <span class="field-description">Please explain the problem you are having, we&rsquo;ll come up with the solution</span>
+						    </label>
+						    <textarea name="textarea-input" id="textarea-input" cols="30" rows="10" class="field-input input--textarea" placeholder="E.g. Hi, I am&hellip;" data-parsley-error-message="Please complete this field with your problem." required aria-invalid="false"></textarea>
+					    </div>
+
+                        <?php // Checkbox example ?>
+					    <fieldset class="field-group checkbox-group">
+						    <legend class="group-legend">Subscribe to our newsletter</legend>
+						    <div class="field-description">We will send you a monthly newsletter with promotions. We will guard your email with our lives and never give it out to a third-party.</div>
+						    <label for="checkbox-input-1">
+							    <input id="checkbox-input-1" name="checkbox-input" class="input--checkbox" value="data-value" type="checkbox">
+							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
+						    </label>
+						    <label for="checkbox-input-2">
+							    <input id="checkbox-input-2" name="checkbox-input" class="input--checkbox" value="data-value" type="checkbox">
+							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
+						    </label>
+						    <label for="checkbox-input-3">
+							    <input id="checkbox-input-3" name="checkbox-input" class="input--checkbox" value="data-value" type="checkbox">
+							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
+						    </label>
+					    </fieldset>
+
+
+                        <?php // Radio options example ?>
+					    <fieldset class="field-group radio-group" role="radiogroup" aria-required="true">
+						    <legend class="group-legend">Radio input</legend>
+						    <div class="field-description">Radio options are easier to read and quicker to scan when laid out one under the other instead of next to each other.</div>
+						    <label for="radio-input">
+							    <input id="radio-input" name="radio-input" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please complete by selecting your preference." required aria-invalid="false">
+							    <span class="radio-label">Radio option.</span>
+						    </label>
+						    <label for="radio-input2">
+							    <input id="radio-input2" name="radio-input" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please complete by selecting your preference." required aria-invalid="false">
+							    <span class="radio-label">Another radio option.</span>
+						    </label>
+					    </fieldset>
+
+                        <?php // Segmented group wrapper ?>
+					    <fieldset class="field-group segmented-group-wrapper">
+						    <legend class="group-legend">Segmented options (Radio)</legend>
+						    <div class="field-description">We understand that different people enjoy books in different ways, which is why we&rsquo;re giving you lots of options.</div>
+
+                            <?php // Segmented group ?>
+						    <div class="segmented-group">
+							    <label for="segmented-option-1">
+								    <input id="segmented-option-1" name="segmented-options" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please select your preferred choice." required aria-invalid="false">
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Approachable option</h2>
+									    <div>Copy to explain this option in more detail.</div>
+								    </div>
+							    </label>
+							    <label for="segmented-option-2">
+								    <input id="segmented-option-2" name="segmented-options" class="input--radio" value="data-value" type="radio" checked>
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Bell curve option</h2>
+									    <div>Copy to explain this option in more detail.</div>
+								    </div>
+							    </label>
+							    <label for="segmented-option-3">
+								    <input id="segmented-option-3" name="segmented-options" class="input--radio" value="data-value" type="radio">
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Expensive option</h2>
+									    <div class="">Copy to explain this option in more detail.</div>
+								    </div>
+							    </label>
+							    <label for="segmented-option-4">
+								    <input id="segmented-option-4" name="segmented-options" class="input--radio" value="data-value" type="radio">
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Secondary options</h2>
+								    </div>
+							    </label>
+							    <label for="segmented-option-5">
+								    <input id="segmented-option-5" name="segmented-options" class="input--radio" value="data-value" type="radio">
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Secondary options</h2>
+								    </div>
+							    </label>
+							    <label for="segmented-option-6">
+								    <input id="segmented-option-6" name="segmented-options" class="input--radio" value="data-value" type="radio">
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Secondary options</h2>
+								    </div>
+							    </label>
+							    <label for="segmented-option-7">
+								    <input id="segmented-option-7" name="segmented-options" class="input--radio" value="data-value" type="radio">
+								    <div class="segmented-label">
+									    <h2 class="size--l heading">Secondary options</h2>
+								    </div>
+							    </label>
+						    </div>
+
+					    </fieldset>
+
+					    <div class="field-group">
+						    <button type="submit" class="button button--primary size--xl">Action-contextual label, i.e. not 'Submit'</button>
+					    </div>
+				    </form>
+
+			    </div>
+		    </div>
+	    </div>
+
+
 
     </main>
 	<?php // End main ?>
