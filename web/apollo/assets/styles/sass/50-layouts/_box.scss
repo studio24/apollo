@@ -19,11 +19,22 @@ perimeter so it behaves like a border and doesn't add to the overall size.
 	border: $size-minus4 solid;
 	color: $black;
 	display: block;
-	//outline: $size-minus4 solid transparent; /* 1 */
-	//outline-offset: $size-minus4 * -1; /* 1 */
 	padding: $size-plus1;
 }
 
+
 .l-box * {
 	color: inherit;
+}
+
+
+.l-box--no-padding {
+	padding: 0;
+}
+
+
+.l-box--no-border {
+	border: none;
+	outline: $size-minus4 solid transparent; /* 1 */
+	outline-offset: $size-minus4 * -1; /* 1 */
 }

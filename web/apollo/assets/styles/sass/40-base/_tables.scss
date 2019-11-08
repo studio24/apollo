@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #Tables
+\*------------------------------------*/
+
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/**
+1. Allow text-direction to change with `ltr`
+ */
+th {
+    border: $size-minus4 solid;
+    padding: 0.75rem;
+    text-align: start; /* 1 */
+}
+
+
+td {
+    border: $size-minus4 solid;
+    padding: 0.75rem;
+}
+
+/**
+Bare minimum handling of large tables on small screens: wrapping
+div adds shading to the right-hand side to indicate when a table
+can be scrolled horizontally. The shading moves to the left-hand
+side when the table has been fully scrolled to the right, and vice versa.
+See https://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
+ */
+.table-wrap {
+    background-attachment: local, local, scroll, scroll;
+    background-color: inherit;
+    background-image: linear-gradient(90deg, $white, rgba(255, 255, 255, 0)),
+    linear-gradient(-90deg, $white, rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, $silver, rgba(195, 195, 197, 0)),
+    linear-gradient(-90deg, $silver, rgba(195, 195, 197, 0));
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+    overflow-x: auto;
+}

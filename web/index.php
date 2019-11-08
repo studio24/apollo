@@ -81,7 +81,115 @@
 	    </div>
         <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
         <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
-	</main>
+		<div class="table-wrap">
+			<table>
+				<thead>
+				<tr>
+					<th></th>
+					<th scope="col"> Table header</th>
+					<th scope="col"> Table header</th>
+					<th scope="col"> Table header</th>
+					<th scope="col"> Table header</th>
+					<th scope="col"> Table header</th>
+					<th scope="col"> Table header</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row"> A </th>
+					<td> € 0,0035 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> B </th>
+					<td> € 0,0042 </td>
+					<td> € 0,0048 </td>
+					<td> € 0,0048 </td>
+					<td> € 0,0048 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> C </th>
+					<td> € 0,0062 </td>
+					<td> € 0,0068 </td>
+					<td> € 0,0068 </td>
+					<td> € 0,0068 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> D </th>
+					<td> € 0,0088 </td>
+					<td> € 0,0091 </td>
+					<td> € 0,0091 </td>
+					<td> € 0,0091 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> E </th>
+					<td> € 0,0086 </td>
+					<td> € 0,0090 </td>
+					<td> € 0,0090 </td>
+					<td> € 0,0090 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> F </th>
+					<td> € 0,0096 </td>
+					<td> € 0,0098 </td>
+					<td> € 0,0098 </td>
+					<td> € 0,0098 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> G </th>
+					<td> € 0,0111 </td>
+					<td> € 0,0111 </td>
+					<td> € 0,0111 </td>
+					<td> € 0,0111 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> H </th>
+					<td> € 0,0123 </td>
+					<td> € 0,0125 </td>
+					<td> € 0,0125 </td>
+					<td> € 0,0125 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> I </th>
+					<td> € 0,0122 </td>
+					<td> € 0,0123 </td>
+					<td> € 0,0123 </td>
+					<td> € 0,0123 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				<tr>
+					<th scope="row"> J </th>
+					<td> € 0,0165 </td>
+					<td> € 0,0162 </td>
+					<td> € 0,0162 </td>
+					<td> € 0,0162 </td>
+					<td> € 0,0041 </td>
+					<td> € 0,0041 </td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+    </main>
 	<?php // End main ?>
 
 <?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
