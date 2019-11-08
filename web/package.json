@@ -30,20 +30,20 @@
   "author": "Studio 24",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.0.0",
+    "@babel/cli": "^7.7.0",
     "autoprefixer-cli": "^1.0.0",
     "fontfaceobserver": "^2.1.0",
     "imagemin-cli": "^3.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "shx": "^0.2.2",
-    "svgo": "^1.2.2",
+    "svgo": "^1.3.2",
     "watch": "^1.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.4.4"
+    "@babel/core": "^7.7.2",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.1"
   }
 }
