@@ -60,7 +60,7 @@
         <button class="u-center">Button</button>
 	    <h2>Points to bear in mind</h2>
         <p>There are certain design schemes that we have tended to follow in recent projects at Studio 24. These are:</p>
-	    <div class="l-box">
+	    <div class="l-box bg bg--subtle">
 		    <ol>
 			    <li>Limiting the content width to 90% of the viewport on smaller screens.</li>
 			    <li>Reducing this width to 80% of the viewport on mid-sized screens.</li>
@@ -68,19 +68,27 @@
 			    <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. banner/hero components)</li>
 		    </ol>
 	    </div>
-	    <div class="l-cluster">
-		    <ul class="clean-list">
-			    <li><a href="#1" class="button button--primary">Item One</a></li>
-			    <li><a href="#2" class="button button--primary">Item Two</a></li>
-			    <li><a href="#3" class="button button--primary">Item Three</a></li>
-			    <li><a href="#4" class="button button--primary">Item Four</a></li>
-			    <li><a href="#5" class="button button--primary">Item Five</a></li>
-			    <li><a href="#6" class="button button--primary">Item Six</a></li>
-			    <li><a href="#7" class="button button--primary">Item Seven</a></li>
-		    </ul>
+	    <div class="l-sidebar">
+		    <div>
+			    <div class="not-sidebar">
+				    <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
+				    <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
+			    </div>
+			    <div class="sidebar">
+				    <div class="l-cluster">
+					    <ul class="clean-list">
+						    <li><a href="#1" class="button button--primary">Item One</a></li>
+						    <li><a href="#2" class="button button--primary">Item Two</a></li>
+						    <li><a href="#3" class="button button--primary">Item Three</a></li>
+						    <li><a href="#4" class="button button--primary">Item Four</a></li>
+						    <li><a href="#5" class="button button--primary">Item Five</a></li>
+						    <li><a href="#6" class="button button--primary">Item Six</a></li>
+						    <li><a href="#7" class="button button--primary">Item Seven</a></li>
+					    </ul>
+				    </div>
+			    </div>
+		    </div>
 	    </div>
-        <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
-        <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
 		<div class="table-wrap">
 			<table>
 				<thead>

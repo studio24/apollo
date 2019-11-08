@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    #Sidebar
+
+    Inspired by https://absolutely.every-layout.dev/layouts/sidebar/
+
+    Note: because this layout uses Flexbox, we can use the `order`
+    property on either `.not-sidebar` or `.sidebar` (depending upon
+    the source order of the HTML) to determine whether the sidebar
+    sits on the left or right side.
+\*------------------------------------*/
+/**
+Suppress horizontal scrolling caused by the negative margin
+in some circumstances.
+ */
+.l-sidebar {
+	overflow: hidden;
+}
+
+/**
+We target the intermediary wrapper and give it a negative margin
+to create a gutter between the `.sidebar` and `.not-sidebar`.
+ */
+.l-sidebar > * {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: calc(#{$size-plus1} / 2 * -1); /* 1 */
+}
+
+
+/**
+We apply an even, symmetrical margin to `.sidebar` and `.not-sidebar`,
+but halve it to to account for 'doubling up' at the edges.
+ */
+.l-sidebar > * > * {
+	margin: calc(#{$size-plus1} / 2);
+}
+
+
+/**
+Flex-basis determines the ideal width of the `.sidebar`. This can be
+omitted to let the contents of `.sidebar` determine the width of
+`.sidebar` (e.g. an image with a specified max-width).
+ */
+.sidebar {
+	flex-basis: rem(320);
+	flex-grow: 1;
+}
+
+
+/**
+Min-width determines the point at which `.sidebar` and `.not-sidebar`
+will sit side-by-side rather than vertically.
+ */
+.not-sidebar {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-width: calc(55% - #{$size-plus1});
+}
