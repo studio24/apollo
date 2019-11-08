@@ -32,3 +32,8 @@ body {
 	background: $white;
 	color: contrast($white);
 }
+
+main {
+	padding-bottom: $size-plus1;
+	padding-top: $size-plus1;
+}
