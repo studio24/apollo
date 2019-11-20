@@ -143,7 +143,7 @@
                 this.splice(index, 1, replacement_token);
                 this._updateClassName();
             }
-        }
+        };
         classListProto.toString = function () {
             return this.join(" ");
         };
@@ -167,7 +167,7 @@
         } else if (objCtr[protoProp].__defineGetter__) {
             elemCtrProto.__defineGetter__(classListProp, classListGetter);
         }
-    }
+    };
 
     myApp.extend('polyfill', polyfill)
 

@@ -1,7 +1,7 @@
 (function () {
 
     var collaps = function (collapsibleHeading){
-        collapsibleHeading.forEach( obj => {
+        collapsibleHeading.forEach( function(obj) {
 
             var thisElement = obj;
 

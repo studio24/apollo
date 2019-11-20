@@ -7,13 +7,10 @@
         // The setup
         findElement(container + '> ul').setAttribute('role', 'tablist');
         findElement(container + ' [role="tablist"] li').setAttribute('role', 'presentation');
-        document.querySelectorAll('[role="tablist"] a').forEach(obj => {
+        document.querySelectorAll('[role="tablist"] a').forEach(function (obj) {
             obj.setAttribute('role', 'tab');
             obj.setAttribute('tabindex', '-1');
-        });
-
-        // Make each aria-controls correspond id of targeted section (re href)
-        document.querySelectorAll('[role="tablist"] a').forEach( (obj) => {
+            // Make each aria-controls correspond id of targeted section (re href)
             obj.setAttribute('aria-controls', obj.getAttribute('href').substring(1));
         });
 
@@ -22,7 +19,7 @@
         findElement('[role="tablist"] li a').setAttribute('tabindex', '0');
 
         // Give each section tabpanel role
-        document.querySelectorAll(container + ' section').forEach( obj => {
+        document.querySelectorAll(container + ' section').forEach( function (obj) {
             obj.setAttribute('role', 'tabpanel')
         });
 
@@ -30,19 +27,31 @@
         findElement(container + ' section > *:first-child').setAttribute('tabindex', '0');
 
         // Make all but the first section hidden (ARIA state and display CSS)
-        document.querySelectorAll('[role="tabpanel"]:not(:first-of-type)').forEach(obj => {
+        document.querySelectorAll('[role="tabpanel"]:not(:first-of-type)').forEach(function (obj) {
             obj.setAttribute('aria-hidden', 'true');
         });
 
         // Change focus between tabs with arrow keys
-        document.querySelectorAll('[role="tab"]').forEach( obj => {
+        document.querySelectorAll('[role="tab"]').forEach( function (obj) {
             obj.onkeydown = function (e) {
 
                 // define current, previous and next (possible) tabs
                 var original = this;
-                var prev = this.parentElement.previousElementSibling !== null ? this.parentElement.previousElementSibling.children[0] : false;
-                var next = this.parentElement.nextElementSibling !== null ? this.parentElement.nextElementSibling.children[0] : false;
+                var prev;
+                var next;
                 var target;
+
+                if(this.parentElement.previousElementSibling !== null){
+                    prev = this.parentElement.previousElementSibling.children[0];
+                }  else {
+                    prev = false;
+                }
+
+                if(this.parentElement.nextElementSibling !== null) {
+                    next = this.parentElement.nextElementSibling.children[0]
+                } else {
+                    next = false;
+                }
 
                 // find the direction (prev or next)
                 switch (e.key) {
@@ -69,7 +78,7 @@
                 }
 
                 // Hide panels
-                document.querySelectorAll(container + ' [role="tabpanel"]').forEach( obj => {
+                document.querySelectorAll(container + ' [role="tabpanel"]').forEach( function (obj) {
                     obj.setAttribute('aria-hidden', 'true');
                 });
 
@@ -80,13 +89,13 @@
         });
 
         // Handle click on tab to show + focus tabpanel
-        document.querySelectorAll('[role="tab"]').forEach(obj => {
+        document.querySelectorAll('[role="tab"]').forEach(function (obj) {
             obj.onclick = function (e) {
                 e.preventDefault();
 
                 // remove focusability [sic] and aria-selected
 
-                document.querySelectorAll('[role="tab"]').forEach( obj => {
+                document.querySelectorAll('[role="tab"]').forEach( function (obj) {
                     obj.setAttribute('tabindex', '-1');
                     obj.setAttribute('aria-selected', null);
 
@@ -97,7 +106,7 @@
                 this.setAttribute('tabindex', '0');
 
                 // Hide panels
-                document.querySelectorAll(container + ' [role="tabpanel"]').forEach( obj => {
+                document.querySelectorAll(container + ' [role="tabpanel"]').forEach( function (obj) {
                     obj.setAttribute('aria-hidden', 'true');
                 });
 
