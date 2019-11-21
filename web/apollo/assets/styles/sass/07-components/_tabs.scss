@@ -41,7 +41,7 @@ a[role="tab"] {
 }
 
 
-a[aria-selected], a[role="tab"]:focus {
+a[aria-selected='true'], a[role="tab"]:focus {
 
   background-color: $subtle-color;
   color: contrast($subtle-color);
