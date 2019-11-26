@@ -203,9 +203,9 @@
 				    <h2>Forms</h2>
 				    <p>We do not use placeholder elements. If an example is needed, we add a div with the <code>field-description</code> class inside the <code>label</code> element. See the article <a href="https://adamsilver.io/articles/placeholders-are-problematic/">Placeholders are problematic</a> by Adam Silver for further details.</p>
 				    <p>For memorable dates that the user will already know, such as their date of birth, we use a series of simple text fields.</p>
-				    <p>We only use a date picker when users need to find a date in relation to another, or if they need to know the day, week or month that the date relates to. For this we use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, a JavaScript plugin, to enhance picking a date from a calendar.</p>
+				    <p>We only use the date input when users need to find a date in relation to another, or if they need to know the day, week or month that the date relates to.</p>
 				    <p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
-				    <p>Using Pikaday and Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
+				    <p>Using Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
 				    <p>Select boxes should be a last resort because they are really hard to use.</p>
 			    </div>
 			    <div class="not-sidebar">
