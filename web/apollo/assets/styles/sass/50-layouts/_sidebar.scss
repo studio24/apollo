@@ -1,13 +1,14 @@
 /*------------------------------------*\
-    #Sidebar
+    #Sidebar layout primitive
 
-    Inspired by https://absolutely.every-layout.dev/layouts/sidebar/
+    From https://absolutely.every-layout.dev/layouts/sidebar/
 
     Note: because this layout uses Flexbox, we can use the `order`
     property on either `.not-sidebar` or `.sidebar` (depending upon
     the source order of the HTML) to determine whether the sidebar
     sits on the left or right side.
 \*------------------------------------*/
+
 /**
 Suppress horizontal scrolling caused by the negative margin
 in some circumstances.

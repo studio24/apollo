@@ -1,7 +1,7 @@
 /*------------------------------------*\
-    #Cluster
+    #Cluster layout primitive
 
-    Inspired by https://absolutely.every-layout.dev/layouts/cluster/
+    From https://absolutely.every-layout.dev/layouts/cluster/
 
     `.l-cluster` suits any groups of elements that differ in length and
     are liable to wrap. Buttons that appear together at the end of forms
@@ -16,8 +16,8 @@
 
     If items need to be in wrapping rows in IE9, use the alternative
     `.inline-list` class as defined in /40-base/lists
-
 \*------------------------------------*/
+
 /**
 Suppress horizontal scrolling caused by the negative margin
 in some circumstances.

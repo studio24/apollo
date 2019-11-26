@@ -202,7 +202,7 @@
 			    <div class="sidebar l-stack">
 				    <h2>Forms</h2>
 				    <p>We do not use placeholder elements. If an example is needed, we add a div with the <code>field-description</code> class inside the <code>label</code> element. See the article <a href="https://adamsilver.io/articles/placeholders-are-problematic/">Placeholders are problematic</a> by Adam Silver for further details.</p>
-				    <p>For memorable dates that the user will already know, such as their date of birth, we use a series of simple text fields.</p>
+				    <p>For memorable dates that the user will already know, such as their date of birth, we use a series of simple text inputs.</p>
 				    <p>We only use the date input when users need to find a date in relation to another, or if they need to know the day, week or month that the date relates to.</p>
 				    <p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
 				    <p>Using Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
@@ -356,6 +356,15 @@
 				    </form>
 
 			    </div>
+		    </div>
+	    </div>
+
+
+	    <div class="l-switcher">
+		    <div>
+			    <div class="l-box l-box--no-padding bg bg--subtle">Stuff</div>
+			    <div class="l-box l-box--no-padding bg bg--subtle">Stuff</div>
+			    <div class="l-box l-box--no-padding bg bg--subtle">Stuff</div>
 		    </div>
 	    </div>
 
