@@ -1,0 +1,762 @@
+/*------------------------------------*\
+    #Forms
+\*------------------------------------*/
+
+$input-required-color: luma(70) !default;
+$input-border-color: luma(70) !default;
+$input-error-color: $yellow !default;
+$segment-selected-bg-color: $olive !default;
+
+/**
+Start of resets for the fieldset and legend elements - see
+https://thatemil.com/blog/2015/01/03/reset-your-fieldset/
+ */
+fieldset {
+	border: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	min-width: 0;
+	padding: 0;
+}
+
+
+body:not(:-moz-handler-blocked) fieldset {
+	display: table-cell; // Deal with fieldset width in Firefox
+}
+
+
+legend {
+	display: table; // Make it line wrap
+	padding: 0;
+}
+
+
+/* Any styling that would normally go on `fieldset` should be set on the wrapper instead */
+.fieldset-wrapper {
+	border: $size-minus3 solid;
+	border-radius: 0;
+	padding: 1em;
+	position: relative;
+}
+/**
+End of resets for the fieldset element
+ */
+
+
+
+
+/**
+Default form styling
+
+1. Make form fields inherit the document styling
+ */
+input,
+select,
+textarea {
+
+	background: $white;
+	border: $size-minus3 solid $input-border-color;
+	border-radius: 0;
+	color: contrast($white);
+	display: block;
+	font-family: inherit; /* 1 */
+	font-size: inherit; /* 1 */
+	line-height: inherit; /* 1 */
+	// max-width: 32em;
+	padding: 0.75em 1.5em;
+	width: 100%;
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: luma(97);
+		border-color: $primary-color;
+
+	}
+
+}
+
+
+/**
+We want these inputs to sit a little closer to their corresponding
+label for increased usability by visually associating the label to its input.
+ */
+* {
+	+ input,
+	+ select,
+	+ textarea,
+	.field-description,
+	.field-error {
+		margin-top: $size-minus2;
+	}
+}
+
+
+
+
+/**
+Styling inputs
+ */
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	margin-right: 0.75em;
+	width: auto;
+}
+
+
+select {
+	height: 3em;
+}
+
+
+textarea {
+	height: 10em;
+	resize: vertical;
+	// max-width: 32em;
+	width: 100%;
+}
+
+
+.field-input--date {
+	width: auto; // It's better to make short fields like dates only as wide as they need to be
+}
+
+
+
+
+/**
+Required fields
+ */
+input[required],
+select[required],
+textarea[required] {
+
+	border-color: $input-required-color;
+	box-shadow: inset 2px 2px 0 0 $input-required-color,
+	inset 2px -2px 0 0 $input-required-color,
+	inset -2px -2px 0 0 $input-required-color,
+	inset -2px 2px 0 0 $input-required-color;
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		box-shadow: inset 2px 2px 0 0 $primary-color,
+		inset 2px -2px 0 0 $primary-color,
+		inset -2px -2px 0 0 $primary-color,
+		inset -2px 2px 0 0 $primary-color;
+
+	}
+
+}
+
+input[required]:valid {
+	box-shadow: inset 0 0 0 0 $input-required-color;
+}
+
+
+
+
+/**
+Field grouping
+ */
+.field-group + .field-group,
+* + .fieldset-wrapper,
+* + .field-group {
+	margin-top: $size-plus2;
+}
+
+
+.field-group {
+	max-width: 32em; // Restrict the measure of the label for readability
+	position: relative;
+}
+
+
+.option-group label {
+	display: block;
+	width: 100%;
+}
+
+
+
+
+/**
+This goes inside the associated label. By doing it this way we are
+associating the help text with the field itself whilst still keeping
+a class-hook for styling.
+ */
+.field-description {
+	@include text-s;
+
+	color: luma(20); // luma(30) doesn't have enough contrast
+	font-style: italic;
+}
+
+
+.field-label {
+	display: block;
+	font-size: 0.9em;
+}
+
+
+
+
+/**
+Word or character counter with aria
+ */
+.field-live-region {
+	@include text-s;
+	@include transition($property: opacity, $delay: 300ms);
+
+	bottom: 1em;
+	color: luma(20);
+	margin-top: 0;
+	opacity: 0;
+	position: absolute;
+	right: 1em;
+}
+
+
+/**
+Fade in live-region on focus. Maybe this should stay visible after
+the field has been completed?
+ */
+.field-input:focus + .field-live-region,
+.field-live-region.is-completed {
+	opacity: 1;
+}
+
+
+
+
+/**
+Group inputs to line up side-by-side
+ */
+.input-group {
+
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+
+	input {
+		flex: 1 0 auto;
+		margin-top: 0;
+		width: auto;
+	}
+
+	&__button {
+		flex: 0 1 auto;
+		margin-top: 0;
+
+		.button {
+			//margin-left: 0.7em;
+			/**
+			Make sure button aligns vertically with input field by changing the button padding to match the input
+			*/
+			padding: #{(0.125em * 2) + 0.75em} 1.5em;
+		}
+
+	}
+
+}
+
+
+
+
+/**
+Collapsible input grouping
+ */
+.js-input-collapsible {
+
+	margin-bottom: 0;
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+
+	&.is-active {
+		margin-bottom: 1.5em;
+		max-height: none;
+		overflow: auto;
+		visibility: visible;
+	}
+
+}
+
+
+
+
+/**
+Shared focus styles for checkboxes and radio buttons
+ */
+.input--checkbox:focus + .checkbox-label:before,
+.input--radio:focus + .radio-label:before,
+.input--checkbox:focus + .checkbox-label,
+.input--radio:focus + .radio-label {
+	background-color: $focus-color;
+	color: contrast($focus-color);
+}
+
+
+
+
+/**
+Shared input styles, gathered here for efficiency
+ */
+.checkbox-label::after,
+.checkbox-label::before,
+.radio-label::after,
+.radio-label::before,
+.segmented-label:after,
+.segmented-label:before {
+	content: '';
+	position: absolute;
+}
+
+
+
+
+/**
+Checkboxes
+ */
+.input--checkbox {
+	/* Hide the actual checkbox */
+	left: -3em;
+	position: absolute;
+}
+
+
+.checkbox-group label {
+	background-color: $subtle-color;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 1.5em;
+	overflow: hidden; //Hide the real checkbox inputs
+	padding: 0.5em 0.5em 0.5em #{0.75+2.25em};
+	position: relative;
+}
+
+
+* + .checkbox-group label {
+
+	margin-top: em($font-leading/3);
+
+}
+
+
+/* Box */
+.checkbox-label:before {
+	border: $size-minus3 solid $input-border-color;
+	border-radius: 0;
+	height: 1.25em;
+	left: 0.75em;
+	top: 0.75em;
+	width: 1.25em;
+}
+
+
+/* Check */
+.checkbox-label:after {
+	border: 0.2em solid transparent;
+	border-width: 0 0.2em 0.2em 0; // creates the inverted "L" shape
+	display: block;
+	height: 0.75em;
+	left: 1.15em;
+	top: 0.95em;
+	transform: rotate(45deg); // tilts the shape
+	width: 0.4em;
+}
+
+
+/* Focused */
+.input--checkbox:focus + .checkbox-label:before {
+	border-color: $primary-color;
+}
+
+
+/* Checked and Focused */
+.input--checkbox:checked:focus + .checkbox-label:before {
+	background-color: lighten($primary-color, $deviate);
+	border-color: lighten($primary-color, $deviate);
+}
+
+.input--checkbox:checked:focus + .checkbox-label:after {
+	border-color: $white;
+}
+
+
+/* Checked */
+.input--checkbox:checked + .checkbox-label:before {
+	background-color: $primary-color;
+	border-color: $primary-color;
+}
+
+.input--checkbox:checked + .checkbox-label:after {
+	background: none;
+	border-color: $white;
+}
+
+
+/* Hover */
+.checkbox-group label:hover .checkbox-label:before {
+	border-color: $primary-color !important;
+}
+
+.input--checkbox:checked + .checkbox-label:hover:before {
+	background-color: lighten($primary-color, $deviate) !important;
+	border-color: lighten($primary-color, $deviate) !important;
+}
+
+
+
+
+/**
+Radio buttons
+ */
+.radio-group input {
+	/* Hide the actual radio */
+	left: -3em;
+	position: absolute;
+}
+
+
+// Wrapper for input and span.radio-label
+.radio-group label {
+	cursor: pointer;
+	display: block;
+	line-height: 1.5;
+	overflow: hidden; // Hide the real radio inputs
+	padding: 0.5em 0.5em 0.5em #{0.75+2.25em};
+	position: relative;
+}
+
+
+* + .radio-group label {
+
+	margin-top: em($font-leading/3);
+
+}
+
+
+.radio-label {
+	display: inline-block;
+	margin-top: 0;
+	max-width: 32em;
+}
+
+
+/* Box */
+.radio-label:before {
+	border: $size-minus3 solid $input-border-color;
+	border-radius: 50%;
+	height: 1.25em;
+	left: 0.75em;
+	top: 0.5em;
+	width: 1.25em;
+}
+
+
+/* Check */
+.radio-label:after {
+	border-radius: 50%;
+	height: 0.75em;
+	left: 1em;
+	top: 0.725em;
+	width: 0.75em;
+}
+
+
+/* Focused */
+.input--radio:focus + .radio-label:before {
+	border-color: $primary-color;
+}
+
+
+/* Checked and Focused */
+.input--radio:checked:focus + .radio-label:before {
+	border-color: lighten($primary-color, $deviate);
+}
+
+.input--radio:checked:focus + .radio-label:after {
+	background-color: lighten($primary-color, $deviate);
+}
+
+
+/* Checked */
+.input--radio:checked + .radio-label:before {
+	border-color: $primary-color;
+}
+
+.input--radio:checked + .radio-label:after {
+	background-color: $primary-color;
+}
+
+
+/* Hover */
+.radio-group label:hover .radio-label:before {
+	border-color: $primary-color !important;
+}
+
+.input--radio:checked + .radio-label:hover:before {
+	border-color: lighten($primary-color, $deviate) !important;
+}
+
+.input--radio:checked + .radio-label:hover:after {
+	background-color: lighten($primary-color, $deviate) !important;
+}
+
+
+
+
+/**
+Segmented options. This can be either radio or checkbox, the purpose is to
+show all available options outright, rather than hide them behind a <select>
+ */
+.segmented-group-wrapper,
+.no-max-width {
+	max-width: none;
+}
+
+
+.segmented-group {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+.segmented-group .input--radio {
+	/* Hide the actual radio */
+	left: -3em;
+	position: absolute;
+}
+
+
+// Wrapper for input and div.segmented-label
+.segmented-group > label {
+
+	cursor: pointer; // Give it more affordance
+	display: block;
+	flex: 1 1 33.3333%;
+	overflow: hidden; // Hide the real radio inputs
+	position: relative;
+
+	// Make it so that all options after 3 become secondary, giving them less emphasis
+	&:nth-child(n+4) {
+		flex: 1 1 25%;
+	}
+
+}
+
+
+* + .segmented-group > label {
+	margin-top: 0.25em; // Makes it easier for the eye to scan and read options
+}
+
+
+.segmented-label {
+
+	margin: 1.5rem;
+	max-width: 32em;
+
+	* {
+		position: relative;
+		z-index: z("segmented", "label");
+	}
+
+	* + * {
+		margin-top: $size-minus2;
+	}
+
+	:first-child {
+		@include text-m;
+	}
+
+	:not(:first-child) {
+		@include text-s;
+	}
+
+}
+
+
+/* Box */
+.segmented-label:before {
+	border: em(2) solid luma(60);
+	box-shadow: inset 0 em(4) 0 rgba($white, 0.2),
+	inset 0 em(- 4) 0 rgba($black, 0.2);
+	height: calc(100% - 4px);
+	left: 2px;
+	top: 2px;
+	width: calc(100% - 4px);
+	z-index: z("segmented", "background");
+}
+
+
+/* Check */
+.segmented-label:after {
+	background-color: transparent;
+	border: 0.2em solid white;
+	border-width: 0 0.2em 0.2em 0; // creates the inverted "L" shape
+	display: block;
+	height: 0.75em;
+	position: absolute;
+	right: 0.75em;
+	top: 0.5em;
+	transform: scale(0) rotate(-45deg); // don't show the shape until checked
+	width: 0.4em;
+	z-index: z("segmented", "label");
+}
+
+
+/* Focused */
+.input--radio:focus + .segmented-label:before {
+	border-color: $primary-color;
+	outline: em(2) solid $focus-color;
+}
+
+
+/* Checked and Focused */
+.input--radio:checked:focus + .segmented-label:before {
+	//background-color: lighten($primary-color, $deviate);
+	border-color: lighten($segment-selected-bg-color, $deviate);
+	box-shadow: inset 0 0.125em 0 0 $grey;
+}
+
+.input--radio:checked:focus + .segmented-label:after {
+	//background-color: deviate($segment-selected-bg-color);
+	//color: contrast(deviate($segment-selected-bg-color));
+}
+
+/* Checked */
+.input--radio:checked + .segmented-label:before {
+	background-color: $segment-selected-bg-color;
+	color: contrast($segment-selected-bg-color);
+	box-shadow: inset 0 0.125em 0 0 darken($segment-selected-bg-color, $deviate);
+	border-color: darken($segment-selected-bg-color, $deviate);
+	border-width: em(4);
+}
+
+.input--radio:checked + .segmented-label {
+	background-color: $segment-selected-bg-color;
+	color: contrast($segment-selected-bg-color);
+}
+
+.input--radio:checked + .segmented-label:after {
+	transform: scale(1) rotate(45deg); // shows and tilts the shape
+}
+
+
+/* Default hover */
+.segmented-group label:hover .segmented-label:before {
+	box-shadow: inset 0 em(2) 0 0 darken($segment-selected-bg-color, $deviate/2);
+}
+
+
+/* Checked hover */
+.input--radio:checked + .segmented-label:hover:before {
+	border-color: lighten($primary-color, $deviate);
+}
+
+
+/* Checked hover */
+.input--radio:checked + .segmented-label:hover:after {
+	//background-color: deviate($primary-color);
+	//color: contrast(deviate($primary-color));
+}
+
+
+/* Disabled */
+.segmented-group label:hover .input--radio:disabled + .segmented-label:before {
+	border-color: luma(90);
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+.input--radio:disabled + .segmented-label:before {
+	border-color: luma(90);
+	box-shadow: none;
+}
+
+.input--radio:disabled + .segmented-label {
+	// text-decoration: line-through;
+	color: luma(60);
+}
+
+.input--radio:disabled + .segmented-label:after {
+	// Still needs work, not possible to get a diagonal line across a dynamically sized box
+	background-image: linear-gradient(157.5deg, $white 0%, $white 48%, $segment-selected-bg-color 49%, $segment-selected-bg-color 50%, $white 51%, $white 100%);
+	background-size: 100% 100%;
+	// color: contrast(luma(90));
+	content: " ";
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+
+
+
+/*------------------------------------*\
+    #Error states
+\*------------------------------------*/
+* + .field-error {
+
+	margin-top: em($font-leading/3);
+
+}
+
+.field-group--has-error .field-label {
+
+	+ input,
+	+ select,
+	+ textarea {
+
+		//margin-top: 0;
+		border-radius: 0.25em 0.25em 0 0;
+
+
+	}
+
+}
+
+.field-error + .segmented-group,
+.field-input + .field-error {
+
+	margin-top: 0;
+
+}
+
+.field-group--has-error input,
+.field-group--has-error select,
+.field-group--has-error textarea {
+
+	border-color: $input-error-color;
+
+	box-shadow: inset 2px 2px 0 0 $input-error-color,
+	inset 2px -2px 0 0 $input-error-color,
+	inset -2px -2px 0 0 $input-error-color,
+	inset -2px 2px 0 0 $input-error-color;
+
+}
+
+// For segmented groups we can't use box-shadow so let's make at a border
+.field-group--has-error .segmented-group {
+
+	border: 4px solid $input-error-color;
+
+}
+
+.field-error:not(:empty) {
+
+	list-style-type: none;
+
+	background-color: $input-error-color;
+	color: contrast($input-error-color);
+
+	padding: 1em;
+	border-radius: 0 0 0.25em 0.25em;
+
+}

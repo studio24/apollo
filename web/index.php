@@ -204,25 +204,32 @@
 				    <p>We use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, JavaScript plugin, to enhance picking a date from a calendar.</p>
 				    <p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
 				    <p>Using Pikaday and Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
+				    <p>We do not use placeholder elements. If an example is needed, we add a div with the <code>field-description</code> class inside the <code>label</code> element. See the article <a href="https://adamsilver.io/articles/placeholders-are-problematic/">Placeholders are problematic</a> by Adam Silver for further details.</p>
 			    </div>
 			    <div class="not-sidebar">
 
 				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
 					    <div class="field-group">
 						    <label for="guide-form-field-1" class="field-label">Email <small>(Required)</small>
-							    <div class="field-description">We&rsquo;ll only contact you if there&rsquo;s something wrong with your order.</div>
+							    <div class="field-description">E.g. jane.smith@example.co.uk<br/>
+								    We&rsquo;ll only contact you if there&rsquo;s something wrong with your order.
+							    </div>
 						    </label>
-						    <input type="email" class="field-input field-input--text" name="guide-form-field-1" id="guide-form-field-1" placeholder="E.g. jane.smith@example.co.uk" data-parsley-error-message="Please complete this field with a valid email address." required aria-invalid="false">
+						    <input type="email" class="field-input field-input--text" name="guide-form-field-1" id="guide-form-field-1" data-parsley-error-message="Please complete this field with a valid email address." required aria-invalid="false">
 					    </div>
 
 					    <div class="field-group">
-						    <label for="guide-form-field-2" class="field-label">Name <small>(Required)</small></label>
-						    <input type="text" class="field-input field-input--text" name="guide-form-field-2" id="guide-form-field-2" placeholder="E.g. Jane Smith" data-parsley-error-message="Please complete this field with your name." required aria-invalid="false">
+						    <label for="guide-form-field-2" class="field-label">Name <small>(Required)</small>
+							    <div class="field-description">E.g. Jane Smith</div>
+						    </label>
+						    <input type="text" class="field-input field-input--text" name="guide-form-field-2" id="guide-form-field-2" data-parsley-error-message="Please complete this field with your name." required aria-invalid="false">
 					    </div>
 
 					    <div class="field-group">
-						    <label for="guide-form-field-3" class="field-label">Date of birth <small>(Required)</small></label>
-						    <input type="date" class="field-input field-input--date js-pikaday" name="guide-form-field-3" id="guide-form-field-3" placeholder="E.g. 21/10/1985" data-parsley-error-message="Please select a date." required aria-invalid="false">
+						    <label for="guide-form-field-3" class="field-label">Date of birth <small>(Required)</small>
+							    <div class="field-description">E.g. 21/10/1985</div>
+						    </label>
+						    <input type="date" class="field-input field-input--date js-pikaday" name="guide-form-field-3" id="guide-form-field-3" data-parsley-error-message="Please select a date." required aria-invalid="false">
 					    </div>
 
 					    <div class="field-group">
@@ -237,9 +244,9 @@
 
 					    <div class="field-group">
 						    <label for="textarea-input" class="field-label">Textarea input <small>(Required)</small>
-							    <span class="field-description">Please explain the problem you are having, we&rsquo;ll come up with the solution</span>
+							    <div class="field-description">Please explain the problem you are having, we&rsquo;ll come up with the solution</div>
 						    </label>
-						    <textarea name="textarea-input" id="textarea-input" cols="30" rows="10" class="field-input input--textarea" placeholder="E.g. Hi, I am&hellip;" data-parsley-error-message="Please complete this field with your problem." required aria-invalid="false"></textarea>
+						    <textarea name="textarea-input" id="textarea-input" cols="30" rows="10" class="field-input input--textarea" data-parsley-error-message="Please complete this field with your problem." required aria-invalid="false"></textarea>
 					    </div>
 
                         <?php // Checkbox example ?>
@@ -250,28 +257,27 @@
 							    <input id="checkbox-input-1" name="checkbox-input" class="input--checkbox" value="data-value" type="checkbox">
 							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
 						    </label>
-						    <label for="checkbox-input-2">
-							    <input id="checkbox-input-2" name="checkbox-input" class="input--checkbox" value="data-value" type="checkbox">
-							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
-						    </label>
-						    <label for="checkbox-input-3">
-							    <input id="checkbox-input-3" name="checkbox-input" class="input--checkbox" value="data-value" type="checkbox">
-							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
-						    </label>
 					    </fieldset>
 
 
                         <?php // Radio options example ?>
 					    <fieldset class="field-group radio-group" role="radiogroup" aria-required="true">
 						    <legend class="group-legend">Radio input</legend>
-						    <div class="field-description">Radio options are easier to read and quicker to scan when laid out one under the other instead of next to each other.</div>
-						    <label for="radio-input">
-							    <input id="radio-input" name="radio-input" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please complete by selecting your preference." required aria-invalid="false">
+						    <div class="field-description">
+							    Radio options are easier to read and quicker to scan when laid out one under the other instead of next to each other.<br />
+							    Optional radio buttons need a &lsquo;none&rsquo; option, because they cannot be unchecked once they are selected.
+						    </div>
+						    <label for="radio-input1">
+							    <input id="radio-input1" name="radio-input" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please complete by selecting your preference." required aria-invalid="false">
 							    <span class="radio-label">Radio option.</span>
 						    </label>
 						    <label for="radio-input2">
 							    <input id="radio-input2" name="radio-input" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please complete by selecting your preference." required aria-invalid="false">
 							    <span class="radio-label">Another radio option.</span>
+						    </label>
+						    <label for="radio-input">
+							    <input id="radio-input" name="radio-input" class="input--radio" value="none" type="radio" data-parsley-error-message="Please complete by selecting your preference." required aria-invalid="false">
+							    <span class="radio-label">None.</span>
 						    </label>
 					    </fieldset>
 
@@ -285,46 +291,46 @@
 							    <label for="segmented-option-1">
 								    <input id="segmented-option-1" name="segmented-options" class="input--radio" value="data-value" type="radio" data-parsley-error-message="Please select your preferred choice." required aria-invalid="false">
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Approachable option</h2>
+									    <h2>Approachable option</h2>
 									    <div>Copy to explain this option in more detail.</div>
 								    </div>
 							    </label>
 							    <label for="segmented-option-2">
 								    <input id="segmented-option-2" name="segmented-options" class="input--radio" value="data-value" type="radio" checked>
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Bell curve option</h2>
+									    <h2>Bell curve option</h2>
 									    <div>Copy to explain this option in more detail.</div>
 								    </div>
 							    </label>
 							    <label for="segmented-option-3">
 								    <input id="segmented-option-3" name="segmented-options" class="input--radio" value="data-value" type="radio">
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Expensive option</h2>
-									    <div class="">Copy to explain this option in more detail.</div>
+									    <h2>Expensive option</h2>
+									    <div>Copy to explain this option in more detail.</div>
 								    </div>
 							    </label>
 							    <label for="segmented-option-4">
 								    <input id="segmented-option-4" name="segmented-options" class="input--radio" value="data-value" type="radio">
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Secondary options</h2>
+									    <h2>Secondary options</h2>
 								    </div>
 							    </label>
 							    <label for="segmented-option-5">
 								    <input id="segmented-option-5" name="segmented-options" class="input--radio" value="data-value" type="radio">
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Secondary options</h2>
+									    <h2>Secondary options</h2>
 								    </div>
 							    </label>
 							    <label for="segmented-option-6">
 								    <input id="segmented-option-6" name="segmented-options" class="input--radio" value="data-value" type="radio">
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Secondary options</h2>
+									    <h2>Secondary options</h2>
 								    </div>
 							    </label>
 							    <label for="segmented-option-7">
 								    <input id="segmented-option-7" name="segmented-options" class="input--radio" value="data-value" type="radio">
 								    <div class="segmented-label">
-									    <h2 class="size--l heading">Secondary options</h2>
+									    <h2>Secondary options</h2>
 								    </div>
 							    </label>
 						    </div>
