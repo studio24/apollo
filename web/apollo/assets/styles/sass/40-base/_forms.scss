@@ -64,7 +64,7 @@ textarea {
 	font-size: inherit; /* 1 */
 	line-height: inherit; /* 1 */
 	// max-width: 32em;
-	padding: 0.75em 1.5em;
+	padding: $size-minus1;
 	width: 100%;
 
 	&:hover,
@@ -120,8 +120,34 @@ textarea {
 }
 
 
-.field-input--date {
-	width: auto; // It's better to make short fields like dates only as wide as they need to be
+
+
+/**
+Memorable date input styles are great for dates that users already know,
+such as their date of birth. We always want these fields to line up,
+so we use inline-block rather than flexbox.
+
+Making fields like these only as wide as they need to be gives
+users a better visual clue as to what is required of them.
+
+If you increase the input padding, remember to increase these widths.
+ */
+.memorable-date {
+	display: inline-block;
+	margin-top: $size-minus1;
+}
+
+.memorable-date + .memorable-date {
+	margin-left: $size-0;
+}
+
+.memorable-date__day,
+.memorable-date__month {
+	width: 3em;
+}
+
+.memorable-date__year {
+	width: 4.5em;
 }
 
 

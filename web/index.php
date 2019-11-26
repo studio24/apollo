@@ -201,7 +201,7 @@
 		    <div>
 			    <div class="sidebar l-stack">
 				    <h2>Forms</h2>
-				    <p>We use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, JavaScript plugin, to enhance picking a date from a calendar.</p>
+				    <p>We use <a href="http://dbushell.github.io/Pikaday/">Pikaday</a>, a JavaScript plugin, to enhance picking a date from a calendar.</p>
 				    <p>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation.</p>
 				    <p>Using Pikaday and Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</p>
 				    <p>We do not use placeholder elements. If an example is needed, we add a div with the <code>field-description</code> class inside the <code>label</code> element. See the article <a href="https://adamsilver.io/articles/placeholders-are-problematic/">Placeholders are problematic</a> by Adam Silver for further details.</p>
@@ -226,10 +226,21 @@
 					    </div>
 
 					    <div class="field-group">
-						    <label for="guide-form-field-3" class="field-label">Date of birth <small>(Required)</small>
-							    <div class="field-description">E.g. 21/10/1985</div>
-						    </label>
-						    <input type="date" class="field-input field-input--date js-pikaday" name="guide-form-field-3" id="guide-form-field-3" data-parsley-error-message="Please select a date." required aria-invalid="false">
+						    <legend>Date of birth <small>(Required)</small></legend>
+						    <div class="field-description">DD MM YYYY</div>
+
+						    <div class="memorable-date">
+							    <label for="day" class="field-label">Day</label>
+							    <input class="field-input memorable-date__day" type="text" pattern="[0-9]*" name="day" value="" id="day" min="0" max="31" data-parsley-error-message="Please enter the day you were born as a number." required aria-invalid="false">
+						    </div>
+						    <div class="memorable-date">
+							    <label for="month" class="field-label">Month</label>
+							    <input class="field-input memorable-date__month" type="text" pattern="[0-9]*" name="month" value="" id="month" min="1" max="12" data-parsley-error-message="Please enter the month you were born as a number." required aria-invalid="false">
+						    </div>
+						    <div class="memorable-date">
+							    <label for="year" class="field-label">Year</label>
+							    <input class="field-input memorable-date__year" type="text" pattern="[0-9]*" name="year" value="" id="year" min="0" max="2050" data-parsley-error-message="Please enter the year you were born." required aria-invalid="false">
+						    </div>
 					    </div>
 
 					    <div class="field-group">
