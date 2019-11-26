@@ -725,64 +725,47 @@ show all available options outright, rather than hide them behind a <select>
 
 
 
-/*------------------------------------*\
-    #Error states
-\*------------------------------------*/
-* + .field-error {
-
-	margin-top: em($font-leading/3);
-
-}
-
+/**
+Error states
+ */
 .field-group--has-error .field-label {
 
 	+ input,
 	+ select,
 	+ textarea {
-
-		//margin-top: 0;
-		border-radius: 0.25em 0.25em 0 0;
-
-
+		border-radius: 0;
 	}
 
 }
 
+
 .field-error + .segmented-group,
 .field-input + .field-error {
-
 	margin-top: 0;
-
 }
+
 
 .field-group--has-error input,
 .field-group--has-error select,
 .field-group--has-error textarea {
-
 	border-color: $input-error-color;
-
 	box-shadow: inset 2px 2px 0 0 $input-error-color,
 	inset 2px -2px 0 0 $input-error-color,
 	inset -2px -2px 0 0 $input-error-color,
 	inset -2px 2px 0 0 $input-error-color;
-
 }
 
-// For segmented groups we can't use box-shadow so let's make at a border
+
+// For segmented groups we can't use box-shadow so let's make it a border
 .field-group--has-error .segmented-group {
-
 	border: 4px solid $input-error-color;
-
 }
+
 
 .field-error:not(:empty) {
-
-	list-style-type: none;
-
 	background-color: $input-error-color;
+	border-radius:0;
 	color: contrast($input-error-color);
-
+	list-style-type: none;
 	padding: 1em;
-	border-radius: 0 0 0.25em 0.25em;
-
 }
