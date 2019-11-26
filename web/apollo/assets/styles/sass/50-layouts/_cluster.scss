@@ -39,7 +39,7 @@ edges.
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: calc(#{$size-0} / 2 * -1); /* 1 */
+	margin: calc(#{$size} / 2 * -1); /* 1 */
 }
 
 
@@ -48,5 +48,5 @@ We apply an even, symmetrical margin to the elements that we wish to space
 out, but halve it to to account for 'doubling up' at the edges.
  */
 .l-cluster > * > * {
-	margin: calc(#{$size-0} / 2);
+	margin: calc(#{$size} / 2);
 }
