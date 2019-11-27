@@ -88,7 +88,8 @@ label for increased usability by visually associating the label to its input.
 	+ select,
 	+ textarea,
 	.field-description,
-	.field-error {
+	.field-error,
+	.segmented-group {
 		margin-top: $size-minus2;
 	}
 }
@@ -553,8 +554,9 @@ show all available options outright, rather than hide them behind a <select>
 }
 
 
+.segmented-group .input--checkbox,
 .segmented-group .input--radio {
-	/* Hide the actual radio */
+	/* Hide the actual checkbox/radio */
 	left: -3em;
 	position: absolute;
 }
@@ -566,12 +568,13 @@ show all available options outright, rather than hide them behind a <select>
 	cursor: pointer; // Give it more affordance
 	display: block;
 	flex: 1 1 33.3333%;
+	max-width: 100%;
+	min-width: rem(155); // Prevent the options from becoming too narrow to read
 	overflow: hidden; // Hide the real radio inputs
 	position: relative;
 
-	// Make it so that all options after 3 become secondary, giving them less emphasis
-	&:nth-child(n+4) {
-		flex: 1 1 25%;
+	* {
+		max-width: 100%;
 	}
 
 }

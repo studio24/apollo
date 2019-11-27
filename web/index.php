@@ -322,30 +322,6 @@
 									    <div>Copy to explain this option in more detail.</div>
 								    </div>
 							    </label>
-							    <label for="segmented-option-4">
-								    <input id="segmented-option-4" name="segmented-options" class="input--radio" value="data-value" type="radio">
-								    <div class="segmented-label">
-									    <h2>Secondary options</h2>
-								    </div>
-							    </label>
-							    <label for="segmented-option-5">
-								    <input id="segmented-option-5" name="segmented-options" class="input--radio" value="data-value" type="radio">
-								    <div class="segmented-label">
-									    <h2>Secondary options</h2>
-								    </div>
-							    </label>
-							    <label for="segmented-option-6">
-								    <input id="segmented-option-6" name="segmented-options" class="input--radio" value="data-value" type="radio">
-								    <div class="segmented-label">
-									    <h2>Secondary options</h2>
-								    </div>
-							    </label>
-							    <label for="segmented-option-7">
-								    <input id="segmented-option-7" name="segmented-options" class="input--radio" value="data-value" type="radio">
-								    <div class="segmented-label">
-									    <h2>Secondary options</h2>
-								    </div>
-							    </label>
 						    </div>
 
 					    </fieldset>
