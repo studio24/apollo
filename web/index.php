@@ -345,6 +345,13 @@
 	    </div>
 
 
+	    <figure>
+		    <div class="l-frame l-frame--16-9">
+			    <img src="/dist/assets/images/sherlock.jpg" alt="Sherlock Holmes and Dr Watson having a discussion in a train carriage.">
+		    </div>
+		    <figcaption>The plot thickens...</figcaption>
+	    </figure>
+
 
     </main>
 	<?php // End main ?>
