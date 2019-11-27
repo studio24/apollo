@@ -3,7 +3,15 @@
 
     From https://absolutely.every-layout.dev/layouts/sidebar/
 
-    Note: because this layout uses Flexbox, we can use the `order`
+    `.l-sidebar` creates a container for a larger panel next to
+    a smaller - sidebar - panel.
+
+    When there is enough horizontal space for them to sit alongside
+    each other, they do so. Otherwise they stack vertically. The
+    point at which this happens is determined by setting a flex-basis
+    on the sidebar panel and a min-width on the other panel.
+
+    N.B: because this layout uses Flexbox, we can use the `order`
     property on either `.not-sidebar` or `.sidebar` (depending upon
     the source order of the HTML) to determine whether the sidebar
     sits on the left or right side.
@@ -43,7 +51,7 @@ Flex-basis determines the ideal width of the `.sidebar`. This can be
 omitted to let the contents of `.sidebar` determine the width of
 `.sidebar` (e.g. an image with a specified max-width).
  */
-.sidebar {
+.l-sidebar .sidebar {
 	flex-basis: rem(320);
 	flex-grow: 1;
 }
@@ -54,7 +62,7 @@ Min-width determines the point at which `.sidebar` and `.not-sidebar`
 will sit side-by-side rather than vertically. This negates the use of
 a media query.
  */
-.not-sidebar {
+.l-sidebar .not-sidebar {
 	flex-basis: 0;
 	flex-grow: 999;
 	min-width: calc(55% - #{$size-plus1});
