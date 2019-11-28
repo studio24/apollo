@@ -26,7 +26,13 @@ ul:not([class]) {
 
 	li + li,
 	li ul {
+
 		padding-top: 1em;
+
+		li + li {
+			padding-top: 0.5em
+		}
+
 	}
 
 }
@@ -61,6 +67,10 @@ ol:not([class]) {
 
 		&:before {
 			top: 1em;
+		}
+
+		li + li {
+			padding-top: 0.5em
 		}
 
 	}
