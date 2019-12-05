@@ -16,23 +16,29 @@ ul[class] {
 
 
 
-ul:not([class]) {
+ul:not([class]),
+ol:not([class]) {
 
-	padding-left: 1em;
+	padding-left: 1.875em;
 
 	li {
-		padding-left: 1.25em;
+
+		padding-left: 1em;
+
 	}
 
-	li + li,
-	li ul {
+	ul,
+	ol {
 
-		padding-bottom: 0.5em;
-		padding-top: 1em;
+		padding-left: 1em;
 
-		li + li {
-			padding-top: 0.5em
-		}
+	}
+
+	* + *,
+	li ul,
+	li ol {
+
+		margin-top: 0.5em;
 
 	}
 
@@ -43,35 +49,29 @@ ol:not([class]) {
 
 	counter-reset: orderedList;
 	list-style-type: none;
-	padding-left: 0;
 
-	li {
+	> li {
+
+		column-break-inside: avoid;
 		display: block;
-		padding-left: 2.25em;
 		position: relative;
 
 		&:before {
+
 			content: counters(orderedList, ".");
 			counter-increment: orderedList;
 			display: block;
-			left: 0;
+			font-weight: 500;
+			left: -0.8em;
 			position: absolute;
 			top: 0;
+
 		}
 
-	}
+		ol li {
 
-	li + li,
-	li ol {
+			padding-left: 1.75em;
 
-		padding-top: 1em;
-
-		&:before {
-			top: 1em;
-		}
-
-		li + li {
-			padding-top: 0.5em
 		}
 
 	}
