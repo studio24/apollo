@@ -31,24 +31,3 @@ a:not([class]) {
 	}
 
 }
-
-
-
-
-/**
-Remove underlines from telephone number links.
-It makes phone numbers easier to read.
- */
-a[href^="tel:"] {
-
-	border: 0 !important;
-	text-decoration: none !important;
-
-	&:hover,
-	&:active,
-	&:focus {
-		border: 0 !important;
-		text-decoration: none !important;
-	}
-
-}
