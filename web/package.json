@@ -9,7 +9,7 @@
     "css:autoprefixer": "autoprefixer-cli -d dist/assets/styles dist/assets/styles/*.css",
     "css": "npm-run-all --sequential css:sass css:autoprefixer",
     "images:imagemin": "imagemin apollo/assets/images/* --out-dir=dist/assets/images",
-    "images:svg": "svgo --folder=apollo/assets/svg --output=dist/assets/svg",
+    "images:svg": "svgo --folder=web/assets/svg --output=dist/assets/svg --disable='removeViewBox' | true",
     "images": "npm-run-all --parallel images:imagemin images:svg",
     "fonts": "shx cp -r apollo/assets/fonts/* dist/assets/fonts",
     "js:copylibraries": "shx cp -r apollo/assets/js/libraries/* dist/assets/js/libraries/",
