@@ -2,13 +2,9 @@
     #Global footer
 \*------------------------------------*/
 
-
-
 .global-footer {
 
-  // margin-top: 0;
-  padding: 3em 0;
-
-  position: relative;
+	grid-row-start: 2; // Needed for sticky footer
+	grid-row-end: 3; // Needed for sticky footer
 
 }
