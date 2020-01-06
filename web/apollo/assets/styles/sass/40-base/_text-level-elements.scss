@@ -2,17 +2,23 @@
     #Text-level elements
 \*------------------------------------*/
 
- small,
- .small {
+small,
+.small {
 	 @include text-s;
- }
+}
 
 
 .small-caps {
 	font-size: em(12);
-	letter-spacing: 0.03em;
 	text-shadow: 0 0 0 $black;
 	text-transform: uppercase;
+}
+
+
+small,
+.small,
+.small-caps {
+	letter-spacing: 0.03em;
 }
 
 

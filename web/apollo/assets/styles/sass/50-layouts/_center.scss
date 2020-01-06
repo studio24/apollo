@@ -21,7 +21,7 @@ to our global box-sizing rule.
 	padding-left: 5vw;
 	padding-right: 5vw;
 
-	@include mq(1024) {
+	@include mq(768) {
 		padding-left: 10vw;
 		padding-right: 10vw;
 	}

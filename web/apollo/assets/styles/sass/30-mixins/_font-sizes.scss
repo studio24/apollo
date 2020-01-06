@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 /**
-We use mixins to ensure consistent font sizing throughout the project.
-If we need to change them, we can just do it here.
+We use mixins to ensure consistent font sizing and line-heights throughout
+the project. If we need to change them, we can just do it here.
 Font grows 0.25px for every 100px of viewport width - see https://css-tricks.com/fun-viewport-units/
  */
 @mixin text-4xl {
