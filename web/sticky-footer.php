@@ -56,8 +56,8 @@
 						<p>See the CSS Tricks article <a href="https://css-tricks.com/couple-takes-sticky-footer/">Sticky Footer, Five Ways</a> if you want to know how this works.</p>
 					</div>
 					<div class="not-sidebar l-stack">
-						<p>We are using the CSS Grid implementation, with syntax that works back to IE11 and IE10.</p>
-						<p>This is the same level of support that FlexBox enjoys, but it eliminates certain display issues spotted in IE10 and 11, caused by components with overflow (e.g. the carousel component) when used inside the sidebar layout.</p>
+						<p>We are using the CSS Grid implementation, with syntax that works back to IE10 and 11.</p>
+						<p>This is the same level of support that FlexBox enjoys, but it eliminates certain display issues spotted in IE10 and 11, caused by components with overflow that is not set to visible (e.g. the carousel component) when used within a sidebar layout.</p>
 						<p>This page uses the sidebar layout and should display correctly.</p>
 					</div>
 

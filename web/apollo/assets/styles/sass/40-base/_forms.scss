@@ -325,6 +325,8 @@ Shared focus styles for checkboxes and radio buttons
 .input--radio:focus + .radio-label {
 	background-color: $focus-color;
 	color: contrast($focus-color);
+	outline: $size-minus3 solid $focus-color;
+	outline-offset: 0;
 }
 
 
