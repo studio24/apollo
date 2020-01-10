@@ -18,7 +18,7 @@
 .l-cover {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 30vh;
 	padding: $size;
 }
 
@@ -30,7 +30,7 @@
 
 
 /* Doesn't have to be an h1... */
-.cover > h1 {
+.l-cover > h1 {
 	margin-top: auto;
 	margin-bottom: auto;
 }

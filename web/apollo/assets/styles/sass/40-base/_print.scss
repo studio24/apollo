@@ -1,5 +1,124 @@
 /*------------------------------------*\
     #Print styles
+
+    We aim to:
+    - Hide everything that is irrelevant for print
+    - Make everything black and white and easy to read
+
+    It is perfectly acceptable to use !important for print styles
+    as they should override everything else.
+
+    IMPORTANT: Anything that uses flexbox or grid on screen
+    and needs to appear in print must be refactored to use
+    block or inline block layout. Otherwise it will not print.
+    You can check this using the print preview in Chrome/Firefox.
 \*------------------------------------*/
 
-//@TODO Check add print styles
+//@TODO Add print styles
+
+
+@media print {
+
+	*,
+	*:before,
+	*:after,
+	p:first-line,
+	div:first-line,
+	blockquote:first-line,
+	li:first-line {
+
+		background: transparent !important;
+		box-shadow: none !important;
+		color: #000 !important;
+		overflow: visible !important;
+		position: static !important;
+		text-shadow: none !important;
+
+	}
+
+	body,
+	.lazy,
+	.lazyload {
+
+		display: block !important;
+
+	}
+
+	.js-object-fit,
+	.responsive-wrapper,
+	picture {
+
+		padding: 0 !important;
+
+		img {
+
+			display: block !important;
+			height: auto !important;
+			width: 100% !important;
+
+		}
+
+	}
+
+	li,
+	.js-object-fit,
+	.responsive-wrapper,
+	picture
+	figure,
+	img {
+
+		break-inside: avoid;
+		page-break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+
+	}
+
+	.l-sidebar > div {
+
+		display: block !important;
+
+	}
+
+	.js-carousel {
+
+		> * {
+
+			display: block !important;
+
+		}
+
+		ul.carousel-controls {
+
+			display: none !important;
+
+		}
+
+		ul.clean-list {
+
+			li + li {
+
+				margin-top: 1cm !important;
+
+			}
+
+		}
+
+	}
+
+	.component--collapsibles [hidden] {
+
+		display: block !important;
+
+	}
+
+	.skip-to-content,
+	#cookie-banner,
+	nav,
+	.component--video,
+	.global-footer {
+
+		display: none !important;
+
+	}
+
+}

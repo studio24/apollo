@@ -24,7 +24,7 @@
 
     <?php // Font Face Observer script to check when web fonts are loaded before applying them via CSS ?>
     <?php // Refer to https://github.com/bramstein/fontfaceobserver ?>
-    <?php require_once( 'delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
+    <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
 
     <?php // Styles ?>
     <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
@@ -49,7 +49,7 @@
 	<div class="wrap">
         <?php // Start main ?>
 		<main class="l-stack l-center">
-			<h1>Sticky footer example</h1>
+			<h1>Example: Sticky footer</h1>
 			<div class="l-sidebar">
 				<div>
 					<div class="sidebar">
@@ -73,7 +73,7 @@
 
 
 
-<?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
+<?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
 
 </body>
 </html>

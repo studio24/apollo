@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #Hero
+\*------------------------------------*/
+
+.hero {
+
+	background-color: $black;
+	color: contrast($black);
+
+}
+
+.hero .l-center {
+
+	max-width: rem(1300);
+	padding-left: 10vw;
+	padding-right: 10vw;
+
+}

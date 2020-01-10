@@ -89,11 +89,11 @@
     #Base --- V2
 \*------------------------------------*/
 @import "sass/40-base/buttons";
-
 @import "sass/40-base/focus";
 @import "sass/40-base/fonts";
 @import "sass/40-base/forms";
 @import "sass/40-base/globals";
+@import "sass/40-base/images";
 @import "sass/40-base/links";
 @import "sass/40-base/lists";
 @import "sass/40-base/tables";
@@ -133,6 +133,9 @@
     #Components -- V2
 \*------------------------------------*/
 @import "sass/60-components/footer";
+@import "sass/60-components/header";
+@import "sass/60-components/hero";
+@import "sass/60-components/logo";
 @import "sass/60-components/main";
 
 
@@ -147,12 +150,10 @@
 @import "sass/07-components/callouts";
 @import "sass/07-components/collapsibles";
 @import "sass/07-components/cta";
-@import "sass/07-components/header";
 @import "sass/07-components/icons";
 @import "sass/07-components/images";
 @import "sass/07-components/island";
 @import "sass/07-components/labels";
-@import "sass/07-components/logo";
 @import "sass/07-components/media";
 @import "sass/07-components/metadata";
 @import "sass/07-components/navigation";

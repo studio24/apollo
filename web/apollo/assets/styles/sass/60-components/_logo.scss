@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #Logo
+\*------------------------------------*/
+
+.logo {
+
+	display: block;
+	height: rem(50);
+	position: relative;
+	width: rem(100);
+
+	svg {
+		box-sizing: content-box;
+		left: 0;
+		height: auto;
+		max-width: none;
+		position: absolute;
+		top: 0;
+	}
+
+}
