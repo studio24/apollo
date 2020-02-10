@@ -69,7 +69,7 @@
 	    <p class="u-center">Find out more...</p>
     </div>
 
-	<main class="l-stack l-center">
+	<main class="l-center">
 		<h2>What's going on?</h2>
 		<ul>
 			<li>We have used the <strong>cover layout</strong> to create a hero area at the top of the page.</li>

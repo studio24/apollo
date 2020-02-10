@@ -49,7 +49,7 @@
 	<div class="wrap">
 
 		<?php // Start main ?>
-	    <main class="l-stack l-center">
+	    <main class="l-center">
 	        <h1>Overview</h1>
 	        <p>So, let’s see about getting some basic styles down for the reboot of <em>Apollo</em>. I’m going to need some paragraphs with some reasonable-looking text inside of them to try and create a base natural layout, so that I can accurately assess how these <strong>core</strong> styles are working.</p>
 		    <p>My thinking here is drawn from the <span class="small-caps">Springer Nature Front End Playbook</span> approach. That is to say:</p>
@@ -72,7 +72,7 @@
 		    </div>
 		    <div class="l-sidebar">
 			    <div>
-				    <div class="not-sidebar l-stack">
+				    <div class="not-sidebar">
 					    <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
 					    <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
 				    </div>
@@ -201,7 +201,7 @@
 
 		    <div class="l-sidebar">
 			    <div>
-				    <div class="sidebar l-stack">
+				    <div class="sidebar">
 					    <h2>Forms</h2>
 					    <p>We do not use placeholder elements. If an example is needed, we add a div with the <code>field-description</code> class inside the <code>label</code> element. See the article <a href="https://adamsilver.io/articles/placeholders-are-problematic/">Placeholders are problematic</a> by Adam Silver for further details.</p>
 					    <p>For memorable dates that the user will already know, such as their date of birth, we use a series of simple text inputs.</p>
