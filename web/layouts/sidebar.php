@@ -41,15 +41,25 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <style>
         .l-box {
-            background: #ffdc00;
-        }
-        .ex1 {
             background:
                 linear-gradient(#7fdbff, #7fdbff) content-box,
                 linear-gradient(#b10dc9, #b10dc9) padding-box;
-            max-width: 600px;
-            padding-left: 1.7rem;
-            padding-right: 1.7rem;
+        }
+
+        .l-sidebar {
+            background: #ffdc00;
+        }
+
+        .ex1 .not-sidebar,
+        .ex1 .sidebar,
+        .ex3 .not-sidebar,
+        .ex3 .sidebar {
+            background:
+                linear-gradient(#7fdbff, #7fdbff) content-box;
+        }
+
+        .ex3 .not-sidebar {
+            order: 1;
         }
     </style>
 
@@ -62,30 +72,53 @@
 <div class="wrap">
     <?php // Start main ?>
     <main class="l-center">
-        <h1>Layout: Cluster</h1>
-        <p>The cluster layout is ideally suited for groups of elements that differ in length and are liable to wrap. Examples include buttons that appear together at the end of forms, as well as lists of tags, keywords, or other meta information.</p>
-        <p>The following example illustrates how the cluster layout works:</p>
-        <ul>
-            <li>A center layout is contained within a box layout (without a border or padding), purely to help with this example.</li>
-            <li>The cluster layout is contained within the center layout.</li>
-            <li>The cluster layout needs an inner container - in this example it's provided by a <code>ul</code>.</li>
-            <li>The cluster items - <code>li</code> in this example - sit within the inner container. Each item has a margin on all sides. Their parent - the inner container - has a negative margin of the same size as the cluster items. This creates the even gaps between cluster items.</li>
-        </ul>
-        <div class="l-box l-box--no-padding l-box--no-border">
-            <div class="l-center ex1">
-                <div class="l-cluster">
-                    <ul class="clean-list">
-                        <li><a href="#1" class="button button--primary">Item One</a></li>
-                        <li><a href="#2" class="button button--primary">Item Two</a></li>
-                        <li><a href="#3" class="button button--primary">Item Three</a></li>
-                        <li><a href="#4" class="button button--primary">Item Four</a></li>
-                        <li><a href="#5" class="button button--primary">Item Five</a></li>
-                        <li><a href="#6" class="button button--primary">Item Six</a></li>
-                        <li><a href="#7" class="button button--primary">Item Seven</a></li>
-                    </ul>
+        <h1>Layout: Sidebar</h1>
+        <p>The sidebar layout creates a container, inside of which a larger panel can sit next to a smaller (sidebar) panel.</p>
+        <p>The two panels stack vertically, until there is enough horizontal space for them to sit alongside each other. The point at which this change happens is determined by setting a <code>flex-basis</code> on the sidebar panel and a <code>min-width</code> on the larger panel.</p>
+
+        <div class="l-sidebar ex1">
+            <div>
+                <div class="not-sidebar">
+                    <h2>Larger content panel</h2>
+                    <p>Notice that there is no spacing between the content and its container. If we were to use padding to achieve this, it would cause the flexbox layout to break.</p>
+                </div>
+                <div class="sidebar">
+                    <h2>Smaller sidebar panel</h2>
+                    <p>Notice that there is no spacing between the content and its container. If we were to use padding to achieve this, it would cause the flexbox layout to break.</p>
                 </div>
             </div>
         </div>
+
+        <div class="l-sidebar ex2">
+            <div>
+                <div class="not-sidebar">
+                    <div class="l-box l-box--no-border">
+                        <h2>Box layout</h2>
+                        <p>This allows us to space the sidebar content away from the container edges.</p>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="l-box l-box--no-border">
+                        <h2>Box layout</h2>
+                        <p>This allows us to space the sidebar content away from the container edges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="l-sidebar ex3">
+            <div>
+                <div class="not-sidebar">
+                    <h2>Larger content panel</h2>
+                    <p>Something looks different here.</p>
+                </div>
+                <div class="sidebar">
+                    <h2>Smaller sidebar panel</h2>
+                    <p>Thanks to Flexbox, we can use the <code>order</code> property to specify whether the sidebar should sit visually on the left or the right without having to adjust the source order.</p>
+                </div>
+            </div>
+        </div>
+
     </main>
     <?php // End main ?>
 </div>
