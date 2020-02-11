@@ -64,7 +64,7 @@
         <div class="l-box">
 	        <p>This is an example of the default box layout. It uses the class <code>.l-box</code></p>
 	        <p>It has an even border and padding on all sides.</p>
-	        <p>Because its parent - <code>main</code> - is set to use Flexbox in the column direction, the box stretches full width.</p>
+	        <p>Because its parent - <code>main</code> - uses Flexbox in the column direction, the box stretches full width.</p>
         </div>
 	    <div class="l-box ex2">
 		    <p>To limit the width of a box to just its content, use <code>align-self: flex-start;</code></p>
