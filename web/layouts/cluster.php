@@ -47,7 +47,7 @@
             background:
                 linear-gradient(#7fdbff, #7fdbff) content-box,
                 linear-gradient(#b10dc9, #b10dc9) padding-box;
-            max-width: 25rem;
+            max-width: 37.75rem;
             padding-left: 1.7rem;
             padding-right: 1.7rem;
         }
@@ -62,18 +62,29 @@
 <div class="wrap">
     <?php // Start main ?>
     <main class="l-center">
-        <h1>Layout: Center</h1>
-        <p>The center layout is used to create a vertical stripe of content inside a given container. Apollo uses it on <code>main</code>.</p>
-        <p>The following example illustrates how the center layout works on a smaller scale, but the principle is the same:</p>
+        <h1>Layout: Cluster</h1>
+        <p>The cluster layout is ideally suited for groups of elements that differ in length and are liable to wrap. Examples include buttons that appear together at the end of forms, as well as lists of tags, keywords, or other meta information.</p>
+        <p>The following example illustrates how the cluster layout works:</p>
         <ul>
             <li>A center layout is contained within a box layout (without a border or padding), purely to help with this example.</li>
-            <li>Auto left and right margins are applied to the center layout, along with some left and right padding and a maximum width.</li>
-            <li>The padding maintains a space between the contents of the center layout and its parent container, even when that container is smaller than the maximum width set on the center layout.</li>
+            <li>The cluster layout is contained within the center layout.</li>
+            <li>The cluster layout needs an inner container - in this example it's provided by a <code>ul</code>.</li>
+            <li>The cluster items - <code>li</code> in this example - sit within the inner container. Each item has a margin on all sides. Their parent - the inner container - has a negative margin of the same size as the cluster items. This creates the even gaps between cluster items.</li>
         </ul>
         <div class="l-box l-box--no-padding l-box--no-border">
-           <div class="l-center ex1">
-               <p>Center in action</p>
-           </div>
+            <div class="l-center ex1">
+                <div class="l-cluster">
+                    <ul class="clean-list">
+                        <li><a href="#1" class="button button--primary">Item One</a></li>
+                        <li><a href="#2" class="button button--primary">Item Two</a></li>
+                        <li><a href="#3" class="button button--primary">Item Three</a></li>
+                        <li><a href="#4" class="button button--primary">Item Four</a></li>
+                        <li><a href="#5" class="button button--primary">Item Five</a></li>
+                        <li><a href="#6" class="button button--primary">Item Six</a></li>
+                        <li><a href="#7" class="button button--primary">Item Seven</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
     <?php // End main ?>
