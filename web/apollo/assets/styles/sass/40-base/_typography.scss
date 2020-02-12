@@ -67,31 +67,37 @@ can safely use the web fonts instead of the system fonts.
 /**
 Heading sizes are included via mixins as defined in /30-mixins/font-sizes
  */
-h1 {
+h1,
+.h1 {
 	@include text-4xl;
 }
 
 
-h2 {
+h2,
+.h2 {
 	@include text-3xl;
 }
 
 
-h3 {
+h3,
+.h3 {
 	@include text-2xl;
 }
 
 
-h4 {
+h4,
+.h4 {
 	@include text-1xl;
 }
 
 
-h5 {
+h5,
+.h5 {
 	@include text-l;
 }
 
 
-h6 {
+h6,
+.h6 {
 	@include text-m;
 }

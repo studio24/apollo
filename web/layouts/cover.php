@@ -39,6 +39,30 @@
     <meta property="og:title" content="Apollo"/>
     <?php // Replace `summary_large_image` with `summary` for a smaller Twitter card ?>
     <meta name="twitter:card" content="summary_large_image"/>
+    <style>
+	    .l-cover {
+            background:
+                linear-gradient(#ffdc00, #ffdc00) content-box,
+                linear-gradient(#b10dc9, #b10dc9) padding-box;
+        }
+
+	    .ex1 {
+		    background:
+			    linear-gradient(#7fdbff, #7fdbff) content-box,
+			    linear-gradient(#b10dc9, #b10dc9) padding-box;
+	    }
+
+        .l-center {
+            margin-bottom: auto;
+            margin-top: auto !important;
+        }
+
+	    .l-center.ex1 {
+		    max-width: 400px;
+		    padding-left: 1.7rem;
+		    padding-right: 1.7rem;
+	    }
+    </style>
 
 </head>
 
@@ -47,38 +71,34 @@
 <body>
 
 <div class="wrap">
+    <?php // Start main ?>
+    <main class="l-center">
+        <h1>Layout: Cover</h1>
+        <p>The cover layout uses Flexbox to vertically centre content, by having a column Flexbox context and a minimum height set. It also allows the addition of header and/or footer content to accompany the principal piece of content, without having to adapt the CSS.</p>
+        <p>The following examples illustrate how the cover layout works:</p>
+        <ul>
+	        <li>The principal item of content to be centered within the cover needs to have the class <code>.principal</code> applied to it. This gives it auto top and bottom margins.</li>
+	        <li>In the first example, the utility class <code>.u-center</code> is added to horizontally center the principal item.</li>
+	        <li>In the second example, a nested center layout provides the horizontal centering.</li>
+	        <li>The final example illustrates the addition of optional header and footer content.</li>
+        </ul>
+        <div class="l-cover">
+            <h2 class="u-center principal ex1">The principal content</h2>
+        </div>
 
-    <div class="l-cover hero">
-	    <div class="l-cluster global-header">
-		    <div>
-			    <a href="#1" class="logo">
-				    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 40"><path d="M30.32 12.25h3V26.7h-3zm4.68 9.5A5.25 5.25 0 1140.22 27 5.18 5.18 0 0135 21.75zm7.52 0a2.28 2.28 0 10-2.28 2.34 2.22 2.22 0 002.26-2.34z"/><path d="M57.31 16.8v9.41c0 3.32-2.6 4.73-5.23 4.73a5 5 0 01-4.69-2.4l2.53-1.46a2.27 2.27 0 002.26 1.25 2 2 0 002.24-2.12v-.91a3.53 3.53 0 01-2.89 1.28 5 5 0 010-10 3.53 3.53 0 012.89 1.28v-1zm-2.89 4.75a2.4 2.4 0 10-2.4 2.3 2.24 2.24 0 002.4-2.3zm4.58.2A5.25 5.25 0 1164.24 27 5.19 5.19 0 0159 21.75zm7.52 0a2.28 2.28 0 10-2.27 2.34 2.22 2.22 0 002.26-2.34zM15.45 9.65v-4H2.05v29.2h13.4V30.6a10.35 10.35 0 010-20.7zm0 0v20.7a10.35 10.35 0 000-20.7z"/><circle cx="73.52" cy="14.54" r="2.2"/></svg>
-			    </a>
-			    <nav class="l-cluster">
-				    <ul class="clean-list">
-					    <li><a href="#1">Nav item</a></li>
-					    <li><a href="#2">Nav item</a></li>
-					    <li><a href="#3">Nav item</a></li>
-					    <li><a href="#4">Nav item</a></li>
-					    <li><a href="#5">Nav item</a></li>
-				    </ul>
-			    </nav>
-		    </div>
+        <div class="l-cover">
+            <div class="l-center principal ex1">
+	            <h2 class="u-center principal ex1">The principal content</h2>
+            </div>
+        </div>
+
+	    <div class="l-cover">
+		    <p class="u-center ex1">We are proud to present...</p>
+		    <h2 class="u-center principal ex1">The principal content</h2>
+            <p class="u-center ex1">Find out more...</p>
 	    </div>
-        <h1 class="principal u-center">Example: Above the fold</h1>
-	    <p class="u-center">Find out more...</p>
-    </div>
-
-	<main class="l-center">
-		<h2>What's going on?</h2>
-		<ul>
-			<li>We have used the <strong>cover layout</strong> to create a hero area at the top of the page.</li>
-			<li>Nested inside the <strong>cover layout</strong> is a <strong>cluster layout</strong> for the global header. This uses <code>justify-content: space-between</code> to separate the logo and navigation.</li>
-			<li>Another <strong>cluster layout</strong> is nested inside the global header to create the main navigation.</li>
-			<li>The <code>H1</code> and &lsquo;footer&rsquo; portion of the hero are each centered using a utility class.</li>
-		</ul>
-	</main>
-
+    </main>
+    <?php // End main ?>
 </div>
 <div class="global-footer">
     Footer content goes here
