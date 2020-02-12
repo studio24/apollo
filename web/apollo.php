@@ -17,7 +17,7 @@
 
 <body>
 
-<?php require_once( 'dist/assets/svg/icons.svg' ); ?>
+<?php //require_once( 'dist/assets/svg/icons.svg' ); ?>
 
 
 <header class="island island--fullpage bg bg--primary" style="background-image: url(/dist/assets/images/apollo.png); background-repeat: no-repeat; background-position: 175% 42%;">

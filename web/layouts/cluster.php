@@ -69,7 +69,7 @@
             <li>A center layout is contained within a box layout (without a border or padding), purely to help with this example.</li>
             <li>The cluster layout is contained within the center layout.</li>
             <li>The cluster layout needs an inner container - in this example it's provided by a <code>ul</code>.</li>
-            <li>The cluster items - <code>li</code> in this example - sit within the inner container. Each item has a margin on all sides. Their parent - the inner container - has a negative margin of the same size as the cluster items. This creates the even gaps between cluster items.</li>
+            <li>The cluster items - <code>li</code> in this example - sit within the inner container. Each item has a margin on all sides. Their parent - the inner container - has a negative margin of the same size as the cluster items. This creates the even gaps between cluster items. The cluster layout uses <code>overflow: hidden;</code> to tidy up the edges.</li>
         </ul>
         <div class="l-box l-box--no-padding l-box--no-border">
             <div class="l-center ex1">
