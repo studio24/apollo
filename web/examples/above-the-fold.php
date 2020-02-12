@@ -72,10 +72,10 @@
 	<main class="l-center">
 		<h2>What's going on?</h2>
 		<ul>
-			<li>We have used the <strong>cover layout</strong> to create a hero area at the top of the page.</li>
-			<li>Nested inside the <strong>cover layout</strong> is a <strong>cluster layout</strong> for the global header. This uses <code>justify-content: space-between</code> to separate the logo and navigation.</li>
-			<li>Another <strong>cluster layout</strong> is nested inside the global header to create the main navigation.</li>
-			<li>The <code>H1</code> and &lsquo;footer&rsquo; portion of the hero are each centered using a utility class.</li>
+			<li>We have used the <a href="../layouts/cover.php">cover layout</a> to create a hero area at the top of the page.</li>
+			<li>Nested inside the cover layout is a <a href="../layouts/cluster.php">cluster layout</a> for the global header. This uses <code>justify-content: space-between</code> to separate the logo and navigation.</li>
+			<li>Another cluster layout is nested inside the global header to create the main navigation.</li>
+			<li>The <code>h1</code> and &lsquo;footer&rsquo; portion of the hero are each centered using a utility class.</li>
 		</ul>
 	</main>
 
