@@ -34,6 +34,6 @@ body {
 	display: grid; // Needed for sticky footer
 	grid-template-columns: 100%; // Needed for sticky footer
 	grid-template-rows: 1fr auto; // Needed for sticky footer
-	height: 100%; // Needed for sticky footer
+	min-height: 100%; // Needed for sticky footer
 	overflow-x: hidden;
 }
