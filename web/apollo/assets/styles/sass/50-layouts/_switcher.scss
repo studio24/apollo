@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    #Switcher layout primitive
+
+    Uses this to switch between vertical and horizontal layouts:
+    https://www.freecodecamp.org/news/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848/
+
+    Uses this to create the gutter effect:
+    https://css-tricks.com/css-grid-in-ie-faking-an-auto-placement-grid-with-gaps/
+
+    `.l-switcher` switches a Flexbox context between a horizontal and a
+    vertical layout at a given, CONTAINER-BASED breakpoint, rather than
+    using viewport media queries.
+
+    For example, if our breakpoint is 480px, the layout will switch to a
+    vertical configuration when the parent element is narrower than 600px.
+
+    The child elements in the horizontal configuration will be of equal
+	width.
+
+	N.B: For this to work in IE11, there must be no padding on the flex
+    items themselves. Instead, apply a margin and/or padding to nested
+    elements inside the flex items.
+
+    Nested elements can be given a max-width of 100% to prevent
+	their content from causing the flex items to grow.
+
+\*------------------------------------*/
+
+/**
+Wrapper for the layout.
+
+1. Part of the gutter configuration.
+ */
+.l-switcher {
+	display: block;
+	overflow: hidden; /* 1 */
+}
+
+/**
+The flex container.
+
+1. Part of the gutter configuration.
+ */
+.l-switcher > * {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 -#{$size} -#{$size} 0; /* 1 */
+}
+
+/**
+The flex children.
+
+1. Part of the gutter configuration.
+
+2. Determines the item width in the single column, vertical configuration
+
+3. Determines how many items will be in a row in the horizontal configuration
+
+4. The 600 value matches the desired breakpoint value, and is the width
+of the columns' parent container at the point when the switch will happen.
+This calculation will create a value that's either bigger than the max-width or
+smaller than the min-width, so that either of these properties is applied instead.
+ */
+.l-switcher > * > * {
+	background-clip: padding-box; /* 1 */
+	border: 0 solid transparent; /* 1 */
+	border-width: 0 #{$size} #{$size} 0; /* 1 */
+	max-width: 100%; /* 2 */
+	min-width: 50%; /* 3 */
+	width: calc(600px * 600 - 100% * 600); /* 4 */
+}

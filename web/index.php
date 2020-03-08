@@ -337,6 +337,15 @@
 			    </div>
 		    </div>
 
+		    <div class="l-switcher">
+			    <div>
+				    <div class="l-box l-box--no-border bg bg--subtle">Stuff</div>
+				    <div class="l-box l-box--no-border bg bg--subtle">Stuff</div>
+				    <div class="l-box l-box--no-border bg bg--subtle">Stuff</div>
+				    <div class="l-box l-box--no-border bg bg--subtle">Stuff</div>
+			    </div>
+		    </div>
+
 		    <figure>
 			    <div class="l-frame l-frame--16-9">
 				    <img src="/dist/assets/images/sherlock.jpg" alt="Sherlock Holmes and Dr Watson having a discussion in a train carriage.">
