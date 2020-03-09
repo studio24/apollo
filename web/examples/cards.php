@@ -40,6 +40,12 @@
     <?php // Replace `summary_large_image` with `summary` for a smaller Twitter card ?>
     <meta name="twitter:card" content="summary_large_image"/>
 
+	<style>
+		.l-switcher > * > * {
+			min-width: 25%;
+		}
+	</style>
+
 
 
 </head>
@@ -52,14 +58,15 @@
     <?php // Start main ?>
     <main class="l-center">
         <h1>Example: Cards</h1>
+	    <h2>Default layout</h2>
         <div class="l-switcher">
             <ul class="card-list">
 	            <li>
 		            <article class="card">
 		                <div class="l-box l-box--no-border card__text">
-			                <h2><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-1">Unique card title 1</a></h2>
+			                <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-1">Unique card title 1</a></h3>
 		                    <p>Here is all the descriptive teaser text for my card.</p>
-			                <span class="button button--primary" aria-hidden="true" id="unique-card-title-1">Read more</span>
+			                <span class="button button--primary card__cta" aria-hidden="true" id="unique-card-title-1">Read more</span>
 		                </div>
 			            <div class="l-frame l-frame--16-9">
 				            <img src="/dist/assets/images/sherlock.jpg" alt>
@@ -69,9 +76,9 @@
 	            <li>
 		            <article class="card">
 			            <div class="l-box l-box--no-border card__text">
-				            <h2><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-2">Unique card title 2</a></h2>
+				            <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-2">Unique card title 2</a></h3>
 				            <p>Here is all the descriptive teaser text for my card. But this one has significantly more text content inside it.</p>
-				            <span class="button button--primary" aria-hidden="true" id="unique-card-title-2">Read more</span>
+				            <span class="button button--primary card__cta" aria-hidden="true" id="unique-card-title-2">Read more</span>
 			            </div>
 			            <div class="l-frame l-frame--16-9">
 				            <img src="/dist/assets/images/sherlock.jpg" alt>
@@ -81,9 +88,9 @@
 	            <li>
 		            <article class="card">
 			            <div class="l-box l-box--no-border card__text">
-				            <h2><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-3">Unique card title 3</a></h2>
+				            <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-3">Unique card title 3 is a bit longer</a></h3>
 				            <p>Here is all the descriptive teaser text for my card.</p>
-				            <span class="button button--primary" aria-hidden="true" id="unique-card-title-3">Read more</span>
+				            <span class="button button--primary card__cta" aria-hidden="true" id="unique-card-title-3">Read more</span>
 			            </div>
 			            <div class="l-frame l-frame--16-9">
 				            <img src="/dist/assets/images/sherlock.jpg" alt>
@@ -93,9 +100,9 @@
 	            <li>
 		            <article class="card">
 			            <div class="l-box l-box--no-border card__text">
-				            <h2><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-4">Unique card title 4</a></h2>
+				            <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-4">Unique card title 4</a></h3>
 				            <p>Here is all the descriptive teaser text for my card.</p>
-				            <span class="button button--primary" aria-hidden="true" id="unique-card-title-4">Read more</span>
+				            <span class="button button--primary card__cta" aria-hidden="true" id="unique-card-title-4">Read more</span>
 			            </div>
 			            <div class="l-frame l-frame--16-9">
 				            <img src="/dist/assets/images/sherlock.jpg" alt>
@@ -104,6 +111,73 @@
 	            </li>
             </ul>
         </div>
+	    <h2>With additional links, e.g. tags</h2>
+	    <div class="l-switcher">
+		    <ul class="clean-list card-list">
+			    <li>
+				    <article class="card">
+					    <div class="l-box l-box--no-border card__text">
+						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="another-card-title-1">Another card title 1</a></h3>
+						    <div class="l-cluster">
+							    <h4 class="visuallyhidden">Categories</h4>
+							    <ul class="clean-list tag-list">
+								    <li>
+									    <a href="https://www.studio24.net/work-sector/arts-and-culture/" class="tag">Arts and culture</a>
+								    </li>
+								    <li>
+									    <a href="https://www.studio24.net/work-sector/education/" class="tag">Education</a>
+								    </li>
+								    <li>
+									    <a href="https://www.studio24.net/work-sector/major-projects-and-engineering/" class="tag">Major projects and engineering</a>
+								    </li>
+							    </ul>
+						    </div>
+						    <p>Here is all the descriptive teaser text for my card.</p>
+						    <span class="button button--primary card__cta" aria-hidden="true" id="another-card-title-1">Read more</span>
+					    </div>
+					    <div class="l-frame l-frame--16-9">
+						    <img src="/dist/assets/images/sherlock.jpg" alt>
+					    </div>
+				    </article>
+			    </li>
+			    <li>
+				    <article class="card">
+					    <div class="l-box l-box--no-border card__text">
+						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="another-card-title-2">Another card title 2</a></h3>
+						    <p>Here is all the descriptive teaser text for my card.</p>
+						    <span class="button button--primary card__cta" aria-hidden="true" id="another-card-title-2">Read more</span>
+					    </div>
+					    <div class="l-frame l-frame--16-9">
+						    <img src="/dist/assets/images/sherlock.jpg" alt>
+					    </div>
+				    </article>
+			    </li>
+			    <li>
+				    <article class="card">
+					    <div class="l-box l-box--no-border card__text">
+						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="another-card-title-3">Another card title 3</a></h3>
+						    <p>Here is all the descriptive teaser text for my card.</p>
+						    <span class="button button--primary card__cta" aria-hidden="true" id="another-card-title-3">Read more</span>
+					    </div>
+					    <div class="l-frame l-frame--16-9">
+						    <img src="/dist/assets/images/sherlock.jpg" alt>
+					    </div>
+				    </article>
+			    </li>
+			    <li>
+				    <article class="card">
+					    <div class="l-box l-box--no-border card__text">
+						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="another-card-title-4">Another card title 4</a></h3>
+						    <p>Here is all the descriptive teaser text for my card.</p>
+						    <span class="button button--primary card__cta" aria-hidden="true" id="another-card-title-4">Read more</span>
+					    </div>
+					    <div class="l-frame l-frame--16-9">
+						    <img src="/dist/assets/images/sherlock.jpg" alt>
+					    </div>
+				    </article>
+			    </li>
+		    </ul>
+	    </div>
     </main>
     <?php // End main ?>
 </div>

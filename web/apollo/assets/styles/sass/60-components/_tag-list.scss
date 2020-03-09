@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #Tag list
+\*------------------------------------*/
+
+.tag-list {
+
+	margin: calc(#{$size-minus2} / 2 * -1);
+
+	li {
+		margin: calc(#{$size-minus2} / 2);
+	}
+
+}
+
+.tag {
+
+	@include text-s;
+
+	background-color: $aqua;
+	display: block;
+	padding: $size-minus3;
+
+}
+
+a.tag {
+	position: relative;
+	text-decoration: none;
+	z-index: 10;
+}

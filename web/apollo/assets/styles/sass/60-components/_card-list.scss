@@ -7,21 +7,24 @@
 	background-color: $subtle-color;
 	position: relative;
 
-	&:hover {
-		background-color: darken($subtle-color, 5%);
-	}
-
 }
 
 .card {
+
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 
-	 .card__link{
+	.card__link {
 
 		color: $black;
+		outline: none;
+
 		text-decoration: none;
+
+		&:focus {
+			text-decoration: underline;
+		}
 
 		&::after {
 			bottom: 0;
@@ -30,22 +33,11 @@
 			position: absolute;
 			right: 0;
 			top: 0;
-			z-index: 10;
-		}
-
-		&:focus {
-			text-decoration: underline;
+			z-index: 5;
 		}
 
 	}
 
-	&:focus-within {
-		background-color: darken($subtle-color, 5%);
-
-		a:focus {
-			text-decoration: none;
-		}
-	}
 }
 
 .card__text {
@@ -55,12 +47,40 @@
 	flex-grow: 1;
 	order: 1;
 
-	:nth-last-child(2) {
-		margin-bottom: 1rem; // Matches the measure used for the stack mixin
+	.card__heading {
+		@extend .h4;
 	}
 
-	:last-child {
+	/**
+	Look for focus within the card header and use the general sibling combinator to
+	delegate the focus style to the call-to-action button.
+	 */
+	.card__heading:focus-within ~ .card__cta {
+		box-shadow: 0 0 0 $size-minus3;
+		outline: solid $size-minus3 transparent;
+	}
+
+	/**
+	Minimum spacing between the call-to-action button and the preceding element.
+	Matches the measure used for the stack mixin on `.card`
+	 */
+	> :nth-last-child(2) {
+		margin-bottom: 1rem;
+	}
+
+	/**
+	Pushes all call-to-action buttons to the bottom of the card.
+	 */
+	> :last-child {
 		margin-top: auto;
 	}
 
+}
+
+/**
+This needs to sit here to cascade correctly. If focus-within is supported by the browser,
+remove the default focus style from `.card__link`.
+ */
+.card:focus-within .card__link:focus {
+	text-decoration: none;
 }
