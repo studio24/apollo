@@ -38,5 +38,5 @@ Font grows 0.25px for every 100px of viewport width - see https://css-tricks.com
 
 
 @mixin text-s {
-	font-size: calc(0.85rem + 0.25vw);
+	font-size: calc(0.85rem + 0.125vw);
 }
