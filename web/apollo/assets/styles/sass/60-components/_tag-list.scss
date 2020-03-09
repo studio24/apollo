@@ -4,10 +4,10 @@
 
 .tag-list {
 
-	margin: calc(#{$size-minus2} / 2 * -1);
+	margin: calc(#{$size-minus1} / 2 * -1);
 
 	li {
-		margin: calc(#{$size-minus2} / 2);
+		margin: calc(#{$size-minus1} / 2);
 	}
 
 }
@@ -18,7 +18,8 @@
 
 	background-color: $aqua;
 	display: block;
-	padding: $size-minus3;
+	font-size: rem(14);
+	padding: $size-minus2;
 
 }
 

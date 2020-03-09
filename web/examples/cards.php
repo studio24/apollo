@@ -128,7 +128,7 @@
 									    <a href="https://www.studio24.net/work-sector/education/" class="tag">Education</a>
 								    </li>
 								    <li>
-									    <a href="https://www.studio24.net/work-sector/major-projects-and-engineering/" class="tag">Major projects and engineering</a>
+									    <a href="https://www.studio24.net/work-sector/charity-and-not-for-profit/" class="tag">Charity and not-for-profit</a>
 								    </li>
 							    </ul>
 						    </div>
