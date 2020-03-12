@@ -36,4 +36,7 @@ body {
 	grid-template-rows: 1fr auto; // Needed for sticky footer
 	min-height: 100%; // Needed for sticky footer
 	overflow-x: hidden;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
