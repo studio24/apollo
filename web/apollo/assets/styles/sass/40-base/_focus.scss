@@ -4,9 +4,7 @@
 
 :focus {
 	outline: $size-minus3 solid $focus-color;
-	outline-offset: $size-minus4;
-	transform: translateZ(0);
-	z-index: z("top");
+	outline-offset: -$size-minus3;
 }
 
 /**

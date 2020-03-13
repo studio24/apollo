@@ -56,8 +56,8 @@
 	delegate the focus style to the call-to-action button.
 	 */
 	.card__heading:focus-within ~ .card__cta {
-		box-shadow: 0 0 0 $size-minus3;
-		outline: solid $size-minus3 transparent;
+		outline: $size-minus3 solid $focus-color;
+		outline-offset: -$size-minus3;
 	}
 
 	/**

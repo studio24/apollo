@@ -16,6 +16,7 @@ a:not([class]) {
 	border: 0;
 	color: $link-color;
 	cursor: pointer;
+	padding: $size-minus3;
 	text-decoration: underline; /* 1 */
 	text-decoration-skip-ink: auto;
 
