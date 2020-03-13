@@ -1,55 +1,64 @@
 /*------------------------------------*\
-    #Card list
+    #Cards
 \*------------------------------------*/
-
-.card-list li {
-
-	background-color: $subtle-color;
-	position: relative;
-
-}
 
 .card {
 
+	background-color: $subtle-color;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	position: relative;
 
-	.card__link {
+	/**
+	Do not include the `hover` and `focus-within` styles in the same block - otherwise
+	the hover style will be lost in browsers that don't support focus-within
+	 */
 
-		color: $black;
-		outline: none;
+	&:hover {
+		background-color: darken($subtle-color, 10%);
+	}
 
-		text-decoration: none;
-
-		&:focus {
-			text-decoration: underline;
-		}
-
-		&::after {
-			bottom: 0;
-			content: '';
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			z-index: 5;
-		}
-
+	&:focus-within {
+		background-color: darken($subtle-color, 10%);
 	}
 
 }
 
 .card__text {
-
 	@include stack(1rem);
 
 	flex-grow: 1;
 	order: 1;
+}
 
-	.card__heading {
-		@extend .h4;
+.card__heading {
+	@extend .h4;
+}
+
+.card__link {
+
+	color: $black;
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+		text-decoration: underline; // For browsers not supporting `focus-within`
 	}
+
+	&::after {
+		bottom: 0;
+		content: '';
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 5;
+	}
+
+}
+
+.card--cta .card__text {
 
 	/**
 	Look for focus within the card header and use the general sibling combinator to
@@ -71,7 +80,7 @@
 	/**
 	Pushes all call-to-action buttons to the bottom of the card.
 	 */
-	> :last-child {
+	.card__cta {
 		margin-top: auto;
 	}
 

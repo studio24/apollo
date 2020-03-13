@@ -246,8 +246,7 @@ input[type="submit"].button {
 
 // For disabled buttons
 .button[disabled],
-.button.is-disabled,
-span.button.button {
+.button.is-disabled {
 	background-color: luma(80);
 	box-shadow: none;
 	color: rgba(contrast(luma(80)), 0.54);
