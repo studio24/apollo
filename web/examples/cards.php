@@ -75,7 +75,7 @@
 				    <ul>
 					    <li>We want the entire card to act as a link:
 						    <ul>
-							    <li>Avoid wrapping the entire card within a link. This can result in the entire contents of the card being read out to screen reader users.</li>
+							    <li>Avoid wrapping the card in a link. This can result in the entire contents of the card being read out to screen reader users.</li>
 							    <li>Avoid wrapping the image in a link and repeating that link elsewhere within the card. This results in unnecessary tab stops and duplicated links.</li>
 							    <li>It makes sense to use the heading text as the link for our card. It is unique and descriptive. Add the link inside the heading.</li>
 							    <li>To make the link span the entire card, we apply <code>position: relative;</code> to the card and <code>position: absolute;</code> to the link's <code>::after</code> pseudo element.</li>
