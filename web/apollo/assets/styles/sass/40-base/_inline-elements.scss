@@ -27,3 +27,11 @@ strong,
 .strong {
 	font-weight: $emphasis-weight;
 }
+
+
+
+code {
+	background-color: $navy;
+	color: $green;
+	padding: $size-minus3;
+}

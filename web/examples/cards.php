@@ -86,14 +86,14 @@
 			    </div>
 			    <div class="sidebar">
 				    <article class="card">
-						    <div class="l-box l-box--no-border card__text">
-							    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net">My card title</a></h3>
-							    <p>Here is all the descriptive teaser text for my card.</p>
-						    </div>
-						    <div class="l-frame l-frame--16-9">
-							    <img src="/dist/assets/images/sherlock.jpg" alt>
-						    </div>
-					    </article>
+					    <div class="l-box l-box--no-border card__text">
+						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net">My card title</a></h3>
+						    <p>Here is all the descriptive teaser text for my card.</p>
+					    </div>
+					    <div class="l-frame l-frame--16-9">
+						    <img src="/dist/assets/images/sherlock.jpg" alt>
+					    </div>
+				    </article>
 			    </div>
 		    </div>
 	    </div>
@@ -187,7 +187,7 @@
 				    </ul>
 			    </div>
 			    <div class="sidebar">
-				    <article class="card">
+				    <article class="card card--cta">
 					    <div class="l-box l-box--no-border card__text">
 						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="another-card-title-1">Another card title 1</a></h3>
 						    <div class="l-cluster">
