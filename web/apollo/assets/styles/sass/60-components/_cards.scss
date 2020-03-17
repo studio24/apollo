@@ -86,6 +86,35 @@
 
 }
 
+.card--horizontal {
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: auto;
+}
+
+.card--horizontal .card__image {
+	flex-basis: 50%;
+	flex-grow: 1;
+	min-width: rem(300);
+}
+
+.card--horizontal .card__text {
+	flex-basis: 0;
+	flex-grow: 999;
+	justify-content: center;
+	min-width: calc(50%);
+}
+
+.card--horizontal .card__text__inner {
+
+	@include stack(1rem);
+
+	> :nth-last-child(2) {
+		margin-bottom: 1rem;
+	}
+
+}
+
 /**
 This needs to sit here to cascade correctly. If focus-within is supported by the browser,
 remove the default focus style from `.card__link`.

@@ -215,6 +215,22 @@
 		    </div>
 	    </div>
 
+	    <h2>Horizontal card</h2>
+	    <p>Horizontal cards use a slightly modified structure, with an inner container added to the text area to centre it vertically. They use a similar mechanism to the <a href="../layouts/sidebar.php">sidebar layout</a>, to switch from vertical to horizontal alignment without a media query.
+	    </p>
+	    <article class="card card--horizontal card--cta">
+		    <div class="l-box l-box--no-border card__text">
+			    <div class="card__text__inner">
+			        <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-4">Unique card title 4</a></h3>
+			        <p>Here is all the descriptive teaser text for my card.</p>
+			        <span class="button button--primary card__cta" aria-hidden="true" id="unique-card-title-4">Read more</span>
+			    </div>
+		    </div>
+		    <div class="l-frame l-frame--16-9 card__image">
+			    <img src="/dist/assets/images/sherlock.jpg" alt>
+		    </div>
+	    </article>
+
     </main>
     <?php // End main ?>
 </div>
