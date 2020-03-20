@@ -1,5 +1,7 @@
 /*------------------------------------*\
     #Tables
+
+    1. Allow text-direction to change with `ltr`
 \*------------------------------------*/
 
 table {
@@ -8,19 +10,20 @@ table {
     width: 100%;
 }
 
-/**
-1. Allow text-direction to change with `ltr`
- */
 th {
     border: $size-minus4 solid;
     padding: 0.75rem;
     text-align: start; /* 1 */
 }
 
-
 td {
     border: $size-minus4 solid;
     padding: 0.75rem;
+}
+
+table caption {
+    padding-bottom: 1rem;
+    text-align: start; /* 1 */
 }
 
 /**
@@ -33,12 +36,36 @@ See https://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
 .table-wrap {
     background-attachment: local, local, scroll, scroll;
     background-color: inherit;
-    background-image: linear-gradient(90deg, $white, rgba(255, 255, 255, 0)),
-    linear-gradient(-90deg, $white, rgba(255, 255, 255, 0)),
-    linear-gradient(90deg, $silver, rgba(195, 195, 197, 0)),
-    linear-gradient(-90deg, $silver, rgba(195, 195, 197, 0));
+    background-image:
+            linear-gradient(90deg, $white, rgba(255, 255, 255, 0)),
+            linear-gradient(270deg, $white, rgba(255, 255, 255, 0)),
+            linear-gradient(90deg, $silver, rgba(195, 195, 197, 0)),
+            linear-gradient(270deg, $silver, rgba(195, 195, 197, 0));
     background-position: 0 0, 100% 0, 0 0, 100% 0;
     background-repeat: no-repeat;
-    background-size: 4em 100%, 4em 100%, 1em 100%, 1em 100%;
+    background-size: 4em 100%, 4em 100%, 2em 100%, 2em 100%;
     overflow-x: auto;
+}
+
+/**
+ Sticky header: an enhancement for tables without any horizontal overflow
+ */
+.js-sticky th {
+    background-clip: padding-box; // Stops border disappearing if <th> is sticky
+    background-color: $white;
+    position: sticky;
+    top: 0;
+
+    /**
+     Adds a bottom border, helpful when scrolling a table with a sticky header
+     */
+    &::after {
+        background-color: $black;
+        bottom: 0;
+        content: '';
+        height: $size-minus4 / 2;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
 }

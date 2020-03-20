@@ -49,7 +49,7 @@
 	<div class="wrap">
         <?php // Start main ?>
 		<main class="l-center">
-			<h1>Example: Sticky footer</h1>
+			<h1>Sticky footer</h1>
 			<div class="l-sidebar">
 				<div>
 					<div class="sidebar">

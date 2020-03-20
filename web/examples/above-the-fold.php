@@ -65,7 +65,7 @@
 			    </nav>
 		    </div>
 	    </div>
-        <h1 class="principal u-center">Example: Above the fold</h1>
+        <h1 class="principal u-center">Above the fold</h1>
 	    <p class="u-center">Find out more...</p>
     </div>
 

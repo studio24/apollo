@@ -62,7 +62,7 @@
 <div class="wrap">
     <?php // Start main ?>
     <main class="l-center">
-        <h1>Example: Cards</h1>
+        <h1>Cards</h1>
 	    <h2>Basic card</h2>
 	    <ul>
 		    <li>The basic card consists of an image area (using the <a href="../layouts/frame.php">frame layout</a>), and a content area (using the <a href="../layouts/box.php">box layout</a>). If the image is purely decorative, an empty <code>alt</code> attribute should be provided.</li>
