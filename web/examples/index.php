@@ -55,6 +55,7 @@
             <li><a href="above-the-fold.php">Above the fold content</a></li>
             <li><a href="cards.php">Cards</a></li>
             <li><a href="tables.php">Data tables</a></li>
+            <li><a href="forms.php">Forms</a></li>
             <li><a href="sticky-footer.php">Sticky footer</a></li>
         </ul>
     </main>

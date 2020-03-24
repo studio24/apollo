@@ -25,7 +25,6 @@
 /*------------------------------------*\
     #Settings
 \*------------------------------------*/
-
 @import "sass/settings";
 
 
@@ -118,17 +117,6 @@
 
 
 
-
-/*------------------------------------*\
-    #Plugins
-
-    Add third-party plugins here.
-\*------------------------------------*/
-@import "sass/06-third-party-plugins/pikaday";
-
-
-
-
 /*------------------------------------*\
     #Components -- V2
 \*------------------------------------*/
@@ -139,7 +127,6 @@
 @import "sass/60-components/logo";
 @import "sass/60-components/main";
 @import "sass/60-components/tag-list";
-
 
 
 
@@ -178,6 +165,16 @@
 
 
 /*------------------------------------*\
+    #Plugins -- V2
+
+    Add third-party plugins here.
+\*------------------------------------*/
+@import "sass/70-third-party-plugins/pikaday";
+@import "sass/70-third-party-plugins/accessible-autocomplete";
+
+
+
+/*------------------------------------*\
     #Templates
 
     Things that affect templates should go here
@@ -197,10 +194,13 @@
 @import "sass/09-utilities/wireframes";
 
 
+
 /*------------------------------------*\
     #Utilities --- V2
 \*------------------------------------*/
-@import "sass/70-utilities/layout";
+@import "sass/80-utilities/layout";
+
+
 
 /*------------------------------------*\
     #Legacy
