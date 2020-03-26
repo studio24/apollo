@@ -50,17 +50,19 @@
 
     <main class="l-center">
         <h1>Forms</h1>
-	    <p>The examples on this page show how we manage forms and their fields. The key top-level points are:</p>
+	    <p>The examples on this page show how we manage forms and their fields. Recommendations are based on this <a href="https://adamsilver.io/articles/form-design-from-zero-to-hero-all-in-one-blog-post/">excellent blog post</a> by Adam Silver.</p>
 	    <ul>
-		    <li><a href="https://adamsilver.io/articles/always-use-a-label/">Every input needs a label</a>. Put labels above the input.</li>
-		    <li>With the exception of <code>&lt;input type="date"&gt;</code>, do not use the <code>placeholder</code> attribute on <code>&lt;input&gt;</code> fields. See <a href="https://adamsilver.io/articles/placeholders-are-problematic/">Placeholders are problematic</a> by Adam Silver for further details.</li>
+		    <li>Every input needs a label. Put labels above the input.</li>
+		    <li>Do not use the <code>placeholder</code> attribute on <code>&lt;input&gt;</code> fields.</li>
 		    <li>If hint text is needed, add a <code>&lt;div class="field-description&gt;</code> inside the <code>&lt;label&gt;</code>. Add hint text when users are more likely to make a mistake, like when having to satisfy a complex set of password rules. Error messages should be a last resort.</li>
 		    <li>Make form fields look like form fields: apply a border and make sure they are empty to begin with. A height of 44px or more makes them easy to tap on touch screen devices.</li>
-		    <li>Make sure any <code>&lt;button&gt;</code> looks like a button. Align them to the left edge of the last input where users naturally look for them.</li>
-		    <li>A note about <code>&lt;select&gt;</code>: <a href="https://www.youtube.com/watch?v=CUkMCQR4TpY">select boxes should be a last resort</a> as they’re really hard to use. Try radio buttons instead. Or use an autocomplete, if there’s a long list of options.</li>
+		    <li>Make sure any <code>&lt;button&gt;</code> looks like a button. Align them to the left edge of the last input where users naturally look for them. Use a verb for button text because the user is doing something, and relate it to what they are doing - avoid generic &lsquo;Submit&rsquo; buttons.</li>
+		    <li><code>&lt;select&gt;</code> should be a last resort as they’re really hard to use. Try radio buttons instead. Or use an autocomplete, if there’s a long list of options.</li>
+		    <li>If you have to use a <code>&lt;select&gt;</code>, don't submit a form when its value changes. Select boxes that submit the form automatically when the user selects an option cause problems for keyboard and screen reader users.</li>
+		    <li>We use <a href="http://parsleyjs.org/">Parsley</a>, a JavaScript library, to handle client-side form validation. Using Parsley, we also add the interactive parts and the ARIA attributes to make form completion as easy as possible for people.</li>
 	    </ul>
 
-	    <h2>Text fields, emails and passwords</h2>
+	    <h2>Text, emails and passwords</h2>
 	    <div class="l-sidebar">
 		    <div>
 			    <div class="sidebar">
@@ -69,31 +71,40 @@
 			    </div>
 			    <div class="not-sidebar">
 				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
-					    <div class="field-group">
+					    <div class="field">
 						    <label for="name" class="field-label">Name <small>(Required)</small>
-							    <div class="field-description">E.g. Jane Smith</div>
+							    <span class="field-description">E.g. Jane Smith</span>
 						    </label>
 						    <input type="text" id="name" name="name" required autocomplete="name" class="field-input field-input--text" data-parsley-error-message="Please complete this field with your name." aria-invalid="false" value>
 					    </div>
-					    <div class="field-group">
+					    <div class="field">
 						    <label for="email" class="field-label">Email <small>(Required)</small>
-							    <div class="field-description">E.g. jane.smith@example.co.uk<br/>
+							    <span class="field-description">E.g. jane.smith@example.co.uk<br/>
 								    We&rsquo;ll only contact you if there&rsquo;s something wrong with your order.
-							    </div>
+							    </span>
 						    </label>
 						    <input type="email" id="email" name="email" required autocomplete="email" autocapitalize="none" autocorrect="off" spellcheck="false" class="field-input field-input--text" data-parsley-error-message="Please complete this field with a valid email address." aria-invalid="false" value>
 					    </div>
-					    <div class="field-group">
+					    <div class="field">
 						    <label for="password" class="field-label">Password <small>(Required)</small>
-							    <div class="field-description">Remember that your password must meet the following criteria:
+							    <span class="field-description">Remember that your password must meet the following criteria:
 								    <ul>
 									    <li>At least eight (8) characters long</li>
 									    <li>Contain both uppercase and lowercase letters</li>
 									    <li>Contain at least one (1) number</li>
 								    </ul>
-							    </div>
+							    </span>
 						    </label>
 						    <input type="password" id="password" name="password" required autocapitalize="none" autocorrect="off" spellcheck="false" class="field-input field-input--text" data-parsley-error-message="Please complete this field with a valid password." value>
+					    </div>
+					    <div class="field">
+						    <label for="message" class="field-label">Your message
+							    <span class="field-description">Please explain the problem you are having, we&rsquo;ll come up with the solution</span>
+						    </label>
+						    <textarea id="message" name="message" class="field-input input--textarea" aria-invalid="false"></textarea>
+					    </div>
+					    <div class="field">
+						    <button class="button button--primary" type="submit">Continue</button>
 					    </div>
 				    </form>
 			    </div>
@@ -105,13 +116,13 @@
 		    <div>
 			    <div class="sidebar">
 				    <p>For memorable dates that the user will already know, such as their date of birth, we use a series of simple text inputs.</p>
-				    <p>We only use <code>&lt;input type="date"&gt;</code> when users need to find a date in relation to another, or if they need to know the day, week or month that the date relates to. We use the <a href="http://dbushell.github.io/Pikaday/">Pikaday</a> JavaScript plugin to enhance picking a date from a calendar.</p>
+				    <p>We use a text field and <a href="http://dbushell.github.io/Pikaday/">Pikaday</a> to allow picking a date from a calendar.</p>
 			    </div>
 			    <div class="not-sidebar">
 				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
-					    <div class="field-group">
+					    <div class="field">
 						    <legend>Date of birth <small>(Required)</small></legend>
-						    <div class="field-description">DD MM YYYY</div>
+						    <span class="field-description">DD MM YYYY</span>
 						    <div class="memorable-date">
 							    <label for="day" class="field-label">Day</label>
 							    <input type="text" id="day" name="day" required pattern="[0-9]*" min="0" max="31" class="field-input memorable-date__day" data-parsley-error-message="Please enter the day you were born as a number." aria-invalid="false" value>
@@ -125,9 +136,37 @@
 							    <input type="text" id="year" name="year" required pattern="[0-9]*" min="1900" max="2050" class="field-input memorable-date__year" data-parsley-error-message="Please enter the year you were born." aria-invalid="false" value>
 						    </div>
 					    </div>
-					    <div class="field-group">
+					    <div class="field">
 						    <label for="arrival_date" class="field-label">Date of arrival <small>(Required)</small></label>
-						    <input type="date" id="arrival_date" name="arrival_date" required placeholder="DD/MM/YYYY" class="field-input field-input--date js-pikaday-arrival" data-parsley-error-message="Please enter a valid arrival date." aria-invalid="false" value>
+						    <input type="text" id="arrival_date" name="arrival_date" required placeholder="DD/MM/YYYY" class="field-input field-input--date js-pikaday-arrival" data-parsley-error-message="Please enter a valid arrival date." aria-invalid="false" value>
+					    </div>
+				    </form>
+			    </div>
+		    </div>
+	    </div>
+
+	    <h2>Numbers</h2>
+	    <div class="l-sidebar">
+		    <div>
+			    <div class="sidebar">
+				    <p>In most instances, it's better to use <code>&lt;input type="text" pattern="[0-9]*&gt;</code> rather than <code>&lt;input type="number"&gt;</code> when dealing with numbers. Adam Silver has written about <a href="https://adamsilver.io/articles/form-design-when-to-use-the-number-input/">when to use the number input</a>.</p>
+				    <p>Including the <code>&lt;autocomplete&gt;</code> attribute can help users fill out payment details more quickly. Older browsers make use of the <code>&lt;name&gt;</code> attribute to achieve the same thing. Here is a list of <a href="https://www.smashingmagazine.com/2017/03/improve-billing-form-ux/">payment autofill attributes</a>.</p>
+			    </div>
+			    <div class="not-sidebar">
+				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+					    <div class="field">
+							<label class="field-label" for="cardnumber">Card number <small>(Required)</small>
+								<span class="field-description">The long number on the front of your card</span>
+							</label>
+						    <input type="text" id="cardnumber" name="cardnumber" required pattern="[0-9]*" autocomplete="cc-number" class="field-input field-input--text" data-parsley-error-message="Please enter your payment card number." aria-invalid="false" value>
+					    </div>
+					    <div class="field">
+						    <label class="field-label" for="phone_number">Phone number</label>
+						    <input type="tel" id="phone_number" name="phone_number" value>
+					    </div>
+					    <div class="field">
+						    <label class="field-label" for="rooms" id="qty-rooms">How many rooms do you require?</label>
+						    <input type="number" id="rooms" name="rooms" min="0" max="9" step="1" class="field-input field-input--number" value="0">
 					    </div>
 				    </form>
 			    </div>
@@ -142,7 +181,7 @@
 			    </div>
 			    <div class="not-sidebar">
 				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
-					    <div class="field-group">
+					    <div class="field">
 						    <label for="destination" class="field-label">Destination</label>
 						    <select id="destination">
 							    <option value="">Select a country</option>
@@ -402,6 +441,107 @@
 		    </div>
 	    </div>
 
+	    <h2>Checkboxes</h2>
+	    <div class="l-sidebar">
+		    <div>
+			    <div class="sidebar">
+				    <p>Let users select one or more options.</p>
+			    </div>
+			    <div class="not-sidebar">
+				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+					    <fieldset class="field checkbox-group">
+						    <legend class="group-legend">Subscribe to our newsletter</legend>
+						    <span class="field-description">We will send you a monthly newsletter with promotions. We will guard your email with our lives and never give it out to a third-party.</span>
+						    <label for="newsletter">
+							    <input type="checkbox" id="newsletter" name="newsletter" class="input--checkbox" value="data-value">
+							    <span class="checkbox-label">Yes, I would love to receive your newsletter once a month</span>
+						    </label>
+					    </fieldset>
+				    </form>
+			    </div>
+		    </div>
+	    </div>
+
+	    <h2>Radio buttons</h2>
+	    <div class="l-sidebar">
+		    <div>
+			    <div class="sidebar">
+				    <p>Let users select one option from a group.</p>
+				    <p>Radio options are easier to read and quicker to scan when laid out one under the other instead of next to each other.</p>
+				    <p>Radio buttons cannot be unchecked once they are selected. So if the question is optional, you'll need a &lsquo;none&rsquo; option.</p>
+			    </div>
+			    <div class="not-sidebar">
+				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+					    <fieldset class="field radio-group" role="radiogroup">
+						    <legend class="group-legend">Do you own any pets?</legend>
+						    <label for="pets_yes">
+							    <input type="radio" id="pets_yes" name="pets" class="input--radio" value="yes">
+							    <span class="radio-label">Yes</span>
+						    </label>
+						    <label for="pets_no">
+							    <input type="radio" id="pets_no" name="pets" class="input--radio" value="no">
+							    <span class="radio-label">No</span>
+						    </label>
+						    <label for="pets_none">
+							    <input type="radio" id="pets_none" name="pets" class="input--radio" value="none">
+							    <span class="radio-label">Prefer not to say</span>
+						    </label>
+					    </fieldset>
+					    <fieldset class="field segmented-group-wrapper">
+						    <legend class="group-legend">Segmented options (Radio)</legend>
+						    <span class="field-description">We understand that different people enjoy books in different ways, which is why we&rsquo;re giving you lots of options.</span>
+
+						    <div class="segmented-group">
+							    <label for="segmented-option-1">
+								    <input type="radio" id="segmented-option-1" name="segmented-options" class="input--radio" value="data-value" data-parsley-error-message="Please select your preferred choice." required aria-invalid="false">
+								    <div class="segmented-label">
+									    <h2>Approachable option</h2>
+									    <div>Copy to explain this option in more detail.</div>
+								    </div>
+							    </label>
+							    <label for="segmented-option-2">
+								    <input type="radio" id="segmented-option-2" name="segmented-options" class="input--radio" value="data-value" checked>
+								    <div class="segmented-label">
+									    <h2>Bell curve option</h2>
+									    <div>Copy to explain this option in more detail.</div>
+								    </div>
+							    </label>
+							    <label for="segmented-option-3">
+								    <input type="radio" id="segmented-option-3" name="segmented-options" class="input--radio" value="data-value">
+								    <div class="segmented-label">
+									    <h2>Expensive option</h2>
+									    <div>Copy to explain this option in more detail.</div>
+								    </div>
+							    </label>
+						    </div>
+
+					    </fieldset>
+				    </form>
+			    </div>
+		    </div>
+	    </div>
+
+	    <h2>Search forms</h2>
+	    <div class="l-sidebar">
+		    <div>
+			    <div class="sidebar"></div>
+			    <div class="not-sidebar">
+				    <form action="">
+					    <div class="fieldset-wrapper">
+						    <label for="search">Search products
+							    <span class="field-description">For example, “black wallet”</span>
+						    </label>
+						    <div class="input-group">
+							    <input type="search" id="search" name="search" value>
+							    <div class="input-group__button">
+							        <input type="submit" class="button button--primary" name="search" value="Search">
+							    </div>
+						    </div>
+					    </div>
+				    </form>
+			    </div>
+		    </div>
+	    </div>
 
     </main>
 
@@ -434,6 +574,7 @@
 		required: true
 	})
 </script>
+
 
 <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
 
