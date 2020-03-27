@@ -102,11 +102,7 @@ $type-sizes: (
     #Palette
 \*------------------------------------*/
 
-// Studio 24 colours
-$rhino-blue:                            hsl(219, 34%, 23%);
-$blaze-orange:                          #f60;
-$orange-peel:                          	#f90;
-$jacarta-purple:                        #512467;
+
 
 // Brand colours
 $tundora-grey:                          hsl(0, 0%, 12%);
@@ -114,23 +110,13 @@ $scorpion-grey:                         hsl(0, 0%, 35%);
 $nobel-grey:                          	hsl(0, 0%, 70%);
 $silver-grey:                          	hsl(0, 0%, 75%);
 
-// Neutrals
-//$wild-sand-white:                       #F7F7F7;
-//$mine-shaft-black:                      #222;
+
 $mercury-grey:                          #e5e5e5;
 
-// System
-//$pomegranate-red:                      	#F04819;
-//$candlelight-yellow:                    #fed41d;
-//$apple-green:							#2ECC40;
 
 /*
  * Sass variables
  */
-
-// Colours for copy ( used by contrast() which is defined in _polarize )
-$polarize-black:                        $black;
-$polarize-white:                        $white;
 
 $primary-color:                         $tundora-grey;
 $secondary-color:                       $scorpion-grey;
