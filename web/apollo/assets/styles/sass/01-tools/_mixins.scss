@@ -70,23 +70,6 @@
 }
 
 /*------------------------------------*\
-    #Type-scale
-
-    TODO: Make it actually work. Infant stage. Put pixel fallback behind
-    lt-ie 9 flag.
-\*------------------------------------*/
-@mixin typescale(
-    $unit,
-    $IE9: false,
-    $scale: 1.5
-) {
-
-    font-size: pow($scale, 3) +em;
-    line-height: pow($scale, 0.25);
-
-}
-
-/*------------------------------------*\
     #Animation
 
     TODO: This needs to be revised to allow for reusability.
