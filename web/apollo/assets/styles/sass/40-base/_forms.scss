@@ -47,7 +47,7 @@ Default form styling
 
 1. Make form fields inherit the document styling
  */
-input,
+input:not([type="submit"]),
 select,
 textarea {
 
@@ -356,7 +356,7 @@ Checkboxes
 
 
 .checkbox-group label {
-	background-color: $subtle-color;
+	background-color: inherit;
 	cursor: pointer;
 	display: block;
 	margin-bottom: 1.5em;
@@ -375,6 +375,7 @@ Checkboxes
 
 /* Box */
 .checkbox-label:before {
+	background-color: $white-pure;
 	border: 2px solid $input-border-color;
 	border-radius: 0;
 	height: 1.25em;
@@ -386,6 +387,7 @@ Checkboxes
 
 /* Check */
 .checkbox-label:after {
+	background-color: $white-pure;
 	border: 0.2em solid transparent;
 	border-width: 0 0.2em 0.2em 0; // creates the inverted "L" shape
 	display: block;
@@ -410,7 +412,7 @@ Checkboxes
 }
 
 .input--checkbox:checked:focus + .checkbox-label:after {
-	border-color: $white;
+	border-color: $white-pure;
 }
 
 
@@ -422,7 +424,7 @@ Checkboxes
 
 .input--checkbox:checked + .checkbox-label:after {
 	background: none;
-	border-color: $white;
+	border-color: $white-pure;
 }
 
 
@@ -476,6 +478,7 @@ Radio buttons
 
 /* Box */
 .radio-label:before {
+	background-color: $white-pure;
 	border: 2px solid $input-border-color;
 	border-radius: 50%;
 	height: 1.4em;
@@ -488,6 +491,7 @@ Radio buttons
 
 /* Check */
 .radio-label:after {
+	background-color: $white-pure;
 	border-radius: 50%;
 	height: 0.7em;
 	left: 1.125em;
@@ -593,7 +597,7 @@ show all available options outright, rather than hide them behind a <select>
 
 	* {
 		position: relative;
-		z-index: z("segmented", "label");
+		z-index: 3;
 	}
 
 	* + * {
