@@ -76,42 +76,6 @@ $iter: 50;
 }
 
 
-
-/*------------------------------------*\
-    #Deviate, calculate lighter or darker variation of hue
-\*------------------------------------*/
-@function deviate(
-	$hue,
-    $deviate: $deviate
-
-) {
-	@if (brightness($hue) < 99-$deviate +0%) {
-		@return lighten($hue, $deviate);
-	}
-	@else {
-		@return darken($hue, $deviate);
-	}
-}
-
-
-
-/*------------------------------------*\
-    #Subtle, does the opposite of deviate()
-\*------------------------------------*/
-@function subtle(
-	$hue,
-    $deviate: $deviate
-
-) {
-	@if (brightness($hue) < 1+$deviate +0%) {
-		@return lighten($hue, $deviate);
-	}
-	@else {
-		@return darken($hue, $deviate);
-	}
-}
-
-
 /*
  * ===========================================================================
  *

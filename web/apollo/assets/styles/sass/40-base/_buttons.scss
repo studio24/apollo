@@ -61,8 +61,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($primary-color);
-		color: contrast(deviate($primary-color));
+		background-color: lighten($primary-color, 10%);
 
 	}
 
@@ -85,8 +84,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($secondary-color);
-		color: contrast(deviate($secondary-color));
+		background-color: lighten($secondary-color, 10%);
 
 	}
 
@@ -109,8 +107,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($tertiary-color);
-		color: contrast(deviate($tertiary-color));
+		background-color: lighten($tertiary-color, 10%);
 
 	}
 
@@ -133,8 +130,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($accent-color);
-		color: contrast(deviate($accent-color));
+		background-color: lighten($accent-color, 10%);
 
 	}
 
@@ -157,8 +153,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($subtle-color);
-		color: contrast(deviate($subtle-color));
+		background-color: lighten($subtle-color, 10%);
 
 	}
 
@@ -181,8 +176,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($success-color);
-		color: contrast(deviate($success-color));
+		background-color: lighten($success-color, 10%);
 
 	}
 
@@ -205,8 +199,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($warning-color);
-		color: contrast(deviate($warning-color));
+		background-color: lighten($warning-color, 10%);
 
 	}
 
@@ -229,8 +222,7 @@ input[type="submit"].button {
 	&:focus,
 	&:active {
 
-		background-color: deviate($alert-color);
-		color: contrast(deviate($alert-color));
+		background-color: lighten($alert-color, 10%);
 
 	}
 
@@ -247,17 +239,17 @@ input[type="submit"].button {
 // For disabled buttons
 .button[disabled],
 .button.is-disabled {
-	background-color: luma(80);
+	background-color: $grey;
 	box-shadow: none;
-	color: rgba(contrast(luma(80)), 0.54);
+	color: lighten($primary-color, 20%);
 	cursor: not-allowed;
 
 	&:hover,
 	&:focus,
 	&:active {
 
-		background-color: luma(80);
-		color: rgba(contrast(luma(80)), 0.54);
+		background-color: $grey;
+		color: lighten($primary-color, 20%);
 		outline: 0;
 
 	}
