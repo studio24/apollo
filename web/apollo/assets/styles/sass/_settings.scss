@@ -5,21 +5,6 @@
  * Trello: https://trello.com/board-name-hash
  */
 
-
-
-/*------------------------------------*\
-    #Box-model
-\*------------------------------------*/
-/*
- * The box-model is set on the `HTML` element and is inherited by everything
- * else. This way you can change the box-model on a per-component basis by
- * changing it for the parent element and its children will inherit the right
- * box-model.
-*/
-$box-sizing:						border-box;
-
-
-
 /*------------------------------------*\
     #Breakpoints
 \*------------------------------------*/
