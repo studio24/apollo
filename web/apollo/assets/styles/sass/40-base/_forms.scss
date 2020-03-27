@@ -30,7 +30,7 @@ legend {
 
 /* Any styling that would normally go on `fieldset` should be set on the wrapper instead */
 .fieldset-wrapper {
-	border: $size-minus3 solid;
+	border: 2px solid;
 	border-radius: 0;
 	padding: 1em;
 	position: relative;
@@ -322,7 +322,7 @@ Shared focus styles for checkboxes and radio buttons
 .input--radio:focus + .radio-label {
 	background-color: $focus-color;
 	color: contrast($focus-color);
-	outline: $size-minus3 solid $focus-color;
+	outline: 2px solid $focus-color;
 	outline-offset: 0;
 }
 
@@ -375,7 +375,7 @@ Checkboxes
 
 /* Box */
 .checkbox-label:before {
-	border: $size-minus3 solid $input-border-color;
+	border: 2px solid $input-border-color;
 	border-radius: 0;
 	height: 1.25em;
 	left: 0.75em;
@@ -476,7 +476,7 @@ Radio buttons
 
 /* Box */
 .radio-label:before {
-	border: $size-minus3 solid $input-border-color;
+	border: 2px solid $input-border-color;
 	border-radius: 50%;
 	height: 1.4em;
 	left: 0.75em;
