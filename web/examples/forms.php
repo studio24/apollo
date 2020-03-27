@@ -137,8 +137,10 @@
 						    </div>
 					    </div>
 					    <div class="field">
-						    <label for="arrival_date" class="field-label">Date of arrival <small>(Required)</small></label>
-						    <input type="text" id="arrival_date" name="arrival_date" required placeholder="DD/MM/YYYY" class="field-input field-input--date js-pikaday-arrival" data-parsley-error-message="Please enter a valid arrival date." aria-invalid="false" value>
+						    <label for="arrival_date" class="field-label">Date of arrival <small>(Required)</small>
+							    <span class="field-description">DD MM YYYY</span>
+						    </label>
+						    <input type="text" id="arrival_date" name="arrival_date" required class="field-input field-input--date js-pikaday-arrival" data-parsley-error-message="Please enter a valid arrival date." aria-invalid="false" value>
 					    </div>
 				    </form>
 			    </div>
