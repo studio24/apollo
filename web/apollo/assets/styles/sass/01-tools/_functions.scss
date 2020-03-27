@@ -60,15 +60,6 @@ $iter: 50;
 
 
 /*------------------------------------*\
-    #Calculate new leading from contextual font-size
-\*------------------------------------*/
-@function leading($number, $context: $font-size) {
-	@return $number / ($context);
-}
-
-
-
-/*------------------------------------*\
     #Luma
 \*------------------------------------*/
 @function luma($number) {
