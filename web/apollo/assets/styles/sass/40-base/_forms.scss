@@ -47,7 +47,7 @@ Default form styling
 
 1. Make form fields inherit the document styling
  */
-input:not([type="submit"]),
+input,
 select,
 textarea {
 

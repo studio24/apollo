@@ -534,7 +534,7 @@
 						    <div class="input-group">
 							    <input type="search" id="search" name="search" value>
 							    <div class="input-group__button">
-							        <input type="submit" class="button button--primary" name="search" value="Search">
+								    <button type="submit" class="button button--primary" name="search">Search</button>
 							    </div>
 						    </div>
 					    </div>
