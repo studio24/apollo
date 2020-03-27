@@ -77,27 +77,6 @@ $emphasis--more:                    800;
 $emphasis-family:					$font-family;
 
 
-// Prototype for new viewport contextual size mapping. We want to loop through these creating a mixin which allows the call for a size (and classes for all of them, allowing reuse in markup). Use the map name for the classes, e.g. 'size--2xl'
-$type-sizes: (
-    'default': (
-        's':    ('size': 24, 'leading': 24),
-        'm':    ('size': 20, 'leading': 24),
-        'l':    ('size': 19, 'leading': 24),
-        'xl':   ('size': 18, 'leading': 24),
-        '2xl':  ('size': 17, 'leading': 24),
-        '3xl':  ('size': 16, 'leading': 24)
-    ),
-    'lap': (
-        's':    ('size': 48, 'leading': 24),
-        'm':    ('size': 40, 'leading': 24),
-        'l':    ('size': 31, 'leading': 24),
-        'xl':   ('size': 25, 'leading': 24),
-        '2xl':  ('size': 20, 'leading': 24),
-        '3xl':  ('size': 16, 'leading': 24)
-    ),
-);
-
-
 /*------------------------------------*\
     #Palette
 \*------------------------------------*/
