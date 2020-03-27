@@ -127,8 +127,6 @@ $mercury-grey:                          #e5e5e5;
 /*
  * Sass variables
  */
-//$white:                                 $wild-sand-white;
-//$black:                                 $mine-shaft-black;
 
 // Colours for copy ( used by contrast() which is defined in _polarize )
 $polarize-black:                        $black;
@@ -139,16 +137,7 @@ $secondary-color:                       $scorpion-grey;
 $tertiary-color:                        $nobel-grey;
 $accent-color:                          $silver-grey;
 
-//$link-color:                            hsl(240, 100%, 50%);
-//$link-color--visited:                   hsl(270, 100%, 50%);
-//$link-color--hover:                     hsl(0, 100%, 50%);
-
 $subtle-color:                          $mercury-grey;
-//$success-color:							$apple-green;
-//$warning-color:							$candlelight-yellow;
-//$alert-color:                           $pomegranate-red;
-//$input-error-color:                     $candlelight-yellow;
-//$focus-color:							$link-color;
 
 /*
  * Accessible colours
@@ -156,42 +145,12 @@ $subtle-color:                          $mercury-grey;
  */
 $grey:                                  rgba(0,0,0,0.54);
 
-/*
- * Use luma to get any desaturated shade between `$white` and `$black`
- */
 
-// luma(x)
 /*
  * You can use Sass `darken` and `lighten` to change hues, and use `$deviate`
  * to set the amount of change consistently across partials.
  */
 $deviate:                               10;
-
-
-
-/*------------------------------------*\
-    #Z-index mapping
-\*------------------------------------*/
-$z-index-map: (
-	"header":						10,
-	"nav": (
-		"wrapper":					20,
-		"toggle":					21,
-        "logo":                     22,
-	),
-    "segmented": (
-        "background":               2,
-        "label":                    3,
-    ),
-    "media": (
-        "cover-image":              1,
-        "cover-caption":            2,
-    ),
-    "default":                      1,
-    "below":                        -1,
-    "bottomless-pit":               -9000,
-    "top":                          900,
-);
 
 
 

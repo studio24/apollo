@@ -173,33 +173,3 @@
     }
     @return url("data:image/svg+xml;charset=utf8,#{$encoded}");
 }
-
-/*------------------------------------*\
-    #Fetch z-index from Sass map
-\*------------------------------------*/
-@function map-has-nested-keys($map, $keys...) {
-    @each $key in $keys {
-        @if not map-has-key($map, $key) {
-            @return false;
-        }
-        $map: map-get($map, $key);
-    }
-
-    @return true;
-}
-
-@function map-deep-get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-
-    @return $map;
-}
-
-@function z($layers...) {
-    @if not map-has-nested-keys($z-index-map, $layers...) {
-        @warn "No layer found for `#{inspect($layers...)}` in $z-index-map map. Property omitted.";
-    }
-
-    @return map-deep-get($z-index-map, $layers...);
-}
