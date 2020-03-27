@@ -37,37 +37,6 @@
 
 }
 
-/*------------------------------------*\
-    #Invert links to stand out against dark backgrounds
-\*------------------------------------*/
-@mixin links($args: $black) {
-
-    // If used without an argument, use $black as default
-    //@if length($args) < 1 {
-    //    $args: $black;
-    //}
-
-    a {
-
-        color: contrast($args);
-
-    }
-
-    a:visited {
-
-        color: deviate(contrast($args), 20);
-
-    }
-
-    a:hover,
-    a:focus,
-    a:active {
-
-        color: deviate(contrast($args));
-
-    }
-
-}
 
 /*------------------------------------*\
     #Animation

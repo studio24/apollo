@@ -123,12 +123,6 @@
 }
 
 // span // label for sighted users (hidden with aria-hidden)
-.share__channel-label.share__channel-label {
-
-    @include links;
-
-}
-
 .js .share__panel[aria-hidden="true"] {
 
     visibility: hidden;
