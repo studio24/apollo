@@ -3,12 +3,14 @@
 \*------------------------------------*/
 
 /**
-1. Because the `.stack` applies flexbox in the column direction,
+1. Because the `stack` mixin applies flexbox in the column direction,
 we need to prevent buttons from stretching horizontally
  */
 button,
 .button {
 	align-self: flex-start; /* 1 */
+	background-color: $grey;
+	border: none;
 	border-radius: 0;
 	color: inherit;
 	font-weight: $font-weight;
@@ -42,133 +44,19 @@ input[type="submit"].button {
 
 
 
-
-// Double specificity so links as buttons keep their styling even within
-// elements that would otherwise override it, without using !important
-.button--primary.button--primary {
-
-	background-color: $primary-color;
-	color: contrast($primary-color);
-
-	&:visited {
-
-		background-color: $primary-color;
-		color: contrast($primary-color);
-
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-
-		background-color: lighten($primary-color, 10%);
-
-	}
-
-}
-
-
-.button--secondary.button--secondary {
-
-	background-color: $secondary-color;
-	color: contrast($secondary-color);
-
-	&:visited {
-
-		background-color: $secondary-color;
-		color: contrast($secondary-color);
-
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-
-		background-color: lighten($secondary-color, 10%);
-
-	}
-
-}
-
-
-.button--tertiary.button--tertiary {
-
-	background-color: $tertiary-color;
-	color: contrast($tertiary-color);
-
-	&:visited {
-
-		background-color: $tertiary-color;
-		color: contrast($tertiary-color);
-
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-
-		background-color: lighten($tertiary-color, 10%);
-
-	}
-
-}
-
-
-.button--accent.button--accent {
-
-	background-color: $accent-color;
-	color: contrast($accent-color);
-
-	&:visited {
-
-		background-color: $accent-color;
-		color: contrast($accent-color);
-
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-
-		background-color: lighten($accent-color, 10%);
-
-	}
-
-}
-
-
-.button--subtle.button--subtle {
-
-	background-color: $subtle-color;
-	color: contrast($subtle-color);
-
-	&:visited {
-
-		background-color: $subtle-color;
-		color: contrast($subtle-color);
-
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-
-		background-color: lighten($subtle-color, 10%);
-
-	}
-
-}
-
-
+/**
+Double specificity so links as buttons keep their styling even within
+elements that would otherwise override it, without using !important
+ */
 .button--success.button--success {
 
 	background-color: $success-color;
-	color: contrast($success-color);
+	color: $black-pure;
 
 	&:visited {
 
 		background-color: $success-color;
-		color: contrast($success-color);
+		color: $black-pure;
 
 	}
 
@@ -186,12 +74,12 @@ input[type="submit"].button {
 .button--warning.button--warning {
 
 	background-color: $warning-color;
-	color: contrast($warning-color);
+	color: $black-pure;
 
 	&:visited {
 
 		background-color: $warning-color;
-		color: contrast($warning-color);
+		color: $black-pure;
 
 	}
 
@@ -209,12 +97,12 @@ input[type="submit"].button {
 .button--alert.button--alert {
 
 	background-color: $alert-color;
-	color: contrast($alert-color);
+	color: $black-pure;
 
 	&:visited {
 
 		background-color: $alert-color;
-		color: contrast($alert-color);
+		color: $black-pure;
 
 	}
 
