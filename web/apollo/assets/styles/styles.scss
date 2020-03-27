@@ -18,6 +18,7 @@
     #Settings --- V2
 \*------------------------------------*/
 @import "sass/10-settings/colors";
+@import "sass/10-settings/debug";
 @import "sass/10-settings/sizes";
 
 
@@ -32,12 +33,10 @@
 /*------------------------------------*\
     #Tools
 
-    1. Set to true to create outlines around every element, helping you squish layout bugs. Default: false
-    2. Set to true to view the site as someone with macular degradation would. Default: false
+    1. Set to true to view the site as someone with macular degradation would. Default: false
 \*------------------------------------*/
 @import "sass/01-tools/placeholders";
-@import "sass/01-tools/pesticide"; /* 1 */
-@import "sass/01-tools/empathise"; /* 2 */
+@import "sass/01-tools/empathise"; /* 1 */
 
 
 
@@ -149,7 +148,6 @@
 @import "sass/07-components/pager";
 @import "sass/07-components/pagination";
 @import "sass/07-components/prices";
-@import "sass/07-components/progress-tracker";
 @import "sass/07-components/quotes";
 @import "sass/07-components/stats";
 @import "sass/07-components/share";

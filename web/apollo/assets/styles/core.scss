@@ -1,19 +1,21 @@
 /*------------------------------------*\
     #Apollo: core styles for all browsers
 
-    1. Set to 'true' to put outlines around every element, helping you debug layouts. Default: 'false'
-    2. Set to 'true' to view the site as someone with macular degeneration would. Default: 'false'
+    1. Set to 'true' to view the site as someone with macular degeneration would. Default: 'false'
 \*------------------------------------*/
 
 @import "sass/settings";
+
+@import "sass/10-settings/colors";
+//@import "sass/10-settings/debug";
+@import "sass/10-settings/sizes";
 
 @import "sass/01-tools/functions";
 @import "sass/30-mixins/font-sizes";
 @import "sass/30-mixins/media-query";
 @import "sass/30-mixins/stack";
 @import "sass/01-tools/placeholders";
-@import "sass/01-tools/pesticide"; /* 1 */
-@import "sass/01-tools/empathise"; /* 2 */
+@import "sass/01-tools/empathise"; /* 1 */
 
 
 

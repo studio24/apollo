@@ -140,12 +140,6 @@ $accent-color:                          $silver-grey;
 $subtle-color:                          $mercury-grey;
 
 
-/*
- * You can use Sass `darken` and `lighten` to change hues, and use `$deviate`
- * to set the amount of change consistently across partials.
- */
-$deviate:                               10;
-
 
 
 /*------------------------------------*\
@@ -164,10 +158,3 @@ $border: $border-width $border-style $border-color;
     #Empathise with other people
 \*------------------------------------*/
 $empathise:                         false;
-
-
-
-/*------------------------------------*\
-    #Debugging helpers
-\*------------------------------------*/
-$pesticide:							false;

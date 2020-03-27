@@ -39,7 +39,7 @@
     &:focus,
     &:active {
 
-        background-color: darken($subtle-color, $deviate);
+        background-color: darken($subtle-color, 10%);
 
     }
 
