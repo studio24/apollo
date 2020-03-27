@@ -31,13 +31,6 @@
 
 
 /*------------------------------------*\
-    #Tools
-\*------------------------------------*/
-@import "sass/01-tools/placeholders";
-
-
-
-/*------------------------------------*\
     #Mixins --- V2
 \*------------------------------------*/
 @import "sass/30-mixins/font-sizes";
@@ -51,7 +44,6 @@
 
     3. Nicolas Gallager's Normalize 4.1.1. Modified to allow for axiomatic owl selectors
 \*------------------------------------*/
-@import "sass/02-generic/axiomatic-owl";
 @import "sass/02-generic/clearfix";
 //@TODO Check if this path is alright, or whether we need to copy the file elsewhere
 @import "../../../node_modules/normalize.css/normalize";
@@ -87,6 +79,7 @@
 @import "sass/40-base/fonts";
 @import "sass/40-base/forms";
 @import "sass/40-base/globals";
+@import "sass/40-base/hide-and-show";
 @import "sass/40-base/images";
 @import "sass/40-base/links";
 @import "sass/40-base/lists";
