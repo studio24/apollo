@@ -38,35 +38,6 @@
 }
 
 
-/*------------------------------------*\
-    #Animation
-
-    TODO: This needs to be revised to allow for reusability.
-\*------------------------------------*/
-@mixin horizontal-stretch {
-
-    &:hover,
-    &:focus,
-    &:active {
-
-        animation-name: horizontal-stretch;
-        animation-duration: 0.75s;
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-
-    }
-
-    // Improve performance on mobile/tablet devices
-    transform: translateZ(0);
-    // Improve aliasing on mobile/tablet devices
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
-    //Font smoothing
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-
-}
 
 /*------------------------------------*\
     #Take a svg and make it embeddable in the css (without Base64)
