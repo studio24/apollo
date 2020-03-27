@@ -2,10 +2,6 @@
     #Forms
 \*------------------------------------*/
 
-$input-required-color: luma(70) !default;
-$input-border-color: luma(70) !default;
-$input-error-color: $yellow !default;
-$segment-selected-bg-color: $olive !default;
 
 /**
 Start of resets for the fieldset and legend elements - see
@@ -55,8 +51,8 @@ input,
 select,
 textarea {
 
-	background-color: $white;
-	border: $size-minus3 solid $input-border-color;
+	background-color: $white-pure;
+	border: 2px solid $input-border-color;
 	border-radius: 0;
 	color: contrast($white);
 	display: block;
@@ -71,7 +67,7 @@ textarea {
 	&:focus,
 	&:active {
 
-		background-color: luma(97);
+		background-color: $white;
 		border-color: $primary-color;
 		outline-offset: 0;
 
@@ -162,11 +158,11 @@ input[required],
 select[required],
 textarea[required] {
 
-	border-color: $input-required-color;
-	box-shadow: inset 2px 2px 0 0 $input-required-color,
-	inset 2px -2px 0 0 $input-required-color,
-	inset -2px -2px 0 0 $input-required-color,
-	inset -2px 2px 0 0 $input-required-color;
+	border-color: $input-border-color;
+	box-shadow: inset 2px 2px 0 0 $input-border-color,
+	inset 2px -2px 0 0 $input-border-color,
+	inset -2px -2px 0 0 $input-border-color,
+	inset -2px 2px 0 0 $input-border-color;
 
 	&:hover,
 	&:focus,
@@ -182,7 +178,7 @@ textarea[required] {
 }
 
 input[required]:valid {
-	box-shadow: inset 0 0 0 0 $input-required-color;
+	box-shadow: inset 0 0 0 0 $input-border-color;
 }
 
 
@@ -217,12 +213,11 @@ This goes inside the associated label. By doing it this way we are
 associating the help text with the field itself whilst still keeping
 a class-hook for styling.
  */
-.field-description {
+.field-description.field-description {
 	@include text-s;
 
-	color: luma(20); // luma(30) doesn't have enough contrast
+	color: lighten($primary-color, 20%);
 	display: block;
-	font-style: italic;
 }
 
 
@@ -242,7 +237,7 @@ Word or character counter with aria
 	@include transition($property: opacity, $delay: 300ms);
 
 	bottom: 1em;
-	color: luma(20);
+	color: lighten($primary-color, 20%);
 	margin-top: 0;
 	opacity: 0;
 	position: absolute;
@@ -410,8 +405,8 @@ Checkboxes
 
 /* Checked and Focused */
 .input--checkbox:checked:focus + .checkbox-label:before {
-	background-color: lighten($primary-color, $deviate);
-	border-color: lighten($primary-color, $deviate);
+	background-color: lighten($primary-color, 10%);
+	border-color: lighten($primary-color, 10%);
 }
 
 .input--checkbox:checked:focus + .checkbox-label:after {
@@ -437,8 +432,8 @@ Checkboxes
 }
 
 .input--checkbox:checked + .checkbox-label:hover:before {
-	background-color: lighten($primary-color, $deviate) !important;
-	border-color: lighten($primary-color, $deviate) !important;
+	background-color: lighten($primary-color, 10%) !important;
+	border-color: lighten($primary-color, 10%) !important;
 }
 
 
@@ -510,11 +505,11 @@ Radio buttons
 
 /* Checked and Focused */
 .input--radio:checked:focus + .radio-label:before {
-	border-color: lighten($primary-color, $deviate);
+	border-color: lighten($primary-color, 10%);
 }
 
 .input--radio:checked:focus + .radio-label:after {
-	background-color: lighten($primary-color, $deviate);
+	background-color: lighten($primary-color, 10%);
 }
 
 
@@ -534,11 +529,11 @@ Radio buttons
 }
 
 .input--radio:checked + .radio-label:hover:before {
-	border-color: lighten($primary-color, $deviate) !important;
+	border-color: lighten($primary-color, 10%) !important;
 }
 
 .input--radio:checked + .radio-label:hover:after {
-	background-color: lighten($primary-color, $deviate) !important;
+	background-color: lighten($primary-color, 10%) !important;
 }
 
 
@@ -618,14 +613,14 @@ show all available options outright, rather than hide them behind a <select>
 
 /* Box */
 .segmented-label:before {
-	border: em(2) solid luma(60);
-	box-shadow: inset 0 em(4) 0 rgba($white, 0.2),
-	inset 0 em(- 4) 0 rgba($black, 0.2);
+	border: 2px solid $input-border-color;
+	box-shadow: inset 0 4px 0 rgba($white-pure, 0.2),
+	inset 0 4px 0 rgba($black-pure, 0.2);
 	height: calc(100% - 4px);
 	left: 2px;
 	top: 2px;
 	width: calc(100% - 4px);
-	z-index: z("segmented", "background");
+	z-index: 2;
 }
 
 
@@ -641,7 +636,7 @@ show all available options outright, rather than hide them behind a <select>
 	top: 0.5em;
 	transform: scale(0) rotate(-45deg); // don't show the shape until checked
 	width: 0.4em;
-	z-index: z("segmented", "label");
+	z-index: 3;
 }
 
 
@@ -654,21 +649,17 @@ show all available options outright, rather than hide them behind a <select>
 
 /* Checked and Focused */
 .input--radio:checked:focus + .segmented-label:before {
-	border-color: lighten($segment-selected-bg-color, $deviate);
+	border-color: lighten($segment-selected-bg-color, 10%);
 	box-shadow: inset 0 0.125em 0 0 $grey;
 }
 
-.input--radio:checked:focus + .segmented-label:after {
-	//background-color: deviate($segment-selected-bg-color);
-	//color: contrast(deviate($segment-selected-bg-color));
-}
 
 /* Checked */
 .input--radio:checked + .segmented-label:before {
 	background-color: $segment-selected-bg-color;
 	color: contrast($segment-selected-bg-color);
-	box-shadow: inset 0 0.125em 0 0 darken($segment-selected-bg-color, $deviate);
-	border-color: darken($segment-selected-bg-color, $deviate);
+	box-shadow: inset 0 0.125em 0 0 darken($segment-selected-bg-color, 10%);
+	border-color: darken($segment-selected-bg-color, 10%);
 	border-width: em(4);
 }
 
@@ -684,50 +675,13 @@ show all available options outright, rather than hide them behind a <select>
 
 /* Default hover */
 .segmented-group label:hover .segmented-label:before {
-	box-shadow: inset 0 em(2) 0 0 darken($segment-selected-bg-color, $deviate/2);
+	box-shadow: inset 0 2px 0 0 darken($segment-selected-bg-color, 10%);
 }
 
 
 /* Checked hover */
 .input--radio:checked + .segmented-label:hover:before {
-	border-color: lighten($primary-color, $deviate);
-}
-
-
-/* Checked hover */
-.input--radio:checked + .segmented-label:hover:after {
-	//background-color: deviate($primary-color);
-	//color: contrast(deviate($primary-color));
-}
-
-
-/* Disabled */
-.segmented-group label:hover .input--radio:disabled + .segmented-label:before {
-	border-color: luma(90);
-	box-shadow: none;
-	cursor: not-allowed;
-}
-
-.input--radio:disabled + .segmented-label:before {
-	border-color: luma(90);
-	box-shadow: none;
-}
-
-.input--radio:disabled + .segmented-label {
-	// text-decoration: line-through;
-	color: luma(60);
-}
-
-.input--radio:disabled + .segmented-label:after {
-	// Still needs work, not possible to get a diagonal line across a dynamically sized box
-	background-image: linear-gradient(157.5deg, $white 0%, $white 48%, $segment-selected-bg-color 49%, $segment-selected-bg-color 50%, $white 51%, $white 100%);
-	background-size: 100% 100%;
-	// color: contrast(luma(90));
-	content: " ";
-	height: 100%;
-	left: 0;
-	top: 0;
-	width: 100%;
+	border-color: lighten($primary-color, 10%);
 }
 
 

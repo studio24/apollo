@@ -182,7 +182,7 @@
 			    <div class="not-sidebar">
 				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
 					    <div class="field">
-						    <label for="destination" class="field-label">Destination</label>
+						    <label for="destination" class="field-label">Destination <small>(Required)</small></label>
 						    <select id="destination">
 							    <option value="">Select a country</option>
 							    <option value="1" data-alt="AF">Afghanistan</option>

@@ -9,7 +9,7 @@ Base colours that can be used when prototyping. Taken from http://clrs.cc/
 is so great that it creates the illusion that text is vibrating on screen.
  */
 $aqua: #7fdbff;
-$blue: #0074d9;
+$blue: #0073d8;
 $fuchsia: #f012be;
 $green: #2ecc40;
 $grey: #aaa;
@@ -24,7 +24,9 @@ $silver: #ddd;
 $teal: #39cccc;
 $yellow: #ffdc00;
 $black: #222; /* 1 */
+$black-pure: #000;
 $white: #fafafa; /* 1 */
+$white-pure: #fff;
 
 
 $link-color:                            $blue;
@@ -35,8 +37,11 @@ $link-color--hover:                     $maroon;
 $success-color:							$green;
 $warning-color:							$yellow;
 $alert-color:                           $red;
-$input-error-color:                     $yellow;
+$input-error-color:                     $red;
 $focus-color:							$link-color;
+
+$input-border-color:                    $grey;
+$segment-selected-bg-color:             $olive;
 
 
 /**
