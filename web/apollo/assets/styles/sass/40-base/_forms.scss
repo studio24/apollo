@@ -234,7 +234,6 @@ Word or character counter with aria
  */
 .field-live-region {
 	@include text-s;
-	@include transition($property: opacity, $delay: 300ms);
 
 	bottom: 1em;
 	color: lighten($primary-color, 20%);
@@ -242,6 +241,7 @@ Word or character counter with aria
 	opacity: 0;
 	position: absolute;
 	right: 1em;
+	transition: opacity 100ms ease-in-out 300ms;
 }
 
 

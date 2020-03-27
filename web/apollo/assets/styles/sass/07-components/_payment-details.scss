@@ -35,7 +35,7 @@
     // Align credit card icon with the abreasted field
     margin-top: em(12);
 
-    @include transition;
+    transition: all 100ms ease-in-out 0ms;
 
     &.is-visible {
 

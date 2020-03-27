@@ -167,20 +167,6 @@ $border: $border-width $border-style $border-color;
 
 
 /*------------------------------------*\
-    #Transitions
-\*------------------------------------*/
-$transition-property-default: 		all;
-$transition-duration-default: 		100ms;
-$transition-timing-default: 		ease-in-out;
-$transition-delay-default: 			0ms;
-/*
- * Named timings
- */
-$bounce:							cubic-bezier(.64,.57,.67,1.53);
-
-
-
-/*------------------------------------*\
     #Empathise with other people
 \*------------------------------------*/
 $empathise:                         false;
