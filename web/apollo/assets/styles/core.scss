@@ -1,7 +1,5 @@
 /*------------------------------------*\
     #Apollo: core styles for all browsers
-
-    1. Set to 'true' to view the site as someone with macular degeneration would. Default: 'false'
 \*------------------------------------*/
 
 @import "sass/settings";
@@ -15,7 +13,6 @@
 @import "sass/30-mixins/media-query";
 @import "sass/30-mixins/stack";
 @import "sass/01-tools/placeholders";
-@import "sass/01-tools/empathise"; /* 1 */
 
 
 
