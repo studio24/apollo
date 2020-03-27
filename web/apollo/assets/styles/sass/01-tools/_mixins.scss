@@ -4,24 +4,7 @@
 /*
  * Standard media query
  */
-@mixin mq(
-    $point,
-    $IE9: false,
-    $query1: min,
-    $query2: width,
-    $context: $font-size
-) {
-    @if $IE9 == true {
-        .lt-ie9 & {
-            @content;
-        }
-    }
 
-    @media screen and (#{$query1}-#{$query2}: $point / $context +em) {
-        @content;
-    }
-
-}
 
 /*------------------------------------*\
     #Transition
