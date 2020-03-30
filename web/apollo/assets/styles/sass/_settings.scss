@@ -16,7 +16,6 @@ $silver-grey:                          	hsl(0, 0%, 75%);
 
 $mercury-grey:                          #e5e5e5;
 
-
 /*
  * Sass variables
  */
@@ -27,16 +26,3 @@ $tertiary-color:                        $nobel-grey;
 $accent-color:                          $silver-grey;
 
 $subtle-color:                          $mercury-grey;
-
-
-
-
-/*------------------------------------*\
-    #Border
-\*------------------------------------*/
-$border-style:						solid;
-$border-width:						2px;
-$border-color:						$primary-color;
-
-// Shorthand for ease-of-use
-$border: $border-width $border-style $border-color;
