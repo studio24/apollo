@@ -1,17 +1,11 @@
 /*------------------------------------*\
     #Apollo
 \*------------------------------------*/
-/*
- * Trello: https://trello.com/b/PzBeGSKH/s24-front-end-roadmap
- */
-
-
 
 /*------------------------------------*\
-    #Functions
+    #Settings
 \*------------------------------------*/
-@import "sass/01-tools/functions";
-
+@import "sass/settings";
 
 
 /*------------------------------------*\
@@ -22,12 +16,11 @@
 @import "sass/10-settings/sizes";
 
 
-
 /*------------------------------------*\
-    #Settings
+    #Functions --- V2
 \*------------------------------------*/
-@import "sass/settings";
-
+@import "sass/20-functions/maths";
+@import "sass/20-functions/units";
 
 
 /*------------------------------------*\
