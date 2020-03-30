@@ -6,7 +6,7 @@
 .tab-interface {
 
   width: 100%;
-  max-width: em($breakpoint-width);
+  max-width: em($max-width);
 
   margin-left: auto;
   margin-right: auto;
@@ -32,7 +32,7 @@ a[role="tab"] {
   height: 100%;
   width: 100%;
 
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     width: auto;
 
@@ -72,7 +72,7 @@ a[role="tab"]:focus {
 
     margin-right: 1px;
 
-    @include mq($breakpoint-lap) {
+    @include mq($bp-tab-small) {
 
         width: auto;
         margin-right: 2px;

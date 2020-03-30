@@ -5,8 +5,8 @@
 /**
 Base colours that can be used when prototyping. Taken from http://clrs.cc/
 
-1. We avoid using pure black and pure white, because the colour contrast
-is so great that it creates the illusion that text is vibrating on screen.
+1. We ideally avoid using pure white on pure black, because the contrast is
+so great that it creates the illusion that text is vibrating on screen.
  */
 $aqua: #7fdbff;
 $blue: #0073d8;
@@ -15,6 +15,7 @@ $green: #2ecc40;
 $grey: #aaa;
 $lime: #01ff70;
 $maroon: #85144b;
+$mercury-grey: #e5e5e5;
 $navy: #001f3f;
 $olive: #3d9970;
 $orange: #ff851b;

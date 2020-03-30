@@ -52,7 +52,7 @@
 
 .media--abreast {
 
-	@include mq($breakpoint-lap) {
+	@include mq($bp-tab-small) {
 
 		display: flex;
 		flex-flow: row nowrap;
@@ -72,7 +72,7 @@
 
 .media--left-on-lap {
 
-	@include mq($breakpoint-lap) {
+	@include mq($bp-tab-small) {
 
 		.media__image {
 
@@ -96,7 +96,7 @@
 
 .media--right-on-lap {
 
-	@include mq($breakpoint-lap) {
+	@include mq($bp-tab-small) {
 
 		.media__image {
 

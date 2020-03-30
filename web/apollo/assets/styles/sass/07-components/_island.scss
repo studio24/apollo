@@ -11,7 +11,7 @@
     
     padding: 1em;
 
-    @include mq($breakpoint-lap) {
+    @include mq($bp-tab-small) {
 
         padding: 3em;
 
@@ -40,7 +40,7 @@
 
     padding: 1em 0;
 
-    @include mq($breakpoint-lap) {
+    @include mq($bp-tab-small) {
     
         padding: 3em 0;
 

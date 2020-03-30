@@ -11,6 +11,7 @@
 /*------------------------------------*\
     #Settings --- V2
 \*------------------------------------*/
+@import "sass/10-settings/breakpoints";
 @import "sass/10-settings/colors";
 @import "sass/10-settings/debug";
 @import "sass/10-settings/sizes";
@@ -47,7 +48,7 @@
 /*------------------------------------*\
     #Skeleton
 \*------------------------------------*/
-@import "sass/03-skeleton/groups";
+//@import "sass/03-skeleton/groups";
 
 
 

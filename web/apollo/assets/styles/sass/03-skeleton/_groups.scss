@@ -5,19 +5,20 @@
 /*------------------------------------*\
     #Flex parent wrapper
 \*------------------------------------*/
+
 .group {
 
   // To remove list-style from when this is used on list items
   padding-left: 0;
 
   width: 100%;
-  max-width: em($breakpoint-width);
-  max-width: rem($breakpoint-width);
+  max-width: em($max-width);
+  max-width: rem($max-width);
 
   margin-left: auto;
   margin-right: auto;
 
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     display: flex;
     flex-wrap: nowrap;
@@ -63,7 +64,7 @@
 
 .group--wide.group--wide {
 
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     // Keep the spacing on items that are displayed in a row regardless of breakpoint
     .group__item + .group__item {
@@ -81,7 +82,7 @@
 
 .group--compact.group--compact {
 
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     // Keep the spacing on items that are displayed in a row regardless of breakpoint
     .group__item + .group__item {
@@ -121,7 +122,7 @@
 \*------------------------------------*/
 .group__item {
 
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     /**
          * Shorthand for flex-grow, flex-shrink and flex-basis.
@@ -304,7 +305,7 @@ li.group__item {
 // with the primary content.
 .group__item--secondary {
 
-  @include mq($breakpoint-desk) {
+  @include mq($bp-tab-large) {
 
     //margin-top: 1em;
 
@@ -319,7 +320,7 @@ li.group__item {
   /* Double the spacing for groups which have primary and secondary
      * items.
      */
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     margin-left: em($font-leading*2);
 
@@ -332,7 +333,7 @@ li.group__item {
   /* Double the spacing for groups which have primary and secondary
      * items.
      */
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     margin-right: em($font-leading*2);
     margin-left: 0;
@@ -347,7 +348,7 @@ li.group__item {
   /* Double the spacing for groups which have primary and secondary
      * items.
      */
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
 
     margin-left: 0;
 
@@ -371,13 +372,13 @@ li.group__item {
     #Sort flex-children
 \*------------------------------------*/
 .sort-first-from-lap {
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
     order: -1;
   }
 }
 
 .sort-last-from-lap {
-  @include mq($breakpoint-lap) {
+  @include mq($bp-tab-small) {
     order: 99;
   }
 }
