@@ -75,13 +75,13 @@
             <div class="l-center ex1">
                 <div class="l-cluster">
                     <ul class="clean-list">
-                        <li><a href="#1" class="button button--primary">Item One</a></li>
-                        <li><a href="#2" class="button button--primary">Item Two</a></li>
-                        <li><a href="#3" class="button button--primary">Item Three</a></li>
-                        <li><a href="#4" class="button button--primary">Item Four</a></li>
-                        <li><a href="#5" class="button button--primary">Item Five</a></li>
-                        <li><a href="#6" class="button button--primary">Item Six</a></li>
-                        <li><a href="#7" class="button button--primary">Item Seven</a></li>
+                        <li><a href="#1" class="button">Item One</a></li>
+                        <li><a href="#2" class="button">Item Two</a></li>
+                        <li><a href="#3" class="button">Item Three</a></li>
+                        <li><a href="#4" class="button">Item Four</a></li>
+                        <li><a href="#5" class="button">Item Five</a></li>
+                        <li><a href="#6" class="button">Item Six</a></li>
+                        <li><a href="#7" class="button">Item Seven</a></li>
                     </ul>
                 </div>
             </div>

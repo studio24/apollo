@@ -70,7 +70,7 @@
 				    <p>Use <code>&lt;autocapitalize="none"&gt;</code>, <code>&lt;autocorrect="off"&gt;</code> and <code>&lt;spellcheck="false"&gt;</code> to stop browsers automatically changing user input on fields that expect grammatically incorrect data, such as email addresses and passwords.</p>
 			    </div>
 			    <div class="not-sidebar">
-				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+				    <form action="" class="form l-box l-box--no-border">
 					    <div class="field">
 						    <label for="name" class="field-label">Name <small>(Required)</small>
 							    <span class="field-description">E.g. Jane Smith</span>
@@ -104,7 +104,7 @@
 						    <textarea id="message" name="message" class="field-input input--textarea" aria-invalid="false"></textarea>
 					    </div>
 					    <div class="field">
-						    <button class="button button--primary" type="submit">Continue</button>
+						    <button class="button" type="submit">Continue</button>
 					    </div>
 				    </form>
 			    </div>
@@ -119,7 +119,7 @@
 				    <p>We use a text field and <a href="http://dbushell.github.io/Pikaday/">Pikaday</a> to allow picking a date from a calendar.</p>
 			    </div>
 			    <div class="not-sidebar">
-				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+				    <form action="" class="form l-box l-box--no-border">
 					    <div class="field">
 						    <legend>Date of birth <small>(Required)</small></legend>
 						    <span class="field-description">DD MM YYYY</span>
@@ -155,7 +155,7 @@
 				    <p>Including the <code>&lt;autocomplete&gt;</code> attribute can help users fill out payment details more quickly. Older browsers make use of the <code>&lt;name&gt;</code> attribute to achieve the same thing. Here is a list of <a href="https://www.smashingmagazine.com/2017/03/improve-billing-form-ux/">payment autofill attributes</a>.</p>
 			    </div>
 			    <div class="not-sidebar">
-				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+				    <form action="" class="form l-box l-box--no-border">
 					    <div class="field">
 							<label class="field-label" for="cardnumber">Card number <small>(Required)</small>
 								<span class="field-description">The long number on the front of your card</span>
@@ -182,7 +182,7 @@
 				    <p>A <code>&lt;select&gt;</code> can be enhanced into an accessible autocomplete via JavaScript. Apollo uses <a href="https://github.com/alphagov/accessible-autocomplete">Accessible autocomplete</a> to achieve this, and there are a number of <a href="https://alphagov.github.io/accessible-autocomplete/examples/">example customisations</a> that can be followed.</p>
 			    </div>
 			    <div class="not-sidebar">
-				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+				    <form action="" class="form l-box l-box--no-border">
 					    <div class="field">
 						    <label for="destination" class="field-label">Destination <small>(Required)</small></label>
 						    <select id="destination">
@@ -450,7 +450,7 @@
 				    <p>Let users select one or more options.</p>
 			    </div>
 			    <div class="not-sidebar">
-				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+				    <form action="" class="form l-box l-box--no-border">
 					    <fieldset class="field checkbox-group">
 						    <legend class="group-legend">Subscribe to our newsletter</legend>
 						    <span class="field-description">We will send you a monthly newsletter with promotions. We will guard your email with our lives and never give it out to a third-party.</span>
@@ -473,7 +473,7 @@
 				    <p>Radio buttons cannot be unchecked once they are selected. So if the question is optional, you'll need a &lsquo;none&rsquo; option.</p>
 			    </div>
 			    <div class="not-sidebar">
-				    <form action="" class="form l-box l-box--no-border bg bg--subtle">
+				    <form action="" class="form l-box l-box--no-border">
 					    <fieldset class="field radio-group" role="radiogroup">
 						    <legend class="group-legend">Do you own any pets?</legend>
 						    <label for="pets_yes">
@@ -536,7 +536,7 @@
 						    <div class="input-group">
 							    <input type="search" id="search" name="search" value>
 							    <div class="input-group__button">
-								    <button type="submit" class="button button--primary" name="search">Search</button>
+								    <button type="submit" class="button" name="search">Search</button>
 							    </div>
 						    </div>
 					    </div>

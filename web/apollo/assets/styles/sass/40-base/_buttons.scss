@@ -48,6 +48,29 @@ input[type="submit"].button {
 Double specificity so links as buttons keep their styling even within
 elements that would otherwise override it, without using !important
  */
+.button--alert.button--alert {
+
+	background-color: $alert-color;
+	color: $black-pure;
+
+	&:visited {
+
+		background-color: $alert-color;
+		color: $black-pure;
+
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		background-color: lighten($alert-color, 10%);
+
+	}
+
+}
+
+
 .button--success.button--success {
 
 	background-color: $success-color;
@@ -88,29 +111,6 @@ elements that would otherwise override it, without using !important
 	&:active {
 
 		background-color: lighten($warning-color, 10%);
-
-	}
-
-}
-
-
-.button--alert.button--alert {
-
-	background-color: $alert-color;
-	color: $black-pure;
-
-	&:visited {
-
-		background-color: $alert-color;
-		color: $black-pure;
-
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-
-		background-color: lighten($alert-color, 10%);
 
 	}
 

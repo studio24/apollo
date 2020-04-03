@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #Background colours
+\*------------------------------------*/
+
+.bg {
+
+	&--alert {
+
+		background-color: $alert-color;
+		color: $black-pure;
+
+	}
+
+	&--success {
+
+		background-color: $success-color;
+		color: $black-pure;
+
+	}
+
+	&--warning {
+
+		background-color: $warning-color;
+		color: $black-pure;
+
+	}
+
+}

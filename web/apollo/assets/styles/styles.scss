@@ -58,6 +58,7 @@
     #Base --- V2
 \*------------------------------------*/
 @import "sass/40-base/animation";
+@import "sass/40-base/bg-color";
 @import "sass/40-base/buttons";
 @import "sass/40-base/focus";
 @import "sass/40-base/fonts";
@@ -157,7 +158,6 @@
     Single-purpose overrides
 \*------------------------------------*/
 @import "sass/09-utilities/alignments";
-@import "sass/09-utilities/colors";
 
 
 
