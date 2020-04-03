@@ -156,13 +156,14 @@
 
     Single-purpose overrides
 \*------------------------------------*/
-@import "sass/09-utilities/alignments";
+
 
 
 
 /*------------------------------------*\
     #Utilities --- V2
 \*------------------------------------*/
+@import "sass/80-utilities/alignments";
 @import "sass/80-utilities/clearfix";
 @import "sass/80-utilities/layout";
 

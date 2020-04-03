@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #Alignment utilities
+\*------------------------------------*/
+
+.u-float-left {
+	float: left;
+}
+
+.u-float-right {
+	float: right;
+}
+
+.u-text-center {
+	text-align: center;
+}
+
+.u-text-left {
+	text-align: left;
+}
+
+.u-text-right {
+	text-align: right;
+}
+
+
+
+/**
+Change text-alignment at the "laptop" breakpoint,
+as defined in /10-settings/breakpoints
+ */
+.u-text-left-from-lap {
+
+	@include mq($bp-lap) {
+		text-align: left;
+	}
+
+}
+
+
+.u-text-center-from-lap {
+
+	@include mq($bp-lap) {
+		text-align: center;
+	}
+
+}
+
+
+.u-text-right-from-lap {
+
+	@include mq($bp-lap) {
+		text-align: right;
+	}
+	
+}
