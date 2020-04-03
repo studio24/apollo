@@ -7,7 +7,7 @@
 	$IE9: false,
 	$query1: min,
 	$query2: width,
-	$context: $font-size
+	$context: $browser-context
 ) {
 	@if $IE9 == true {
 		.lt-ie9 & {
