@@ -23,8 +23,8 @@ a[role="tab"] {
 
   border: 0;
 
-  background-color: rgba($subtle-color, 0.25);
-  color: contrast($subtle-color);
+  background-color: $mercury-grey;
+  color: $black;
 
   padding: 0.5em 0.75em;
   display: inline-block;
@@ -43,8 +43,8 @@ a[role="tab"] {
 
 a[aria-selected='true'], a[role="tab"]:focus {
 
-  background-color: $subtle-color;
-  color: contrast($subtle-color);
+  background-color: $mercury-grey;
+  color: $black;
 
 }
 
@@ -96,18 +96,18 @@ a[role="tab"]:focus {
 
   margin-top: 0;
 
-  background-color: $subtle-color;
-  color: contrast($subtle-color);
+  background-color: $mercury-grey;
+  color: $black;
 
   padding: 1em;
 
   a {
 
-    color: contrast($subtle-color);
+    color: $black;
 
     &:visited {
 
-      color: contrast($subtle-color);
+      color: $black;
 
     }
 
@@ -115,7 +115,7 @@ a[role="tab"]:focus {
     &:focus,
     &:active {
 
-      color: deviate(contrast($subtle-color));
+      color: deviate(contrast($mercury-grey));
 
     }
 

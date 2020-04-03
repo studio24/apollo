@@ -2,18 +2,13 @@
     #Apollo
 \*------------------------------------*/
 
-/*------------------------------------*\
-    #Settings
-\*------------------------------------*/
-@import "sass/settings";
-
 
 /*------------------------------------*\
     #Settings --- V2
 \*------------------------------------*/
 @import "sass/10-settings/breakpoints";
 @import "sass/10-settings/colors";
-@import "sass/10-settings/debug";
+//@import "sass/10-settings/debug";
 @import "sass/10-settings/paths";
 @import "sass/10-settings/sizes";
 @import "sass/10-settings/typesetting";

@@ -129,7 +129,7 @@ elements that would otherwise override it, without using !important
 .button.is-disabled {
 	background-color: $grey;
 	box-shadow: none;
-	color: lighten($primary-color, 20%);
+	color: #3f3f3f;
 	cursor: not-allowed;
 
 	&:hover,
@@ -137,7 +137,7 @@ elements that would otherwise override it, without using !important
 	&:active {
 
 		background-color: $grey;
-		color: lighten($primary-color, 20%);
+		color: #3f3f3f;
 		outline: 0;
 
 	}

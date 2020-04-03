@@ -73,7 +73,7 @@ textarea {
 	&:active {
 
 		background-color: $white;
-		border-color: $primary-color;
+		border-color: $black;
 		outline-offset: 0;
 
 	}
@@ -173,10 +173,10 @@ textarea[required] {
 	&:focus,
 	&:active {
 
-		box-shadow: inset 2px 2px 0 0 $primary-color,
-		inset 2px -2px 0 0 $primary-color,
-		inset -2px -2px 0 0 $primary-color,
-		inset -2px 2px 0 0 $primary-color;
+		box-shadow: inset 2px 2px 0 0 $black,
+		inset 2px -2px 0 0 $black,
+		inset -2px -2px 0 0 $black,
+		inset -2px 2px 0 0 $black;
 
 	}
 
@@ -221,7 +221,7 @@ a class-hook for styling.
 .field-description.field-description {
 	@include text-s;
 
-	color: lighten($primary-color, 20%);
+	color: #666;
 	display: block;
 }
 
@@ -241,7 +241,7 @@ Word or character counter with aria
 	@include text-s;
 
 	bottom: 1em;
-	color: lighten($primary-color, 20%);
+	color: #666;
 	margin-top: 0;
 	opacity: 0;
 	position: absolute;
@@ -406,14 +406,14 @@ Checkboxes
 
 /* Focused */
 .input--checkbox:focus + .checkbox-label:before {
-	border-color: $primary-color;
+	border-color: $black;
 }
 
 
 /* Checked and Focused */
 .input--checkbox:checked:focus + .checkbox-label:before {
-	background-color: lighten($primary-color, 10%);
-	border-color: lighten($primary-color, 10%);
+	background-color: $black;
+	border-color: $black;
 }
 
 .input--checkbox:checked:focus + .checkbox-label:after {
@@ -423,8 +423,8 @@ Checkboxes
 
 /* Checked */
 .input--checkbox:checked + .checkbox-label:before {
-	background-color: $primary-color;
-	border-color: $primary-color;
+	background-color: $black;
+	border-color: $black;
 }
 
 .input--checkbox:checked + .checkbox-label:after {
@@ -435,12 +435,12 @@ Checkboxes
 
 /* Hover */
 .checkbox-group label:hover .checkbox-label:before {
-	border-color: $primary-color !important;
+	border-color: $black !important;
 }
 
 .input--checkbox:checked + .checkbox-label:hover:before {
-	background-color: lighten($primary-color, 10%) !important;
-	border-color: lighten($primary-color, 10%) !important;
+	background-color: #666 !important;
+	border-color: #666 !important;
 }
 
 
@@ -508,41 +508,41 @@ Radio buttons
 
 /* Focused */
 .input--radio:focus + .radio-label:before {
-	border-color: $primary-color;
+	border-color: $black;
 }
 
 
 /* Checked and Focused */
 .input--radio:checked:focus + .radio-label:before {
-	border-color: lighten($primary-color, 10%);
+	border-color: #666;
 }
 
 .input--radio:checked:focus + .radio-label:after {
-	background-color: lighten($primary-color, 10%);
+	background-color: #666;
 }
 
 
 /* Checked */
 .input--radio:checked + .radio-label:before {
-	border-color: $primary-color;
+	border-color: $black;
 }
 
 .input--radio:checked + .radio-label:after {
-	background-color: $primary-color;
+	background-color: $black;
 }
 
 
 /* Hover */
 .radio-group label:hover .radio-label:before {
-	border-color: $primary-color !important;
+	border-color: $black !important;
 }
 
 .input--radio:checked + .radio-label:hover:before {
-	border-color: lighten($primary-color, 10%) !important;
+	border-color: #666 !important;
 }
 
 .input--radio:checked + .radio-label:hover:after {
-	background-color: lighten($primary-color, 10%) !important;
+	background-color: #666 !important;
 }
 
 
@@ -651,7 +651,7 @@ show all available options outright, rather than hide them behind a <select>
 
 /* Focused */
 .input--radio:focus + .segmented-label:before {
-	border-color: $primary-color;
+	border-color: $black;
 	outline: em(2) solid $focus-color;
 }
 
@@ -690,7 +690,7 @@ show all available options outright, rather than hide them behind a <select>
 
 /* Checked hover */
 .input--radio:checked + .segmented-label:hover:before {
-	border-color: lighten($primary-color, 10%);
+	border-color: #666;
 }
 
 

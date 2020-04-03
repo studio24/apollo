@@ -52,19 +52,13 @@
 
 
 
-.nav--primary,
-.nav--secondary {
-
-}
-
-
 
 .nav--primary {
 
 	// margin-top: 0;
 
-	background-color: $primary-color;
-	color: contrast($primary-color);
+	background-color: $black;
+	color: $white;
 
 	padding: 2em 1em 1.5em 1em;
 

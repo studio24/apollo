@@ -39,7 +39,7 @@
     &:focus,
     &:active {
 
-        background-color: darken($subtle-color, 10%);
+        background-color: #666;
 
     }
 
@@ -49,10 +49,8 @@
 
     margin-top: 1rem;
 
-    background-color: $subtle-color;
-    color: contrast($subtle-color);
-
-    //box-shadow: 0 em(2) em(2) rgba($black, 0.2);
+    background-color: $mercury-grey;
+    color: $black;
 
     padding: 1rem 4rem 1rem 1rem;
     border-radius: 0.2em;
@@ -81,7 +79,7 @@
         border-left: em(16) solid transparent;
         border-right: em(16) solid transparent;
 
-        border-bottom: em(16) solid $subtle-color;
+        border-bottom: em(16) solid $mercury-grey;
 
     }
 

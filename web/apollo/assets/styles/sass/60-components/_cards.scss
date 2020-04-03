@@ -4,7 +4,7 @@
 
 .card {
 
-	background-color: $subtle-color;
+	background-color: $mercury-grey;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -16,11 +16,11 @@
 	 */
 
 	&:hover {
-		background-color: darken($subtle-color, 10%);
+		background-color: darken($mercury-grey, 10%);
 	}
 
 	&:focus-within {
-		background-color: darken($subtle-color, 10%);
+		background-color: darken($mercury-grey, 10%);
 	}
 
 }
