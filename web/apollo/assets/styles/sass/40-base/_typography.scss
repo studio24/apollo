@@ -3,20 +3,11 @@
 \*------------------------------------*/
 
 /**
-Use https://www.cssfontstack.com/ and https://meowni.ca/font-style-matcher/ to pick
-system fonts that are reasonably close to any web fonts needed for the project.
-
-This improves performance, avoids Flash Of Invisible Text (FOIT) and minimises
-Flash of Unstyled Content (FOUC) - see https://helenvholmes.com/writing/type-is-your-right/
-
-Be sure to include fonts for both Mac OS and Windows. Use quote marks around
-fonts with white space in their name.
-
 1. Font grows 0.25px for every 100px of viewport width and never drops below 16px
 (assuming a browser default of 16px) - see https://css-tricks.com/fun-viewport-units/
  */
 body {
-	font-family: 'Lucida Grande', Tahoma, sans-serif;
+	font-family: $font-family;
 	font-size: calc(1rem + 0.25vw); /* 1 */
 	font-style: $font-style;
 	font-weight: $font-weight;
@@ -33,7 +24,7 @@ All headings start off at the same size by default, so we focus on the semantic 
 (assuming a browser default of 16px) - see https://css-tricks.com/fun-viewport-units/
  */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lucida Bright', Palatino, serif;
+	font-family: $heading-family;
 	// Font grows 0.25px for every 100px of viewport width and never drops below 20px
 	font-size: calc(1.25rem + 0.25vw); /* 1 */
 	font-style: $heading-style;
@@ -52,11 +43,11 @@ can safely use the web fonts instead of the system fonts.
 .fonts-loaded {
 
 	body {
-		font-family: $font-family;
+		font-family: $font-loaded-family;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: $heading-family;
+		font-family: $heading-loaded-family;
 	}
 
 }
