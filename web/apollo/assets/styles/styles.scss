@@ -38,9 +38,8 @@
 /*------------------------------------*\
     #Generic
 
-    3. Nicolas Gallager's Normalize 4.1.1. Modified to allow for axiomatic owl selectors
+    3. Nicolas Gallager's Normalize
 \*------------------------------------*/
-@import "sass/02-generic/clearfix";
 //@TODO Check if this path is alright, or whether we need to copy the file elsewhere
 @import "../../../node_modules/normalize.css/normalize";
 
@@ -164,6 +163,7 @@
 /*------------------------------------*\
     #Utilities --- V2
 \*------------------------------------*/
+@import "sass/80-utilities/clearfix";
 @import "sass/80-utilities/layout";
 
 
