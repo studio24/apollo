@@ -65,10 +65,10 @@
 @import "sass/40-base/globals";
 @import "sass/40-base/hide-and-show";
 @import "sass/40-base/images";
+@import "sass/40-base/inline-elements";
 @import "sass/40-base/links";
 @import "sass/40-base/lists";
 @import "sass/40-base/tables";
-@import "sass/40-base/inline-elements";
 @import "sass/40-base/typography";
 @import "sass/40-base/print";
 
@@ -104,29 +104,14 @@
 /*------------------------------------*\
     #Components
 \*------------------------------------*/
-@import "sass/07-components/address";
-@import "sass/07-components/banner";
 @import "sass/07-components/breadcrumbs";
-@import "sass/07-components/callouts";
 @import "sass/07-components/collapsibles";
-@import "sass/07-components/cta";
 @import "sass/07-components/icons";
-@import "sass/07-components/images";
-@import "sass/07-components/island";
-@import "sass/07-components/labels";
-@import "sass/07-components/media";
-@import "sass/07-components/metadata";
 @import "sass/07-components/navigation";
-@import "sass/07-components/notes";
-@import "sass/07-components/pager";
 @import "sass/07-components/pagination";
-@import "sass/07-components/prices";
 @import "sass/07-components/quotes";
-@import "sass/07-components/stats";
 @import "sass/07-components/share";
 @import "sass/07-components/tabs";
-@import "sass/07-components/taxonomies";
-@import "sass/07-components/thematic-break";
 
 // This should cascade higher than _icons
 @import "sass/07-components/payment-details";
