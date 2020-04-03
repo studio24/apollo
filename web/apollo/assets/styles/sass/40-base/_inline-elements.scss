@@ -25,7 +25,7 @@ small,
 
 strong,
 .strong {
-	font-weight: $emphasis-weight;
+	font-weight: $emphasis;
 }
 
 
@@ -33,5 +33,7 @@ strong,
 code {
 	background-color: $navy;
 	color: $green;
-	padding: $size-minus3;
+	font-family: $mono-family;
+	padding-left: $size-minus3;
+	padding-right: $size-minus3;
 }
