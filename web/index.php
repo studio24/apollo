@@ -59,7 +59,12 @@
 	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
 	        </ul>
 		    <p>I believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
-	        <button class="u-center">Button</button>
+	        <button class="u-center">
+		        <svg class="icon--inline" viewBox="0 0 100 100">
+			        <circle cx="50" cy="50" r="50"></circle>
+		        </svg>
+		        Button
+	        </button>
 		    <h2>Points to bear in mind</h2>
 	        <p>There are certain design schemes that we have tended to follow in recent projects at Studio 24. These are:</p>
 		    <div class="l-box">
@@ -70,30 +75,11 @@
 				    <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. banner/hero components)</li>
 			    </ol>
 		    </div>
-		    <div class="l-sidebar">
-			    <div>
-				    <div class="not-sidebar">
-					    <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
-					    <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
-					    <blockquote>
-						    <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
-					    </blockquote>
-				    </div>
-				    <div class="sidebar">
-					    <div class="l-cluster">
-						    <ul class="clean-list">
-							    <li><a href="#1" class="button button--primary">Item One</a></li>
-							    <li><a href="#2" class="button button--primary">Item Two</a></li>
-							    <li><a href="#3" class="button button--primary">Item Three</a></li>
-							    <li><a href="#4" class="button button--primary">Item Four</a></li>
-							    <li><a href="#5" class="button button--primary">Item Five</a></li>
-							    <li><a href="#6" class="button button--primary">Item Six</a></li>
-							    <li><a href="#7" class="button button--primary">Item Seven</a></li>
-						    </ul>
-					    </div>
-				    </div>
-			    </div>
-		    </div>
+		    <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
+		    <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
+		    <blockquote>
+			    <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
+		    </blockquote>
 	    </main>
 		<?php // End main ?>
 
