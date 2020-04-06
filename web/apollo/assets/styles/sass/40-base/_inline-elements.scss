@@ -2,6 +2,21 @@
     #Text-level elements
 \*------------------------------------*/
 
+b,
+strong,
+.strong {
+	font-weight: $emphasis;
+}
+
+
+
+em,
+i {
+	font-style: italic;
+}
+
+
+
 small,
 .small {
 	 @include text-s;
@@ -19,13 +34,6 @@ small,
 .small,
 .small-caps {
 	letter-spacing: 0.03em;
-}
-
-
-
-strong,
-.strong {
-	font-weight: $emphasis;
 }
 
 
