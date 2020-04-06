@@ -53,17 +53,17 @@
 \*------------------------------------*/
 @import "sass/40-base/animation";
 @import "sass/40-base/bg-color";
+@import "sass/40-base/body";
+@import "sass/40-base/box-sizing";
 @import "sass/40-base/buttons";
 @import "sass/40-base/focus";
 @import "sass/40-base/fonts";
 @import "sass/40-base/forms";
-@import "sass/40-base/globals";
 @import "sass/40-base/hide-and-show";
 @import "sass/40-base/images";
 @import "sass/40-base/inline-elements";
 @import "sass/40-base/links";
 @import "sass/40-base/lists";
-@import "sass/40-base/main";
 @import "sass/40-base/tables";
 @import "sass/40-base/typography";
 @import "sass/40-base/print";
@@ -92,6 +92,7 @@
 @import "sass/60-components/header";
 @import "sass/60-components/hero";
 @import "sass/60-components/logo";
+@import "sass/60-components/main";
 @import "sass/60-components/tag-list";
 
 
