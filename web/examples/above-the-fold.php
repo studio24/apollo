@@ -69,7 +69,7 @@
 	    <p class="u-center">Find out more...</p>
     </div>
 
-	<main class="l-center">
+	<main>
 		<h2>What's going on?</h2>
 		<ul>
 			<li>We have used the <a href="../layouts/cover.php">cover layout</a> to create a hero area at the top of the page.</li>

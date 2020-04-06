@@ -48,7 +48,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Examples</h1>
         <p>Here you will find examples of common components and functionality.</p>
         <ul>

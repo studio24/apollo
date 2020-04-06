@@ -58,7 +58,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Box</h1>
 	    <p>The box layout should have borders and/or padding on all sides, or none at all. An element with specific (and asymmetrical) border/padding is no longer a box, instead it's trying to solve a more specific problem.</p>
         <div class="l-box">

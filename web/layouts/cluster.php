@@ -48,8 +48,6 @@
                 linear-gradient(#7fdbff, #7fdbff) content-box,
                 linear-gradient(#b10dc9, #b10dc9) padding-box;
             max-width: 600px;
-            padding-left: 1.7rem;
-            padding-right: 1.7rem;
         }
     </style>
 
@@ -61,7 +59,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Cluster</h1>
         <p>The cluster layout is ideally suited for groups of elements that differ in length and are liable to wrap. Examples include buttons that appear together at the end of forms, as well as lists of tags, keywords, or other meta information.</p>
         <p>The following example illustrates how the cluster layout works:</p>

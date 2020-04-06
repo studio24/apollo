@@ -48,7 +48,7 @@
 
 <div class="wrap">
 
-    <main class="l-center">
+    <main>
 	    <h1>Data tables</h1>
 	    <p>The examples on this page show the required markup for accessible data tables. The key points are:</p>
 	    <ul>

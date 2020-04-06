@@ -47,9 +47,6 @@
             background:
                 linear-gradient(#7fdbff, #7fdbff) content-box,
                 linear-gradient(#b10dc9, #b10dc9) padding-box;
-            max-width: 400px;
-            padding-left: 1.7rem;
-            padding-right: 1.7rem;
         }
     </style>
 
@@ -61,9 +58,9 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Center</h1>
-        <p>The center layout is used to create a vertical stripe of content inside a given container. Apollo uses it on <code>main</code>.</p>
+        <p>The center layout is used to create a vertical stripe of content inside a given container. Apollo uses the technique on <code>&lt;main&gt;</code>.</p>
         <p>The following example illustrates how the center layout works on a smaller scale, but the principle is the same:</p>
         <ul>
             <li>A center layout is contained within a box layout (without a border or padding), purely to help with this example.</li>

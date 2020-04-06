@@ -49,7 +49,7 @@
 	<div class="wrap">
 
 		<?php // Start main ?>
-	    <main class="l-center">
+	    <main>
 	        <h1>Overview</h1>
 	        <p>So, let’s see about getting some basic styles down for the reboot of <em>Apollo</em>. I’m going to need some paragraphs with some reasonable-looking text inside of them to try and create a base natural layout, so that I can accurately assess how these <strong>core</strong> styles are working.</p>
 		    <p>My thinking here is drawn from the <span class="small-caps">Springer Nature Front End Playbook</span> approach. That is to say:</p>

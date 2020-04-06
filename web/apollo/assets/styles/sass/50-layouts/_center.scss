@@ -17,13 +17,8 @@ to our global box-sizing rule.
 	box-sizing: content-box /* 1 */;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: rem($max-width);
-	padding-left: 5vw;
-	padding-right: 5vw;
-
-	@include mq($bp-tab-small) {
-		padding-left: 10vw;
-		padding-right: 10vw;
-	}
+	max-width: rem(400); // Can be whatever is needed
+	padding-left: $size-plus1;
+	padding-right: $size-plus1;
 
 }

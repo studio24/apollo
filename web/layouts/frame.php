@@ -48,7 +48,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Frame</h1>
         <p>The frame layout is useful for cropping media (images and video) to a specific aspect ratio. It uses percentage padding to create a frame with a set aspect ratio (because padding is always based on the width of an element), which then acts as a window onto the content inside.</p>
 

@@ -48,7 +48,7 @@
 
 <div class="wrap">
 
-    <main class="l-center">
+    <main>
         <h1>Forms</h1>
 	    <p>The examples on this page show how we manage forms and their fields. Recommendations are based on this <a href="https://adamsilver.io/articles/form-design-from-zero-to-hero-all-in-one-blog-post/">excellent blog post</a> by Adam Silver.</p>
 	    <ul>

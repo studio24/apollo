@@ -61,7 +61,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Cards</h1>
 	    <h2>Basic card</h2>
 	    <ul>

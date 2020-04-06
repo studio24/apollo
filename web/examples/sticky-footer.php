@@ -48,7 +48,7 @@
 
 	<div class="wrap">
         <?php // Start main ?>
-		<main class="l-center">
+		<main>
 			<h1>Sticky footer</h1>
 			<div class="l-sidebar">
 				<div>

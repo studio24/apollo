@@ -56,12 +56,6 @@
             margin-bottom: auto;
             margin-top: auto !important;
         }
-
-	    .l-center.ex1 {
-		    max-width: 400px;
-		    padding-left: 1.7rem;
-		    padding-right: 1.7rem;
-	    }
     </style>
 
 </head>
@@ -72,7 +66,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Cover</h1>
         <p>The cover layout uses Flexbox to vertically centre content, by having a column Flexbox context and a minimum height set. It also allows the addition of header and/or footer content to accompany the principal piece of content, without having to adapt the CSS.</p>
         <p>The following examples illustrate how the cover layout works:</p>

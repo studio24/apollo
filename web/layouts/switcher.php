@@ -57,7 +57,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Switcher</h1>
         <p>The switcher layout switches a container with Flexbox between a horizontal and a vertical direction at a given, <strong>container-based</strong> breakpoint. No viewport media queries required, so it will nest nicely inside of other containers.</p>
         <p>It's a good choice for situations where each child item should be considered equal. Card components that advertise products usually share the same width, irrespective of orientation, otherwise one or more cards could be perceived as highlighted or featured in some way. Another use case could be for a set of numbered steps in a process, which is easier to understand if those steps are laid out along one horizontal or vertical line.</p>

@@ -71,7 +71,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layout: Sidebar</h1>
         <p>The sidebar layout creates a container, inside of which a larger panel can sit next to a smaller (sidebar) panel.</p>
         <p>The two panels stack vertically, until there is enough horizontal space for them to sit alongside each other. The point at which this change happens is determined by setting a <code>flex-basis</code> on the sidebar panel and a <code>min-width</code> on the larger panel. No viewport media queries required, so it will nest nicely inside of other containers.</p>

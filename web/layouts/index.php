@@ -55,7 +55,7 @@
 
 <div class="wrap">
     <?php // Start main ?>
-    <main class="l-center">
+    <main>
         <h1>Layouts</h1>
         <p>Here you will find examples of the basic layout types, which can be combined and customised to make a variety of components.</p>
         <p>To help show how these basic layouts are constructed, the following colours are used to identify content areas, padding and internal margins:</p>
