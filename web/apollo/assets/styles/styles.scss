@@ -14,11 +14,13 @@
 @import "sass/10-settings/typesetting";
 
 
+
 /*------------------------------------*\
     #Functions --- V2
 \*------------------------------------*/
 @import "sass/20-functions/maths";
 @import "sass/20-functions/units";
+
 
 
 /*------------------------------------*\
@@ -31,26 +33,18 @@
 
 
 /*------------------------------------*\
-    #Generic
-
-    3. Nicolas Gallager's Normalize
-\*------------------------------------*/
-//@TODO Check if this path is alright, or whether we need to copy the file elsewhere
-@import "../../../node_modules/normalize.css/normalize";
-
-
-
-/*------------------------------------*\
     #Skeleton
 \*------------------------------------*/
 //@import "sass/03-skeleton/groups";
 
 
 
-
 /*------------------------------------*\
     #Base --- V2
 \*------------------------------------*/
+//@TODO Check if this path is alright, or whether we need to copy the file elsewhere
+@import "../../../node_modules/normalize.css/normalize";
+
 @import "sass/40-base/animation";
 @import "sass/40-base/bg-color";
 @import "sass/40-base/body";
@@ -67,7 +61,6 @@
 @import "sass/40-base/tables";
 @import "sass/40-base/typography";
 @import "sass/40-base/print";
-
 
 
 
@@ -120,38 +113,20 @@
 
     Add third-party plugins here.
 \*------------------------------------*/
-@import "sass/70-third-party-plugins/pikaday";
 @import "sass/70-third-party-plugins/accessible-autocomplete";
+@import "sass/70-third-party-plugins/pikaday";
 
 
 
 /*------------------------------------*\
     #Templates
-
-    Things that affect templates should go here
 \*------------------------------------*/
-
-
-/*------------------------------------*\
-    #Utility
-
-    Single-purpose overrides
-\*------------------------------------*/
-
 
 
 
 /*------------------------------------*\
     #Utilities --- V2
 \*------------------------------------*/
-@import "sass/80-utilities/alignments";
-@import "sass/80-utilities/clearfix";
-@import "sass/80-utilities/layout";
-
-
-
-/*------------------------------------*\
-    #Legacy
-
-    Need Old IE stuff? This is where it goes
-\*------------------------------------*/
+@import "sass/90-utilities/alignments";
+@import "sass/90-utilities/clearfix";
+@import "sass/90-utilities/layout";

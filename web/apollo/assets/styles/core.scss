@@ -10,17 +10,20 @@
 @import "sass/10-settings/typesetting";
 
 
+
 @import "sass/20-functions/maths";
 @import "sass/20-functions/units";
+
 
 
 @import "sass/30-mixins/font-sizes";
 @import "sass/30-mixins/media-query";
 @import "sass/30-mixins/stack";
 
+
+
 //@TODO Check if this path is alright, or whether we need to copy the file elsewhere
 @import "../../../node_modules/normalize.css/normalize";
-
 
 @import "sass/40-base/animation";
 @import "sass/40-base/bg-color";
@@ -40,6 +43,7 @@
 @import "sass/40-base/print";
 
 
+
 @import "sass/50-layouts/box";
 @import "sass/50-layouts/center";
 @import "sass/50-layouts/cluster";
@@ -49,9 +53,11 @@
 @import "sass/50-layouts/switcher";
 
 
+
 @import "sass/60-components/main";
 
 
-@import "sass/80-utilities/alignments";
-@import "sass/80-utilities/clearfix";
-@import "sass/80-utilities/layout";
+
+@import "sass/90-utilities/alignments";
+@import "sass/90-utilities/clearfix";
+@import "sass/90-utilities/layout";
