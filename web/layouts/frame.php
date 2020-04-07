@@ -57,28 +57,28 @@
                 <div class="not-sidebar">
                     <figure>
                         <div class="l-frame l-frame--16-9">
-                            <img src="/dist/assets/images/sherlock.jpg" alt="Sherlock Holmes and Dr Watson having a discussion in a train carriage.">
+                            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt="Multicoloured abstract painting" />
                         </div>
                         <figcaption>16:9 frame uses the class <code>.l-frame--16-9</code></figcaption>
                     </figure>
 
                     <figure>
                         <div class="l-frame l-frame--3-2">
-                            <img src="/dist/assets/images/sherlock.jpg" alt="Sherlock Holmes and Dr Watson having a discussion in a train carriage.">
+                            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt="Multicoloured abstract painting" />
                         </div>
                         <figcaption>3:2 frame uses the class <code>.l-frame--3-2</code></figcaption>
                     </figure>
 
                     <figure>
                         <div class="l-frame l-frame--4-3">
-                            <img src="/dist/assets/images/sherlock.jpg" alt="Sherlock Holmes and Dr Watson having a discussion in a train carriage.">
+                            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt="Multicoloured abstract painting" />
                         </div>
                         <figcaption>4:3 frame uses the class <code>.l-frame--4-3</code></figcaption>
                     </figure>
 
                     <figure>
                         <div class="l-frame l-frame--square">
-                            <img src="/dist/assets/images/sherlock.jpg" alt="Sherlock Holmes and Dr Watson having a discussion in a train carriage.">
+                            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt="Multicoloured abstract painting" />
                         </div>
                         <figcaption>Square frame uses the class <code>.l-frame--square</code></figcaption>
                     </figure>
