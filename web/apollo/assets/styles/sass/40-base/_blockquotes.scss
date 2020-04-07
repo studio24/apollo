@@ -19,7 +19,7 @@ blockquote p:last-of-type::after {
 	content: close-quote;
 }
 
-blockquote > *:last-child {
+blockquote footer {
 
 	@include text-m;
 
