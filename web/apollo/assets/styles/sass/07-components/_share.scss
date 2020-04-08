@@ -194,7 +194,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($facebook);
+        background-color: darken($facebook, 10%);
 
     }
 
@@ -215,7 +215,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($twitter);
+        background-color: darken($twitter, 10%);
 
     }
 
@@ -236,7 +236,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($pinterest);
+        background-color: darken($pinterest, 10%);
 
     }
 
@@ -257,7 +257,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($whatsapp);
+        background-color: darken($whatsapp, 10%);
 
     }
 
@@ -278,7 +278,7 @@
     .share__channel-link:focus &,
     .share__channel-link:active & {
 
-        background-color: deviate($linkedin);
+        background-color: darken($linkedin, 10%);
 
     }
 
