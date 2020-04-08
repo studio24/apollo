@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #Collapsible sections
+\*------------------------------------*/
+//@todo: scope to the availability of JS
+.component--collapsibles {
+
+	[data-heading="collapsibles"] button {
+
+		align-items: center;
+		background-color: transparent;
+		color: inherit;
+		display: flex;
+		font-weight: $heading-weight;
+		justify-content: space-between;
+		padding: $size;
+		width: 100%;
+
+		&[aria-expanded="true"] .vert {
+			display: none;
+		}
+
+		svg {
+			height: 1em;
+			width: 1em;
+		}
+
+	}
+
+	[data-heading="collapsibles"] + * {
+
+		@include stack;
+
+		padding: $size;
+
+		&[aria-hidden="true"] {
+			display: none;
+		}
+
+	}
+
+}
