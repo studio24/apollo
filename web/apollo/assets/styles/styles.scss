@@ -90,6 +90,7 @@
 @import "sass/60-components/hero";
 @import "sass/60-components/logo";
 @import "sass/60-components/main";
+@import "sass/60-components/navigation";
 @import "sass/60-components/tabs";
 @import "sass/60-components/tag-list";
 
@@ -98,7 +99,6 @@
 /*------------------------------------*\
     #Components
 \*------------------------------------*/
-@import "sass/07-components/navigation";
 @import "sass/07-components/share";
 
 // This should cascade higher than _icons
