@@ -47,6 +47,7 @@ edges.
 We apply an even, symmetrical margin to the elements that we wish to space
 out, but halve it to to account for 'doubling up' at the edges.
  */
-.l-cluster > * > * {
+.l-cluster.l-cluster > * > * {
+	display: inline-block; // IE9
 	margin: calc(#{$size} / 2);
 }

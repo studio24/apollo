@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #Breadcrumbs
+    See: https://scottaohara.github.io/a11y_breadcrumbs/
+\*------------------------------------*/
+
+.breadcrumbs.breadcrumbs {
+
+	li {
+		display: inline-block; // IE9
+		padding-right: 0.5em;
+		position: relative;
+
+		&::before {
+			content: "\2000";
+			position: absolute;
+			z-index: -1;
+		}
+
+	}
+
+	/**
+	Separator chevron - see https://codepen.io/jonneal/pen/kptBs
+	 */
+	li:not(:last-child) {
+
+		&::after {
+			border-style: solid;
+			border-width: 0.2em 0.2em 0 0;
+			content: '';
+			display: block;
+			height: 0.45em;
+			position: absolute;
+			right: -0.2em;
+			top: 50%;
+			transform: rotate(45deg) translateY(-50%);
+			width: 0.45em;
+		}
+
+	}
+
+	[aria-current] {
+		color: $black;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			outline-color: $black;
+		}
+	}
+
+}

@@ -47,27 +47,34 @@
 <body>
 
 <div class="wrap">
-    <?php // Start main ?>
+
     <main>
-        <h1>Examples</h1>
-        <p>Here you will find examples of common components and functionality.</p>
-        <ul>
-            <li><a href="above-the-fold.php">Above the fold content</a></li>
-            <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
-            <li><a href="cards.php">Cards</a></li>
-            <li><a href="collapsibles.php">Collapsible sections</a></li>
-            <li><a href="tables.php">Data tables</a></li>
-            <li><a href="forms.php">Forms</a></li>
-            <li><a href="sticky-footer.php">Sticky footer</a></li>
-            <li><a href="tabs.php">Tabbed sections</a></li>
-        </ul>
+        <h1>Breadcrumbs</h1>
+        <nav class="l-cluster" aria-label="breadcrumb">
+            <ol class="breadcrumbs">
+                <li>
+                    <a href="/">
+                        Index
+                    </a>
+                </li>
+                <li>
+                    <a href="/pg2">
+                        Second page
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-current="page"> <!-- or "location" -->
+                        This page
+                    </a>
+                </li>
+            </ol>
+        </nav>
     </main>
-    <?php // End main ?>
+
 </div>
 <div class="global-footer">
     Footer content goes here
 </div>
-
 
 
 <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
