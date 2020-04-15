@@ -1,9 +1,10 @@
 /*------------------------------------*\
     #Collapsible sections
 \*------------------------------------*/
-//@todo: scope to the availability of JS
+
 .component--collapsibles {
 
+	// Added via JavaScript
 	[data-heading="collapsibles"] button {
 
 		align-items: center;
