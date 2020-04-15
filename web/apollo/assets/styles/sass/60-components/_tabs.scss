@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    #Tabbed sections
+\*------------------------------------*/
+
+.no-js .component--tabs {
+
+	@include stack;
+
+	section {
+		@include stack(1rem);
+	}
+
+}
+
+.component--tabs {
+
+	[role="tablist"] {
+
+		border-bottom: solid $size-minus4 $grey;
+		display: flex;
+		flex-flow: row nowrap;
+		max-width: 100%;
+		overflow-x: auto;
+		padding: 0 $size-plus1;
+		-webkit-overflow-scrolling: touch;
+
+		li {
+			flex-shrink: 0;
+			list-style: none;
+			margin-top: 0;
+			padding: 0;
+		}
+
+		li + li {
+			margin-left: $size-plus1;
+		}
+
+	}
+
+	a[role="tab"] {
+
+		background-color: $mercury-grey;
+		border: 0;
+		border-bottom: solid transparent $size-minus3;
+		color: $black;
+		display: block;
+		padding: em(10) em(15);
+
+		&:focus,
+		&[aria-selected="true"] {
+			border-color: $link-color;
+			outline: none;
+			text-decoration: none;
+		}
+
+	}
+
+	[role="tabpanel"] {
+
+		@include stack(1rem);
+
+		padding: $size-plus1;
+
+		&:focus {
+			outline: solid $size-minus4 $grey;
+		}
+
+	}
+
+}
