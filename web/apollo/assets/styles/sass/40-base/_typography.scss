@@ -23,7 +23,8 @@ All headings start off at the same size by default, so we focus on the semantic 
 1. Font grows 0.25px for every 100px of viewport width and never drops below 20px
 (assuming a browser default of 16px) - see https://css-tricks.com/fun-viewport-units/
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $heading-family;
 	// Font grows 0.25px for every 100px of viewport width and never drops below 20px
 	font-size: calc(1.25rem + 0.25vw); /* 1 */
@@ -46,7 +47,8 @@ can safely use the web fonts instead of the system fonts.
 		font-family: $font-loaded-family;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
 		font-family: $heading-loaded-family;
 	}
 
