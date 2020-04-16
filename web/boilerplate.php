@@ -6,17 +6,24 @@
     <?php // Charset: Must be in first 1024 bytes of the document and before title  ?>
     <meta charset="utf-8">
 
-    <?php // Title: To avoid a potential encoding-related security issue in IE  ?>
-    <title>Apollo</title>
+    <?php // Viewport:  Make it zoomable ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <?php // Compatibility: https://msdn.microsoft.com/en-us/library/cc288325.aspx  ?>
+	<?php // The above 2 meta tags *must* come first in the <head> to consistently ensure proper document rendering. Any other head element should come *after* these tags. https://htmlhead.dev/#recommended-minimum ?>
+
+    <?php // Title: To avoid a potential encoding-related security issue in IE  ?>
+    <title>Apollo Boilerplate</title>
+
+    <?php // Compatibility: Force IE 8/9/10 to use its latest rendering engine ?>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <?php // Description: The description meta tag provides a short description of the page (Including Open Graph support which needs to be before name attribute)  ?>
-    <meta property="og:description" name="description" content="The living content- and style guide for Studio 24 by Studio 24."/>
+    <meta property="og:description" name="description" content="HTML boilerplate file for use with Apollo"/>
 
-    <?php // Viewport:  Make it zoomable ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php // Favicon: Suggest using https://realfavicongenerator.net/ to create icons. It will generate more than you need. For most desktop browser/versions just put the favicon.ico file in the root directory - no tag necessary. For the rest, you only need the following - put the files in the root directory. ?>
+	<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#00aba9">
 
     <?php // Add a `js` class to the HTML element to help avoid Flash Of Unstyled Content (FOUC) ?>
     <?php // We target the HTML element because WordPress already adds lots of classes to `body` ?>
@@ -24,7 +31,17 @@
 
     <?php // Font Face Observer script to check when web fonts are loaded before applying them via CSS ?>
     <?php // Refer to https://github.com/bramstein/fontfaceobserver ?>
-    <?php require_once( 'delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
+	<?php // @TODO Check if this path is alright, or whether we need to copy the file elsewhere ?>
+	<script src="../../node_modules/fontfaceobserver/fontfaceobserver.js"></script>
+
+	<script>
+		var fontContent = new FontFaceObserver('Proza Libre');
+		var fontHeadings = new FontFaceObserver('Playfair Display');
+
+		Promise.all([fontContent.load(), fontHeadings.load()]).then(function () {
+			document.documentElement.className += " fonts-loaded";
+		});
+	</script>
 
     <?php // Styles ?>
     <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
@@ -32,17 +49,15 @@
     <?php // Open Graph tags (description is included below standard title ?>
     <?php // https://developers.facebook.com/tools/debug/sharing/ ?>
     <?php // https://cards-dev.twitter.com/validator ?>
+	<?php // https://www.linkedin.com/help/linkedin/answer/46687 ?>
+	<meta property="og:title" content="Apollo Boilerplate"/>
+	<meta property="og:image" content="/dist/assets/images/apollo.png"/>
     <meta property="og:url" content="http://apollo.s24.net/"/>
-    <meta property="og:image" content="http://apollo.s24.net/dist/assets/images/apollo.png"/>
 
-    <?php // Duplicate the standard title tag because Twitter doesn't understand it ?>
-    <meta property="og:title" content="Apollo"/>
     <?php // Replace `summary_large_image` with `summary` for a smaller Twitter card ?>
     <meta name="twitter:card" content="summary_large_image"/>
 
 </head>
-
-
 
 <body>
 
