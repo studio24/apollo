@@ -548,9 +548,9 @@
     </main>
 
 </div>
-<div class="global-footer">
-    Footer content goes here
-</div>
+<footer class="global-footer">
+	Footer content goes here
+</footer>
 
 <script src="../dist/assets/js/libraries/pikaday.js"></script>
 

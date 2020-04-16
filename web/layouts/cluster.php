@@ -87,9 +87,9 @@
     </main>
     <?php // End main ?>
 </div>
-<div class="global-footer">
+<footer class="global-footer">
     Footer content goes here
-</div>
+</footer>
 
 
 

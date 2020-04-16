@@ -67,10 +67,9 @@
     </main>
     <?php // End main ?>
 </div>
-<div class="global-footer">
-    Footer content goes here
-</div>
-
+<footer class="global-footer">
+	Footer content goes here
+</footer>
 
 
 <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>

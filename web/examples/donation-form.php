@@ -188,34 +188,9 @@
     </main>
 
 </div>
-<div class="global-footer">
-    Footer content goes here
-</div>
-
-<script src="../dist/assets/js/libraries/pikaday.js"></script>
-
-<script>
-	/* Instantiate PikaDay */
-	var picker = new Pikaday({
-		field: document.querySelector('.js-pikaday-arrival'),
-		firstDay: 1,
-		minDate: new Date(),
-		maxDate: new Date(2020, 12, 31),
-		yearRange: [2000,2020]
-	});
-</script>
-
-<script src="../dist/assets/js/libraries/accessible-autocomplete.min.js"></script>
-
-<script>
-	/* Instantiate Accessible Autocomplete */
-	accessibleAutocomplete.enhanceSelectElement({
-		defaultValue: '',
-		selectElement: document.querySelector('#destination'),
-		showAllValues: true,
-		required: true
-	})
-</script>
+<footer class="global-footer">
+	Footer content goes here
+</footer>
 
 
 <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
