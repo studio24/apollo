@@ -4,7 +4,7 @@
 
 
 /*------------------------------------*\
-    #Settings --- V2
+    #Settings
 \*------------------------------------*/
 @import "sass/10-settings/breakpoints";
 @import "sass/10-settings/colors";
@@ -16,7 +16,7 @@
 
 
 /*------------------------------------*\
-    #Functions --- V2
+    #Functions
 \*------------------------------------*/
 @import "sass/20-functions/maths";
 @import "sass/20-functions/units";
@@ -24,7 +24,7 @@
 
 
 /*------------------------------------*\
-    #Mixins --- V2
+    #Mixins
 \*------------------------------------*/
 @import "sass/30-mixins/font-sizes";
 @import "sass/30-mixins/media-query";
@@ -33,7 +33,7 @@
 
 
 /*------------------------------------*\
-    #Base --- V2
+    #Base
 \*------------------------------------*/
 //@TODO Check if this path is alright, or whether we need to copy the file elsewhere
 @import "../../../node_modules/normalize.css/normalize";
@@ -60,7 +60,7 @@
 
 
 /*------------------------------------*\
-    #Layouts --- V2
+    #Layouts
 \*------------------------------------*/
 @import "sass/50-layouts/box";
 @import "sass/50-layouts/center";
@@ -73,7 +73,7 @@
 
 
 /*------------------------------------*\
-    #Components -- V2
+    #Components
 \*------------------------------------*/
 @import "sass/60-components/breadcrumbs";
 @import "sass/60-components/cards";
@@ -84,22 +84,14 @@
 @import "sass/60-components/logo";
 @import "sass/60-components/main";
 @import "sass/60-components/navigation";
+@import "sass/60-components/payment-details";
 @import "sass/60-components/tabs";
 @import "sass/60-components/tag-list";
 
 
 
 /*------------------------------------*\
-    #Components
-\*------------------------------------*/
-
-// These should cascade higher than _icons
-@import "sass/07-components/payment-details";
-
-
-
-/*------------------------------------*\
-    #Plugins -- V2
+    #Plugins
 
     Add third-party plugins here.
 \*------------------------------------*/
@@ -115,7 +107,7 @@
 
 
 /*------------------------------------*\
-    #Utilities --- V2
+    #Utilities
 \*------------------------------------*/
 @import "sass/90-utilities/alignments";
 @import "sass/90-utilities/clearfix";
