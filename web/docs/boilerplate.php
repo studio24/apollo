@@ -1,31 +1,30 @@
 <!doctype html>
+<?php // Ensure an appropriate language attribute is included and add class to avoid Flash Of Unstyled Content ?>
 <html lang="en" class="no-js">
 
 <head>
 
-    <?php // Charset: Must be in first 1024 bytes of the document and before title  ?>
+    <?php // Charset: Must be in first 1024 bytes of the document and before title ?>
     <meta charset="utf-8">
 
-    <?php // Viewport:  Make it zoomable ?>
+    <?php // Viewport: Make it zoomable ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php // The above 2 meta tags *must* come first in the <head> to consistently ensure proper document rendering. Any other head element should come *after* these tags. https://htmlhead.dev/#recommended-minimum ?>
-
-    <?php // Title: To avoid a potential encoding-related security issue in IE  ?>
-    <title>Apollo Boilerplate</title>
+    <?php // Title: Provides the accessible name of the document ?>
+    <title>Boilerplate Documentation</title>
 
     <?php // Compatibility: Force IE 8/9/10 to use its latest rendering engine ?>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <?php // Description: The description meta tag provides a short description of the page (Including Open Graph support which needs to be before name attribute)  ?>
-    <meta property="og:description" name="description" content="HTML boilerplate file for use with Apollo"/>
+    <?php // Description: A short description of the page. Open Graph support must come before the name attribute ?>
+    <meta property="og:description" name="description" content="What is included in the Apollo HTML boilerplate, and why"/>
 
 	<?php // Favicon: Suggest using https://realfavicongenerator.net/ to create icons. It will generate more than you need. For most desktop browser/versions just put the favicon.ico file in the root directory - no tag necessary. For the rest, you only need the following - put the files in the root directory. ?>
 	<link rel="icon" type="image/png" sizes="192x192" href="../icon.png">
 	<link rel="apple-touch-icon" href="../icon.png">
 	<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#00aba9">
 
-    <?php // Add a `js` class to the HTML element to help avoid Flash Of Unstyled Content (FOUC) ?>
+    <?php // Adds a `js` class to the HTML element to help avoid Flash Of Unstyled Content (FOUC) ?>
     <?php // See https://www.paulirish.com/2009/avoiding-the-fouc-v3/ ?>
 	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 
@@ -71,7 +70,7 @@
     <?php // https://developers.facebook.com/tools/debug/sharing/ ?>
     <?php // https://cards-dev.twitter.com/validator ?>
 	<?php // https://www.linkedin.com/help/linkedin/answer/46687 ?>
-	<meta property="og:title" content="Apollo Boilerplate"/>
+	<meta property="og:title" content="Boilerplate Documentation"/>
 	<meta property="og:image" content="/dist/assets/images/apollo.png"/>
     <meta property="og:url" content="http://apollo.s24.net/"/>
 
@@ -87,6 +86,7 @@
 	<div id="top" class="wrap">
         <?php // Skip to content link ?>
 		<a class="skip-link" href="#main">Skip to content</a>
+
         <?php // ARIA role is needed for IE11 - https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/ ?>
 		<header role="banner">
 			Header content goes here
@@ -94,52 +94,94 @@
 
         <?php // The id is used as the target for the skip to content link. ARIA role is needed for IE11 ?>
 		<main id="main" role="main">
-			<h1>Boilerplate</h1>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a, <a href="#1">convallis quis</a>, pellentesque a, dolor. Curabitur vitae nisi non dolor vestibulum consequat.</p>
-			<p>Duis viverra nibh a felis<sup>sup</sup> canis<sub>sub</sub> condimentum pretium. Nullam tristique lacus non purus. Donec vel felis. Etiam et sapien. Pellentesque nec quam a justo tincidunt laoreet. Aenean id enim. Donec lorem arcu, eleifend venenatis, rhoncus mollis, semper at, dui. Praesent velit tellus, adipiscing et, blandit convallis, dictum at, dui. Integer suscipit tortor in orci. Phasellus consequat. Quisque dictum convallis pede.</p>
-			<p><b>Mauris viverra scelerisque mauris.</b> Nulla facilisis, elit malesuada pretium egestas, dolor arcu commodo est, at egestas massa tortor ut ante. <strong>Etiam eget libero.</strong> Aenean pretium, tellus sed sodales semper, turpis purus aliquet orci, pulvinar ornare odio tortor sit amet dui.</p>
-			<p><i>Aenean id orci.</i> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus magna. <em>Mauris tincidunt iaculis enim.</em> Duis a mi vitae sapien dapibus tincidunt. Proin metus.</p>
-			<p>Proin cursus, libero non auctor faucibus, urna mi vestibulum orci, sit amet fermentum nibh purus eget enim. Aenean aliquet ligula nec nulla. Praesent sit amet lorem vitae massa hendrerit auctor. Sed sit amet urna. Aenean sapien nunc, imperdiet a, pharetra in, consequat eu, neque. Phasellus vel sem gravida augue consequat tempor. Curabitur eget mauris at pede varius facilisis.</p>
-			<h2>Basic image</h2>
-			<img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt="Multicoloured abstract painting" />
-			<p>Morbi ut sapien. Morbi arcu mauris, suscipit congue, placerat sit amet, suscipit a, ante. Donec aliquet dui ac nunc. Mauris magna quam, aliquet quis, viverra eu, fringilla eget, purus. Donec tristique pretium sem.</p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed eleifend urna eu sapien. Quisque posuere nunc eu massa. Praesent bibendum lorem non leo. Morbi volutpat, urna eu fermentum rutrum, ligula lacus interdum mauris, ac pulvinar libero pede a enim. Etiam commodo malesuada ante. Donec nec ligula. Curabitur mollis semper diam.</p>
-			<blockquote>
-				<p>Proin vestibulum. Ut ligula. Nullam sed dolor id odio volutpat pulvinar. Integer a leo. In et eros at neque pretium sagittis. Sed sodales lorem a ipsum suscipit gravida. Ut fringilla placerat arcu. Phasellus imperdiet. Mauris ac justo et turpis pharetra vulputate.</p>
-				<footer>Joe Bloggs, <cite><a href="#2">Quote Source</a></cite></footer>
-			</blockquote>
-			<h1>Level 1 Heading</h1>
-			<h2>Level 2 Heading</h2>
-			<h3>Level 3 Heading</h3>
-			<h4>Level 4 Heading</h4>
-			<h5>Level 5 Heading</h5>
-			<h6>Level 6 Heading</h6>
-			<h3>An Unordered List</h3>
-			<ul>
-				<li>Vestibulum in mauris semper tortor interdum ultrices.</li>
-				<li>Sed vel lorem et justo laoreet bibendum. Donec dictum.</li>
-				<li>Etiam massa libero, lacinia at, commodo in, tincidunt a, purus.</li>
-				<li>Praesent volutpat eros quis enim blandit tincidunt.</li>
-				<li>Aenean eu libero nec lectus ultricies laoreet. Donec rutrum, nisi vel egestas ultrices, ipsum urna sagittis libero, vitae vestibulum dui dolor vel velit.</li>
-			</ul>
-			<p>Nulla sagittis convallis arcu. Sed sed nunc. Curabitur consequat. Quisque metus enim, venenatis fermentum, mollis in, porta et, nibh. Duis vulputate elit in elit. Mauris dictum libero id justo. Fusce in est. Sed nec diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque semper nibh eget nibh. Sed tempor. Fusce erat.</p>
-			<h3>An Ordered List</h3>
-			<ol>
-				<li>Vestibulum in mauris semper tortor interdum ultrices.</li>
-				<li>Sed vel lorem et justo laoreet bibendum. Donec dictum.</li>
-				<li>Etiam massa libero, lacinia at, commodo in, tincidunt a, purus.</li>
-				<li>Praesent volutpat eros quis enim blandit tincidunt.</li>
-				<li>Aenean eu libero nec lectus ultricies laoreet. Donec rutrum, nisi vel egestas ultrices, ipsum urna sagittis libero, vitae vestibulum dui dolor vel velit.</li>
-				<li>Vestibulum in mauris semper tortor interdum ultrices.</li>
-				<li>Sed vel lorem et justo laoreet bibendum. Donec dictum.</li>
-				<li>Etiam massa libero, lacinia at, commodo in, tincidunt a, purus.</li>
-				<li>Praesent volutpat eros quis enim blandit tincidunt.</li>
-				<li>Aenean eu libero nec lectus ultricies laoreet. Donec rutrum, nisi vel egestas ultrices, ipsum urna sagittis libero, vitae vestibulum dui dolor vel velit.</li>
-			</ol>
-			<p>Vivamus semper auctor turpis. Sed ipsum lacus, varius quis, iaculis at, mollis sagittis, arcu.</p>
 
+			<h1>Boilerplate documentation</h1>
+			<p>This document provides an in-depth exploration of the <a href="../boilerplate.html">Boilerplate HTML file</a>, explaining what is included and why. The Boilerplate HTML file serves two functions:</p>
+			<ul>
+				<li>It provides some standard HTML that you can copy and paste into a CMS to help check your theme</li>
+				<li>It provides a pattern for the essential elements of a well-formed web page</li>
+			</ul>
+			<p>If you open this documentation page in a text editor you will see lots of inline PHP comments; here we explain what's going on.</p>
+
+			<h2>The Doctype</h2>
+			<p>Always start with <code>&lt;!doctype html&gt;</code></p>
+
+			<h2>Language declaration</h2>
+			<p>The HTML element must include an appropriate language attribute. For the majority of work that we undertake <code>lang="en"</code> is likely to be sufficient. If a specific language region (e.g. <code>lang="en-US"</code> or <code>lang="en-GB"</code>) or non-English language is required, refer to the W3C's <a href="https://www.w3.org/International/questions/qa-choosing-language-tags">Choosing a Language Tag</a> for guidance.</p>
+
+			<h2>Default no-js class</h2>
+			<p>We also add <code>class="no-js"</code> to the HTML element. This will be replaced by JavaScript as part of a process to avoid a Flash Of Unstyled Content (FOUC), which we will cover later on.</p>
+
+			<h2>The Head</h2>
+			<p>The portion of an HTML document containing <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">metadata</a> about that document and links to CSS and JavaScript files. The contents of the head, and the order in which they appear, are important. As explained in <a href="https://htmlhead.dev/#recommended-minimum">The Head Project</a>, <strong>charset and viewport meta tags must come first</strong> to consistently ensure proper document rendering. Any other head elements should come after these tags.</p>
+
+			<h3>Character encoding</h3>
+			<p>The first item is the charset meta tag: <code>&lt;meta charset="utf-8"&gt;</code>. This declares the page's character encoding. If left undefined, a page can be vulnerable to cross-site-scripting attacks. We put it first within the head because it must be within the first 1024 bytes of the HTML, as some browsers only look at those bytes before choosing an encoding.</p>
+
+			<h3>Allow pinch-to-zoom</h3>
+			<p>The second item is the viewport meta tag: <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>. This is added to enable responsive web pages and allow users to zoom content.</p>
+
+			<h3>Title</h3>
+			<p>The title element provides an accessible name for the HTML document.</p>
+
+			<h3>Internet Explorer compatibility</h3>
+			<p>We make earlier versions of IE use its latest rendering engine with <code>&lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;</code>, to provide a better experience for users stuck with these browsers.</p>
+
+			<h3>Description</h3>
+			<p>A concise summary of the content of the HTML document, which often appears in search engine results. To provide Open Graph support (covered in more detail below) and avoid using more tags than necessary, we include the <code>property="og:description"</code> attribute ahead of <code>name="description"</code>.</p>
+
+			<h3>Favicons</h3>
+			<p>Pretty much all desktop browsers are amply served by including an <b>.ico file</b> in the root directory. For Android and iOS, include a 192px square <b>.png file</b> that has first been optimised using a program such as <a href="https://imageoptim.com/mac">ImageOptim</a> or a website such as <a href="https://tinypng.com/">TinyPNG</a>. Safari requires a <b>.svg file</b> for its pinned tab icon.</p>
+			<p>The easiest way to generate the favicon files is to use <a href="https://realfavicongenerator.net/">Favicon Generator</a>. It will create more assets than you really need, so it is recommended to only include those specified above on your project, unless you are building a progressive web app. Pop them all in the root directory to keep them together.</p>
+
+			<h3>Avoiding a flash of unstyled content</h3>
+			<p>We use Paul Irish's <a href="https://www.paulirish.com/2009/avoiding-the-fouc-v3/">Avoiding the FOUC method</a>, which uses a small piece of JavaScript to replace <code>class="no-js"</code> with <code>class="js"</code>. Using the HTML element means that the JavaScript can be included in the head, which stops us from blocking the rendering of the body content.</p>
+
+			<h3>Avoiding a flash of invisible text</h3>
+			<p>Web fonts can be large assets, so it's important that their use does not impact performance. We declare default system fonts with a fallback in our CSS, to ensure that users never experience a flash of invisible text (FOIT). Bram Stein's <a href="https://github.com/bramstein/fontfaceobserver">Font Face Observer</a> checks when web fonts are loaded and then adds <code>fonts-loaded</code> to the class list on the HTML element. Web fonts styles are scoped to this class in our CSS. As with the FOUC script, by targeting the HTML element we ensure the script is not render-blocking.</p>
+			<p>To minimise the resulting visual jump from system fonts to web fonts, it's helpful to pick system fonts with similar metrics to the web fonts, using <a href="https://www.cssfontstack.com/">CSS Font Stack</a> and <a href="https://meowni.ca/font-style-matcher/">Font style matcher</a> to test the effect.</p>
+
+			<h3>Stylesheets</h3>
+			<p>Links to CSS stylesheets are next in the head.</p>
+
+			<h3>Google Tag Manager script</h3>
+			<p>The script for Google Tag Manager is next in the head.</p>
+
+			<h3>Content appearance on social media</h3>
+			<p>The final head elements allow us to control how content appears when URLs are shared on social media.</p>
+			<dl>
+				<dt>Facebook</dt>
+				<dd><a href="https://ogp.me/">Open Graph markup</a></dd>
+				<dd><a href="https://developers.facebook.com/tools/debug/">Facebook Sharing Debugger</a></dd>
+				<dt>Twitter</dt>
+				<dd><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">Getting started with cards</a></dd>
+				<dd><a href="https://cards-dev.twitter.com/validator">Twitter Card Validator</a></dd>
+				<dt>LinkedIn</dt>
+				<dd><a href="https://www.linkedin.com/help/linkedin/answer/46687">Making your website shareable on LinkedIn</a></dd>
+			</dl>
+
+			<h2>Body</h2>
+			<h3>Google Tag Manager</h3>
+			<p>The first item included within the body element is a <code>noscript</code> fallback for Google Tag Manager.</p>
+
+			<h3>Wrap container</h3>
+			<p>Next we add a simple div container with <code>id="top"</code> and <code>class="wrap"</code>. This container holds <code>&lt;header&gt;</code> and <code>&lt;main&gt;</code> (and possibly other block elements, depending on your project needs) but <code>&lt;footer&gt;</code> sits outside of it. This gives us the necessary markup to create a <a href="https://css-tricks.com/couple-takes-sticky-footer/">sticky footer</a>.</p>
+			<p>The id attribute provides us with a hook for any back-to-top links, if used. The class provides a hook for any CSS we may wish to apply to this container.</p>
+
+			<h4>Skip to content link</h4>
+			<p>We provide a skip to content link to allow users to easily skip past the <code>&lt;header&gt;</code>, which is repeated across multiple web pages.</p>
+
+			<h4>The header element</h4>
+			<p>To support IE11, we include the ARIA <code>role="banner"</code>.</p>
+
+			<h4>The main element</h4>
+			<p>We add <code>id="main"</code>, which is used as the <code>href</code> in the skip to content link. To support IE11, we include the ARIA <code>role="main"</code>.</p>
+
+			<h3>The footer element</h3>
+			<p>To support IE11, we include the ARIA <code>role="contentinfo"</code>.</p>
 
 		</main>
+
 		<?php // End main ?>
 
 	</div>
@@ -147,8 +189,6 @@
 	<footer class="global-footer" role="contentinfo">
 		Footer content goes here
 	</footer>
-
-<?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
 
 </body>
 </html>
