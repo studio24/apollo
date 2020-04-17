@@ -17,14 +17,8 @@ perimeter so it behaves like a border and doesn't add to the overall size.
  */
 .l-box {
 	border: $size-minus4 solid;
-	color: $black;
 	display: block;
 	padding: $size-plus1;
-}
-
-
-.l-box * {
-	color: inherit;
 }
 
 
