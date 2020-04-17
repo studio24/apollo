@@ -106,3 +106,20 @@ ol:not([class]) {
 	}
 
 }
+
+/**
+Description lists / Definition lists
+ */
+
+dl {
+
+	dd + dt {
+		margin-top: 0.5em;
+	}
+
+	dt + dd,
+	dd + dd {
+		margin-top: 0.25em;
+	}
+
+}
