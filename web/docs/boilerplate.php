@@ -21,9 +21,9 @@
     <meta property="og:description" name="description" content="HTML boilerplate file for use with Apollo"/>
 
 	<?php // Favicon: Suggest using https://realfavicongenerator.net/ to create icons. It will generate more than you need. For most desktop browser/versions just put the favicon.ico file in the root directory - no tag necessary. For the rest, you only need the following - put the files in the root directory. ?>
-	<link rel="icon" type="image/png" sizes="192x192" href="icon.png">
-	<link rel="apple-touch-icon" href="icon.png">
-	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#00aba9">
+	<link rel="icon" type="image/png" sizes="192x192" href="../icon.png">
+	<link rel="apple-touch-icon" href="../icon.png">
+	<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#00aba9">
 
     <?php // Add a `js` class to the HTML element to help avoid Flash Of Unstyled Content (FOUC) ?>
     <?php // See https://www.paulirish.com/2009/avoiding-the-fouc-v3/ ?>
