@@ -62,12 +62,15 @@
 <body>
 
 	<div class="wrap">
-		<header>
+        <?php // Skip to content link ?>
+		<a class="skip-link" href="#main">Skip to content</a>
+        <?php // ARIA role is needed for IE11 - https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/ ?>
+		<header role="banner">
 			Header content goes here
 		</header>
 
-		<?php // Start main ?>
-		<main>
+        <?php // The id is used as the target for the skip to content link. ARIA role is needed for IE11 ?>
+		<main id="main" role="main">
 			<h1>Boilerplate</h1>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a, <a href="#1">convallis quis</a>, pellentesque a, dolor. Curabitur vitae nisi non dolor vestibulum consequat.</p>
 			<p>Duis viverra nibh a felis<sup>sup</sup> canis<sub>sub</sub> condimentum pretium. Nullam tristique lacus non purus. Donec vel felis. Etiam et sapien. Pellentesque nec quam a justo tincidunt laoreet. Aenean id enim. Donec lorem arcu, eleifend venenatis, rhoncus mollis, semper at, dui. Praesent velit tellus, adipiscing et, blandit convallis, dictum at, dui. Integer suscipit tortor in orci. Phasellus consequat. Quisque dictum convallis pede.</p>
@@ -117,7 +120,8 @@
 		<?php // End main ?>
 
 	</div>
-	<footer class="global-footer">
+    <?php // ARIA role is needed for IE11 ?>
+	<footer class="global-footer" role="contentinfo">
 		Footer content goes here
 	</footer>
 
