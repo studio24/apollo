@@ -64,6 +64,16 @@
 	        <li><p style="background-color: #b10dc9">Padding: Fuchsia</p></li>
 	        <li><p style="background-color: #ffdc00">Internal margins: Yellow</p></li>
         </ul>
+        <h2>Layout samples</h2>
+        <ul>
+            <li><a href="box.php">Box</a></li>
+            <li><a href="center.php">Center</a></li>
+            <li><a href="cluster.php">Cluster</a></li>
+            <li><a href="cover.php">Cover</a></li>
+            <li><a href="frame.php">Frame</a></li>
+            <li><a href="sidebar.php">Sidebar</a></li>
+            <li><a href="switcher.php">Switcher</a></li>
+        </ul>
     </main>
     <?php // End main ?>
 </div>
