@@ -112,7 +112,7 @@
 			    <div class="sidebar">
 				    <article class="card card--cta">
 					    <div class="l-box l-box--no-border card__text">
-						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title">Unique card title</a></h3>
+						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net" aria-describedby="unique-card-title-2">Unique card title</a></h3>
 						    <p>Here is all the descriptive teaser text for my card.</p>
 						    <span class="button card__cta" aria-hidden="true" id="unique-card-title-2">Read more</span>
 					    </div>
