@@ -26,7 +26,7 @@
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#00aba9">
 
     <?php // Add a `js` class to the HTML element to help avoid Flash Of Unstyled Content (FOUC) ?>
-    <?php // We target the HTML element because WordPress already adds lots of classes to `body` ?>
+    <?php // See https://www.paulirish.com/2009/avoiding-the-fouc-v3/ ?>
 	<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 
     <?php // Font Face Observer script to check when web fonts are loaded before applying them via CSS ?>
