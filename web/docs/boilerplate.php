@@ -46,6 +46,27 @@
     <?php // Styles ?>
     <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
 
+    <?php // Google tag manager (GTM)  ?>
+	<script>
+		// Normalize doNotTrack implementations, see https://caniuse.com/#feat=do-not-track
+		var DO_NOT_TRACK_ENABLED = (
+			navigator.doNotTrack === '1' ||
+			navigator.doNotTrack === 'yes' || // Firefox 31 and below
+			navigator.msDoNotTrack === '1' || // IE 9 - 10
+			window.doNotTrack === '1' // IE 11 / Edge 16 and below
+		);
+
+		// If the user has enabled 'DoNotTrack', we should not load Google Tag Manager (and therefore, Google Analytics.)
+		if (!DO_NOT_TRACK_ENABLED && !window.__TESTS_RUNNING) {(
+			// Start Google Tag Manager
+			function(w,d,s,l,i){w[l]=w[l]||[];
+			w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+			var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-XXXX');
+			// End Google Tag Manager
+			}
+	</script>
+
     <?php // Open Graph tags (description is included below standard title ?>
     <?php // https://developers.facebook.com/tools/debug/sharing/ ?>
     <?php // https://cards-dev.twitter.com/validator ?>
@@ -60,8 +81,10 @@
 </head>
 
 <body>
+	<?php // Google tag manager for browsers without javascript (GTM) ?>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-	<div class="wrap">
+	<div id="top" class="wrap">
         <?php // Skip to content link ?>
 		<a class="skip-link" href="#main">Skip to content</a>
         <?php // ARIA role is needed for IE11 - https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/ ?>
