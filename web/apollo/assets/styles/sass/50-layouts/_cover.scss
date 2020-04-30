@@ -3,13 +3,13 @@
 
     From https://absolutely.every-layout.dev/layouts/cover/
 
-    `.l-cover` uses Flexbox context to vertically center a principal
-    item of content. It is given a min-height value to achieve this
-    which could be 100vh, or less if used as, e.g. a hero container.
+    `.l-cover` uses Flexbox to vertically center a principal item
+    of content. It is given a min-height value to achieve this
+    which could be 100vh, or less.
 
     Horizontal centering of content can be achieved using the `.l-center`
     layout within `.l-cover`, or with the `.u-center` utility found in
-    /70-utilities/layout
+    /90-utilities/layout
 
     The size variable provides optional padding to the container
     (currently 1rem). Sizes are defined in /10-settings/sizes

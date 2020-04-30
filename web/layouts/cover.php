@@ -73,7 +73,7 @@
         <ul>
 	        <li>The principal item of content to be centered within the cover needs to have the class <code>.principal</code> applied to it. This gives it auto top and bottom margins.</li>
 	        <li>In the first example, the utility class <code>.u-center</code> is added to horizontally center the principal item.</li>
-	        <li>In the second example, a nested center layout provides the horizontal centering.</li>
+            <li>In the second example, a nested <a href="center.php">center layout</a> provides the horizontal centering.</li>
 	        <li>The final example illustrates the addition of optional header and footer content.</li>
         </ul>
         <div class="l-cover">

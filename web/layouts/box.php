@@ -60,7 +60,7 @@
     <?php // Start main ?>
     <main>
         <h1>Layout: Box</h1>
-	    <p>The box layout should have borders and/or padding on all sides, or none at all. An element with specific (and asymmetrical) border/padding is no longer a box, instead it's trying to solve a more specific problem.</p>
+	    <p>The box should have borders and/or padding on all sides, or none at all. Otherwise it's not a box, but something more specific.</p>
         <div class="l-box">
 	        <p>This is an example of the default box layout. It uses the class <code>.l-box</code></p>
 	        <p>It has an even border and padding on all sides.</p>

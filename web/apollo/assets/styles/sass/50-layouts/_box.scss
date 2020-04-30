@@ -4,17 +4,9 @@
     From https://absolutely.every-layout.dev/layouts/box/
 
     `.l-box` should have borders and/or padding on all sides, or
-    none at all. An element with specific (and asymmetrical)
-    border/padding is no longer a box, instead it's trying to solve
-    a more specific problem.
+    none at all. Otherwise it's not a box, but something more specific.
 \*------------------------------------*/
 
-/**
-1. High contrast themes tend to eliminate background-color. If there is no
-border set on the box, we need to apply a transparent outline to maintain
-the box shape. The negative outline-offset moves the outline inside the
-perimeter so it behaves like a border and doesn't add to the overall size.
- */
 .l-box {
 	border: $size-minus4 solid;
 	display: block;
@@ -26,7 +18,12 @@ perimeter so it behaves like a border and doesn't add to the overall size.
 	padding: 0;
 }
 
-
+/**
+1. High contrast themes tend to eliminate background-color. If there is no
+border set on the box, we need to apply a transparent outline to maintain
+the box shape. The negative outline-offset moves the outline inside the
+perimeter so it behaves like a border and doesn't add to the overall size.
+ */
 .l-box--no-border {
 	border: none;
 	outline: $size-minus4 solid transparent; /* 1 */

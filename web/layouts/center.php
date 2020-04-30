@@ -63,7 +63,7 @@
         <p>The center layout is used to create a vertical stripe of content inside a given container. Apollo uses the technique on <code>&lt;main&gt;</code>.</p>
         <p>The following example illustrates how the center layout works on a smaller scale, but the principle is the same:</p>
         <ul>
-            <li>A center layout is contained within a box layout (without a border or padding), purely to help with this example.</li>
+            <li>A center layout is contained within a <a href="box.php">box layout</a> (without a border or padding), purely to help with this example.</li>
             <li>Auto left and right margins are applied to the center layout, along with some left and right padding and a maximum width.</li>
             <li>The padding maintains a space between the contents of the center layout and its parent container, even when that container is smaller than the maximum width set on the center layout.</li>
             <li>The center layout uses an exception to our global <code>box-sizing: border-box;</code> declaration. It uses <code>box-sizing: content-box;</code> to prevent the padding from making the content narrower than intended.</li>

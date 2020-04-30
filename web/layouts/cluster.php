@@ -61,10 +61,10 @@
     <?php // Start main ?>
     <main>
         <h1>Layout: Cluster</h1>
-        <p>The cluster layout is ideally suited for groups of elements that differ in length and are liable to wrap. Examples include buttons that appear together at the end of forms, as well as lists of tags, keywords, or other meta information.</p>
+        <p>The cluster suits any groups of elements that differ in length and are liable to wrap. Examples include groups of buttons at the end of forms, lists of tags, etc.</p>
         <p>The following example illustrates how the cluster layout works:</p>
         <ul>
-            <li>A center layout is contained within a box layout (without a border or padding), purely to help with this example.</li>
+            <li>A <a href="center.php">center layout</a> is contained within a <a href="box.php">box layout</a> (without a border or padding), purely to help with this example.</li>
             <li>The cluster layout is contained within the center layout.</li>
             <li>The cluster layout needs an inner container - in this example it's provided by a <code>ul</code>.</li>
             <li>The cluster items - <code>li</code> in this example - sit within the inner container. Each item has a margin on all sides. Their parent - the inner container - has a negative margin of the same size as the cluster items. This creates the even gaps between cluster items. The cluster layout uses <code>overflow: hidden;</code> to tidy up the edges.</li>

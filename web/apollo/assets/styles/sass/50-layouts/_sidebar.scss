@@ -64,7 +64,7 @@ omitted to let the contents of `.sidebar` determine the width of
 /**
 Min-width determines the point at which `.sidebar` and `.not-sidebar`
 will sit side-by-side rather than vertically. This negates the use of
-a media query.
+a viewport media query.
  */
 .l-sidebar .not-sidebar {
 
