@@ -33,40 +33,49 @@ can be scrolled horizontally. The shading moves to the left-hand
 side when the table has been fully scrolled to the right, and vice versa.
 See https://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
  */
-.table-wrap {
-    background-attachment: local, local, scroll, scroll;
-    background-color: inherit;
-    background-image:
-            linear-gradient(90deg, $white, transparent),
-            linear-gradient(270deg, $white, transparent),
-            linear-gradient(90deg, rgba(195, 195, 197, 0.5), transparent),
-            linear-gradient(270deg, rgba(195, 195, 197, 0.5), transparent);
-    background-position: 0 0, 100% 0, 0 0, 100% 0;
-    background-repeat: no-repeat;
-    background-size: 4em 100%, 4em 100%, 2em 100%, 2em 100%;
-    overflow-x: auto;
-    padding-left: $size-minus4; // Same as border width
+@media screen {
+
+    .table-wrap {
+        background-attachment: local, local, scroll, scroll;
+        background-color: inherit;
+        background-image:
+                linear-gradient(90deg, $white, transparent),
+                linear-gradient(270deg, $white, transparent),
+                linear-gradient(90deg, rgba(195, 195, 197, 0.5), transparent),
+                linear-gradient(270deg, rgba(195, 195, 197, 0.5), transparent);
+        background-position: 0 0, 100% 0, 0 0, 100% 0;
+        background-repeat: no-repeat;
+        background-size: 4em 100%, 4em 100%, 2em 100%, 2em 100%;
+        overflow-x: auto;
+        padding-left: $size-minus4; // Same as border width
+    }
+
 }
+
 
 /**
  Sticky header: an enhancement for tables without any horizontal overflow
  */
-.js-sticky th {
-    background-clip: padding-box; // Stops border disappearing if <th> is sticky
-    background-color: $white;
-    position: sticky;
-    top: 0;
+@media screen {
 
-    /**
-     Adds a bottom border, helpful when scrolling a table with a sticky header
-     */
-    &::after {
-        background-color: $black;
-        bottom: 0;
-        content: '';
-        height: $size-minus4 / 2;
-        left: 0;
-        position: absolute;
-        width: 100%;
+    .js-sticky th {
+        background-clip: padding-box; // Stops border disappearing if <th> is sticky
+        background-color: $white;
+        position: sticky;
+        top: 0;
+
+        /**
+		 Adds a bottom border, helpful when scrolling a table with a sticky header
+		 */
+        &::after {
+            background-color: $black;
+            bottom: 0;
+            content: '';
+            height: $size-minus4 / 2;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
     }
+
 }
