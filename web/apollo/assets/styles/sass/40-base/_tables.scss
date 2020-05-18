@@ -37,14 +37,15 @@ See https://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
     background-attachment: local, local, scroll, scroll;
     background-color: inherit;
     background-image:
-            linear-gradient(90deg, $white, rgba(255, 255, 255, 0)),
-            linear-gradient(270deg, $white, rgba(255, 255, 255, 0)),
-            linear-gradient(90deg, $silver, rgba(195, 195, 197, 0)),
-            linear-gradient(270deg, $silver, rgba(195, 195, 197, 0));
+            linear-gradient(90deg, $white, transparent),
+            linear-gradient(270deg, $white, transparent),
+            linear-gradient(90deg, rgba(195, 195, 197, 0.5), transparent),
+            linear-gradient(270deg, rgba(195, 195, 197, 0.5), transparent);
     background-position: 0 0, 100% 0, 0 0, 100% 0;
     background-repeat: no-repeat;
     background-size: 4em 100%, 4em 100%, 2em 100%, 2em 100%;
     overflow-x: auto;
+    padding-left: $size-minus4; // Same as border width
 }
 
 /**
