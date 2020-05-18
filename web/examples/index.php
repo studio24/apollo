@@ -53,14 +53,15 @@
         <p>Here you will find examples of common components and functionality.</p>
         <ul>
             <li><a href="above-the-fold.php">Above the fold content</a></li>
+            <li><a href="sticky-footer.php">Sticky footer</a></li>
             <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
+            <li><a href="pagination.php">Pagination</a></li>
             <li><a href="tables.php">Data tables</a></li>
             <li><a href="cards.php">Cards</a></li>
-            <li><a href="collapsibles.php">Collapsible sections</a></li>
-            <li><a href="tabs.php">Tabbed sections</a></li>
             <li><a href="forms.php">Forms</a></li>
             <li><a href="donation-form.php">Donation form</a></li>
-            <li><a href="sticky-footer.php">Sticky footer</a></li>
+            <li><a href="collapsibles.php">Collapsible sections</a></li>
+            <li><a href="tabs.php">Tabbed sections</a></li>
         </ul>
     </main>
     <?php // End main ?>
