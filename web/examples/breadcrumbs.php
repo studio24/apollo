@@ -50,7 +50,7 @@
 
     <main>
         <h1>Breadcrumbs</h1>
-        <nav class="l-cluster" aria-label="breadcrumb">
+        <nav class="l-cluster" aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumbs">
                 <li>
                     <a href="/">
