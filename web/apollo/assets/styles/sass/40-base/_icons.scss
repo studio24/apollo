@@ -12,11 +12,30 @@ svg {
 
 
 /**
-Inline SVG icons
+SVG icons are sized relative to font size, thanks to the em unit.
+
+1. When the cap unit is supported this will make it easier to match icon
+size to text size.
  */
-.icon--inline {
+svg.icon {
 	height: 0.75em;
-	position: relative;
+	height: 1cap; /* 1 */
 	vertical-align: baseline;
 	width: 0.75em;
+	width: 1cap; /* 1 */
+}
+
+
+/**
+Use the `with-icon` class on the SVG's parent, if there
+is a need to specify the spacing between text and icon.
+ */
+.with-icon {
+	align-items: baseline;
+	display: inline-flex;
+
+	// Logical property creates appropriate spacing irrespective of text direction
+	.icon {
+		margin-inline-end: $size-minus1;
+	}
 }

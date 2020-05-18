@@ -59,8 +59,8 @@
 	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
 	        </ul>
 		    <p>I believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
-	        <button class="u-center">
-		        <svg class="icon--inline" viewBox="0 0 100 100">
+	        <button class="u-center with-icon">
+		        <svg class="icon" viewBox="0 0 100 100">
 			        <circle cx="50" cy="50" r="50"></circle>
 		        </svg>
 		        Button
