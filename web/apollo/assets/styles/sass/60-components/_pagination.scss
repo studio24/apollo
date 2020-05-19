@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #Pagination
+    See: https://weboverhauls.github.io/demos/pagination/
+\*------------------------------------*/
+
+.pagination.pagination {
+
+	li {
+		display: inline-block; // IE9
+		position: relative;
+
+		&::before {
+			content: "\2000";
+			position: absolute;
+			z-index: -1;
+		}
+
+	}
+
+	.pagination__item {
+		background-color: $mercury-grey;
+		border: $size-minus4 solid;
+		display: block;
+		padding:  $size-minus3 $size-minus1;
+		text-decoration: none;
+	}
+
+	[aria-current] {
+		background-color: $grey;
+
+	}
+
+}
