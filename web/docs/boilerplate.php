@@ -96,12 +96,8 @@
 		<main id="main" role="main">
 
 			<h1>Boilerplate documentation</h1>
-			<p>This document provides an in-depth exploration of the <a href="../boilerplate.html">Boilerplate HTML file</a>, explaining what is included and why. The Boilerplate HTML file serves two functions:</p>
-			<ul>
-				<li>It provides some standard HTML that you can copy and paste into a CMS to help check your theme</li>
-				<li>It provides a pattern for the essential elements of a well-formed web page</li>
-			</ul>
-			<p>If you open this documentation page in a text editor you will see lots of inline PHP comments; here we explain what's going on.</p>
+			<p>This is an in-depth exploration of the <a href="../boilerplate.html">Boilerplate HTML file</a>, explaining what is included and why.</p>
+			<p>Note: If you open this page in a text editor you will see lots of inline PHP comments; here we explain what's going on.</p>
 
 			<h2>The Doctype</h2>
 			<p>Always start with <code>&lt;!doctype html&gt;</code></p>
