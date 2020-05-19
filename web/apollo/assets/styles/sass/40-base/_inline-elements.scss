@@ -18,24 +18,17 @@ i {
 
 
 small,
-.small {
-	 @include text-s;
-}
-
-
-.small-caps {
-	font-size: em(12);
-	text-shadow: 0 0 0 $black;
-	text-transform: uppercase;
-}
-
-
-small,
 .small,
 .small-caps {
+	 font-size: 0.8em;
 	letter-spacing: 0.03em;
 }
 
+
+.small-caps {
+	text-shadow: 0 0 0 $black;
+	text-transform: uppercase;
+}
 
 
 code {

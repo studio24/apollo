@@ -219,16 +219,15 @@ associating the help text with the field itself whilst still keeping
 a class-hook for styling.
  */
 .field-description.field-description {
-	@include text-s;
 
 	color: #666;
 	display: block;
+	font-size: 0.8em
 }
 
 
 .field-label {
 	display: block;
-	font-size: 0.9em;
 }
 
 
@@ -238,10 +237,9 @@ a class-hook for styling.
 Word or character counter with aria
  */
 .field-live-region {
-	@include text-s;
-
 	bottom: 1em;
 	color: #666;
+	font-size: 0.8em;
 	margin-top: 0;
 	opacity: 0;
 	position: absolute;
@@ -610,11 +608,11 @@ show all available options outright, rather than hide them behind a <select>
 	}
 
 	:first-child {
-		@include text-m;
+		font-size: 1em;
 	}
 
 	:not(:first-child) {
-		@include text-s;
+		font-size: 0.8em;
 	}
 
 }

@@ -1,29 +1,29 @@
-/* proza-libre-regular - latin */
+/* open-sans-regular - latin */
 @font-face {
-  font-family: 'Proza Libre';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Proza Libre'), local('ProzaLibre-Regular'),
-  url('../fonts/proza-libre-v2-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('../fonts/proza-libre-v2-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+  url('../fonts/open-sans-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/open-sans-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* proza-libre-italic - latin */
+/* open-sans-italic - latin */
 @font-face {
-  font-family: 'Proza Libre';
+  font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
-  src: local('Proza Libre Italic'), local('ProzaLibre-Italic'),
-  url('../fonts/proza-libre-v2-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('../fonts/proza-libre-v2-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans Italic'), local('OpenSans-Italic'),
+  url('../fonts/open-sans-v17-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/open-sans-v17-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* proza-libre-600 - latin */
+/* open-sans-600 - latin */
 @font-face {
-  font-family: 'Proza Libre';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: local('Proza Libre SemiBold'), local('ProzaLibre-SemiBold'),
-  url('../fonts/proza-libre-v2-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('../fonts/proza-libre-v2-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+  url('../fonts/open-sans-v17-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/open-sans-v17-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* playfair-display-regular - latin */

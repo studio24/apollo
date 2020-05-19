@@ -13,13 +13,10 @@
 }
 
 .tag {
-
-	@include text-s;
-
 	background-color: $aqua;
 	display: block;
+	font-size: 0.8em;
 	padding: $size-minus2;
-
 }
 
 a.tag {

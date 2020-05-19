@@ -5,8 +5,7 @@
 blockquote {
 
 	@include stack(1rem);
-	@include text-1xl;
-
+	font-size: 1.25em;
 	quotes: "\201C" "\201D" "\2018" "\2019";
 
 }
@@ -20,7 +19,5 @@ blockquote p:last-of-type::after {
 }
 
 blockquote footer {
-
-	@include text-m;
-
+	font-size: 1em;
 }
