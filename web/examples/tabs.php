@@ -49,7 +49,7 @@
 <div class="wrap">
 
     <main>
-        <h1>Tabs</h1>
+        <h1>Tabbed sections or "Tabs"</h1>
         <div class="component--tabs" data-component="tabs">
             <ul>
                 <li>

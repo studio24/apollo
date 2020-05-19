@@ -64,9 +64,9 @@
 
         <div class="l-switcher">
             <div>
-                <div class="content">Stuff</div>
-                <div class="content">Stuff</div>
-                <div class="content">Stuff</div>
+                <div class="content">Stuff 1</div>
+                <div class="content">Stuff 2</div>
+                <div class="content">Stuff 3</div>
             </div>
         </div>
 
