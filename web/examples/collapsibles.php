@@ -49,7 +49,7 @@
 <div class="wrap">
 
     <main>
-        <h1>Collapsibles</h1>
+        <h1>Collapsible sections or "Collapsibles"</h1>
         <div class="component--collapsibles" data-component="collapsibles">
             <h2 data-heading="collapsibles">Baby Spice</h2>
             <div>
