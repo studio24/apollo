@@ -52,9 +52,9 @@
         <h1>Examples</h1>
         <p>Here you will find examples of common components and functionality.</p>
         <ul>
-            <li><a href="above-the-fold.php">Above the fold content</a></li>
-            <li><a href="sticky-footer.php">Sticky footer</a></li>
+            <li><a href="hero.php">Hero</a></li>
             <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
+            <li><a href="sticky-footer.php">Sticky footer</a></li>
             <li><a href="pagination.php">Pagination</a></li>
             <li><a href="tables.php">Data tables</a></li>
             <li><a href="cards.php">Cards</a></li>
