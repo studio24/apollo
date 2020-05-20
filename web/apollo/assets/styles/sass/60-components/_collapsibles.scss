@@ -2,19 +2,23 @@
     #Collapsible sections
 \*------------------------------------*/
 
-.component--collapsibles {
+.js .component--collapsibles {
 
 	// Added via JavaScript
 	[data-heading="collapsibles"] button {
 
 		align-items: center;
-		background-color: transparent;
+		background-color: $silver;
 		color: inherit;
 		display: flex;
 		font-weight: $heading-weight;
 		justify-content: space-between;
 		padding: $size;
 		width: 100%;
+
+		&:hover {
+			background-color: $grey;
+		}
 
 		&[aria-expanded="true"] .vert {
 			display: none;
@@ -36,6 +40,12 @@
 		&[aria-hidden="true"] {
 			display: none;
 		}
+
+	}
+
+	* + [data-heading="collapsibles"] {
+
+		margin-top: $size;
 
 	}
 
