@@ -90,7 +90,7 @@
 						    <h3 class="card__heading"><a class="card__link" href="https://www.studio24.net">My card title</a></h3>
 						    <p>Here is all the descriptive teaser text for my card.</p>
 					    </div>
-					    <div class="l-frame l-frame--16-9">
+					    <div class="l-frame l-frame--16-9 card__image">
 						    <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 					    </div>
 				    </article>
@@ -116,7 +116,7 @@
 						    <p>Here is all the descriptive teaser text for my card.</p>
 						    <span class="button card__cta" aria-hidden="true" id="unique-card-title-2">Read more</span>
 					    </div>
-					    <div class="l-frame l-frame--16-9">
+					    <div class="l-frame l-frame--16-9 card__image">
 						    <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 					    </div>
 				    </article>
@@ -132,7 +132,7 @@
 		                    <p>Here is all the descriptive teaser text for my card.</p>
 			                <span class="button card__cta" aria-hidden="true" id="unique-card-title-1">Read more</span>
 		                </div>
-			            <div class="l-frame l-frame--16-9">
+			            <div class="l-frame l-frame--16-9 card__image">
 				            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 			            </div>
 		            </article>
@@ -144,7 +144,7 @@
 				            <p>Here is all the descriptive teaser text for my card. But this one has significantly more text content inside it.</p>
 				            <span class="button card__cta" aria-hidden="true" id="unique-card-title-2">Read more</span>
 			            </div>
-			            <div class="l-frame l-frame--16-9">
+			            <div class="l-frame l-frame--16-9 card__image">
 				            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 			            </div>
 		            </article>
@@ -156,7 +156,7 @@
 				            <p>Here is all the descriptive teaser text for my card.</p>
 				            <span class="button card__cta" aria-hidden="true" id="unique-card-title-3">Read more</span>
 			            </div>
-			            <div class="l-frame l-frame--16-9">
+			            <div class="l-frame l-frame--16-9 card__image">
 				            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 			            </div>
 		            </article>
@@ -168,7 +168,7 @@
 				            <p>Here is all the descriptive teaser text for my card.</p>
 				            <span class="button card__cta" aria-hidden="true" id="unique-card-title-4">Read more</span>
 			            </div>
-			            <div class="l-frame l-frame--16-9">
+			            <div class="l-frame l-frame--16-9 card__image">
 				            <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 			            </div>
 		            </article>
@@ -207,7 +207,7 @@
 						    <p>Here is all the descriptive teaser text for my card.</p>
 						    <span class="button card__cta" aria-hidden="true" id="another-card-title-1">Read more</span>
 					    </div>
-					    <div class="l-frame l-frame--16-9">
+					    <div class="l-frame l-frame--16-9 card__image">
 						    <img src="/dist/assets/images/steve-johnson--zASKXkwkIY-unsplash.jpg" alt>
 					    </div>
 				    </article>

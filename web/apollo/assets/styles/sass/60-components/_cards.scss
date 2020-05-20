@@ -10,6 +10,18 @@
 	height: 100%;
 	position: relative;
 
+	.card__image::before {
+		background-color: transparent;
+		bottom: 0;
+		content: '';
+		display: block;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
 	/**
 	Do not include the `hover` and `focus-within` styles in the same block - otherwise
 	the hover style will be lost in browsers that don't support focus-within
@@ -17,6 +29,10 @@
 
 	&:hover {
 		background-color: darken($mercury-grey, 10%);
+
+		.card__image::before {
+			background-color: rgba(0, 0, 0, 0.25);
+		}
 	}
 
 	&:focus-within {
