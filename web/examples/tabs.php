@@ -50,6 +50,7 @@
 
     <main>
         <h1>Tabbed sections or "Tabs"</h1>
+        <p>We use the data attribute <code>data-component="tabs"</code> as a hook for our JavaScript, as this keeps things nicely separated from classes, which could more easily be overwritten.</p>
         <div class="component--tabs" data-component="tabs">
             <ul>
                 <li>
