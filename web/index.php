@@ -82,12 +82,12 @@
 					<div class="not-sidebar">
 						
 						
-						<h1>Getting started</h1>
+						<h2>Getting started</h2>
                     	<ol>
                         	<li><a href="#!">Download Apollo.</a></li>
                         	<li>Put it in the root of your project.</li>
                     	</ol>
-						<h1>Overview</h1>
+						<h2>Overview</h2>
             		    <p>The thinking here is drawn from the <i>Springer Nature Front End Playbook</i> approach. That is to say:</p>
             	        <ul>
             	            <li>Serve core CSS styles to all browsers for an accessible experience (perhaps not the most exciting, but it works)</li>
@@ -95,7 +95,7 @@
             	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
             	        </ul>
             		    <p>We believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
-    	       		    <h2>Points to bear in mind</h2>
+    	       		    <h3>Points to bear in mind</h3>
             	        <p>There are some design patterns we have tended to follow in recent projects at Studio 24. These are:</p>
             		    <div class="l-box">
             			    <ol>
