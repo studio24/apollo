@@ -47,31 +47,30 @@ ol:not([class]) {
 
 ol:not([class]) {
 
-	counter-reset: orderedList;
 	list-style-type: none;
 
 	> li {
 
 		column-break-inside: avoid;
+		counter-increment: orderedList;
 		display: block;
 		position: relative;
 
 		&:before {
-
 			content: counters(orderedList, ".");
-			counter-increment: orderedList;
 			display: block;
 			font-weight: 500;
 			left: -0.8em;
 			position: absolute;
 			top: 0;
+		}
 
+		&:first-child {
+			counter-reset: orderedList;
 		}
 
 		ol li {
-
 			padding-left: 1.75em;
-
 		}
 
 	}
