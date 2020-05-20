@@ -64,7 +64,7 @@
 	        <li><p style="background-color: #b10dc9">Padding: Fuchsia</p></li>
 	        <li><p style="background-color: #ffdc00">Internal margins: Yellow</p></li>
         </ul>
-        <h2>Layout samples</h2>
+        <h2>Layout examples</h2>
         <ul>
             <li><a href="box.php">Box</a></li>
             <li><a href="center.php">Center</a></li>

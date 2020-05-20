@@ -47,46 +47,79 @@
 <body>
 
 	<div class="wrap">
-
-		<?php // Start main ?>
-	    <main>
-	        <h1>Overview</h1>
-	        <p>So, let’s see about getting some basic styles down for the reboot of <em>Apollo</em>. I’m going to need some paragraphs with some reasonable-looking text inside of them to try and create a base natural layout, so that I can accurately assess how these <strong>core</strong> styles are working.</p>
-		    <p>My thinking here is drawn from the <span class="small-caps">Springer Nature Front End Playbook</span> approach. That is to say:</p>
-	        <ul>
-	            <li>Serve core CSS styles to all browsers for an accessible experience (perhaps not the most exciting, but it works)</li>
-	            <li>Use a CSS media query to cut the mustard and serve advanced CSS styles to modern browsers (plus IE10/11)</li>
-	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
-	        </ul>
-		    <p>I believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
-	        <button class="u-center with-icon">
-		        <svg class="icon" viewBox="0 0 100 100">
-			        <circle cx="50" cy="50" r="50"></circle>
-		        </svg>
-		        Button
-	        </button>
-		    <h2>Points to bear in mind</h2>
-	        <p>There are certain design schemes that we have tended to follow in recent projects at Studio 24. These are:</p>
-		    <div class="l-box">
-			    <ol>
-				    <li>Limiting the content width to 90% of the viewport on small screens.</li>
-				    <li>Reducing this width to 80% of the viewport on tablet screens.</li>
-				    <li>Setting a max-width for content at 1300px</li>
-				    <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. banner/hero components)</li>
-			    </ol>
-		    </div>
-		    <p>It is worth bearing these points in mind for our base styles, as they should provide a neater reading experience for users. For example, it will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
-		    <p>By adjusting Apollo styles locally, I can test the resulting visual feel using <a href="https://www.browserstack.com/users/sign_in">Browserstack</a> and – when happy – push these changes into a separate branch on the Github Apollo repo.</p>
-		    <blockquote>
-			    <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
-		    </blockquote>
-	    </main>
-		<?php // End main ?>
-
+        <?php // Start main ?>
+		<main>
+			<h1>Apollo <small>by Studio 24</small></h1>
+			<div class="l-sidebar">
+				<div>
+					<div class="sidebar">
+						<h4><a href="layouts">Layouts</a></h4>
+						<ul>
+                            <li><a href="layouts/box.php">Box</a></li>
+                            <li><a href="layouts/center.php">Center</a></li>
+                            <li><a href="layouts/cluster.php">Cluster</a></li>
+                            <li><a href="layouts/cover.php">Cover</a></li>
+                            <li><a href="layouts/frame.php">Frame</a></li>
+                            <li><a href="layouts/sidebar.php">Sidebar</a></li>
+                            <li><a href="layouts/switcher.php">Switcher</a></li>
+                        </ul>
+						<h4><a href="patterns">Patterns</a></h4>
+                        <ul>
+                            <li><a href="patterns/breadcrumbs.php">Breadcrumbs</a></li>
+                            <li><a href="patterns/sticky-footer.php">Sticky footer</a></li>
+                            <li><a href="patterns/pagination.php">Pagination</a></li>
+                            <li><a href="patterns/tables.php">Data tables</a></li>
+                            <li><a href="patterns/cards.php">Cards</a></li>
+                            <li><a href="patterns/forms.php">Forms</a></li>
+                            <li><a href="patterns/collapsibles.php">Collapsible sections</a></li>
+                            <li><a href="patterns/tabs.php">Tabbed sections</a></li>
+                        </ul>
+                        <p>Inspiration and ideas:</p>
+                        <ul>
+                            <li><a href="patterns/page-header.php">Page header</a></li>
+                        </ul>
+					</div>
+					<div class="not-sidebar">
+						
+						
+						<h1>Getting started</h1>
+                    	<ol>
+                        	<li><a href="#!">Download Apollo.</a></li>
+                        	<li>Put it in the root of your project.</li>
+                    	</ol>
+						<h1>Overview</h1>
+            		    <p>The thinking here is drawn from the <i>Springer Nature Front End Playbook</i> approach. That is to say:</p>
+            	        <ul>
+            	            <li>Serve core CSS styles to all browsers for an accessible experience (perhaps not the most exciting, but it works)</li>
+            	            <li>Use a CSS media query to cut the mustard and serve advanced CSS styles to modern browsers (plus IE10/11)</li>
+            	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
+            	        </ul>
+            		    <p>We believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
+    	       		    <h2>Points to bear in mind</h2>
+            	        <p>There are some design patterns we have tended to follow in recent projects at Studio 24. These are:</p>
+            		    <div class="l-box">
+            			    <ol>
+            				    <li>Limiting the content width to 90% of the viewport on small screens.</li>
+            				    <li>Reducing this width to 80% of the viewport on tablet screens.</li>
+            				    <li>Setting a max-width for content at 1300px</li>
+            				    <li>Allowing certain elements to extend beyond these restrictions to fill the browser width (e.g. feature photography, full-width video)</li>
+            			    </ol>
+            		    </div>
+                	    <p>It is worth bearing these points in mind for our base styles. For example, they will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
+                	    <blockquote>
+                		    <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
+                	    </blockquote>
+					</div>
+				</div>
+			</div>
+		</main>
+        <?php // End main ?>
 	</div>
 	<footer class="global-footer">
 		Footer content goes here
 	</footer>
+
+
 
 <?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
 

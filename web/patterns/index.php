@@ -49,7 +49,7 @@
 <div class="wrap">
     <?php // Start main ?>
     <main>
-        <h1>Examples</h1>
+        <h1>Patterns</h1>
         <p>Common components and functionality:</p>
         <ul>
             <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
