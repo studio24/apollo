@@ -82,7 +82,7 @@
 					<div class="not-sidebar">
 						
 						
-						<h2>Getting started</h2>
+						<h1>Getting started</h1>
                     	<ol>
                         	<li><a href="#!">Download Apollo.</a></li>
                         	<li>Put it in the root of your project.</li>
@@ -95,7 +95,7 @@
             	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
             	        </ul>
             		    <p>We believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
-    	       		    <h3>Points to bear in mind</h3>
+    	       		    <h2>Points to bear in mind</h2>
             	        <p>There are some design patterns we have tended to follow in recent projects at Studio 24. These are:</p>
             		    <div class="l-box">
             			    <ol>
