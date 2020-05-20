@@ -51,7 +51,7 @@
     <main>
         <h1>Collapsible sections or "Collapsibles"</h1>
 
-        <p>We insert buttons via JavaScript for opening and closing collapsible sections. We use the data attribute <code>data-component="collapsibles"</code> as a hook for our JavaScript, as this keeps things nicely separated from classes, which coulld more easily be overwritten.</p>
+        <p>We insert buttons via JavaScript for opening and closing collapsible sections. We use the data attribute <code>data-component="collapsibles"</code> as a hook for our JavaScript, as this keeps things nicely separated from classes, which could more easily be overwritten.</p>
         <p><a href="https://adamsilver.io/articles/buttons-shouldnt-have-a-hand-cursor/">Buttons shouldn't use the pointer cursor</a>, so we need to ensure the buttons have sufficient affordance by other means, such as background colour, border and/or box-shadow styles.</p>
 
         <div class="component--collapsibles" data-component="collapsibles">
