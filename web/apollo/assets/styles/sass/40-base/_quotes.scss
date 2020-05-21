@@ -1,13 +1,17 @@
 /*------------------------------------*\
-    #Blockquotes
+    #Quotes
 \*------------------------------------*/
 
-blockquote {
-
+blockquote,
+.quote {
 	@include stack(1rem);
-	font-size: 1.25em;
-	quotes: "\201C" "\201D" "\2018" "\2019";
+}
 
+blockquote {
+	border-left: solid $size-minus3;
+	font-size: 1.25rem;
+	padding-left: $size-plus1;
+	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote p:first-child::before {
@@ -19,5 +23,9 @@ blockquote p:last-of-type::after {
 }
 
 blockquote footer {
-	font-size: 1em;
+	font-size: 1rem;
+}
+
+.quote figcaption {
+	padding-left: $size-plus1;
 }

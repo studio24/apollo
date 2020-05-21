@@ -64,16 +64,17 @@
                             <li><a href="layouts/switcher.php">Switcher</a></li>
                         </ul>
 						<h2 class="h4"><a href="patterns">Patterns</a></h2>
-                        <ul>
-                            <li><a href="patterns/breadcrumbs.php">Breadcrumbs</a></li>
-                            <li><a href="patterns/sticky-footer.php">Sticky footer</a></li>
-                            <li><a href="patterns/pagination.php">Pagination</a></li>
-                            <li><a href="patterns/tables.php">Data tables</a></li>
-                            <li><a href="patterns/cards.php">Cards</a></li>
-                            <li><a href="patterns/forms.php">Forms</a></li>
-                            <li><a href="patterns/collapsibles.php">Collapsible sections</a></li>
-                            <li><a href="patterns/tabs.php">Tabbed sections</a></li>
-                        </ul>
+						<ul>
+							<li><a href="patterns/sticky-footer.php">Sticky footer</a></li>
+							<li><a href="patterns/tables.php">Data tables</a></li>
+							<li><a href="patterns/forms.php">Forms</a></li>
+							<li><a href="patterns/quotes.php">Quotes</a></li>
+							<li><a href="patterns/breadcrumbs.php">Breadcrumbs</a></li>
+							<li><a href="patterns/cards.php">Cards</a></li>
+							<li><a href="patterns/pagination.php">Pagination</a></li>
+							<li><a href="patterns/collapsibles.php">Collapsible sections</a></li>
+							<li><a href="patterns/tabs.php">Tabbed sections</a></li>
+						</ul>
                         <p>Inspiration and ideas:</p>
                         <ul>
                             <li><a href="patterns/page-header.php">Page header</a></li>
@@ -106,9 +107,6 @@
             			    </ol>
             		    </div>
                 	    <p>It is worth bearing these points in mind for our base styles. For example, they will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
-                	    <blockquote>
-                		    <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
-                	    </blockquote>
 					</div>
 				</div>
 			</div>

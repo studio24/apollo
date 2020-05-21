@@ -47,32 +47,34 @@
 <body>
 
 <div class="wrap">
-    <?php // Start main ?>
+
     <main>
-        <h1>Patterns</h1>
-        <p>Common components and functionality:</p>
-        <ul>
-            <li><a href="sticky-footer.php">Sticky footer</a></li>
-            <li><a href="tables.php">Data tables</a></li>
-            <li><a href="forms.php">Forms</a></li>
-	        <li><a href="quotes.php">Quotes</a></li>
-	        <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
-	        <li><a href="cards.php">Cards</a></li>
-	        <li><a href="pagination.php">Pagination</a></li>
-            <li><a href="collapsibles.php">Collapsible sections</a></li>
-            <li><a href="tabs.php">Tabbed sections</a></li>
-        </ul>
-        <p>Inspiration and ideas:</p>
-        <ul>
-            <li><a href="page-header.php">Page header</a></li>
-        </ul>
+        <h1>Quotes</h1>
+        <h2>Basic blockquote</h2>
+        <blockquote>
+            <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
+        </blockquote>
+
+        <h2>Blockquote with footer</h2>
+        <blockquote>
+            <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
+            <footer>Billy Connolly</footer>
+        </blockquote>
+
+        <h2>Blockquote as a figure</h2>
+	    <p>This could be used a slide in a carousel of quotes/testimonials.</p>
+        <figure class="quote">
+            <blockquote>
+	            <p>Before you judge a man, walk a mile in his shoes. After that who cares? He’s a mile away and you’ve got his shoes!</p>
+            </blockquote>
+            <figcaption>Billy Connolly</figcaption>
+        </figure>
     </main>
-    <?php // End main ?>
+
 </div>
 <footer class="global-footer">
-	Footer content goes here
+    Footer content goes here
 </footer>
-
 
 
 <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
