@@ -53,7 +53,7 @@
 			<div class="l-sidebar">
 				<div>
 					<div class="sidebar">
-						<h4><a href="layouts">Layouts</a></h4>
+						<h2 class="h4"><a href="layouts">Layouts</a></h2>
 						<ul>
                             <li><a href="layouts/box.php">Box</a></li>
                             <li><a href="layouts/center.php">Center</a></li>
@@ -63,7 +63,7 @@
                             <li><a href="layouts/sidebar.php">Sidebar</a></li>
                             <li><a href="layouts/switcher.php">Switcher</a></li>
                         </ul>
-						<h4><a href="patterns">Patterns</a></h4>
+						<h2 class="h4"><a href="patterns">Patterns</a></h2>
                         <ul>
                             <li><a href="patterns/breadcrumbs.php">Breadcrumbs</a></li>
                             <li><a href="patterns/sticky-footer.php">Sticky footer</a></li>
@@ -82,7 +82,7 @@
 					<div class="not-sidebar">
 						
 						
-						<h1>Getting started</h1>
+						<h2>Getting started</h2>
                     	<ol>
                         	<li><a href="#!">Download Apollo.</a></li>
                         	<li>Put it in the root of your project.</li>
@@ -95,7 +95,7 @@
             	            <li>Load JavaScript according to whether the advanced CSS styles have been applied to the site</li>
             	        </ul>
             		    <p>We believe this is in the best interests of all web users, and takes into account issues of performance for older browsers by giving them just what they need to make content accessible for users. We infer that users of older browsers may well have a device with less processing power, and so we simplify. We can progressively enhance the experience for users who are privileged to have access to more capable browsers and devices.</p>
-    	       		    <h2>Points to bear in mind</h2>
+    	       		    <h3>Points to bear in mind</h3>
             	        <p>There are some design patterns we have tended to follow in recent projects at Studio 24. These are:</p>
             		    <div class="l-box">
             			    <ol>
