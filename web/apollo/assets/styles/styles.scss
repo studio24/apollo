@@ -35,9 +35,7 @@
 /*------------------------------------*\
     #Base
 \*------------------------------------*/
-//@TODO Check if this path is alright, or whether we need to copy the file elsewhere
-@import "../../../node_modules/normalize.css/normalize";
-
+@import "../../../../node_modules/normalize.css/normalize";
 @import "sass/40-base/animation";
 @import "sass/40-base/bg-color";
 @import "sass/40-base/quotes";
