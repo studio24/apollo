@@ -16,6 +16,12 @@ button,
 	font-weight: $font-weight;
 	letter-spacing: 0.015em;
 	padding: em(10) em(15);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: lighten($grey, 10%);
+	}
 }
 
 

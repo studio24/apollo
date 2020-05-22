@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #Social links
+\*------------------------------------*/
+
+.social-links {}
+
+
+.social-links__item {
+
+	color: $white;
+	padding: .25em;
+
+	.icon {
+		background-color: $link-color;
+		height: 2em;
+		padding: .5em;
+		width: 2em;
+	}
+
+	&:hover .icon {
+		background-color: $link-color--hover;
+	}
+
+}
+
+.social-links__item.with-icon {
+
+	align-items: center;
+	color: $link-color;
+
+	.icon {
+		background-color: transparent;
+		height: 1em;
+		padding: 0;
+		width: 1em;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+}
