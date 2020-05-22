@@ -69,6 +69,7 @@
 							<li><a href="patterns/tables.php">Data tables</a></li>
 							<li><a href="patterns/forms.php">Forms</a></li>
 							<li><a href="patterns/quotes.php">Quotes</a></li>
+							<li><a href="patterns/icons.php">Icons</a></li>
 							<li><a href="patterns/breadcrumbs.php">Breadcrumbs</a></li>
 							<li><a href="patterns/cards.php">Cards</a></li>
 							<li><a href="patterns/pagination.php">Pagination</a></li>
