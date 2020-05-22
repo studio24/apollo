@@ -56,6 +56,7 @@
             <li><a href="tables.php">Data tables</a></li>
             <li><a href="forms.php">Forms</a></li>
 	        <li><a href="quotes.php">Quotes</a></li>
+            <li><a href="icons.php">Icons</a></li>
 	        <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
 	        <li><a href="cards.php">Cards</a></li>
 	        <li><a href="pagination.php">Pagination</a></li>
