@@ -9,9 +9,11 @@
     "to": "web/dist/assets"
   },
   "scripts": {
-    "css:mainsass:compressed": "node-sass --output-style=compressed --source-map=true ${npm_package_config_from}/styles/styles.scss ${npm_package_config_to}/styles/styles.min.css",
-    "css:mainsass:uncompressed": "node-sass ${npm_package_config_from}/styles/styles.scss ${npm_package_config_to}/styles/styles.css",
-    "css:sass": "npm-run-all --parallel css:mainsass:*",
+    "css:core:compressed": "node-sass --output-style=compressed --source-map=true ${npm_package_config_from}/styles/core.scss ${npm_package_config_to}/styles/core.min.css",
+    "css:core:uncompressed": "node-sass ${npm_package_config_from}/styles/core.scss ${npm_package_config_to}/styles/core.css",
+    "css:advanced:compressed": "node-sass --output-style=compressed --source-map=true ${npm_package_config_from}/styles/advanced.scss ${npm_package_config_to}/styles/advanced.min.css",
+    "css:advanced:uncompressed": "node-sass ${npm_package_config_from}/styles/advanced.scss ${npm_package_config_to}/styles/advanced.css",
+    "css:sass": "npm-run-all --parallel css:core:* css:advanced:*",
     "css:autoprefixer": "autoprefixer-cli -d ${npm_package_config_to}/styles ${npm_package_config_to}/styles/*.css",
     "css": "npm-run-all --sequential css:sass css:autoprefixer",
     "images:imagemin": "imagemin ${npm_package_config_from}/images/* --out-dir=${npm_package_config_to}/images",

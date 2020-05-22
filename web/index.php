@@ -27,7 +27,7 @@
     <?php require_once('_includes/scripts__header.html'); ?>
 
     <?php // Styles ?>
-    <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
+    <?php require_once('_includes/styles.php') ?>
 
     <?php // Open Graph tags (description is included below standard title ?>
     <?php // https://developers.facebook.com/tools/debug/sharing/ ?>
