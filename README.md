@@ -71,7 +71,7 @@ TODO
 
 ### To report an issue
 
-* [Report an issue](https://github.com/studio24/apollo/issues/new?labels=bug).
+* [Report an issue](https://github.com/studio24/apollo/issues/new?labels=bug)
 * [Suggest an enhancement](https://github.com/studio24/apollo/issues/new?labels=enhancement) 
 
 ### To submit a bug fix or an enhancement
@@ -88,8 +88,8 @@ Create a new branch (one per fix/improvement) and apply your fix. When you are d
 
 ## Authors
 
-* Nicola Saunders, Studio 24 (Project Lead)
-* Carlos Eriksson, Studio 24 
+* Nicola Saunders - _Project Lead_ - [Studio 24](https://www.studio24.net/)
+* Carlos Eriksson - [Studio 24](https://www.studio24.net/)
 
 ## License
 
@@ -98,3 +98,6 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 [LICENSE]: ./LICENSE
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 
+## Acknowledgments
+
+* Inspired by [Springer Nature Front End Playbook](https://github.com/springernature/frontend-playbook)
