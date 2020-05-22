@@ -53,7 +53,7 @@
 			<div class="l-sidebar">
 				<div>
 					<div class="sidebar">
-						<h2 class="h4"><a href="layouts">Layouts</a></h2>
+						<h2 class="h4"><a href="layouts/">Layouts</a></h2>
 						<ul>
                             <li><a href="layouts/box.php">Box</a></li>
                             <li><a href="layouts/center.php">Center</a></li>
@@ -63,7 +63,7 @@
                             <li><a href="layouts/sidebar.php">Sidebar</a></li>
                             <li><a href="layouts/switcher.php">Switcher</a></li>
                         </ul>
-						<h2 class="h4"><a href="patterns">Patterns</a></h2>
+						<h2 class="h4"><a href="patterns/">Patterns</a></h2>
 						<ul>
 							<li><a href="patterns/sticky-footer.php">Sticky footer</a></li>
 							<li><a href="patterns/tables.php">Data tables</a></li>
