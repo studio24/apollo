@@ -1,27 +1,4 @@
 ##
-# Standard ignore rules
-##
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# IDEs
-nbproject
-.komodotools
-.buildpath
-.project
-.settings
-.idea
-*.sublime-project
-*.sublime-workspace
-
-##
 # Add any project-specific ignore rules here
 # e.g. cache, package, build and file upload folders
 ##
@@ -29,19 +6,13 @@ nbproject
 # Composer
 vendor
 
-# Bower
-bower_components
-
 # NPM
 node_modules
 npm-debug.log
+package-lock.json
 
 # SASS
 .sass_cache
 
 # dist
 web/dist
-
-# Wordpress
-# Account for plugins that include a vendor directory but no composer.json file
-!web/wp-content/plugins/**/vendor

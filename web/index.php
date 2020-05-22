@@ -24,7 +24,7 @@
 
     <?php // Font Face Observer script to check when web fonts are loaded before applying them via CSS ?>
     <?php // Refer to https://github.com/bramstein/fontfaceobserver ?>
-    <?php require_once( 'delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
+    <?php require_once('_includes/scripts__header.html'); ?>
 
     <?php // Styles ?>
     <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
@@ -53,7 +53,7 @@
 			<div class="l-sidebar">
 				<div>
 					<div class="sidebar">
-						<h2 class="h4"><a href="layouts">Layouts</a></h2>
+						<h2 class="h4"><a href="layouts/">Layouts</a></h2>
 						<ul>
                             <li><a href="layouts/box.php">Box</a></li>
                             <li><a href="layouts/center.php">Center</a></li>
@@ -63,7 +63,7 @@
                             <li><a href="layouts/sidebar.php">Sidebar</a></li>
                             <li><a href="layouts/switcher.php">Switcher</a></li>
                         </ul>
-						<h2 class="h4"><a href="patterns">Patterns</a></h2>
+						<h2 class="h4"><a href="patterns/">Patterns</a></h2>
 						<ul>
 							<li><a href="patterns/sticky-footer.php">Sticky footer</a></li>
 							<li><a href="patterns/tables.php">Data tables</a></li>
@@ -85,9 +85,11 @@
 						
 						<h2>Getting started</h2>
                     	<ol>
-                        	<li><a href="#!">Download Apollo.</a></li>
-                        	<li>Put it in the root of your project.</li>
+                        	<li><a href="https://github.com/studio24/apollo/archive/v2.0-beta.1.zip">Download Apollo.</a></li>
+                            <li>Copy <code>apollo/</code> folder and the files <code>.babelrc</code>, <code>.nvmrc</code>, <code>package.json</code> to the root of your project</li>
+                        	<li>To build files run <code>nvm use; npm install; npm run build</code></li>
                     	</ol>
+                        <p>Please note this is currently a beta release and the installation process will be refined before the final v2.0</p>
 						<h2>Overview</h2>
             		    <p>The thinking here is drawn from the <i>Springer Nature Front End Playbook</i> approach. That is to say:</p>
             	        <ul>
@@ -119,7 +121,7 @@
 
 
 
-<?php require_once( 'delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
+<?php require_once('_includes/scripts__footer.html'); ?>
 
 </body>
 </html>

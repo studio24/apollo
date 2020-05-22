@@ -24,7 +24,7 @@
 
     <?php // Font Face Observer script to check when web fonts are loaded before applying them via CSS ?>
     <?php // Refer to https://github.com/bramstein/fontfaceobserver ?>
-    <?php require_once( '../delete-this-folder-in-wp/_includes/scripts__header.html' ); ?>
+    <?php require_once('../_includes/scripts__header.html'); ?>
 
     <?php // Styles ?>
     <link rel="stylesheet" href="/dist/assets/styles/styles.min.css" type="text/css" media="screen"/>
@@ -578,7 +578,7 @@
 </script>
 
 
-<?php require_once( '../delete-this-folder-in-wp/_includes/scripts__footer.html' ); ?>
+<?php require_once('../_includes/scripts__footer.html'); ?>
 
 </body>
 </html>
