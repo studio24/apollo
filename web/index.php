@@ -88,7 +88,7 @@
                     	<ol>
                         	<li><a href="https://github.com/studio24/apollo/archive/v2.0-beta.1.zip">Download Apollo.</a></li>
                             <li>Copy <code>apollo/</code> folder and the files <code>.babelrc</code>, <code>.nvmrc</code>, <code>package.json</code> to the root of your project</li>
-                        	<li>To build files run <code>nvm use; npm install; npm run build</code></li>
+                        	<li>To build files run <code>nvm use && npm install && npm run build</code></li>
                     	</ol>
                         <p>Please note this is currently a beta release and the installation process will be refined before the final v2.0</p>
 						<h2>Overview</h2>
