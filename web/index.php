@@ -89,6 +89,7 @@
                             <li>Copy <code>apollo/</code> folder and the files <code>.babelrc</code>, <code>.nvmrc</code>, <code>package.json</code> to the root of your project</li>
                         	<li>To build files run <code>nvm use; npm install; npm run build</code></li>
                     	</ol>
+                        <p>Please note this is currently a beta release and the installation process will be refined before the final v2.0</p>
 						<h2>Overview</h2>
             		    <p>The thinking here is drawn from the <i>Springer Nature Front End Playbook</i> approach. That is to say:</p>
             	        <ul>
