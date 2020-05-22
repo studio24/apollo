@@ -1,6 +1,7 @@
 /*------------------------------------*\
-    #Apollo: core styles for all browsers
+    #Apollo
 \*------------------------------------*/
+
 
 /*------------------------------------*\
     #Settings
@@ -34,7 +35,6 @@
 /*------------------------------------*\
     #Base
 \*------------------------------------*/
-//@TODO Check if this path is alright, or whether we need to copy the file elsewhere
 @import "../../../node_modules/normalize.css/normalize";
 
 @import "sass/40-base/animation";
@@ -75,11 +75,34 @@
     #Components
 \*------------------------------------*/
 @import "sass/60-components/breadcrumbs";
+@import "sass/60-components/cards";
+@import "sass/60-components/collapsibles";
 @import "sass/60-components/footer";
 @import "sass/60-components/header";
+@import "sass/60-components/hero";
+@import "sass/60-components/logo";
 @import "sass/60-components/main";
 @import "sass/60-components/navigation";
 @import "sass/60-components/pagination";
+@import "sass/60-components/payment-details";
+@import "sass/60-components/tabs";
+@import "sass/60-components/tag-list";
+
+
+
+/*------------------------------------*\
+    #Plugins
+
+    Add third-party plugins here.
+\*------------------------------------*/
+@import "sass/70-third-party-plugins/accessible-autocomplete";
+@import "sass/70-third-party-plugins/pikaday";
+
+
+
+/*------------------------------------*\
+    #Templates
+\*------------------------------------*/
 
 
 

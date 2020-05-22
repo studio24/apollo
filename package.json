@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "author": "Studio 24",
   "description": "NPM scripts for building front-end website files",
+  "license": "MIT",
   "config": {
-    "from": "web/apollo/assets",
+    "from": "apollo/assets",
     "to": "web/dist/assets"
   },
   "scripts": {
@@ -25,7 +26,7 @@
     "jsmain:babel:uncompressed": "babel ${npm_package_config_from}/js/app.js --out-file ${npm_package_config_to}/js/app.js",
     "js": "npm-run-all --parallel js:copylibraries js:copypackages js:copyfunctions jsmain:babel:*",
     "build": "npm-run-all --parallel css images fonts js",
-    "prebuild": "shx rm -rf dist && shx mkdir -p ${npm_package_config_to}/fonts && shx mkdir ${npm_package_config_to}/images && shx mkdir ${npm_package_config_to}/js && shx mkdir ${npm_package_config_to}/js/libraries && shx mkdir ${npm_package_config_to}/js/functions && shx mkdir ${npm_package_config_to}/styles && shx mkdir ${npm_package_config_to}/svg",
+    "prebuild": "shx rm -rf ${npm_package_config_to} && shx mkdir -p ${npm_package_config_to}/fonts && shx mkdir ${npm_package_config_to}/images && shx mkdir ${npm_package_config_to}/js && shx mkdir ${npm_package_config_to}/js/libraries && shx mkdir ${npm_package_config_to}/js/functions && shx mkdir ${npm_package_config_to}/styles && shx mkdir ${npm_package_config_to}/svg",
     "watch:css": "watch 'npm run css' ${npm_package_config_from}/styles --interval=1",
     "watch:images:svg": "watch 'npm run images:svg' ${npm_package_config_from}/svg --interval=1",
     "watch:images:imagemin": "watch 'npm run images:imagemin' ${npm_package_config_from}/images --interval=1",
@@ -54,20 +55,5 @@
     "@babel/core": "^7.7.2",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/studio24/apollo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/studio24/apollo/issues"
-  },
-  "homepage": "https://apollo.studio24.net/",
-  "keywords": [
-    "studio24",
-    "frontend",
-    "design system",
-    "template"
-  ],
-  "license": "MIT"
+  }
 }
