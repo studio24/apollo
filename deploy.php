@@ -7,12 +7,6 @@ require 'recipe/common.php';
 // Project name
 set('application', 'Apollo v2');
 
-// Project repository
-set('repository', 'git@github.com:studio24/apollo');
-
-// [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
-
 // Custom
 set('keep_releases', 10);
 
@@ -37,10 +31,7 @@ task('deploy', [
     'deploy:prepare',
     'deploy:lock',
     'deploy:release',
-    'deploy:update_code',
-    'deploy:composer:nvm-use',
-    'deploy:composer:npm-install',
-    'deploy:composer:npm-build',
+    'deploy:copy_code',
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
@@ -48,28 +39,11 @@ task('deploy', [
     'success'
 ]);
 
-task('deploy:nvm-use',function(){
-
-    cd('{{release_path}}');
-    run('/usr/local/bin/nvm use ');
-
-});
-
-task('deploy:npm-install',function(){
-
-    cd('{{release_path}}');
-    run('/usr/local/bin/npm install ');
-
-});
-
-task('deploy:npm-build',function(){
-
-    cd('{{release_path}}');
-    run('/usr/local/bin/npm build ');
-
+task('deploy:copy_code', function () {
+    writeln("<info>Uploading files to server</info>");
+    upload(__DIR__  . '/web', '{{release_path}}');
 });
 
 // [Optional] If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
-
 
