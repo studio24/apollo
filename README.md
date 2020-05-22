@@ -100,4 +100,4 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 ## Acknowledgments
 
-* Inspired by [Springer Nature Front End Playbook](https://github.com/springernature/frontend-playbook)
+* Inspired by [Springer Nature Front End Playbook](https://github.com/springernature/frontend-playbook) and [Every Layout](https://every-layout.dev/)
