@@ -4,11 +4,11 @@ This is a front-end (HTML, CSS & Javascript) framework to help build websites wi
 
 ## Preview URLs
 
-__Note:__ new URLs to be setup.
-
-* Production - https://apollo.studio24.net/ (was http://apollo.s24.net/)
-* Staging - https://apollo.studio24.dev/ (was http://apollo-staging.s24.net)
+* Production - https://apollo.studio24.net/ 
+* Staging - https://apollo.studio24.dev/
 * Development - http://localhost:8000/
+
+Please note Apollo v1 can be viewed at http://apollo.s24.net/
 
 ## How do I get set up?
 
@@ -68,7 +68,7 @@ TODO
 TODO
 ````
 
-## Contribution guidelines
+## Contributions
 
 ### To report an issue
 
@@ -86,6 +86,15 @@ would answer the following questions. A single 'Yes,' already tells us we would 
 
 Create a new branch (one per fix/improvement) and apply your fix. When you are done, submit a pull request for review.
 
-## Project lead
+## Authors
 
-* Nicola Saunders, Studio 24
+* Nicola Saunders, Project Lead
+* Carlos Eriksson, Lead on Apollo v1
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
+
+[LICENSE]: ./LICENSE
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+
