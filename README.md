@@ -12,7 +12,7 @@ Please note Apollo v1 can be viewed at http://apollo.s24.net/
 ## How do I get set up?
 
 ### Installation
-
+From within the project root
 ```bash
 # Switch your version of Node to the correct version for this project (see .nvmrc)
 nvm use
