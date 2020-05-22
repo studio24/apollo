@@ -110,7 +110,14 @@
             			    </ol>
             		    </div>
                 	    <p>It is worth bearing these points in mind for our base styles. For example, they will provide a nice margin on either side of text on smaller screens, keeping the text away from the very edges.</p>
-					</div>
+
+                        <h2>Support</h2>
+                        <p>The Apollo CSS framework is maintained by <a href="https://www.studio24.net/">Studio 24</a>.
+                            If you’ve got any questions please <a href="https://www.studio24.net/contact/">get in touch</a>.
+                            You can also review the <a href="https://github.com/studio24/apollo/tree/apollo-v2">Apollo GitHub repo</a>,
+                            where you can submit bug reports or suggestions for improvements.
+                        </p>
+                    </div>
 				</div>
 			</div>
 		</main>
