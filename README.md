@@ -57,16 +57,11 @@ npm run watch
 
 ### Deploy to Staging
 
-Please note that files are deployed from your local file system, and not from Git.
+Please note that files are currently deployed from your local file system, and not from Git. This is likely to change in 
+the near future, but for now - it works!
 
 ````bash
-dep deploy staging --branch=branchname
-````
-
-### Deploy to Production
-
-````bash
-TODO
+npm run build && dep deploy staging
 ````
 
 ## Contributions
