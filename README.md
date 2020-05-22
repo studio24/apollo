@@ -57,8 +57,10 @@ npm run watch
 
 ### Deploy to Staging
 
+Please note that files are deployed from your local file system, and not from Git.
+
 ````bash
-TODO
+dep deploy staging --branch=branchname
 ````
 
 ### Deploy to Production
