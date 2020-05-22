@@ -6,7 +6,6 @@ This is a front-end (HTML, CSS & Javascript) framework to help build websites wi
 
 * Production - https://apollo.studio24.net/ 
 * Staging - https://apollo.studio24.dev/
-* Development - http://localhost:8000/
 
 Please note Apollo v1 can be viewed at http://apollo.s24.net/
 
@@ -72,7 +71,8 @@ TODO
 
 ### To report an issue
 
-Open a ticket in the [Issues section of this repository](https://bitbucket.org/studio24/apollo/issues?status=new&status=open). 
+* [Report an issue](https://github.com/studio24/apollo/issues/new?labels=bug).
+* [Suggest an enhancement](https://github.com/studio24/apollo/issues/new?labels=enhancement) 
 
 ### To submit a bug fix or an enhancement
 
@@ -88,8 +88,8 @@ Create a new branch (one per fix/improvement) and apply your fix. When you are d
 
 ## Authors
 
-* Nicola Saunders, Project Lead
-* Carlos Eriksson, Lead on Apollo v1
+* Nicola Saunders, Studio 24 (Project Lead)
+* Carlos Eriksson, Studio 24 
 
 ## License
 
