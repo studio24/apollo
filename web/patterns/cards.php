@@ -231,6 +231,9 @@
 		    </div>
 	    </article>
 
+	    <h2>Image credit</h2>
+	    <p>Photo by <a href="https://unsplash.com/photos/-zASKXkwkIY">Steve Johnson</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+
     </main>
     <?php // End main ?>
 </div>
