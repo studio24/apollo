@@ -49,7 +49,7 @@
 }
 
 .card__heading {
-	@extend .h4;
+	@include text-h4;
 }
 
 .card__link {

@@ -20,7 +20,7 @@ i {
 small,
 .small,
 .small-caps {
-	font-size: 0.8em;
+	@include text-s;
 	letter-spacing: 0.03em;
 }
 

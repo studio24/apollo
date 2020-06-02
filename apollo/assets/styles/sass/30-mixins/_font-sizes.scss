@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    #Font sizes
+\*------------------------------------*/
+
+@mixin text-h1 {
+	font-size: 3.052rem;
+}
+
+
+@mixin text-h2 {
+	font-size: 2.441rem;
+}
+
+
+@mixin text-h3 {
+	font-size: 1.953rem;
+}
+
+
+@mixin text-h4 {
+	font-size: 1.563rem;
+}
+
+
+@mixin text-h5 {
+	font-size: 1.25rem;
+}
+
+
+@mixin text-m {
+	font-size: 1rem;
+}
+
+
+@mixin text-s {
+	font-size: 0.8em;
+}
