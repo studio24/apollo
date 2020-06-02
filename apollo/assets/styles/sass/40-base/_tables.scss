@@ -1,7 +1,7 @@
 /*------------------------------------*\
     #Tables
 
-    1. Allow text-direction to change with `ltr`
+    1. Logical property allows text-direction to change with `ltr`
 \*------------------------------------*/
 
 table {
@@ -13,6 +13,7 @@ table {
 th {
     border: $size-minus4 solid;
     padding: 0.75rem;
+    text-align: left; // IE fallback for next rule - only works for ltr languages
     text-align: start; /* 1 */
 }
 
@@ -23,6 +24,7 @@ td {
 
 table caption {
     padding-bottom: 1rem;
+    text-align: left; // IE fallback for next rule - only works for ltr languages
     text-align: start; /* 1 */
 }
 

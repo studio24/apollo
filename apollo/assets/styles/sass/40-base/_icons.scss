@@ -4,8 +4,8 @@
 
 svg {
 
-	height: auto;
 	fill: currentColor;
+	height: auto;
 	width: 100%;
 
 }
@@ -18,24 +18,38 @@ SVG icons are sized relative to font size, thanks to the em unit.
 size to text size.
  */
 svg.icon {
+
 	height: 0.75em;
 	height: 1cap; /* 1 */
 	vertical-align: baseline;
 	width: 0.75em;
 	width: 1cap; /* 1 */
+
 }
 
 
 /**
 Use the `with-icon` class on the SVG's parent, if there
 is a need to specify the spacing between text and icon.
+
+2. Logical property creates appropriate spacing irrespective of text direction
  */
 .with-icon {
+
 	align-items: baseline;
 	display: inline-flex;
 
-	// Logical property creates appropriate spacing irrespective of text direction
 	.icon {
-		margin-inline-end: $size-minus1;
+
+		margin-right: $size-minus1; // IE fallback for next rule - only works for ltr languages
+
+		@supports (margin-inline-end: 1em) {
+
+			margin-inline-end: $size-minus1; /* 2 */
+			margin-right: 0;
+
+		}
+
 	}
+
 }

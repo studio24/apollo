@@ -1,5 +1,7 @@
 /*------------------------------------*\
     #Alignment utilities
+
+    1. Logical property allows text-direction to change with `ltr`
 \*------------------------------------*/
 
 .u-float-left {
@@ -15,11 +17,13 @@
 }
 
 .u-text-left {
-	text-align: left;
+	text-align: left; // IE fallback for next rule - only works for ltr languages
+	text-align: start; /* 1 */
 }
 
 .u-text-right {
-	text-align: right;
+	text-align: right; // IE fallback for next rule - only works for ltr languages
+	text-align: end; /* 1 */
 }
 
 
@@ -27,11 +31,14 @@
 /**
 Change text-alignment at the "laptop" breakpoint,
 as defined in /10-settings/breakpoints
+
+1. Logical property allows text-direction to change with `ltr`
  */
 .u-text-left-from-lap {
 
 	@include mq($bp-lap) {
-		text-align: left;
+		text-align: left; // IE fallback for next rule - only works for ltr languages
+		text-align: start; /* 1 */
 	}
 
 }
@@ -49,7 +56,8 @@ as defined in /10-settings/breakpoints
 .u-text-right-from-lap {
 
 	@include mq($bp-lap) {
-		text-align: right;
+		text-align: right; // IE fallback for next rule - only works for ltr languages
+		text-align: end; /* 1 */
 	}
 	
 }
