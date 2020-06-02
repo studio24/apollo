@@ -13,6 +13,7 @@ Please note Apollo v1 can be viewed at http://apollo.s24.net/
 
 ### Installation
 From within the project root
+
 ```bash
 # Switch your version of Node to the correct version for this project (see .nvmrc)
 nvm use
@@ -55,14 +56,37 @@ npm run watch
 
 ## Deployment instructions
 
-### Deploy to Staging
+Please note that files are currently deployed from your local file system, and not from Git. So please ensure you are on
+the right branch before you deploy and your code is up-to-date. 
 
-Please note that files are currently deployed from your local file system, and not from Git. This is likely to change in 
-the near future, but for now - it works!
+### Deploy to Production
 
 ````bash
-npm run build && dep deploy staging
+dep deploy production
 ````
+
+### Deploy to Staging
+
+````bash
+dep deploy staging
+````
+
+## Creating a release
+
+We use [semantic versioning](https://semver.org/) for releases. For example:
+
+* Major release: v2.0
+* Minor release: v2.1
+* Beta release: v2.0-beta.1
+
+To create a new release:
+
+* Go to [releases](https://github.com/studio24/apollo/releases) > Draft a new release
+* Set the tag & title to the release name (see above)
+* Make sure you choose the right branch
+* Publish release
+
+This then creates a set of downloadable links for the package on the releases page.
 
 ## Contributions
 
