@@ -44,7 +44,13 @@
 .autocomplete__input--show-all-values {
 	cursor: pointer;
 	padding: $size-minus1; /* Space for arrow. Other padding should match .autocomplete__input--default. */
-	padding-right: 34px;
+	padding-right: 34px; // IE fallback for next rule - only works for ltr languages
+
+	// Logical property creates appropriate spacing irrespective of text direction
+	@supports (padding-inline-end: 1em) {
+		padding-right: 0;
+		padding-inline-end: 34px;
+	}
 }
 
 .autocomplete__dropdown-arrow-down{
