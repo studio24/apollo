@@ -1,6 +1,8 @@
 # Apollo
 
-This is a front-end (HTML, CSS & Javascript) framework to help build websites with performance and accessibility as first-class passengers.
+Apollo is our standard approach to front-end development (HTML, CSS & Javascript) at Studio 24. It contains a small, focussed starting point for CSS projects along with a set of common patterns. 
+
+Our aim with Apollo is to use vanilla HTML and CSS, performance and accessibility are first-class passengers. This is primarily an internal project at Studio 24, though it is open source so anyone is welcome to use or learn from this project.
 
 ## Preview URLs
 
@@ -94,18 +96,6 @@ This then creates a set of downloadable links for the package on the releases pa
 
 * [Report an issue](https://github.com/studio24/apollo/issues/new?labels=bug)
 * [Suggest an enhancement](https://github.com/studio24/apollo/issues/new?labels=enhancement) 
-
-### To submit a bug fix or an enhancement
-
-I'm so excited that you want to contribute to Apollo. Before you do though, please take a moment to consider how you 
-would answer the following questions. A single 'Yes,' already tells us we would want your addition.
-
-1. Does this solution already exist? (drop-down, select menu, tooltip, video player, etc.)
-2. Could others use it? (Yes, no, maybe)
-3. Have you already seen a working solution for this? (It works well, it needs improvement)
-4. Does it solve the problem? (Yes, no, partially)
-
-Create a new branch (one per fix/improvement) and apply your fix. When you are done, submit a pull request for review.
 
 ## Authors
 
