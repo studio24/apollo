@@ -2,7 +2,7 @@
 
 Apollo is our standard approach to front-end development (HTML, CSS & Javascript) at Studio 24. It contains a small, focussed starting point for CSS projects along with a set of common patterns. 
 
-Our aim with Apollo is to use vanilla HTML and CSS, performance and accessibility are first-class passengers. This is primarily an internal project at Studio 24, though it is open source so anyone is welcome to use or learn from this project.
+Our aim with Apollo is to use native HTML, CSS, and vanilla JavaScript to build websites. Performance and accessibility are first-class passengers. Apollo is primarily an internal project at Studio 24, though it is open-source, so anyone is welcome to use or learn from this project.
 
 ## Preview URLs
 
