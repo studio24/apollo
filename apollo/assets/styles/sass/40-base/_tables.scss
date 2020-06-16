@@ -38,18 +38,16 @@ See https://www.the-haystack.com/2013/09/24/responsive-scrollable-tables/
 @media screen {
 
     .table-wrap {
-        background-attachment: local, local, scroll, scroll;
-        background-color: inherit;
+        background-attachment: local, scroll, local, scroll;
+        background-color: $white;
         background-image:
-                linear-gradient(90deg, $white, transparent),
-                linear-gradient(270deg, $white, transparent),
-                linear-gradient(90deg, rgba(195, 195, 197, 0.5), transparent),
-                linear-gradient(270deg, rgba(195, 195, 197, 0.5), transparent);
-        background-position: 0 0, 100% 0, 0 0, 100% 0;
+                linear-gradient(90deg, $white 0%, rgba(250, 250, 250, 0) 3rem),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(250, 250, 250, 0) 1rem),
+                linear-gradient(270deg, $white 0%, rgba(250, 250, 250, 0) 3rem),
+                linear-gradient(270deg, rgba(0, 0, 0, 0.3) 0%, rgba(250, 250, 250, 0) 1rem);
         background-repeat: no-repeat;
-        background-size: 4em 100%, 4em 100%, 2em 100%, 2em 100%;
         overflow-x: auto;
-        padding-left: $size-minus4; // Same as border width
+        padding-left: 1px; // Same as border width
     }
 
 }
