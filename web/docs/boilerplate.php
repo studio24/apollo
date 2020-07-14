@@ -72,6 +72,7 @@
 	<?php // https://www.linkedin.com/help/linkedin/answer/46687 ?>
 	<meta property="og:title" content="Boilerplate Documentation"/>
 	<meta property="og:image" content="/dist/assets/images/apollo.png"/>
+	<meta property="og:image:alt" content="The head of a statue of Apollo" />
     <meta property="og:url" content="http://apollo.s24.net/"/>
 
     <?php // Replace `summary_large_image` with `summary` for a smaller Twitter card ?>
