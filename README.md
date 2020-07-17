@@ -13,7 +13,7 @@ Apollo is used in the Studio24 Wordpress starter theme with the same name. It's 
 
 ## Preview URLs
 
-* Live - http://apollo.s24.net/
+* Live - https://v1.apollo.studio24.net/
 * Staging - http://apollo-staging.s24.net
 * Development - http://local.apollo.s24.net
 
