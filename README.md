@@ -9,7 +9,7 @@ Our aim with Apollo is to use native HTML, CSS, and vanilla JavaScript to build 
 * Production - https://apollo.studio24.net/ 
 * Staging - https://apollo.studio24.dev/
 
-Please note Apollo v1 can be viewed at http://apollo.s24.net/
+Please note Apollo v1 can be viewed at https://v1.apollo.studio24.net/
 
 ## How do I get set up?
 
