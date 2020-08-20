@@ -56,7 +56,7 @@
 				// Handle clicking of tabs for mouse users
 				tab.addEventListener('click', function(event) {
 					event.preventDefault();
-					var currentTab = tablist.querySelector('[aria-selected');
+					var currentTab = tablist.querySelector('[aria-selected]');
 					if (event.currentTarget !== currentTab) {
 						switchTab(currentTab, event.currentTarget);
 					}
