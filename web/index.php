@@ -76,9 +76,10 @@
 							<li><a href="patterns/collapsibles.php">Collapsible sections</a></li>
 							<li><a href="patterns/tabs.php">Tabbed sections</a></li>
 						</ul>
-                        <p>Inspiration and ideas:</p>
+						<h2 class="h4"><a href="ideas/">Ideas</a></h2>
                         <ul>
-                            <li><a href="patterns/page-header.php">Page header</a></li>
+                            <li><a href="ideas/page-header.php">Page header</a></li>
+	                        <li><a href="ideas/pattern-library.php">Pattern library</a></li>
                         </ul>
 					</div>
 					<div class="not-sidebar">

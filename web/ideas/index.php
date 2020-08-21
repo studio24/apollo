@@ -49,25 +49,16 @@
 <div class="wrap">
     <?php // Start main ?>
     <main>
-        <h1>Patterns</h1>
-        <p>Common components and functionality:</p>
+        <h1>Ideas</h1>
         <ul>
-            <li><a href="sticky-footer.php">Sticky footer</a></li>
-            <li><a href="tables.php">Data tables</a></li>
-            <li><a href="forms.php">Forms</a></li>
-	        <li><a href="quotes.php">Quotes</a></li>
-            <li><a href="icons.php">Icons</a></li>
-	        <li><a href="breadcrumbs.php">Breadcrumbs</a></li>
-	        <li><a href="cards.php">Cards</a></li>
-	        <li><a href="pagination.php">Pagination</a></li>
-            <li><a href="collapsibles.php">Collapsible sections</a></li>
-            <li><a href="tabs.php">Tabbed sections</a></li>
+            <li><a href="page-header.php">Page header</a></li>
+            <li><a href="pattern-library.php">Pattern library</a></li>
         </ul>
     </main>
     <?php // End main ?>
 </div>
 <footer class="global-footer">
-	Footer content goes here
+    Footer content goes here
 </footer>
 
 
