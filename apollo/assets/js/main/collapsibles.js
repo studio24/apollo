@@ -3,7 +3,7 @@
  * See https://heydon.github.io/inclusive-components-demos/collapsible-sections/progressive.html
  */
 
-;(function () {
+var collapsibles = (function () {
 
 	// Get all the collapsible containers
 	var collapseArray = Array.prototype.slice.call(document.querySelectorAll('[data-component="collapsibles"]'));
@@ -49,3 +49,5 @@
 	} // End if statement
 
 })();
+
+export {collapsibles};
