@@ -9,6 +9,8 @@ var stickyColumnHead = function () {
 	document.documentElement.style['position'] = 'sticky';
 	if (document.documentElement.style['position'] === 'sticky') {
 
+		document.documentElement.removeAttribute('style');
+
 		// Get all the table wraps
 		var tablesArray = Array.prototype.slice.call(document.querySelectorAll('.table-wrap'));
 		if (tablesArray) {

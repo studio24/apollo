@@ -86,7 +86,7 @@
 
 <?php require_once('../_includes/scripts__footer.html'); ?>
 
-<script src="../dist/assets/js/libraries/tabbyjs/tabby.polyfills.min.js"></script>
+<script src="../dist/assets/js/libraries/tabby.polyfills.min.js"></script>
 <script>
 	var tabs = new Tabby('[data-tabs]');
 </script>
