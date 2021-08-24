@@ -10,7 +10,7 @@ CSS is based on [Sass](http://sass-lang.com/) (using the [SCSS syntax](https://s
 
 All CSS is found within `/apollo/assets/styles/sass`.
 
-The architecture is split into a series of levels, each level representing a folder that contains our SASS split out into different files. CSS is organised in specificity order and, with the exception of print styles, the SASS files should be included in the order denoted by this structure.
+The architecture is split into a series of levels, each level representing a directory containing Sass split out into multiple [partial files](https://sass-lang.com/guide#topic-4).
 
 More generic and wide-reaching styles sit within the lower numbered levels, with specificity increasing with each level:
 
@@ -43,7 +43,9 @@ The SASS files are compiled into three separate CSS stylesheets:
   - Third party plugins involving JavaScript
 - `print.css` (print stylesheet)
 
-The files `core.scss`, `advanced.scss` and `print.scss` determine which SASS files will be compiled into which stylesheets.
+The files `core.scss`, `advanced.scss` determine which Sass files will be compiled into which stylesheets. CSS is organised in specificity order, from low to high. The individual Sass partials should be included using the [`@import` directive](https://sass-lang.com/documentation/at-rules/import#partials) in the order denoted by the level in which they reside, remembering the impact of the [CSS cascade](https://wattenberger.com/blog/css-cascade).
+
+Print styles are a slight exception - as noted previously, they reside in [Base](base/README.md) but are included within `print.css`.
 
 Both `core.css` and `print.css` are served to all browsers. `advanced.css`, is only served to browsers that meet the following CSS media query that sits within `<head>`:
 

@@ -267,8 +267,8 @@ Again, due to inconsistencies with how different browsers and Assistive Technolo
                 </label>
                 <div class="field-hint" id="hint-chips">Fries or frites, not crisps.</div>
             </div>
-		</fieldset>
-	</div>
+        </fieldset>
+    </div>
 </form>
 ```
 
@@ -483,7 +483,7 @@ To notify a user of an error with their form submission:
 3. Add an error message to each problematic input
 
 ```
-<div class="l-box error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1" data-component="error-summary">
+<div class="l-box note note--error" role="alert" aria-labelledby="error-summary-title" tabindex="-1" data-component="error-summary">
     <h2 id="error-summary-title" class="txt-mars">There is a problem</h2>
     <ul class="clean-list" role="list">
         <li>

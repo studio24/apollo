@@ -18,6 +18,7 @@ The **advanced components** directory handles the styles for those few component
 - [Quote](quote.md)
 - [Image](image.md)
 - [Video](video.md)
+- [Notes](notes.md)
 - [Fifty-fifty](fifty-fifty.md)
 - [Cards](cards.md)
 - [Tag list](tags.md)

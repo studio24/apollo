@@ -1,6 +1,6 @@
 # Avatars
 
-Wrap a square or rectangular image inside a `<div>` with the class `.avatar` to apply a circular mask to the image. Here is an example from the [evangelists component](../components/evangelists.md) found on the [business ecosystem](../templates/business-ecosystem.md) template:
+Wrap a square or rectangular image inside a `<div>` or `<span>` with the class `.avatar` to apply a circular mask to the image. Here is an example from the [evangelists component](../components/evangelists.md) found on the [business ecosystem](../templates/business-ecosystem.md) template:
 
 ```
 <div class="avatar">
