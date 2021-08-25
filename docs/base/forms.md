@@ -4,7 +4,7 @@ The examples on this page show how we manage forms and their fields. Recommendat
 
 ## Top tips
 
-- Every `<input>` needs a `<label>`. Put labels above the input.
+- Every `<input>` needs a `<label>`. Do not wrap inputs in labels, put labels above the input.
 - Do not use the `placeholder` attribute on `<input>` fields.
 - Use [fixed width inputs](#fixed-width-inputs) for content that has a specific, known length. Postcode inputs should be postcode-sized, telephone number inputs should be telephone number-sized.
 - Make form fields look like form fields: apply a border and make sure they are empty to begin with. A height of 44px or more makes them easy to tap on touch screen devices.
