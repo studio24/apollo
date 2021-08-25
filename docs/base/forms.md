@@ -383,7 +383,7 @@ The basis of this pattern is the [switcher layout](../layouts/switcher.md). The 
 
 ### Considerations
 
-Before using the `<select>` element, try asking users questions which will allow you to present them with fewer options. This should lessen the need for the `<select>` element, which could be replaced with e.g. radios.
+The `<select>` element should be a last resort as they’re really hard to use. Before using the `<select>` element, try asking users questions which will allow you to present them with fewer options. This should lessen the need for the `<select>` element, which could be replaced with e.g. radios.
 
 ## Auto-complete
 
