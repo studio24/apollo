@@ -25,14 +25,18 @@ Always include width and height attributes as part of the SVG markup. This preve
 If you want control over the spacing between the icon and text, add the `.with-icon--before` or `.with-icon--after` class to the parent element. This applies inline-flex and alignment styles to help things line up nicely, and uses margin for the spacing. It also handles right-to-left text if applicable. Choose the class which reflects the correct order of icon and text.
 
 ```
-<p class="with-icon--before">
-    <svg aria-hidden="true" focusable="false" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
-    </svg> Phone
+<p>
+	<span class="with-icon--before">
+		<svg aria-hidden="true" focusable="false" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+		</svg> Phone
+	</span>
 </p>
 
-<p class="with-icon--after">
-    Phone <svg aria-hidden="true" focusable="false" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
-    </svg>
+<p>
+	<span class="with-icon--after">
+		Phone <svg aria-hidden="true" focusable="false" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em"><!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></svg>
+		</svg>
+	</span>
 </p>
 ```
 
@@ -74,7 +78,7 @@ In all the preceding examples, the SVG has acted as a **decorative item**, and u
 
 ```
 <svg aria-hidden="true" focusable="false" ... >
-    <!-- ... -->
+    <!-- child elements of the inline SVG would go here -->
 </svg>
 ```
 
@@ -84,12 +88,16 @@ If using an icon without a visible text label, the following markup pattern shou
 
 ```
 <button>
-    <svg aria-hidden="true" focusable="false"><!--...--></svg>
+    <svg aria-hidden="true" focusable="false">
+        <!-- child elements of the inline SVG would go here -->
+    </svg>
     <span class="visuallyhidden">Search</span>
 </button>
 
 <a href="/search">
-    <svg aria-hidden="true" focusable="false"><!--...--></svg>
+    <svg aria-hidden="true" focusable="false">
+        <!-- child elements of the inline SVG would go here -->
+    </svg>
     <span class="visuallyhidden">Search</span>
 </a>
 ```
@@ -101,7 +109,7 @@ If an SVG is used in a context where it adds meaning to the content then it is n
 ```
 <svg role="img" focusable="false">
     <title>Accessible Name</title>
-    <!--...-->
+     <!-- child elements of the inline SVG would go here -->
 </svg>
 ```
 
