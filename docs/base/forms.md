@@ -425,7 +425,7 @@ This class should not be used in conjunction with radios or checkboxes. The patt
 
 ## Fixed width inputs
 
-Apollo includes several CSS classes which, when added to an `<input>`, will reduce the maximum width of the input field to better suit the intended contents:
+Apollo includes a collection of CSS classes prefixed with `.input-width-` which, when added to an `<input>`, will reduce the maximum width of the input field to better suit the intended contents:
 
 ```
 <form novalidate>
