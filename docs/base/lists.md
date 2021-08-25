@@ -48,13 +48,7 @@ Adding the `.clean-list` class to an unordered or ordered list will remove the l
 <ul class="clean-list">
     <li>Level 1 list item 1</li>
     <li>Level 1 list item 2</li>
-    <li>Level 1 list item 3
-        <ul>
-            <li>Level 2 list item 1</li>
-            <li>Level 2 list item 2</li>
-            <li>Level 2 list item 3</li>
-        </ul>
-    </li>
+    <li>Level 1 list item 3</li>
     <li>Level 1 list item 4</li>
     <li>Level 1 list item 5</li>
     <li>Level 1 list item 6</li>
