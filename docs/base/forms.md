@@ -111,9 +111,9 @@ Use `autocapitalize="none"`, `autocorrect="off"` and `spellcheck="false"` to sto
 
 ### How to make filling in number fields easier
 
-In many cases, it's better to use `<input type="text" pattern="[0-9]*>` rather than `<input type="number">` when dealing with numbers. Adam Silver has written about [when to use the number input](https://adamsilver.io/articles/form-design-when-to-use-the-number-input/).
+In many cases, it's better to use `<input type="text" pattern="[0-9]*" inputmode="numeric">` rather than `<input type="number">` when dealing with numbers. Adam Silver has written about [when to use the number input](https://adamsilver.io/articles/form-design-when-to-use-the-number-input/).
 
-For telephone numbers, use the specific `type="tel"` attribute on the `<input>`.
+For telephone numbers, use the `type="tel"` and `inputmode="tel"` attributes on the `<input>`.
 
 When asking for payment details, including the `autocomplete` attribute can help users complete their responses more quickly. Older browsers make use of the `name` attribute to achieve the same thing. Here is a [list of payment autofill attributes](https://www.smashingmagazine.com/2017/03/improve-billing-form-ux/).
 
