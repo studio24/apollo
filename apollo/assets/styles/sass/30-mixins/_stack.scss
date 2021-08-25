@@ -10,8 +10,8 @@ By applying Flexbox to the parent container, we can use auto margin on a specifi
 child element. This way, we can choose to group elements inside the stack to the
 top/bottom of the vertical space, which is useful for card-like components.
 
-The current default measure for the stack matches the base line-height,
-as defined in /40-base/typography.
+The current default measure for the stack matches the styles line-height,
+as defined in /40-styles/typography.
 
 Use with a specific measure, or without for the default measure, e.g.
 
