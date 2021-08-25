@@ -28,11 +28,11 @@ Use lists to make blocks of text easier to read, and to break information into m
     <li>Level 1 list item 1</li>
     <li>Level 1 list item 2</li>
     <li>Level 1 list item 3
-        <ul>
+        <ol>
             <li>Level 2 list item 1</li>
             <li>Level 2 list item 2</li>
             <li>Level 2 list item 3</li>
-        </ul>
+        </ol>
     </li>
     <li>Level 1 list item 4</li>
     <li>Level 1 list item 5</li>
