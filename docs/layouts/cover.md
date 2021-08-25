@@ -22,7 +22,7 @@ The cover layout creates a container with a minimum height to hold vertically ce
 
 ## Cover with optional header and footer content
 
-The following example shows how we might change the default alignment of the &quot;header&quot;:
+The following example shows how we might change the default alignment of the 'header':
 
 ```
 <style>
