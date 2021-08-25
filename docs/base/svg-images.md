@@ -1,6 +1,6 @@
 # SVG images
 
-This section specifically covers how to use an SVG file as the `src` of an `<img>`. The [use of SVG icon](svg-icons.md) is covered separately.
+This section specifically covers how to use an SVG file as the `src` of an `<img>`. The [use of SVG icons](svg-icons.md) is covered separately.
 
 ```
 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44216/pixels-2.svg" role="img" alt="Pixels the cat">
