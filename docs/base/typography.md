@@ -32,7 +32,7 @@ Heading | Class
 
 ### Font override classes
 
-Eight classes are available in total. `.txt-mercury` is used for the `<h1>` on the landing and business ecosystem page templates. Note that the font size and line-height of `.txt-mercury`, `.txt-venus` and `.txt-earth` increase at the `$bp-tab-small` media query breakpoint, defined in [Settings](../settings/README.md).
+Eight classes are available in total. Note that the font size and line-height of `.txt-mercury`, `.txt-venus` and `.txt-earth` increase at the `$bp-tab-small` media query breakpoint, defined in [Settings](../settings/README.md).
 
 ```
 <p class="txt-mercury">txt-mercury</p>
