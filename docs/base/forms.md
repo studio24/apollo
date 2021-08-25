@@ -770,7 +770,7 @@ To notify a user of an error with their form submission:
             <option value="Saturday">Saturday</option>
             <option value="Sunday">Sunday</option>
         </select>
-    </div
+    </div>
 </form>
 
 
