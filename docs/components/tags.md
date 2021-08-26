@@ -22,20 +22,22 @@
 
 ```
 <div class="l-cluster">
-    <ul class="clean-list">
-        <li>
-            <a href="path/to/page" class="tag">Accessibility</span>
-        </li>
-        <li>
-            <a href="path/to/page" class="tag">Privacy</span>
-        </li>
-        <li>
-            <a href="path/to/page" class="tag">Security</span>
-        </li>
-    </ul>
+	<ul class="clean-list">
+		<li>
+			<a href="path/to/page" class="tag"><span class="visuallyhidden">Content tagged with</span> Accessibility</a>
+		</li>
+		<li>
+			<a href="path/to/page" class="tag"><span class="visuallyhidden">Content tagged with</span> Privacy</a>
+		</li>
+		<li>
+			<a href="path/to/page" class="tag"><span class="visuallyhidden">Content tagged with</span> Security</a>
+		</li>
+	</ul>
 </div>
 ```
 
 ## Considerations
 
 Note the use of the [cluster layout](../layouts/cluster.md).
+
+Note the inclusion of visually-hidden text in the linked tags, to provide detail for assistive technology users when browsing out of context.
