@@ -389,7 +389,19 @@ The `<select>` element should be a last resort as they’re really hard to use. 
 
 A `<select>` can be enhanced into an accessible auto-complete via JavaScript. Apollo uses [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete) to achieve this, and there are a number of [example customisations](https://alphagov.github.io/accessible-autocomplete/examples/) which can be followed.
 
-Follow the default markup for a `<select>`, making sure to give it a unique ID which can be referenced in the JavaScript.
+Follow the default markup for a `<select>`, making sure to give it a unique ID which can be referenced in the JavaScript. You will also need to include a script before the closing body tag `</body>`, for example:
+
+```
+<script>
+	if (document.documentElement.classList.contains('js')) {
+
+		let jsAutocomplete= document.createElement('script');
+		jsAutocomplete.src = '/dist/assets/js/autocomplete.js';
+		document.querySelector('body').appendChild(jsAutocomplete);
+
+	}
+</script>
+```
 
 ## An example of a simple search form
 
