@@ -35,9 +35,7 @@
 
 /**
  * 1. Don't apply axiomatic owl to elements which are for Assistive Technology
- * 2. Summary: Firefox is an ass hole
- *
- * Empty inline elements generate empty inline boxes, but these boxes still
+ * 2. Empty inline elements generate empty inline boxes, but these boxes still
  * have margins, padding, borders and a line height, and thus influence these
  * calculations just like elements with content.
  *
