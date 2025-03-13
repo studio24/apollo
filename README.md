@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> This repo is archived, please see our new HTML/CSS starter kit [Amplify](https://github.com/studio24/amplify).
+
 # Apollo
 
 This is a static (HTML, CSS and Javascript) framework with performance and accessibility as first-class passenger.
