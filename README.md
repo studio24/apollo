@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> This repo is archived, please see our new HTML/CSS starter kit [Amplify](https://github.com/studio24/amplify).
+> This repo is archived, please see our new front-end starter kit [Amplify](https://github.com/studio24/amplify).
 
 # Apollo
 
