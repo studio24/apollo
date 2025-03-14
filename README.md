@@ -5,8 +5,6 @@
 
 This is a static (HTML, CSS and Javascript) framework with performance and accessibility as first-class passenger.
 
-_Please note the new version of Apollo is being actively developed in the [apollo-v2](https://github.com/studio24/apollo/tree/apollo-v2) branch and is planned for completion in early 2020._
-
 ## What is this repository for?
 
 Apollo is used in the Studio24 Wordpress starter theme with the same name. It's part of the [Wordpress installer script](https://bitbucket.org/studio24/wordpress-installation-script). The following file(s) and folder(s) should be deleted after installation. They are used for this repository itself and are not needed when used in the theme.
