@@ -83,6 +83,9 @@
                         </ul>
 					</div>
 					<div class="not-sidebar">
+						<div class="l-box">
+							<p><strong>This project is now archived and has been replaced by the <a href="https://amplify.studio24.net/">Amplify</a> front-end starter kit.</strong></p>
+						</div>
 						
 						
 						<h2>Getting started</h2>
