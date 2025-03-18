@@ -27,10 +27,9 @@
 
             <h1 class="heading size--xxxl">Apollo</h1>
             <div class="lead">
-                <p>The living content- and style guide for Studio 24 by <a
-                            href="http://studio24.net">Studio 24</a>.</p>
+		<p><strong>This project is now archived and has been replaced by the <a href="https://amplify.studio24.net/">Amplify</a> front-end starter kit.</strong></p>
             </div>
-
+	    <p>The living content- and style guide for Studio 24 by <a href="http://studio24.net">Studio 24</a>.</p>
             <p>Named in honour of Apollo, the Greek god of truth. This guide and
                 its content serve as one single source of truth.</p>
 
